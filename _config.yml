@@ -28,14 +28,14 @@ launch_buttons:
 
 # Information about where the book exists on the web
 repository:
-  url: hfboyce.github.io/tableau_course/  # Online location of your book
+  url: https://github.com/hfboyce/tableau_course/ # Online location of your book
   path_to_book : ""  # A path to your book's folder, relative to the repository root.
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: imgs/bait_logo.png
+  favicon: logo.png
   home_page_in_navbar: false
   use_edit_page_button: true
   use_repository_button: true
