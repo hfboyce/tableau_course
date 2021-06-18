@@ -1,8 +1,29 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
 - file: intro
-- file: content
-  sections:
-    - file: markdown
-    - file: notebooks
+
+- part: Things to Know
+  chapters:
+  - file: things_to_know/who
+  - file: things_to_know/how
+  - file: things_to_know/what
+
+- part: Classes 
+  numbered: true
+  chapters:
+    - file: lectures/lecture1
+    - file: lectures/lecture2
+    - file: lectures/lecture3
+    - file: lectures/lecture4
+    - file: lectures/lecture5
+
+- part: Activities 
+  numbered: true
+  chapters:
+    - file: activities/lecture1
+    - file: activities/lecture2
+    - file: activities/lecture3
+    - file: activities/lecture4
+    - file: activities/lecture5
+
+- part: References
+  chapters:
+    - file: things_to_know/attribution
