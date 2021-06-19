@@ -14,21 +14,21 @@ By the end of the course, learners are expected to be able to:
 8. Identify the different data fields and data types used by Tableau and when to appropriately apply them to different columns.  
 ## Course Instructor 
 
-| Name         |  email | 
-| :---:        | :---:  | 
-| [Hayley Boyce](https://www.hayleyfboyce.com/) | hfboyce@cs.ubc.ca | 
+| Name         |  email | website |
+| :---:        | :---:  | :---:  | 
+| Hayley Boyce | hayleyfboyce@gmail.com | [https://www.hayleyfboyce.com/](https://www.hayleyfboyce.com/)|
 
 ## Class Meetings
 
 Details about class meetings will appear here as they become available.
 
-|  #   | Date | Topic | Link |
-| :---: | :---: | :---: | :---:|
-| 1  | June 25th 9:00am - 11ish IST (June 24th 8:30-10:30PM PST) | Introduction to Tableau and visualization Importance | [Class 1](https://bait509-ubc.github.io/BAIT509/lectures/lecture1.html)|
-| 2 | July 2nd 9:00am - 11ish IST (July 1st 8:30-10:30PM PST) |   |  | 
-| 3 | July 9th 9:00am - 11ish IST (July 8th 8:30-10:30PM PST) |   |  | 
-| 4 | July 16th 9:00am - 11ish IST (July 15th 8:30-10:30PM PST) |    |  | 
-| 5 | July 23rd 9:00am - 11ish IST (July 22nd 8:30-10:30PM PST) |  Dashboard presentations | |
+|  #   | Date - India | Date - Vancouver | Topic | Link |
+| :---: | :---: :---: || :---: | :---:|
+| 1  | Jun/25 9:00am - 11ish IST |June 24th 8:30-10:30PM PST | Introduction to Tableau and Visualization Importance | [Class 1]()|
+| 2 | Jul/02 9:00am - 11ish IST |Jul/01 8:30-10:30PM PST |   |  | 
+| 3 | Jul/09 9:00am - 11ish IST |Jul/08 8:30-10:30PM PST |   |  | 
+| 4 | Jul/16 9:00am - 11ish IST |Jul/15 8:30-10:30PM PST |    |  | 
+| 5 | Jul/23 9:00am - 11ish IST |Jul/22 8:30-10:30PM PST |  Dashboard Presentations | |
 ## Class Outline
 
 ### Lecture 1
