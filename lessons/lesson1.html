@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Visualization Importance &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson1.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Introduction to Tableau" href="tableau1.html" />
+    <link rel="prev" title="What: Learning Outcomes" href="../things_to_know/what.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson1.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Visualization Importance" />
+<meta property="og:description" content="Visualization Importance  Why do we Visualize?  When you are trying to make sense of data that you have, you can present it in multiples ways. You can communica" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Visualization Importance
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/practice1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/lesson1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/lesson1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/lesson1.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-visualize">
+   1.1. Why do we Visualize?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-good-data-visualization-is-so-important">
+   1.2. Why Good Data Visualization is So Important
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="visualization-importance">
+<h1><span class="section-number">1. </span>Visualization Importance<a class="headerlink" href="#visualization-importance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-do-we-visualize">
+<h2><span class="section-number">1.1. </span>Why do we Visualize?<a class="headerlink" href="#why-do-we-visualize" title="Permalink to this headline">¶</a></h2>
+<p>When you are trying to make sense of data that you have, you can present it in multiples ways. You can communicate the insights and the statistics you obtained using tables, numbers or words but sometimes the most effective way to relay your discoveries in an efficient and effective way through data visualization.</p>
+<p>Data visualization is representing these statistics and insights using the positions, lengths, and colours of different shapes and lines.</p>
+<a class="reference internal image-reference" href="../_images/shapes.png"><img alt="404 image" src="../_images/shapes.png" style="width: 100%;" /></a>
+<p>We usually visualize our data to either:</p>
+<ol class="simple">
+<li><p>Solve a problem by answering a question (we will look into these types of questions later in this course)</p></li>
+<li><p>Explore our data to discover new questions that we may have</p></li>
+</ol>
+<p>Let’s take a look at an example and experience exactly <strong>how</strong> visualizations are sometimes more effective.<br />
+(Source: Joel Ostblom - <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module1">Data Visualization</a> derived from <a class="reference external" href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Francis Anscombe</a>)</p>
+<p>Look at the four sets of numbers.</p>
+<p>We have X and Y values for 4 sets of numbers labelled A through D.</p>
+<table border="1" style="width:40%; float:center; margin-right:40px">
+<thead style="text-align: center">
+  <col>
+  <colgroup span="4"></colgroup>
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th colspan="2" scope="colgroup" style="width: 25%; text-align:center">A</th>
+    <th colspan="2" scope="colgroup" style="width: 25%; text-align:center">B</th>
+    <th colspan="2" scope="colgroup" style="width: 25%; text-align:center">C</th>
+    <th colspan="2" scope="colgroup" style="width: 25%; text-align:center">D</th>
+  </tr>
+  <tr>
+    <th scope="col" style="width: 12.5%; text-align:center">X</th>
+    <th scope="col" style="width: 12.5%; text-align:center">Y</th>
+    <th scope="col" style="width: 12.5%; text-align:center">X</th>
+    <th scope="col" style="width: 12.5%; text-align:center">Y</th>
+    <th scope="col" style="width: 12.5%; text-align:center">X</th>
+    <th scope="col" style="width: 12.5%; text-align:center">Y</th>
+    <th scope="col" style="width: 12.5%; text-align:center">X</th>
+    <th scope="col" style="width: 12.5%; text-align:center">Y</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>8.04</td>
+    <td>10</td>
+    <td>9.14</td>
+    <td>10</td>
+    <td>7.46</td>
+    <td>8</td>
+    <td>6.58</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>6.95</td>
+    <td>8</td>
+    <td>8.14</td>
+    <td>8</td>
+    <td>6.77</td>
+    <td>8</td>
+    <td>5.76</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>7.58</td>
+    <td>13</td>
+    <td>8.74</td>
+    <td>13</td>
+    <td>12.74</td>
+    <td>8</td>
+    <td>7.71</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>8.81</td>
+    <td>9</td>
+    <td>8.77</td>
+    <td>9</td>
+    <td>7.11</td>
+    <td>8</td>
+    <td>8.84</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>8.33</td>
+    <td>11</td>
+    <td>9.26</td>
+    <td>11</td>
+    <td>7.81</td>
+    <td>8</td>
+    <td>8.47</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>9/96</td>
+    <td>14</td>
+    <td>8.10</td>
+    <td>14</td>
+    <td>8.84</td>
+    <td>8</td>
+    <td>7.04</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>7.24</td>
+    <td>6</td>
+    <td>6.14</td>
+    <td>6</td>
+    <td>6.08</td>
+    <td>8</td>
+    <td>5.25</td>
+  </tr>
+ <tr>
+    <td>4</td>
+    <td>4.26</td>
+    <td>4</td>
+    <td>3.10</td>
+    <td>4</td>
+    <td>5.39</td>
+    <td>19</td>
+    <td>12.50</td>
+  </tr>
+ <tr>
+    <td>12</td>
+    <td>10.84</td>
+    <td>12</td>
+    <td>9.13</td>
+    <td>12</td>
+    <td>8.15</td>
+    <td>8</td>
+    <td>5.56</td>
+  </tr>
+ <tr>
+    <td>7</td>
+    <td>4.81</td>
+    <td>7</td>
+    <td>7.26</td>
+    <td>7</td>
+    <td>6.43</td>
+    <td>8</td>
+    <td>7.91</td>
+  </tr>
+ <tr>
+    <td>5</td>
+    <td>5.68</td>
+    <td>5</td>
+    <td>4.74</td>
+    <td>5</td>
+    <td>5.73</td>
+    <td>8</td>
+    <td>6.89</td>
+  </tr>
+</table>
+<br>
+<p>How is easy is it for us to find any trends, similarities or contrasts from these four sets?</p>
+<p>Can you see the differences in the general trends between these four sets of numbers?</p>
+<p>We can use some calculations or more formally called summary statistics to help shed some light on the data and compare and contrast between the 4 sets.</p>
+<p>Summary statistics can be calculations such as the mean, median, standard deviation, maximum and minimum values or even the range.</p>
+<p>These can help give some idea as we can see here for our 4 sets.</p>
+<table border="1" style="width:55%; float:center; margin-right:40px">
+<thead style="text-align: center">
+  <col>
+  <colgroup span="4"></colgroup>
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th colspan="3" scope="colgroup" style="width: 25%; text-align:center">A</th>
+    <th colspan="3" scope="colgroup" style="width: 25%; text-align:center">B</th>
+    <th colspan="3" scope="colgroup" style="width: 25%; text-align:center">C</th>
+    <th colspan="3" scope="colgroup" style="width: 25%; text-align:center">D</th>
+  </tr>
+  <tr>
+    <th scope="col" style="width: 9%; text-align:center"></th>
+    <th scope="col" style="width: 8%; text-align:center">Y</th>
+    <th scope="col" style="width: 8%; text-align:center">X</th>
+    <th scope="col" style="width: 9%; text-align:center"></th>
+    <th scope="col" style="width: 8%; text-align:center">X</th>
+    <th scope="col" style="width: 8%; text-align:center">Y</th>
+    <th scope="col" style="width: 9%; text-align:center"></th>
+    <th scope="col" style="width: 8%; text-align:center">X</th>
+    <th scope="col" style="width: 8%; text-align:center">Y</th>
+    <th scope="col" style="width: 9%; text-align:center"></th>
+    <th scope="col" style="width: 8%; text-align:center">X</th>
+    <th scope="col" style="width: 8%; text-align:center">Y</th>
+  </tr>
+  <tr>
+<th scope="row">mean</th>
+    <td>9.00</td>
+    <td>7.5</td>
+<th scope="row">mean</th>
+    <td>9.00</td>
+    <td>7.5</td>
+<th scope="row">mean</th>
+    <td>9.00</td>
+    <td>7.5</td>
+<th scope="row">mean</th>
+    <td>9.00</td>
+    <td>7.5</td>
+  </tr>
+  <tr>
+<th scope="row">std</th>
+    <td>3.32</td>
+    <td>2.03</td>
+<th scope="row">std</th>
+    <td>3.32</td>
+    <td>2.03</td>
+<th scope="row">std</th>
+    <td>3.32</td>
+    <td>2.03</td>
+<th scope="row">std</th>
+    <td>3.32</td>
+    <td>2.03</td> 
+  </tr>
+</table>
+<br>
+<p>They tell us in this case that they all share the same mean and standard deviation to 2 decimal places. That means the sets all has the same center and spread among the points.</p>
+<p>That being said, using 2 measures for all our data points, doesn’t give us the full story about the data and fails to show us exactly how these 4 sets differ.</p>
+<p>If we plotted the sets, we would get the following visualizations.</p>
+<a class="reference internal image-reference" href="../_images/sets.png"><img alt="404 image" src="../_images/sets.png" style="width: 100%;" /></a>
+<p>So although they do share similar means, and standard deviations, we can clearly see that they are vastly different from one another.</p>
+<p>Another great illustration to drive home our point is the graphic below from <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">
+Matejka and Fitzmaurice, 2017</a>.</p>
+<p><img alt="" src="https://blog.revolutionanalytics.com/downloads/DataSaurus%20Dozen.gif" /></p>
+<p>This shows multiple datasets with similar means and standard deviations to 2 decimals places but are quite different in appearance when visualized.</p>
+<p>The moral of the story here is although statistics and calculation can help describe our data, a visualization sometimes really is worth a thousand words here.</p>
+<p>This is why it’s so important to use visualizations to effectively communicate our data insights.</p>
+</div>
+<div class="section" id="why-good-data-visualization-is-so-important">
+<h2><span class="section-number">1.2. </span>Why Good Data Visualization is So Important<a class="headerlink" href="#why-good-data-visualization-is-so-important" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it’s best to actually experience a case where analysis improvements occurred to really solidify the effect of good visualizations. Using a case study from the course <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module2">Data Visualization</a> that I co-developed and its source from <a class="reference external" href="https://www.cs.ubc.ca/~tmm/courses/547-19/slides/borkin-artery-subset-slides.pdf">here</a>, let’s experience a real occurrence, where changing the visualizations resulted in concrete analysis improvements.</p>
+<p>Heart disease is a range of conditions that affect your heart including blood vessel disease and Heart rhythm problems. It is known as the leading cause of death globally with an estimated 17.9 million people dying from it in 2019 <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">(source)</a>,</p>
+<p>ESS (Which stands for Endothelial Shear Stress) measures the tangential stress due to the friction of the flowing blood on the endothelial surface of the arterial wall. Long story short, low ESS is associated with plaque progression and if doctors can detect regions in the arteries where ESS is low, they can diagnose the patient and take actions early on which improves the patient’s chance of survival.</p>
+<p>The regular way of evaluating ESS is using a digital 3D representation of the arteries using blue-red-and green colouring.</p>
+<ul class="simple">
+<li><p>Blue indicates areas that could be problematic as ESS is lower here.</p></li>
+<li><p>Red indicates areas where ESS is higher and not as concerning.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/heart1.png"><img alt="404 image" src="../_images/heart1.png" style="width: 80%;" /></a>
+<p>Using this visualization, doctors were able to identify the areas of concern 39% of the time.</p>
+<p>Researchers then went off to see how changes to this visualization affected identification rates.</p>
+<p>Researchers changed the colour to something more interpretable. It’s important to note that colourblindness affects many individuals particularly the specific red-green colour blindness. Not only that but it’s not always completely clear what values are the ones doctors should be particularly concerned with. The researchers adapted the colours so that low ESS stands out more, and highlighted the area with a red colour, and the rest are in black and white.</p>
+<a class="reference internal image-reference" href="../_images/heart21.png"><img alt="404 image" src="../_images/heart21.png" style="width: 80%;" /></a>
+<p>With this small modification, doctors were then able to identify the areas of low ESS much better than before and the average identification rate increased to 71%!</p>
+<p>Following the change of colour, researchers then changed the number of dimensions that the arteries and blood vessels were shown in.</p>
+<p>Researchers then converted the 3D representations of the vessels to 2D. We will talk more about the problems of 3D later on, but generally, it’s difficult for our human brains to assess and a 2D view can be more straightforward to understand.</p>
+<a class="reference internal image-reference" href="../_images/heart3.png"><img alt="404 image" src="../_images/heart3.png" style="width: 80%;" /></a>
+<p>This definitely was the case for the doctors as the 2D representation changed the ESS identification rates from 71% to 91%.</p>
+<p>This goes to show how important colour and dimensionality are to effective visualization and thus your analysis.</p>
+<br> 
+<br> 
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../things_to_know/what.html" title="previous page">What: Learning Outcomes</a>
+    <a class='right-next' id="next-link" href="tableau1.html" title="next page"><span class="section-number">1. </span>Introduction to Tableau</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
