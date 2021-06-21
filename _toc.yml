@@ -6,23 +6,32 @@
   - file: things_to_know/how
   - file: things_to_know/what
 
-- part: Classes 
+- part: Lessons - Theory
   numbered: true
   chapters:
-    - file: lectures/lecture1
-    - file: lectures/lecture2
-    - file: lectures/lecture3
-    - file: lectures/lecture4
-    - file: lectures/lecture5
+    - file: lessons/lesson1
+    - file: lessons/lesson2
+    - file: lessons/lesson3
+    - file: lessons/lesson4
+    - file: lessons/lesson5
 
-- part: Activities 
+- part: Lessons - Tableau
   numbered: true
   chapters:
-    - file: activities/lecture1
-    - file: activities/lecture2
-    - file: activities/lecture3
-    - file: activities/lecture4
-    - file: activities/lecture5
+    - file: lessons/tableau1
+    - file: lessons/tableau2
+    - file: lessons/tableau3
+    - file: lessons/tableau4
+    - file: lessons/tableau5
+
+- part: Activities
+  numbered: true
+  chapters:
+    - file: activities/practice1
+    - file: activities/practice2
+    - file: activities/practice3
+    - file: activities/practice4
+    - file: activities/practice5
 
 - part: References
   chapters:

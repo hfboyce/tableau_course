@@ -52,14 +52,12 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/things_to_know/what.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Intro to ML &amp; Decision Trees" href="../lectures/lecture1.html" />
-    <link rel="prev" title="How: The Course Structure" href="how.html" />
+    <link rel="next" title="1. Visualization Importance" href="../lessons/lesson1.html" />
+    <link rel="prev" title="Who: Hayley Boyce" href="who.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -69,7 +67,7 @@
 <meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/things_to_know/what.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="What: Learning Outcomes" />
-<meta property="og:description" content="What: Learning Outcomes  Course Objectives  Describe fundamental machine learning concepts such as: supervised and unsupervised learning, regression and classif" />
+<meta property="og:description" content="What: Learning Outcomes  Course Objectives  By the end of the course, learners are expected to be able to:  Distinguish between good visualizations vs bad visua" />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -109,11 +107,6 @@
    Who: Hayley Boyce
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="how.html">
-   How: The Course Structure
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    What: Learning Outcomes
@@ -122,33 +115,13 @@
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Classes
+  Lessons - Theory
  </span>
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/lecture1.html">
-   1. Intro to ML &amp;  Decision Trees
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/lecture2.html">
-   2. Splitting and Cross-validation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/lecture3.html">
-   3. Baseline, k-Nearest Neighbours
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/lecture4.html">
-   4. SVM with RBF Kernel and Feature Preprocessing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lectures/lecture5.html">
-   5. Preprocessing Categorical Features and Column Transformer
+  <a class="reference internal" href="../lessons/lesson1.html">
+   1. Visualization Importance
   </a>
  </li>
 </ul>
@@ -257,8 +230,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-1">
-     Lecture 1
+    <a class="reference internal nav-link" href="#lesson-1">
+     Lesson 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -281,31 +254,6 @@
      Lecture 5
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-6">
-     Lecture 6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-7">
-     Lecture 7
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-8">
-     Lecture 8
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-9">
-     Lecture 9
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lecture-10">
-     Lecture 10
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -324,135 +272,42 @@
 <h1>What: Learning Outcomes<a class="headerlink" href="#what-learning-outcomes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="course-objectives">
 <h2>Course Objectives<a class="headerlink" href="#course-objectives" title="Permalink to this headline">¶</a></h2>
+<p>By the end of the course, learners are expected to be able to:</p>
 <ol class="simple">
-<li><p>Describe fundamental machine learning concepts such as: supervised and unsupervised learning, regression and classification, overfitting, training/validation/testing error, parameters and hyperparameters, and the golden rule.</p></li>
-<li><p>Broadly explain how common machine learning algorithms work, including: naïve Bayes, k-nearest neighbors, decision trees, support vector machines, and logistic regression.</p></li>
-<li><p>Identify when and why to apply data pre-processing techniques such as scaling and one-hot encoding.</p></li>
-<li><p>Use Python and the scikit-learn package to develop an end-to-end supervised machine learning pipeline.</p></li>
-<li><p>Apply and interpret machine learning methods to carry out supervised learning projects and to answer business objectives.</p></li>
+<li><p>Distinguish between good visualizations vs bad visualizations.</p></li>
+<li><p>Explain how visualizations are important to the data analysis process.</p></li>
+<li><p>Conduct full exploratory data analysis including visualizations.</p></li>
+<li><p>Use appropriate plots and graphs to effectively comminicate insights from the data with a specified audience.</p></li>
+<li><p>Create a compelling narrative for your findings using story telling.</p></li>
+<li><p>Connect Tableau to different data sources.</p></li>
+<li><p>construct maps, distributions, bar amd line plots using Tableau.</p></li>
+<li><p>Identify the different data fields and data types used by Tableau and when to appropriately apply them to different columns.</p></li>
 </ol>
-<div class="section" id="lecture-1">
-<h3>Lecture 1<a class="headerlink" href="#lecture-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="lesson-1">
+<h3>Lesson 1<a class="headerlink" href="#lesson-1" title="Permalink to this headline">¶</a></h3>
+<p>By the end of the lesson, learners are expected to be able to:</p>
 <ul class="simple">
-<li><p>Explain motivation to study machine learning.</p></li>
-<li><p>Differentiate between supervised and unsupervised learning.</p></li>
-<li><p>Differentiate between classification and regression problems.</p></li>
-<li><p>Explain machine learning terminology such as features, targets, training, and error.</p></li>
-<li><p>Explain the <code class="docutils literal notranslate"><span class="pre">.fit()</span></code> and <code class="docutils literal notranslate"><span class="pre">.predict()</span></code> paradigm and use <code class="docutils literal notranslate"><span class="pre">.score()</span></code> method of ML models.</p></li>
-<li><p>Broadly describe how decision trees make predictions.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">DecisionTreeClassifier()</span></code> and <code class="docutils literal notranslate"><span class="pre">DecisionTreeRegressor()</span></code> to build decision trees using scikit-learn.</p></li>
-<li><p>Explain the difference between parameters and hyperparameters.</p></li>
-<li><p>Explain how decision boundaries change with <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>.</p></li>
+<li><p>Explain the importance of  visualizations in communication and analysis.</p></li>
+<li><p>Discuss the advantages and disadvantages of using Tableau as a tool.</p></li>
+<li><p>Open and connect Tableau to a data source.</p></li>
+<li><p>List the different data types Tableau uses.</p></li>
+<li><p>Locate important buttons and menus needed in Tableau.</p></li>
+<li><p>identify how Tableau categorizes columns into Dimensions and Measures.</p></li>
+<li><p>Create new worksheets for plots.</p></li>
+<li><p>Save your work appropriately.</p></li>
 </ul>
 </div>
 <div class="section" id="lecture-2">
 <h3>Lecture 2<a class="headerlink" href="#lecture-2" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Explain the concept of generalization.</p></li>
-<li><p>Split a dataset into train and test sets using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function.</p></li>
-<li><p>Explain the difference between train, validation, test, and “deployment” data.</p></li>
-<li><p>Identify the difference between training error, validation error, and test error.</p></li>
-<li><p>Explain cross-validation and use <code class="docutils literal notranslate"><span class="pre">cross_val_score()</span></code> and <code class="docutils literal notranslate"><span class="pre">cross_validate()</span></code> to calculate cross-validation error.</p></li>
-<li><p>Explain overfitting, underfitting, and the fundamental tradeoff.</p></li>
-<li><p>State the golden rule and identify the scenarios when it’s violated.</p></li>
-</ul>
 </div>
 <div class="section" id="lecture-3">
 <h3>Lecture 3<a class="headerlink" href="#lecture-3" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">DummyClassifier</span></code> and <code class="docutils literal notranslate"><span class="pre">DummyRegressor</span></code> as baselines for machine learning problems.</p></li>
-<li><p>Explain the notion of similarity-based algorithms .</p></li>
-<li><p>Broadly describe how KNNs use distances.</p></li>
-<li><p>Discuss the effect of using a small/large value of the hyperparameter <span class="math notranslate nohighlight">\(K\)</span> when using the KNN algorithm</p></li>
-<li><p>Explain the general idea of SVMs with RBF kernel.</p></li>
-<li><p>Describe the problem of the curse of dimensionality.</p></li>
-<li><p>Broadly describe the relation of <code class="docutils literal notranslate"><span class="pre">gamma</span></code> and <code class="docutils literal notranslate"><span class="pre">C</span></code> hyperparameters and the fundamental tradeoff.</p></li>
-</ul>
 </div>
 <div class="section" id="lecture-4">
 <h3>Lecture 4<a class="headerlink" href="#lecture-4" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Identify when to implement feature transformations such as imputation and scaling.</p></li>
-<li><p>Describe the difference between normalizing and standardizing and be able to use scikit-learn’s <code class="docutils literal notranslate"><span class="pre">MinMaxScaler()</span></code> and <code class="docutils literal notranslate"><span class="pre">StandardScaler()</span></code> to pre-process numeric features.</p></li>
-<li><p>Apply <code class="docutils literal notranslate"><span class="pre">sklearn.pipeline.Pipeline</span></code> to build a machine learning pipeline.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> for applying numerical feature transformations to the data.</p></li>
-<li><p>Discuss the golden rule in the context of feature transformations.</p></li>
-</ul>
 </div>
 <div class="section" id="lecture-5">
 <h3>Lecture 5<a class="headerlink" href="#lecture-5" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Identify when it’s appropriate to apply ordinal encoding vs one-hot encoding.</p></li>
-<li><p>Explain strategies to deal with categorical variables with too many categories.</p></li>
-<li><p>Explain <code class="docutils literal notranslate"><span class="pre">handle_unknown=&quot;ignore&quot;</span></code> hyperparameter of <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>’s <code class="docutils literal notranslate"><span class="pre">OneHotEncoder</span></code>.</p></li>
-<li><p>Use the scikit-learn <code class="docutils literal notranslate"><span class="pre">ColumnTransformer</span></code> function to implement preprocessing functions such as <code class="docutils literal notranslate"><span class="pre">MinMaxScaler</span></code> and <code class="docutils literal notranslate"><span class="pre">OneHotEncoder</span></code> to numeric and categorical features simultaneously.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">ColumnTransformer</span></code> to build all our transformations together into one object and use it with <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> pipelines.</p></li>
-<li><p>Explain why text data needs a different treatment than categorical variables.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>’s <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> to encode text data.</p></li>
-<li><p>Explain different hyperparameters of <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code>.</p></li>
-</ul>
-</div>
-<div class="section" id="lecture-6">
-<h3>Lecture 6<a class="headerlink" href="#lecture-6" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Identify when it’s appropriate to apply ordinal encoding vs one-hot encoding.</p></li>
-<li><p>Explain strategies to deal with categorical variables with too many categories.</p></li>
-<li><p>Explain <code class="docutils literal notranslate"><span class="pre">handle_unknown=&quot;ignore&quot;</span></code> hyperparameter of <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>’s <code class="docutils literal notranslate"><span class="pre">OneHotEncoder</span></code>.</p></li>
-<li><p>Use the scikit-learn <code class="docutils literal notranslate"><span class="pre">ColumnTransformer</span></code> function to implement preprocessing functions such as <code class="docutils literal notranslate"><span class="pre">MinMaxScaler</span></code> and <code class="docutils literal notranslate"><span class="pre">OneHotEncoder</span></code> to numeric and categorical features simultaneously.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">ColumnTransformer</span></code> to build all our transformations together into one object and use it with <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> pipelines.</p></li>
-<li><p>Explain why text data needs a different treatment than categorical variables.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>’s <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> to encode text data.</p></li>
-<li><p>Explain different hyperparameters of <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code>.</p></li>
-</ul>
-</div>
-<div class="section" id="lecture-7">
-<h3>Lecture 7<a class="headerlink" href="#lecture-7" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Explain the general intuition behind linear models.</p></li>
-<li><p>Explain the <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">predict</span></code> paradigm of linear models.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>’s <code class="docutils literal notranslate"><span class="pre">LogisticRegression</span></code> classifier.</p>
-<ul>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">fit</span></code>, <code class="docutils literal notranslate"><span class="pre">predict</span></code> and <code class="docutils literal notranslate"><span class="pre">predict_proba</span></code>.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">coef_</span></code> to interpret the model weights.</p></li>
-</ul>
-</li>
-<li><p>Explain the advantages and limitations of linear classifiers.</p></li>
-<li><p>Apply scikit-learn regression model (e.g., Ridge) to regression problems.</p></li>
-<li><p>Relate the Ridge hyperparameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code> to the <code class="docutils literal notranslate"><span class="pre">LogisticRegression</span></code> hyperparameter <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p></li>
-<li><p>Compare logistic regression with naive Bayes.</p></li>
-</ul>
-</div>
-<div class="section" id="lecture-8">
-<h3>Lecture 8<a class="headerlink" href="#lecture-8" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>In the context of supervised learning, form statistical questions  from business questions/objectives.</p></li>
-<li><p>Understand the different forms your client may expect you to communicate results.</p></li>
-<li><p>Explain the general concept of feature selection.</p></li>
-<li><p>Discuss and compare different feature selection methods at a high level.</p></li>
-<li><p>Use sklearn’s implementation of recursive feature elimination (RFE).</p></li>
-<li><p>Implement the forward search algorithm.</p></li>
-</ul>
-</div>
-<div class="section" id="lecture-9">
-<h3>Lecture 9<a class="headerlink" href="#lecture-9" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Explain why accuracy is not always the best metric in ML.</p></li>
-<li><p>Explain components of a confusion matrix.</p></li>
-<li><p>Define precision, recall, and f1-score and use them to evaluate different classifiers.</p></li>
-<li><p>Identify whether there is class imbalance and whether you need to deal with it.</p></li>
-<li><p>Explain <code class="docutils literal notranslate"><span class="pre">class_weight</span></code> and use it to deal with data imbalance.</p></li>
-<li><p>Appropriately select a scoring metric given a regression problem.</p></li>
-<li><p>Interpret and communicate the meanings of different scoring metrics on regression problems. MSE, RMSE, <span class="math notranslate nohighlight">\(R^2\)</span>, MAPE.</p></li>
-<li><p>Apply different scoring functions with <code class="docutils literal notranslate"><span class="pre">cross_validate</span></code>, <code class="docutils literal notranslate"><span class="pre">GridSearchCV</span></code> and <code class="docutils literal notranslate"><span class="pre">RandomizedSearchCV</span></code>.</p></li>
-</ul>
-</div>
-<div class="section" id="lecture-10">
-<h3>Lecture 10<a class="headerlink" href="#lecture-10" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Explain components of a confusion matrix with respect to multi-class classification.</p></li>
-<li><p>Define precision, recall, and f1-score with multi-class classification</p></li>
-<li><p>Carry out multi-class classification using OVR and OVO strategies.</p></li>
-</ul>
 </div>
 </div>
 </div>
@@ -482,8 +337,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="how.html" title="previous page">How: The Course Structure</a>
-    <a class='right-next' id="next-link" href="../lectures/lecture1.html" title="next page"><span class="section-number">1. </span>Intro to ML &amp;  Decision Trees</a>
+    <a class='left-prev' id="prev-link" href="who.html" title="previous page">Who: Hayley Boyce</a>
+    <a class='right-next' id="next-link" href="../lessons/lesson1.html" title="next page"><span class="section-number">1. </span>Visualization Importance</a>
 
         </div>
         

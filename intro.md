@@ -1,4 +1,4 @@
-# Learning Data Visualization using Tableau 
+# Learning Data Visualization with Tableau 
 
 ## Learning Objectives
 
@@ -18,7 +18,7 @@ By the end of the course, learners are expected to be able to:
 | :---:        | :---:  | :---:  | 
 | Hayley Boyce | hayleyfboyce@gmail.com | [https://www.hayleyfboyce.com/](https://www.hayleyfboyce.com/)|
 
-## Class Meetings
+## Lesson Meetings
 
 Details about class meetings will appear here as they become available.
 
@@ -31,18 +31,17 @@ Details about class meetings will appear here as they become available.
 | 5 | Jul/23 9:00am - 11ish  |Jul/22 8:30-10:30PM  |  Dashboard Presentations | |
 ## Class Outline
 
-### Lecture 1 - Introduction to Tableau and Visualization Importance
+### Lesson 1 - Introduction to Tableau and Visualization Importance
 #### Theory 
 - Why do we visualize?  
     - tables vs graphs
     - Improvements and effectiveness
+
+#### Tableau Applications 
 - Introduce Tableau examples
--  History of Tableau
+- History of Tableau
 - Other Tools available, pros and cons
 - Where is visualization situated in the grand scheme of data science? Can visualization be an end-goal?
-
-
-#### Applications 
 - Connecting to csv, excel (differences)
 - Connecting to SQL Server
 - Introduction to data types (Ordinal, Nominal, Quantitative & continuous, discrete, binary, ordered, unordered, datetime, text, etc.)
@@ -62,14 +61,14 @@ Details about class meetings will appear here as they become available.
 - Create a bar chart 
 - Create a scatter plot 
 
-### Lecture 2 - Viz Types and the Tableau Dashboard
+### Lesson 2 - Viz Types and the Tableau Dashboard
 
 #### Theory 
 
 - Common visualization types (bar, line, points, intervals, geo-spatial, chord, etc.)
 - When do we use what?
 - Developing the 6 types of statistical questions (exploratory, descriptive, inferential {frequentist, Bayesian}, causal, mechanistic, predictive)
-#### Applications 
+### Tableau Applications 
 
 - Creating time and geographical plots
 - Dashboards
@@ -84,7 +83,7 @@ Details about class meetings will appear here as they become available.
 - Add to a dashboard
 - Add filters 
 - Add tooltips and change layout
-### Lecture 3 - Exploratory Data Visualization, Asthetics and Trends
+### Lesson 3 - Exploratory Data Visualization, Asthetics and Trends
 
 #### Theory 
 
@@ -93,7 +92,7 @@ Details about class meetings will appear here as they become available.
 - Conclusion and next steps in an EDA  
 - Importance of colour, titles etc. 
 
-#### Applications 
+### Tableau Applications 
 
 - Joining, unions 
 - Titles
@@ -106,7 +105,7 @@ Details about class meetings will appear here as they become available.
 - Adding titles manually? 
 - Adding a trend line 
 
-### Lecture 4 - Good vs Evil, Tableau Stories and Extras
+### Lesson 4 - Good vs Evil, Tableau Stories and Extras
 
 #### Theory 
 
@@ -115,7 +114,7 @@ Details about class meetings will appear here as they become available.
 - A game of Good vs Evil
 - Best practices
 - Story telling 
-#### Applications 
+### Tableau Applications 
 
 - Clicks and hovers 
 - palettes 
@@ -129,7 +128,7 @@ Details about class meetings will appear here as they become available.
 - Create a tableau story 
 
 Next class, take any dataset, make a mini dashboard (What is your question?) then present it in the next class. 
-### Lecture 5 - Dashboard Presentations
+### Lesson 5 - Dashboard Presentations
 
 - Present your dashboards.
 - As a group discuss how each dashboard is effective and contribute potential ideas to enhance them.  

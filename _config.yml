@@ -4,7 +4,7 @@
 title: Data Visualization with Tableau
 author: Hayley Boyce
 email: hayleyfboyce@gmail.com
-logo: logo.png
+logo: imgs/logo.png
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Data Visualization using the tool Tableau.
 
@@ -35,7 +35,7 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: logo.png
+  favicon: imgs/logo.png
   home_page_in_navbar: false
   use_edit_page_button: true
   use_repository_button: true
@@ -47,7 +47,7 @@ parse:
     # including those that are enabled by default!
     - html_image
     - dollarmath
-    
+
 sphinx:
     extra_extensions:
         - jupyterbook_latex
