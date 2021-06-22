@@ -2,32 +2,356 @@
 
 ## What is Tableau 
 
+By now, you'll know that tableau is going to help you make sense of your data but how? 
+
+Tableau is a visualization software used in businesses to create static and dynamic plots that can easily be shared within and across organizations.
+
+This software is used my many different occupations such as: 
+
+- Business Analysts
+- Data Visualization Analysts
+- Data Scientists
+- Software developers
+- Engineers 
+
+to name a few.
+
+Not only do many different occupations use it but companies ranging in size including giants like:
+
+- Amazon,  Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, etc.
+
+<img src="imgs/brands.png"  width = "100%" alt="404 image" />
+
+
 ## Tableau Examples 
+
+I guess it would be nice to know why right? Well Tableau makes some beautiful visualizations.
+
+Here is a dashboard I made for the company "Fresh Prep" that you can explore on [Tableau public](https://public.tableau.com/app/profile/hayley2039/viz/2020-06-02-dummy/DASH-PREDICTIVE-PG2).
+
+<div class='tableauPlaceholder' id='viz1624349477125' style='position: relative'><noscript><a href='#'><img alt='DASH-PREDICTIVE-PG2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99FSXFSFM&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;99FSXFSFM' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99FSXFSFM&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624349477125');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<br>
+
+This took around 5 weeks and note that you are seeing the dashboard using fake data. 
+
+This is just the tip of the iceburg though. 
+
+Let's take a look at a few exceptionally beautiful examples. 
+
+### [bo Burnham INSIDE by Joshua Preston](https://public.tableau.com/app/profile/joshpreston/viz/boburnhaminside/Dashboard1)
+
+<div class='tableauPlaceholder' id='viz1624325919060'  style='width: 400; height: 600; style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;boburnhaminside&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='30%' height='70%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='boburnhaminside&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;boburnhaminside&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624325919060');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='1000px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+### [Demo wealth and banking - Manager view by Ellen Blackburn](https://public.tableau.com/app/profile/ellen4268/viz/Demowealthandbanking-Managerview/BankingDemo-Managerview3)
+<div class='tableauPlaceholder' id='viz1624325942676'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Banking Demo - Manager view (3) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624325942676');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='820px';vizElement.style.height='800px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='820px';vizElement.style.height='702px';} else { vizElement.style.width='100%';vizElement.style.height='3677px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+### [Dinosaur2 by Rahul Patil](https://public.tableau.com/app/profile/rahul7922/viz/Dinosaur2_16228076369930/Dinosaur)
+<div class='tableauPlaceholder' style='width: 700; height: 600; style='position: relative' id='viz1624324606775'><noscript><a href='#'><img alt='Dinosaur ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Dinosaur2_16228076369930&#47;Dinosaur&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dinosaur2_16228076369930&#47;Dinosaur' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Dinosaur2_16228076369930&#47;Dinosaur&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624324606775');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='800px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+### [The History of 6+ Magnitude Earthquakes in years 1900-2013 by Marcin Pielużek](https://public.tableau.com/app/profile/marcin3282/viz/TheHistoryof6MagnitudeEarthquakesinyears1900-2013/Dashboard1)
+
+<div class='tableauPlaceholder' id='viz1624326049667'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='30%' height='60%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624326049667');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='820px';vizElement.style.height='820px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='820px';vizElement.style.height='800px';} else { vizElement.style.width='100%';vizElement.style.height='5027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+### [Piano Classroom by Nir Smilga](https://public.tableau.com/app/profile/nir.smilga/viz/PianoClassroom/PianoClassroom)
+<div class='tableauPlaceholder' id='viz1624326079002'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Piano Classroom ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PianoClassroom&#47;PianoClassroom&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PianoClassroom&#47;PianoClassroom' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PianoClassroom&#47;PianoClassroom&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624326079002');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='820px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+To see more, go to [Tableau's Feature Gallery](https://public.tableau.com/en-us/gallery/?tab=featured&type=featured)
 
 ## History of Tableau 
 
-## Other Tools available, pros and cons
+Tableau was founded in 2003 in California (classic).  
 
-## Where is visualization situated in the grand scheme of data science? Can visualization be an end-goal?
+Recently in 2019, the company was acquired by Salesforce for $15.7 billion just giving a little reference about how valuable this tool is considered. 
 
-## Connecting to 
+Normally this wouldn't be too important but I do want you to know the expertise that this software is built by and why it is credible.
 
-### csv, excel (differences)
-###  Connecting to SQL Server
+There are 3 main characters involved: 
 
-## Introduction to data types (Ordinal, Nominal, Quantitative & continuous, discrete, binary, ordered, unordered, datetime, text, etc.)
+<img src="https://www.tableau.com/sites/default/files/pages/stolte_0.jpg"  width = "45%" alt="404 image" />
 
 
-## Tableau buttons (show me menu, filter and marks)
+**Chris Stolte who is the Co-founder and technical advisor**
+- Phd is Computer Science (from Standford University)
+- Co-inventor on five software patents related to information visualization
+
+<img src="https://www.tableau.com/sites/default/files/pages/hanrahan_1.jpg"  width = "45%" alt="404 image" />
+
+**Pat Hanrahan who is the Co-founder and Chief Scientist** 
+- Founding employee at Pixar Animation Studios
+- Received three Academy Awards for his work in rendering and computer graphics research
+- Professor of Computer Science and Electrical Engineering at Stanford University, teaching computer graphics
+
+<img src="https://www.tableau.com/sites/default/files/pages/chabot_1.jpg"  width = "45%" alt="404 image" />  
+
+**Christian Chabot, who is the Co-founder and chairman** 
+- MBA from Standford University
+- CEO and co-founder of BeeLine Software, a pioneer of next-generation digital mapping technology
+
+
+The short story of this is that Tableau is built by some very talented individuals. 
+
+
+## Other Similar Tools Available
+
+- Microsoft PowerBI (sold as part of a Microsoft package)
+- Looker (Owned by Google)
+- QlikView
+- Domo
+- many, many others...
+
+## Pros and Cons
+
+<img src="imgs/pros_cons.png"  width = "100%" alt="404 image" />
+
+## Version control?
+
+A slight setback if you do not have a Tableau Server. 
+
+<img src="imgs/versions.png"  width = "40%" alt="404 image" />
+
+<img src="imgs/brutal.png"  width = "30%" alt="404 image" />
+
+## Where is visualization situated in the grand scheme of data science? 
+
+- Visualization can absolutely be an end-goal! 
+- Visualization dashboards can used used to target individuals for sales, find short comings in production as well as help identify tends in the data which can help with a prediction component. 
+
+## Getting Started 
+
+First let's open up the application. I'll be using the software installed on my computer.
+
+<img src="imgs/icon.png"  width = "20%" alt="404 image" />
+
+<br>
+<br>
+
+You can also use [Tableau public](https://public.tableau.com/en-us/s/) which is a free version of Tableau that allows you to use most of the software functions. The biggest downside is it does not let you save your work locally.
+
+When you open this, you'll be greated with the home screen. I have a few projects already on the go but you'll have your own as well. 
+
+
+<img src="imgs/home.png"  width = "85%" alt="404 image" />
+
+
+
+
+## Connecting to Data 
+
+Tableau lets you either connect to a database server or upload a file. We are going to discuss one of each. 
+
+
+<img src="imgs/datatypes.png"  width = "85%" alt="404 image" />
+
+### Connecting to MySQL Server
+
+The most occuring database server and the example we are going to show you here is MySQL. 
+
+Clicking ***MySQL*** for the first time results in the following popup.
+
+<img src="imgs/mysql.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/sqlpopup.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+You'll have to follow the instructions [here](https://www.tableau.com/support/drivers?edition=pro&lang=en-us&platform=mac&cpu=64&version=2021.1&__full-version=20211.21.0511.0935#mysql) and make sure you downloaded the 2 necessary packages in order for Tableau to connect. 
+
+Once you've installed them, you'll have to close Tableau and reopen it. 
+
+Now when you click on ***MySQL***, you will have the new popup where you'll have to put the required information to your server. 
+
+<img src="imgs/sqlpopup3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Note that there are MANY other servers that are options. Simply click ***More...*** under the "To a Server" heading and take your pick!
+
+
+<img src="imgs/serveroptions.png"  width = "85%" alt="404 image" />
+
+
+## csv, excel, etc. 
+
+In addition to Tableau connecting to a server, there are a multitude of files types Tableau can upload. The major types are CSVs, excel files, json files etc. to upload, we can simple use the ***More...*** under the "To a File" heading. 
+
+<img src="imgs/more.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+We are going to use a CSV named `street-trees.csv` for our demo. 
+
+Locate your file and click ***Open***.
+
+
+<img src="imgs/picking.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+After you've selected you'll be directed to a new screen where you'll be asked to ***Update now*** or ***Automatically Update***. I generally select the former. 
+
+<img src="imgs/updatenow.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This will now give you a view of the data that the csv has to offer. 
+
+
+
+<img src="imgs/datasee.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This is where you'll see some symbols on top of each column. 
+
+
+<img src="imgs/coltypes.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+What are these? 
+
+## Introduction to data types
+
+Each column in your data will have a data type. This represents the kind of information that is stored in a column. 
+
+Tableau will designate a data type when you connect to a source. 
+
+The data types offered in Tableau are as follows: ([source](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm)). 
+
+<table cellspacing="0" class="TableStyle-Basic-Border" style="margin-left: 0px; margin-right: auto;"><colgroup><col class="TableStyle-Basic-Border-Column-Column1" style="width: auto;"> <col class="TableStyle-Basic-Border-Column-Column1" style="width: auto;"></colgroup><thead><tr class="TableStyle-Basic-Border-Head-Header1"><th class="TableStyle-Basic-Border-HeadE-Column1-Header1">Icon</th> <th class="TableStyle-Basic-Border-HeadD-Column1-Header1">Data type</th></tr></thead> <tbody><tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_text.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Text (string) values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_date.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Date values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_datetime.png"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Date &amp; Time values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_number.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Numerical values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_bool.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Boolean values (relational only)</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/geoicon.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Geographic values (used with maps)</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/Schema_Viewer_Group_Cluster_Discrete_25x20.png"></td> <td class="TableStyle-Basic-Border-BodyA-Column1-Body1">Cluster Group (used with <a href="clustering.htm" target="_blank" class="MCXref xref">Find Clusters in Data<span class="sr-only">(Link opens in a new window)</span></a>)</td></tr></tbody></table>
+
+<br>
+<br>
+
+Note that generally speaking Tableau will guess which type goes with each column but you'll soon find out that Tableau isn't alway right. For example the column `Date Planted` should be changed to a "Date" data type and `Longitude` and `Latitude` should be both be Geographic data types. 
+
+<img src="imgs/3cols.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+The good news is this is easy to fix! 
+
+Let's convert the column `Date Planted` first.     
+Simply click on the icon (ABC in this case) and select the desired type. We are changing this to a date. 
+
+<img src="imgs/colchange.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+To convert the columns `Longitude` and `Latitude` will take 2 steps instead. 
+
+We can't convert it straight to a geographical location since `Longitude` or `Latitude` isn't an option when the column is of type string. 
+
+<img src="imgs/strlong.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+So we need to change it to a "Number (decimal)" first! 
+
+<img src="imgs/geonumb.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Once the column is a number, we can then select the appropriate `Longitude` option under the Geographical Location menu.
+
+<img src="imgs/numblong2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Ta Da! Now we have the appropriate globe icon, meaning the column is now a Geographical data type. 
+
+<img src="imgs/globe.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+We will have to repeat this for the `Latitude` column now. 
+
+
+## Tableau buttons
+
+Let's stop playing with our data for a second and get into the actual visualization screen! 
+
+Clicking on ***Sheet 1*** will take us to a worksheet where we can make our first plot. 
+
+<img src="imgs/sheet1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/worksheethome.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+### Workspace
+
+Tableau has a great [image](https://help.tableau.com/current/pro/desktop/en-us/environment_workspace.htm) that will help you identify what you need in your workspace but here is my version. 
+
+<img src="imgs/workspace.png"  width = "85%" alt="404 image" />
+
+
+<br>
+<br>
+
+
+## Understanding Tableau 
+
+## Dimensions vs Measures 
+
+You'll also notice the columns from our data source are displayed on the side here in 2 categories.
+
+<img src="imgs/mandd.png"  width = "85%" alt="404 image" />
+
+
+<br>
+<br>
+
+mandd
+
+The blue icons above the line are called **Dimensions** and the green icons are called **Measures**. 
+
+Tableau describes Dimensions as "qualitative values (such as names, dates, or geographical data)" whereas Measures are numeric, quantitative values. 
+
+This is important to know since sometimes you'll have to switch a column to be expressed as one or the other which it may not have automatically been defaulted to. 
+
+## Continuous vs Discrete
+
+Blue vs green. 
+
+
 
 ### Worksheets vs dashboards vs story
 
-## Understanding Tableau 
-### Dimensions and Measures
 
-### Discrete vs continuous
 ### Drill down, Hierarchies and Sorting
 
 
 ## Quick viz examples and effectiveness 
+- Bar 
+- Bubble
+- Fast Map
+
 ## Distributing and saving
+
+- Workbook 
+- tbx

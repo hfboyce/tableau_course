@@ -27,11 +27,7 @@
 - part: Activities
   numbered: true
   chapters:
-    - file: activities/practice1
-    - file: activities/practice2
-    - file: activities/practice3
-    - file: activities/practice4
-    - file: activities/practice5
+    - file: activities/activity1
 
 - part: References
   chapters:

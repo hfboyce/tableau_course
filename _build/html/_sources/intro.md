@@ -10,7 +10,7 @@ By the end of the course, learners are expected to be able to:
 4. Use appropriate plots and graphs to effectively comminicate insights from the data with a specified audience.
 5. Create a compelling narrative for your findings using story telling.
 6. Connect Tableau to different data sources.
-7. construct maps, distributions, bar amd line plots using Tableau.
+7. Construct maps, distributions, bar and line plots using Tableau.
 8. Identify the different data fields and data types used by Tableau and when to appropriately apply them to different columns.  
 ## Course Instructor 
 
@@ -24,7 +24,7 @@ Details about class meetings will appear here as they become available.
 
 |  #   | Date - India (IST) | Date - Vancouver (PST) | Topic | Link |
 | :---: | :---: | :---: | :---: | :---:|
-| 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Class 1]()|
+| 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Lesson 1]()|
 | 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Viz Types and the Tableau Dashboard  |  | 
 | 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Exploratory Data Visualization, Asthetics and Trends |  | 
 | 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  |  | 
