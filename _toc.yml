@@ -25,7 +25,7 @@
     - file: lessons/tableau5
 
 - part: Activities
-  numbered: true
+  numbered: false
   chapters:
     - file: activities/activity1
 
