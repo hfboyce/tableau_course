@@ -7,12 +7,13 @@ By the end of the course, learners are expected to be able to:
 1. Distinguish between good visualizations vs bad visualizations.
 2. Explain how visualizations are important to the data analysis process. 
 3. Conduct full exploratory data analysis including visualizations. 
-4. Use appropriate plots and graphs to effectively comminicate insights from the data with a specified audience.
-5. Create a compelling narrative for your findings using story telling.
+4. Use appropriate plots and graphs to effectively communicate insights from the data with a specified audience.
+5. Create a compelling narrative for your findings using storytelling.
 6. Connect Tableau to different data sources.
 7. Construct maps, distributions, bar and line plots using Tableau.
 8. Identify the different data fields and data types used by Tableau and when to appropriately apply them to different columns.  
-## Course Instructor 
+
+## Class Instructor 
 
 | Name         |  email | website |
 | :---:        | :---:  | :---:  | 
@@ -41,10 +42,10 @@ Details about class meetings will appear here as they become available.
 - Introduce Tableau examples
 - History of Tableau
 - Other Tools available, pros and cons
-- Where is visualization situated in the grand scheme of data science? Can visualization be an end-goal?
+- Where is visualization situated in the grand scheme of data science? Can visualization be an end goal?
 - Connecting to csv, excel (differences)
 - Connecting to SQL Server
-- Introduction to data types (Ordinal, Nominal, Quantitative & continuous, discrete, binary, ordered, unordered, datetime, text, etc.)
+- Introduction to data types (Ordinal, Nominal, Quantitative & continuous, discrete, binary, ordered, unordered, DateTime, text, etc.)
 - Tableau buttons (show me menu, filter and marks)
 - Dimensions and Measures
 - 	Drill down, Hierarchies and Sorting
@@ -76,7 +77,7 @@ Details about class meetings will appear here as they become available.
 - Filtering 
 - Tooltips 
 - layouts 
-- Forcasting
+- Forecasting
 
 #### Exercise 
 
@@ -84,9 +85,9 @@ Details about class meetings will appear here as they become available.
 - Create a time series
 - Add to a dashboard
 - Add filters 
-- Add tooltips and change layout
+- Add tooltips and change the layout
 
-### Lesson 3 - Exploratory Data Visualization, Asthetics and Trends
+### Lesson 3 - Exploratory Data Visualization, Aesthetics and Trends
 
 #### Theory 
 
@@ -102,7 +103,7 @@ Details about class meetings will appear here as they become available.
 - Joining, unions 
 - Titles
 - Trend lines
-- Forcasting 
+- Forecasting 
 
 #### Exercise
 - Combine 2 dataframes
@@ -118,7 +119,7 @@ Details about class meetings will appear here as they become available.
 - Common pitfalls (8-10 examples)
 - A game of Good vs Evil
 - Best practices
-- Story telling 
+- Storytelling 
 ### Tableau Applications 
 
 - Clicks and hovers 
