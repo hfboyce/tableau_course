@@ -106,7 +106,7 @@ The short story of this is that Tableau is built by some very talented individua
 
 <img src="imgs/pros_cons.png"  width = "100%" alt="404 image" />
 
-## Version control?
+## Version Control?
 
 A slight setback if you do not have a Tableau Server. 
 
@@ -309,47 +309,316 @@ Tableau has a great [image](https://help.tableau.com/current/pro/desktop/en-us/e
 
 <img src="imgs/workspace.png"  width = "85%" alt="404 image" />
 
+<br>
+<br>
+
+<img src="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png"  width = "10%" alt="404 image" /> : On the top left of the workspace you'll see this symbol, this will take you back to the home page that displays all your projects. 
+
+
+<p style="font-size:30px; color:#9929BD">Toolbar</p>
+
+I'm not showing all the options but the ones you'll use often. 
+
+<img src="imgs/toolbar3.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
+<p style="font-size:30px; color:#D54A7A">Shelves</p>
 
-## Understanding Tableau 
 
-## Dimensions vs Measures 
+This is essentially you x and y axis and where you can designate one of your data source's columns. 
 
-You'll also notice the columns from our data source are displayed on the side here in 2 categories.
+<p style="font-size:30px; color:#77BB41">Cards</p>
+
+Assigning columns to cards can build on your visualization by encoding marks with color, size, shape, text, and details like hovers.
+
+
+<p style="font-size:30px; color:#C4BC00">Viz Area</p>
+
+Also known as the **"View"**, this is exactly what it sounds like; this is where your visualization will be displayed. 
+
+
+<p style="font-size:30px; color:#3A88FE">Show Me Window</p>
+
+This is going to be a really useful window when you first start using Tableau. If you have already selected columns in the any of the shelves or cards, Tableau will give you the option of several types of graphs that could be appropriate for the columns selected. It will also highlight the graph type that best matches the data.
+
+
+<p style="font-size:30px; color:#00FDFF">Data or Analytics Pane</p>
+
+This is going to be be a busy pane for you. Here is where all your data columns are displayed. Your columns are split into 2 different types (with the possibility of more) and 2 different colours. What do they mean though?!
+
+## Data Pane 
+
+### Dimensions vs Measures 
+
+There is a faint line that splits the columns from the data source in 2 categories.
+- **Dimensions** and,
+- **Measures**
 
 <img src="imgs/mandd.png"  width = "85%" alt="404 image" />
 
+<br>
+<br>
+
+Tableau describes **Dimensions** as "qualitative values (such as names, dates, or geographical data)" whereas **Measures** are numeric, quantitative values. 
+
+This is important to know since sometimes you'll have to switch a column to be expressed as one or the other which it may not have automatically been defaulted to.
+
+## Continuous vs Discrete columns
+
+<img src="imgs/greenblue.png"  width = "30%" alt="404 image" />
 
 <br>
 <br>
 
-mandd
-
-The blue icons above the line are called **Dimensions** and the green icons are called **Measures**. 
-
-Tableau describes Dimensions as "qualitative values (such as names, dates, or geographical data)" whereas Measures are numeric, quantitative values. 
-
-This is important to know since sometimes you'll have to switch a column to be expressed as one or the other which it may not have automatically been defaulted to. 
-
-## Continuous vs Discrete
-
-Blue vs green. 
+Have you notices there are 2 different colours of icons? 
 
 
+<span style="color:#48A67F">Green</span> measures and dimensions means the field (column) is being expressed in a continuous manner.
+Continous data is data that can take on any possible value. An example would be a person's height or the time it takes to microwave popcorn. 
 
-### Worksheets vs dashboards vs story
+<span style="color:#5794AD; page-break-inside: avoid;">Blue</span> measures and dimensions means the field (column) is being expressed discretely. 
+Discrete data can only take certain values. Examples include number of employees at a company. We can't really have half an employee, would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis. 
+
+### Calculations, Sets, Parameters
+You'll possible have to make other data types besides dimensions and measures such as 
+
+Calculation: These are values or calculations from existing columns that are not currently in your data source. 
+You can create these new fields using a formula, calculating the values and saving them as part of your data.
+
+Sets: A section of the data that you define from a column from your data source and a desired criteria. 
+For example you may want a subsection of the data that doesn't include retail customers and only corporate customers. 
+
+Parameters: These are values that can be used as placeholders in formulas for calculations and filters.
+
+We may touch on later on, but for now, let's move on. 
 
 
-### Drill down, Hierarchies and Sorting
+## Worksheets vs Dashboards vs Story
+
+<img src="imgs/workdashstory.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<p style="font-size:30px; color:#D54A7A">Worksheet</p>
 
 
-## Quick viz examples and effectiveness 
-- Bar 
-- Bubble
-- Fast Map
+<img src="imgs/ex_worksheet.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This is where you create each individual visualization. You create 1 viz per worksheet. 
+
+<p style="font-size:30px; color:#9929BD">Dashboard</p>
+
+
+<img src="imgs/ex_dash.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+In a dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user. 
+
+You can only add worksheets that have been already made. That means that if you want to add a graph to a dashboard, you have to first make it from a worksheet. 
+
+It's likely as well that you'll have more worksheets and graph than you want to place in your dashboard. We wil talk a little bit more about this in our section on Exploratory Data Visualization. 
+
+<p style="font-size:30px; color:#00C7FC">Story</p>
+
+
+<img src="https://help.tableau.com/current/pro/desktop/en-us/Img/story_earthquake6.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+A sequence of worksheets or dashboards that work together to tell a story.
+
+You can create stories to tell a data narrative, provide context, demonstrate how decisions relate to outcomes, or to simply make a compelling case.
+
+Each individual sheet in a story is called a story point. 
+
+We will discuss more about the importance of story telling later on in this course, but this will likely be one of the tabs you use less frequently. 
+
+
+## Making some Viz! (It's about time!)
+
+### Bar
+
+Our question that we want to answer with this plot is ***how many trees there are in each Vancouver neighbourhood?*** 
+
+**Step by Step Instructions**
+
+
+1\. We are going to drag from the left-hand side under the heading "Tables" the column named `Neighbourhood Name` to the **Column** shelf.
+
+<img src="imgs/columns_names.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. We are interested in the count of the trees in each neighbourhood. We don't have a count of trees as a column, but since the column `Tree Id` is unique (that means that every row in the data has a different value for `Tree Id`) we can use it to count the rows (you can use multiple different columns here though). Let's drag the `Tree Id` column from the left of the screen to the **Rows** shelf.
+
+<img src="imgs/treeid_rows.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+3\. We need to convert this `Tree Id` variable to a "Measure" specifically a "Count" so that we get 1 value for each neighbourhood. We can do this by right-clicking on it and selecting **Count**.
+
+<img src="imgs/count_tree.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Voila! A bar chart!
+
+<img src="imgs/bartrees.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+4\. Let's change the colour. Go to the **Marks** card and select a new colour.
+
+<img src="imgs/tree_colour.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+5\. Let's edit our y-axis label. Right-click on the axis and click "Edit Axis..."
+
+<img src="imgs/ylabel_tree.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+ Under "Axis", you can edit your axis "Title".
+ 
+ <img src="imgs/labely.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+You can edit the title of the graph in two ways;
+
+- By editing the title or...
+
+ <img src="imgs/title1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+- By editing the sheet name by double-clicking the sheet at the bottom. (I prefer this way)
+
+<img src="imgs/title2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/title3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+6\. You can sort the bars by clicking the icon beside the axis title or the icon in the toolbar. 
+
+<img src="imgs/sorttrees.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+7\. Let's convert it to a verticle bar chart. On the toolbar right above "Columns" you'll see a "Swap rows and columns" icon. This transposes your graph.
+
+<img src="imgs/transposetrees.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+## Bubble
+
+To answer the same question we could also have done a bubble chart.  
+
+**Step by Step Instructions**
+
+
+1\. 
+
+<img src="imgs/bubble1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. 
+
+<img src="imgs/bubble2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+3\. 
+
+<img src="imgs/bubble3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+4\.
+
+<img src="imgs/bubble4.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+5\. 
+
+<img src="imgs/bubble5.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+ 
+
+6\.  
+
+<img src="imgs/bubble6.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+7\. 
+
+<img src="imgs/bubble7.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+7\. 
+
+<img src="imgs/bubble8.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+##
+
+We could also do a "highlight table" to answer this question as well. 
+
+**Step by Step Instructions**
+
+1\.
+
+<img src="imgs/tabletrees.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+## Drill down, Hierarchies (if time)
+
 
 ## Distributing and saving
 

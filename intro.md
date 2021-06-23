@@ -68,13 +68,15 @@ Details about class meetings will appear here as they become available.
 - Common visualization types (bar, line, points, intervals, geo-spatial, chord, etc.)
 - When do we use what?
 - Developing the 6 types of statistical questions (exploratory, descriptive, inferential {frequentist, Bayesian}, causal, mechanistic, predictive)
-### Tableau Applications 
 
+### Tableau Applications 
+- Calculations 
 - Creating time and geographical plots
 - Dashboards
 - Filtering 
 - Tooltips 
 - layouts 
+- Forcasting
 
 #### Exercise 
 
@@ -83,6 +85,7 @@ Details about class meetings will appear here as they become available.
 - Add to a dashboard
 - Add filters 
 - Add tooltips and change layout
+
 ### Lesson 3 - Exploratory Data Visualization, Asthetics and Trends
 
 #### Theory 
@@ -92,8 +95,10 @@ Details about class meetings will appear here as they become available.
 - Conclusion and next steps in an EDA  
 - Importance of colour, titles etc. 
 
+
 ### Tableau Applications 
 
+- Not every EDA will make it in the Dashboard
 - Joining, unions 
 - Titles
 - Trend lines
