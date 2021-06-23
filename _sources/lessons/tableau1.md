@@ -6,7 +6,7 @@ By now, you'll know that tableau is going to help you make sense of your data bu
 
 Tableau is a visualization software used in businesses to create static and dynamic plots that can easily be shared within and across organizations.
 
-This software is used my many different occupations such as: 
+This software is used by many different occupations such as: 
 
 - Business Analysts
 - Data Visualization Analysts
@@ -25,7 +25,7 @@ Not only do many different occupations use it but companies ranging in size incl
 
 ## Tableau Examples 
 
-I guess it would be nice to know why right? Well Tableau makes some beautiful visualizations.
+I guess it would be nice to know why right? Well, Tableau makes some beautiful visualizations.
 
 Here is a dashboard I made for the company "Fresh Prep" that you can explore on [Tableau public](https://public.tableau.com/app/profile/hayley2039/viz/2020-06-02-dummy/DASH-PREDICTIVE-PG2).
 
@@ -35,7 +35,7 @@ Here is a dashboard I made for the company "Fresh Prep" that you can explore on 
 
 This took around 5 weeks and note that you are seeing the dashboard using fake data. 
 
-This is just the tip of the iceburg though. 
+This is just the tip of the iceberg though. 
 
 Let's take a look at a few exceptionally beautiful examples. 
 
@@ -74,13 +74,13 @@ There are 3 main characters involved:
 
 
 **Chris Stolte who is the Co-founder and technical advisor**
-- Phd is Computer Science (from Standford University)
+- Ph.D. in Computer Science (from Standford University)
 - Co-inventor on five software patents related to information visualization
 
 <img src="https://www.tableau.com/sites/default/files/pages/hanrahan_1.jpg"  width = "45%" alt="404 image" />
 
 **Pat Hanrahan who is the Co-founder and Chief Scientist** 
-- Founding employee at Pixar Animation Studios
+- A founding employee at Pixar Animation Studios
 - Received three Academy Awards for his work in rendering and computer graphics research
 - Professor of Computer Science and Electrical Engineering at Stanford University, teaching computer graphics
 
@@ -117,11 +117,31 @@ A slight setback if you do not have a Tableau Server.
 ## Where is visualization situated in the grand scheme of data science? 
 
 - Visualization can absolutely be an end-goal! 
-- Visualization dashboards can used used to target individuals for sales, find short comings in production as well as help identify tends in the data which can help with a prediction component. 
+- Visualization dashboards can be used used to target individuals for sales, find shortcomings in production, as well as help, identify trends in the data which can help with a prediction component. 
+
+## Quick Quiz
+
+1. What must you have in order for us to have some form of version control beyond saving files with different names?
+2. Who is Tableau's Co-founder and technical advisor?
+3. Name me a company that uses Tableau.
+4. What Visualization tool was acquired by Google?
+5. **True or False:** You must have some coding experience to use Tableau. 
+
+
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. Tableau Server
+2. Chris Stolte
+3. Amazon, Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, Nokia Dell, Lenovo, Cisco, Forbes, eBay, Intel, Ferrari, Deloitte etc. 
+4. Looker
+5. False
+
+``` //-->
 
 ## Getting Started 
 
-First let's open up the application. I'll be using the software installed on my computer.
+First, let's open up the application. I'll be using the software installed on my computer.
 
 <img src="imgs/icon.png"  width = "20%" alt="404 image" />
 
@@ -130,7 +150,7 @@ First let's open up the application. I'll be using the software installed on my 
 
 You can also use [Tableau public](https://public.tableau.com/en-us/s/) which is a free version of Tableau that allows you to use most of the software functions. The biggest downside is it does not let you save your work locally.
 
-When you open this, you'll be greated with the home screen. I have a few projects already on the go but you'll have your own as well. 
+When you open it, you'll be greeted with the home screen. I have a few projects already on the go but you'll have your own as well. 
 
 
 <img src="imgs/home.png"  width = "85%" alt="404 image" />
@@ -147,7 +167,7 @@ Tableau lets you either connect to a database server or upload a file. We are go
 
 ### Connecting to MySQL Server
 
-The most occuring database server and the example we are going to show you here is MySQL. 
+The most occurring database server and the example we are going to show you here is MySQL. 
 
 Clicking ***MySQL*** for the first time results in the following popup.
 
@@ -180,7 +200,7 @@ Note that there are MANY other servers that are options. Simply click ***More...
 
 ## csv, excel, etc. 
 
-In addition to Tableau connecting to a server, there are a multitude of files types Tableau can upload. The major types are CSVs, excel files, json files etc. to upload, we can simple use the ***More...*** under the "To a File" heading. 
+In addition to Tableau connecting to a server, there are a multitude of file types Tableau can upload. The major types are CSVs, excel files, JSON files etc. to upload, we can simply use the ***More...*** under the "To a File" heading. 
 
 <img src="imgs/more.png"  width = "85%" alt="404 image" />
 
@@ -236,7 +256,7 @@ The data types offered in Tableau are as follows: ([source](https://help.tableau
 <br>
 <br>
 
-Note that generally speaking Tableau will guess which type goes with each column but you'll soon find out that Tableau isn't alway right. For example the column `Date Planted` should be changed to a "Date" data type and `Longitude` and `Latitude` should be both be Geographic data types. 
+Note that generally speaking Tableau will guess which type goes with each column but you'll soon find out that Tableau isn't always right. For example, the column `Date Planted` should be changed to a "Date" data type and `Longitude` and `Latitude` should be both be Geographic data types. 
 
 <img src="imgs/3cols.png"  width = "85%" alt="404 image" />
 
@@ -276,7 +296,7 @@ Once the column is a number, we can then select the appropriate `Longitude` opti
 <br>
 <br>
 
-Ta Da! Now we have the appropriate globe icon, meaning the column is now a Geographical data type. 
+Ta-Da! Now we have the appropriate globe icon, meaning the column is now a Geographical data type. 
 
 <img src="imgs/globe.png"  width = "85%" alt="404 image" />
 
@@ -287,7 +307,7 @@ Ta Da! Now we have the appropriate globe icon, meaning the column is now a Geogr
 We will have to repeat this for the `Latitude` column now. 
 
 
-## Tableau buttons
+## Tableau Setup
 
 Let's stop playing with our data for a second and get into the actual visualization screen! 
 
@@ -312,7 +332,7 @@ Tableau has a great [image](https://help.tableau.com/current/pro/desktop/en-us/e
 <br>
 <br>
 
-<img src="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png"  width = "10%" alt="404 image" /> : On the top left of the workspace you'll see this symbol, this will take you back to the home page that displays all your projects. 
+<img src="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png"  width = "3%" alt="404 image" /> : On the top left of the workspace you'll see this symbol, this will take you back to the home page that displays all your projects. 
 
 
 <p style="font-size:30px; color:#9929BD">Toolbar</p>
@@ -327,11 +347,11 @@ I'm not showing all the options but the ones you'll use often.
 <p style="font-size:30px; color:#D54A7A">Shelves</p>
 
 
-This is essentially you x and y axis and where you can designate one of your data source's columns. 
+This is essentially your x and y-axis and where you can designate one of your data source's columns. 
 
 <p style="font-size:30px; color:#77BB41">Cards</p>
 
-Assigning columns to cards can build on your visualization by encoding marks with color, size, shape, text, and details like hovers.
+Assigning columns to cards can build on your visualization by encoding marks with colour, size, shape, text, and details like hovers.
 
 
 <p style="font-size:30px; color:#C4BC00">Viz Area</p>
@@ -341,18 +361,18 @@ Also known as the **"View"**, this is exactly what it sounds like; this is where
 
 <p style="font-size:30px; color:#3A88FE">Show Me Window</p>
 
-This is going to be a really useful window when you first start using Tableau. If you have already selected columns in the any of the shelves or cards, Tableau will give you the option of several types of graphs that could be appropriate for the columns selected. It will also highlight the graph type that best matches the data.
+This is going to be a really useful window when you first start using Tableau. If you have already selected columns in any of the shelves or cards, Tableau will give you the option of several types of graphs that could be appropriate for the columns selected. It will also highlight the graph type that best matches the data.
 
 
 <p style="font-size:30px; color:#00FDFF">Data or Analytics Pane</p>
 
-This is going to be be a busy pane for you. Here is where all your data columns are displayed. Your columns are split into 2 different types (with the possibility of more) and 2 different colours. What do they mean though?!
+This is going to be a busy pane for you. Here is where all your data columns are displayed. Your columns are split into 2 different types (with the possibility of more) and 2 different colours. What do they mean though?!
 
-## Data Pane 
+### Data Pane 
 
-### Dimensions vs Measures 
+#### Dimensions vs Measures 
 
-There is a faint line that splits the columns from the data source in 2 categories.
+There is a faint line that splits the columns from the data source into 2 categories.
 - **Dimensions** and,
 - **Measures**
 
@@ -365,7 +385,7 @@ Tableau describes **Dimensions** as "qualitative values (such as names, dates, o
 
 This is important to know since sometimes you'll have to switch a column to be expressed as one or the other which it may not have automatically been defaulted to.
 
-## Continuous vs Discrete columns
+#### Continuous vs Discrete columns
 
 <img src="imgs/greenblue.png"  width = "30%" alt="404 image" />
 
@@ -376,10 +396,10 @@ Have you notices there are 2 different colours of icons?
 
 
 <span style="color:#48A67F">Green</span> measures and dimensions means the field (column) is being expressed in a continuous manner.
-Continous data is data that can take on any possible value. An example would be a person's height or the time it takes to microwave popcorn. 
+Continuous data is data that can take on any possible value. An example would be a person's height or the time it takes to microwave popcorn. 
 
 <span style="color:#5794AD; page-break-inside: avoid;">Blue</span> measures and dimensions means the field (column) is being expressed discretely. 
-Discrete data can only take certain values. Examples include number of employees at a company. We can't really have half an employee, would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis. 
+Discrete data can only take certain values. Examples include the number of employees at a company. We can't really have half an employee, would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis. 
 
 ### Calculations, Sets, Parameters
 You'll possible have to make other data types besides dimensions and measures such as 
@@ -388,14 +408,14 @@ Calculation: These are values or calculations from existing columns that are not
 You can create these new fields using a formula, calculating the values and saving them as part of your data.
 
 Sets: A section of the data that you define from a column from your data source and a desired criteria. 
-For example you may want a subsection of the data that doesn't include retail customers and only corporate customers. 
+For example, you may want a subsection of the data that doesn't include retail customers and only corporate customers. 
 
 Parameters: These are values that can be used as placeholders in formulas for calculations and filters.
 
-We may touch on later on, but for now, let's move on. 
+We may touch on this later on, but for now, let's move on. 
 
 
-## Worksheets vs Dashboards vs Story
+### Worksheets vs Dashboards vs Story
 
 <img src="imgs/workdashstory.png"  width = "85%" alt="404 image" />
 
@@ -420,11 +440,11 @@ This is where you create each individual visualization. You create 1 viz per wor
 <br>
 <br>
 
-In a dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user. 
+A dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user. 
 
 You can only add worksheets that have been already made. That means that if you want to add a graph to a dashboard, you have to first make it from a worksheet. 
 
-It's likely as well that you'll have more worksheets and graph than you want to place in your dashboard. We wil talk a little bit more about this in our section on Exploratory Data Visualization. 
+It's likely as well that you'll have more worksheets and graphs than you want to place in your dashboard. We will talk a little bit more about this in our section on Exploratory Data Visualization. 
 
 <p style="font-size:30px; color:#00C7FC">Story</p>
 
@@ -436,12 +456,31 @@ It's likely as well that you'll have more worksheets and graph than you want to 
 
 A sequence of worksheets or dashboards that work together to tell a story.
 
-You can create stories to tell a data narrative, provide context, demonstrate how decisions relate to outcomes, or to simply make a compelling case.
+You can create stories to tell a data narrative, provide context, demonstrate how decisions relate to outcomes, or simply make a compelling case.
 
 Each individual sheet in a story is called a story point. 
 
-We will discuss more about the importance of story telling later on in this course, but this will likely be one of the tabs you use less frequently. 
+We will discuss more on the importance of storytelling later on in this course, but this will likely be one of the tabs you use less frequently. 
 
+## Quick Quiz
+
+1. **True or False:** Connecting to a MySQL server is relatively simple. 
+2. Tableau sorts data columns into how many different data types?
+3. Which of the following is not part of the Tableau Workspace: Toolbar, Cards, Data Pane, Calculation Keys, Show Me Window. 
+4. What is the difference between Dimensions and Measures? 
+5. **True or False:** Columns that are blue are continuous data, whereas columns in green are discrete. 
+
+
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. 7
+3. Calculation Keys
+4. Dimensions are qualitative fields and Measures and quantitative fields. 
+5. False
+
+``` //-->
 
 ## Making some Viz! (It's about time!)
 
@@ -459,7 +498,7 @@ Our question that we want to answer with this plot is ***how many trees there ar
 <br>
 <br>
 
-2\. We are interested in the count of the trees in each neighbourhood. We don't have a count of trees as a column, but since the column `Tree Id` is unique (that means that every row in the data has a different value for `Tree Id`) we can use it to count the rows (you can use multiple different columns here though). Let's drag the `Tree Id` column from the left of the screen to the **Rows** shelf.
+2\. We are interested in the count of trees in each neighbourhood. We don't have a count of trees as a column, but since the column `Tree Id` is unique (that means that every row in the data has a different value for `Tree Id`) we can use it to count the rows (you can use multiple different columns here though). Let's drag the `Tree Id` column from the left of the screen to the **Rows** shelf.
 
 <img src="imgs/treeid_rows.png"  width = "85%" alt="404 image" />
 
@@ -530,50 +569,55 @@ You can edit the title of the graph in two ways;
 <br>
 <br>
 
-7\. Let's convert it to a verticle bar chart. On the toolbar right above "Columns" you'll see a "Swap rows and columns" icon. This transposes your graph.
+7\. Let's convert it to a verticle bar chart. On the toolbar right above **Columns** you'll see a *Swap rows and columns** icon. This transposes your graph.
 
 <img src="imgs/transposetrees.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-## Bubble
+### Bubble
 
 To answer the same question we could also have done a bubble chart.  
 
 **Step by Step Instructions**
 
 
-1\. 
+1\. Click on the **Show Me** in the top right corner of the workspace.
 
 <img src="imgs/bubble1.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-2\. 
+2\. This will drop down other suggested plots for the measures and dimensions we have dragged to the **Columns** and **Rows** shelves.
+
+Select the bubble diagram that's at the bottom right of the **Show Me** menu.
 
 <img src="imgs/bubble2.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-3\. 
+And Voila! Bubble plot! Easy as that! 
 
 <img src="imgs/bubble3.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
+It would be nice to add some colour no? 
 
-4\.
+4\. To add colour to a field, we can drag it to the colour option on the **Marks** card. Here we are dragging `Neighbourhood Name`.
 
 <img src="imgs/bubble4.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-5\. 
+This was a problematic choice though, there seem to be duplicate colours and it's not an effective colour channel. 
+
+5\. Let's remove the `Neighbourhood Name` from the colour channel by right-clicking it in the **Marks** card and selecting **Remove** from the dropdown menu.
 
 <img src="imgs/bubble5.png"  width = "85%" alt="404 image" />
 
@@ -582,45 +626,203 @@ To answer the same question we could also have done a bubble chart.
 
  
 
-6\.  
+6\.  Let's instead drag the `Tree Id` column to the colour channel. 
 
 <img src="imgs/bubble6.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-7\. 
+Now, this looks bad but we want the count of trees to be represented by a colour scale. 
+
+7\. We can change this by right-clicking `Tree Id` in the **Marks** card and converting it to a **Count** Measure. 
 
 <img src="imgs/bubble7.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-7\. 
+8\. Now we can see that the number of trees in each neighbourhood is not only represented by the size of each bubble but also the colour.  The scale on the right side of the plot gives us an idea of how the colour translate to quantity.  
 
-<img src="imgs/bubble8.png"  width = "85%" alt="404 image" />
+<img src="imgs/bubble8b.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
 
-##
+### Highlight Table
 
 We could also do a "highlight table" to answer this question as well. 
 
 **Step by Step Instructions**
 
-1\.
+1\. Let's go back to the **Show Me** menu and click the highlight table option. 
 
 <img src="imgs/tabletrees.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-## Drill down, Hierarchies (if time)
+And we are done! That's all 1 step needed! 
+
+### Making a New Worksheet
+
+To create a new viz we need to make a new worksheet. We can do this in 2 ways: 
+
+1. by clicking the dropdown menu on the icon in the toolbar and selecting **New Worksheet**
+
+2. Clicking the icon at the bottom left of the workspace. 
 
 
-## Distributing and saving
+<img src="imgs/new_wb.png"  width = "85%" alt="404 image" />
 
-- Workbook 
-- tbx
+<br>
+<br>
+
+### Maps 
+
+Maps seem to be pretty intimidating as they can be complex and provide a lot of information in a small space. Luckily for us, maps can be quick friendly and easy to do with Tableau. 
+
+**Step by Step Instructions** 
+1\. Drag `Longitude` to the **Columns** shelf.
+
+<img src="imgs/map1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. Drag `Latitude` to the **Rows** shelf.
+
+<img src="imgs/map2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+And you have made a map with all the trees! 
+
+```{warning}
+This won't work so easily if you have not specified a geographical datatype for the columns. 
+```
+
+```{admonition} Tip!
+:class: tip
+If you don't have latitude and longitude columns, you may still be able to make a map if you have any of the following geographical data types that you can designate to the column. 
+- Airport	
+- US telephone Area Code 
+- U.S. Core Based Statistical Areas (CBSA)
+- Country/Region
+- County (U.S. counties, French départements, German kriese, etc)
+- NUTS Europe
+- State/Province	
+- Code/Postcode
+```
+
+3. Let's tidy this up a bit though. Decrease the size of your markers by clicking the **Size** icon under the **Marks** card.  
+
+<img src="imgs/map3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+4. Right-click the map and select **Map Layers...** from the dropdown. This gives you the ability to customize the appearance of your map. 
+
+<img src="imgs/map4.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+6\. Change the map *Style* to **Normal**. 
+
+<img src="imgs/map5.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+7\. Add opacity to the map with **Washout**.
+
+<img src="imgs/map6.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+8\. Add different Map Layers such as **Streets, Highways, Routes** and **Zip Code Boundaries**.
+
+<img src="imgs/map7.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+    
+9\. Add a title like you've done before and you've got a functioning map in < 5 mins. 
+
+<img src="imgs/map8.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+
+### Time Series 
+
+We are now interested in the number of trees planted and the date they were planted so our two columns of interest are `date_plated` and `tree_id`.
+
+**Step by Step Instructions**
+1. Drag the `date_planted` variable to the "**Columns**" toolbar and again the `tree_id` to "**Rows**". We are again interested in the number of trees planted at selected dates so once again we want to transform this to a "**Count**" type "**Measure**".  
+
+
+1. Since `date_planted' is a continuous variable, it's a good idea to right-click and transform this into a **Continuous** Dimension. 
+
+
+1. This automatically generates the number of trees planted each year (but there are null values!)
+1. We can change this to:
+    - month - discrete (Top month choice when right-clicking)  which aggregates months together for all years 
+    - month - continuous (Bottom month choice when right-clicking) which will make a sequential plot.
+1. Combining scatterplot onto our line graph by adding an identical `tree_id` to rows and converting it to a counting measurement again. At first, we should get 2 graphs on top of each other. We can right-click one of them and select "**Dual Axis**".
+This will superimpose one on another with a left and a right axis title. We can hide the one on the right by right-clicking the axis and unticking the "**Show Header**" option. 
+1. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the "**All**" tab under the "**Marks**" card on the right.      
+1. Don't forget to give it a title and edit the y-axis label as we did earlier.  
+
+_💡Tableau also has a forecasting option. We can obtain it by right-clicking the plot and selecting "**Forcast**" then "**Show Forcast**". You can customize this by right-clicking again and Selecting "**Forcast Options ..**". I am going to stop here because this is NOT recommended. It's here but we can do better than this._
+
+Make a new worksheet by going to the menu bar under "**Worksheet**" and clicking "**New Worksheet**" (Or command T on a Macbook).  
+
+### Drill down, Hierarchies (if time)
+
+## Distributing and Saving
+
+### Workbook (`.twb`)
+
+Tableau by default will save all your sheets and dashboards as a workbook, a `.twb` file. 
+
+This does require you to connect to the data source locally. 
+
+If you send this to colleagues, you will need to send them the data you used, along with any images or additional files you used in your dashboard or worksheets. 
+
+### Packaged Workbook (`.twbx`)
+
+Instead, you could save your work as a packaged workbook where now all of the files and data sources used are contained in the space. The extension for this file type is `.twbx`. 
+
+That means the workbook is no longer linked to the original data source or images. 
+
+## Quick Quiz
+
+1. Where can we find the button/tool necessary to sort your plot?
+2. What is one way we can convert a dimension to a measure? 
+3. **True or False:** When using the "Show me" window and changing the graph to a different type, the fields can change shelves and/or from dimensions or measures. 
+4. **True or False:** It's important that every plot has a dimension/measure in the Columns and Rows shelves.  
+5. Which file extension does not save the data in the workbook?
+
+
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. In the toolbar or by clicking the sort icon on the axis of the plot.
+2. Right-clicking and selecting the appropriate statistic. We can also right-click and convert them in the Data pane. 
+3. True
+4. False
+5. `.tbw`
+
+``` //-->
