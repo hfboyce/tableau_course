@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Tableau &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/ftableau2.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/ftableau2.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Introduction to Tableau" />
+<meta property="og:description" content="Introduction to Tableau  What is Tableau  By now, you’ll know that tableau is going to help you make sense of your data but how?  Tableau is a visualization sof" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/ftableau2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/ftableau2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/ftableau2.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-tableau">
+   What is Tableau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tableau-examples">
+   Tableau Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bo-burnham-inside-by-joshua-preston">
+     bo Burnham INSIDE by Joshua Preston
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo-wealth-and-banking-manager-view-by-ellen-blackburn">
+     Demo wealth and banking - Manager view by Ellen Blackburn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dinosaur2-by-rahul-patil">
+     Dinosaur2 by Rahul Patil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-history-of-6-magnitude-earthquakes-in-years-1900-2013-by-marcin-pieluzek">
+     The History of 6+ Magnitude Earthquakes in years 1900-2013 by Marcin Pielużek
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#piano-classroom-by-nir-smilga">
+     Piano Classroom by Nir Smilga
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#history-of-tableau">
+   History of Tableau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-similar-tools-available">
+   Other Similar Tools Available
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pros-and-cons">
+   Pros and Cons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control">
+   Version Control?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-is-visualization-situated-in-the-grand-scheme-of-data-science">
+   Where is visualization situated in the grand scheme of data science?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-to-data">
+   Connecting to Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-to-mysql-server">
+     Connecting to MySQL Server
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv-excel-etc">
+   csv, excel, etc.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-data-types">
+   Introduction to data types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tableau-setup">
+   Tableau Setup
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#workspace">
+     Workspace
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-pane">
+     Data Pane
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dimensions-vs-measures">
+       Dimensions vs Measures
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#continuous-vs-discrete-columns">
+       Continuous vs Discrete columns
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculations-sets-parameters">
+     Calculations, Sets, Parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worksheets-vs-dashboards-vs-story">
+     Worksheets vs Dashboards vs Story
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-some-viz-it-s-about-time">
+   Making some Viz! (It’s about time!)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bar">
+     Bar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bubble">
+     Bubble
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlight-table">
+     Highlight Table
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-a-new-worksheet">
+     Making a New Worksheet
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aggregation-plots">
+   Aggregation Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drill-down-and-hiearcha-data">
+   Drill Down and Hiearcha data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maps">
+     Maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distributing-and-saving">
+   Distributing and Saving
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#workbook-twb">
+     Workbook (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .twb
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#packaged-workbook-twbx">
+     Packaged Workbook (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .twbx
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Quick Quiz
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-tableau">
+<h1>Introduction to Tableau<a class="headerlink" href="#introduction-to-tableau" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-tableau">
+<h2>What is Tableau<a class="headerlink" href="#what-is-tableau" title="Permalink to this headline">¶</a></h2>
+<p>By now, you’ll know that tableau is going to help you make sense of your data but how?</p>
+<p>Tableau is a visualization software used in businesses to create static and dynamic plots that can easily be shared within and across organizations.</p>
+<p>This software is used by many different occupations such as:</p>
+<ul class="simple">
+<li><p>Business Analysts</p></li>
+<li><p>Data Visualization Analysts</p></li>
+<li><p>Data Scientists</p></li>
+<li><p>Software developers</p></li>
+<li><p>Engineers</p></li>
+</ul>
+<p>to name a few.</p>
+<p>Not only do many different occupations use it but companies ranging in size including giants like:</p>
+<ul class="simple">
+<li><p>Amazon,  Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, etc.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/brands.png"><img alt="404 image" src="../_images/brands.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="tableau-examples">
+<h2>Tableau Examples<a class="headerlink" href="#tableau-examples" title="Permalink to this headline">¶</a></h2>
+<p>I guess it would be nice to know why right? Well, Tableau makes some beautiful visualizations.</p>
+<p>Here is a dashboard I made for the company “Fresh Prep” that you can explore on <a class="reference external" href="https://public.tableau.com/app/profile/hayley2039/viz/2020-06-02-dummy/DASH-PREDICTIVE-PG2">Tableau public</a>.</p>
+<div class='tableauPlaceholder' id='viz1624349477125' style='position: relative'><noscript><a href='#'><img alt='DASH-PREDICTIVE-PG2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99FSXFSFM&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;99FSXFSFM' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;99&#47;99FSXFSFM&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624349477125');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2127px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<br>
+<p>This took around 5 weeks and note that you are seeing the dashboard using fake data.</p>
+<p>This is just the tip of the iceberg though.</p>
+<p>Let’s take a look at a few exceptionally beautiful examples.</p>
+<div class="section" id="bo-burnham-inside-by-joshua-preston">
+<h3><a class="reference external" href="https://public.tableau.com/app/profile/joshpreston/viz/boburnhaminside/Dashboard1">bo Burnham INSIDE by Joshua Preston</a><a class="headerlink" href="#bo-burnham-inside-by-joshua-preston" title="Permalink to this headline">¶</a></h3>
+<div class='tableauPlaceholder' id='viz1624325919060'  style='width: 400; height: 600; style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;boburnhaminside&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='30%' height='70%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='boburnhaminside&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;bo&#47;boburnhaminside&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624325919060');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='1000px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+<div class="section" id="demo-wealth-and-banking-manager-view-by-ellen-blackburn">
+<h3><a class="reference external" href="https://public.tableau.com/app/profile/ellen4268/viz/Demowealthandbanking-Managerview/BankingDemo-Managerview3">Demo wealth and banking - Manager view by Ellen Blackburn</a><a class="headerlink" href="#demo-wealth-and-banking-manager-view-by-ellen-blackburn" title="Permalink to this headline">¶</a></h3>
+<div class='tableauPlaceholder' id='viz1624325942676'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Banking Demo - Manager view (3) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Demowealthandbanking-Managerview&#47;BankingDemo-Managerview3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624325942676');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='820px';vizElement.style.height='800px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='820px';vizElement.style.height='702px';} else { vizElement.style.width='100%';vizElement.style.height='3677px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+<div class="section" id="dinosaur2-by-rahul-patil">
+<h3><a class="reference external" href="https://public.tableau.com/app/profile/rahul7922/viz/Dinosaur2_16228076369930/Dinosaur">Dinosaur2 by Rahul Patil</a><a class="headerlink" href="#dinosaur2-by-rahul-patil" title="Permalink to this headline">¶</a></h3>
+<div class='tableauPlaceholder' style='width: 700; height: 600; style='position: relative' id='viz1624324606775'><noscript><a href='#'><img alt='Dinosaur ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Dinosaur2_16228076369930&#47;Dinosaur&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dinosaur2_16228076369930&#47;Dinosaur' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;Dinosaur2_16228076369930&#47;Dinosaur&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624324606775');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='800px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+<div class="section" id="the-history-of-6-magnitude-earthquakes-in-years-1900-2013-by-marcin-pieluzek">
+<h3><a class="reference external" href="https://public.tableau.com/app/profile/marcin3282/viz/TheHistoryof6MagnitudeEarthquakesinyears1900-2013/Dashboard1">The History of 6+ Magnitude Earthquakes in years 1900-2013 by Marcin Pielużek</a><a class="headerlink" href="#the-history-of-6-magnitude-earthquakes-in-years-1900-2013-by-marcin-pieluzek" title="Permalink to this headline">¶</a></h3>
+<div class='tableauPlaceholder' id='viz1624326049667'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='30%' height='60%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryof6MagnitudeEarthquakesinyears1900-2013&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624326049667');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='820px';vizElement.style.height='820px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='820px';vizElement.style.height='800px';} else { vizElement.style.width='100%';vizElement.style.height='5027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+<div class="section" id="piano-classroom-by-nir-smilga">
+<h3><a class="reference external" href="https://public.tableau.com/app/profile/nir.smilga/viz/PianoClassroom/PianoClassroom">Piano Classroom by Nir Smilga</a><a class="headerlink" href="#piano-classroom-by-nir-smilga" title="Permalink to this headline">¶</a></h3>
+<div class='tableauPlaceholder' id='viz1624326079002'  style='width: 700; height: 600; style='position: relative'><noscript><a href='#'><img alt='Piano Classroom ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PianoClassroom&#47;PianoClassroom&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  width='90%' height='100%' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PianoClassroom&#47;PianoClassroom' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pi&#47;PianoClassroom&#47;PianoClassroom&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='mobile=' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624326079002');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='820px';vizElement.style.height='820px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<p>To see more, go to <a class="reference external" href="https://public.tableau.com/en-us/gallery/?tab=featured&amp;type=featured">Tableau’s Feature Gallery</a></p>
+</div>
+</div>
+<div class="section" id="history-of-tableau">
+<h2>History of Tableau<a class="headerlink" href="#history-of-tableau" title="Permalink to this headline">¶</a></h2>
+<p>Tableau was founded in 2003 in California (classic).</p>
+<p>Recently in 2019, the company was acquired by Salesforce for $15.7 billion just giving a little reference about how valuable this tool is considered.</p>
+<p>Normally this wouldn’t be too important but I do want you to know the expertise that this software is built by and why it is credible.</p>
+<p>There are 3 main characters involved:</p>
+<a class="reference internal image-reference" href="https://www.tableau.com/sites/default/files/pages/stolte_0.jpg"><img alt="404 image" src="https://www.tableau.com/sites/default/files/pages/stolte_0.jpg" style="width: 45%;" /></a>
+<p><strong>Chris Stolte who is the Co-founder and technical advisor</strong></p>
+<ul class="simple">
+<li><p>Ph.D. in Computer Science (from Standford University)</p></li>
+<li><p>Co-inventor on five software patents related to information visualization</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://www.tableau.com/sites/default/files/pages/hanrahan_1.jpg"><img alt="404 image" src="https://www.tableau.com/sites/default/files/pages/hanrahan_1.jpg" style="width: 45%;" /></a>
+<p><strong>Pat Hanrahan who is the Co-founder and Chief Scientist</strong></p>
+<ul class="simple">
+<li><p>A founding employee at Pixar Animation Studios</p></li>
+<li><p>Received three Academy Awards for his work in rendering and computer graphics research</p></li>
+<li><p>Professor of Computer Science and Electrical Engineering at Stanford University, teaching computer graphics</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://www.tableau.com/sites/default/files/pages/chabot_1.jpg"><img alt="404 image" src="https://www.tableau.com/sites/default/files/pages/chabot_1.jpg" style="width: 45%;" /></a>
+<p><strong>Christian Chabot, who is the Co-founder and chairman</strong></p>
+<ul class="simple">
+<li><p>MBA from Standford University</p></li>
+<li><p>CEO and co-founder of BeeLine Software, a pioneer of next-generation digital mapping technology</p></li>
+</ul>
+<p>The short story of this is that Tableau is built by some very talented individuals.</p>
+</div>
+<div class="section" id="other-similar-tools-available">
+<h2>Other Similar Tools Available<a class="headerlink" href="#other-similar-tools-available" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Microsoft PowerBI (sold as part of a Microsoft package)</p></li>
+<li><p>Looker (Owned by Google)</p></li>
+<li><p>QlikView</p></li>
+<li><p>Domo</p></li>
+<li><p>many, many others…</p></li>
+</ul>
+</div>
+<div class="section" id="pros-and-cons">
+<h2>Pros and Cons<a class="headerlink" href="#pros-and-cons" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/pros_cons.png"><img alt="404 image" src="../_images/pros_cons.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="version-control">
+<h2>Version Control?<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<p>A slight setback if you do not have a Tableau Server.</p>
+<a class="reference internal image-reference" href="../_images/versions.png"><img alt="404 image" src="../_images/versions.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/brutal.png"><img alt="404 image" src="../_images/brutal.png" style="width: 30%;" /></a>
+</div>
+<div class="section" id="where-is-visualization-situated-in-the-grand-scheme-of-data-science">
+<h2>Where is visualization situated in the grand scheme of data science?<a class="headerlink" href="#where-is-visualization-situated-in-the-grand-scheme-of-data-science" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Visualization can absolutely be an end-goal!</p></li>
+<li><p>Visualization dashboards can be used used to target individuals for sales, find shortcomings in production, as well as help, identify trends in the data which can help with a prediction component.</p></li>
+</ul>
+</div>
+<div class="section" id="quick-quiz">
+<h2>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>What must you have in order for us to have some form of version control beyond saving files with different names?</p></li>
+<li><p>Who is Tableau’s Co-founder and technical advisor?</p></li>
+<li><p>Name me a company that uses Tableau.</p></li>
+<li><p>What Visualization tool was acquired by Google?</p></li>
+<li><p><strong>True or False:</strong> You must have some coding experience to use Tableau.</p></li>
+</ol>
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. Tableau Server
+2. Chris Stolte
+3. Amazon, Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, Nokia Dell, Lenovo, Cisco, Forbes, eBay, Intel, Ferrari, Deloitte etc. 
+4. Looker
+5. False
+
+``` //-->
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>First, let’s open up the application. I’ll be using the software installed on my computer.</p>
+<a class="reference internal image-reference" href="../_images/icon.png"><img alt="404 image" src="../_images/icon.png" style="width: 20%;" /></a>
+<br>
+<br>
+<p>You can also use <a class="reference external" href="https://public.tableau.com/en-us/s/">Tableau public</a> which is a free version of Tableau that allows you to use most of the software functions. The biggest downside is it does not let you save your work locally.</p>
+<p>When you open it, you’ll be greeted with the home screen. I have a few projects already on the go but you’ll have your own as well.</p>
+<a class="reference internal image-reference" href="../_images/home.png"><img alt="404 image" src="../_images/home.png" style="width: 85%;" /></a>
+</div>
+<div class="section" id="connecting-to-data">
+<h2>Connecting to Data<a class="headerlink" href="#connecting-to-data" title="Permalink to this headline">¶</a></h2>
+<p>Tableau lets you either connect to a database server or upload a file. We are going to discuss one of each.</p>
+<a class="reference internal image-reference" href="../_images/datatypes.png"><img alt="404 image" src="../_images/datatypes.png" style="width: 85%;" /></a>
+<div class="section" id="connecting-to-mysql-server">
+<h3>Connecting to MySQL Server<a class="headerlink" href="#connecting-to-mysql-server" title="Permalink to this headline">¶</a></h3>
+<p>The most occurring database server and the example we are going to show you here is MySQL.</p>
+<p>Clicking <em><strong>MySQL</strong></em> for the first time results in the following popup.</p>
+<a class="reference internal image-reference" href="../_images/mysql.png"><img alt="404 image" src="../_images/mysql.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/sqlpopup.png"><img alt="404 image" src="../_images/sqlpopup.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>You’ll have to follow the instructions <a class="reference external" href="https://www.tableau.com/support/drivers?edition=pro&amp;lang=en-us&amp;platform=mac&amp;cpu=64&amp;version=2021.1&amp;__full-version=20211.21.0511.0935#mysql">here</a> and make sure you downloaded the 2 necessary packages in order for Tableau to connect.</p>
+<p>Once you’ve installed them, you’ll have to close Tableau and reopen it.</p>
+<p>Now when you click on <em><strong>MySQL</strong></em>, you will have the new popup where you’ll have to put the required information to your server.</p>
+<a class="reference internal image-reference" href="../_images/sqlpopup3.png"><img alt="404 image" src="../_images/sqlpopup3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Note that there are MANY other servers that are options. Simply click <em><strong>More…</strong></em> under the “To a Server” heading and take your pick!</p>
+<a class="reference internal image-reference" href="../_images/serveroptions.png"><img alt="404 image" src="../_images/serveroptions.png" style="width: 85%;" /></a>
+</div>
+</div>
+<div class="section" id="csv-excel-etc">
+<h2>csv, excel, etc.<a class="headerlink" href="#csv-excel-etc" title="Permalink to this headline">¶</a></h2>
+<p>In addition to Tableau connecting to a server, there are a multitude of file types Tableau can upload. The major types are CSVs, excel files, JSON files etc. to upload, we can simply use the <em><strong>More…</strong></em> under the “To a File” heading.</p>
+<a class="reference internal image-reference" href="../_images/more.png"><img alt="404 image" src="../_images/more.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We are going to use a CSV named <code class="docutils literal notranslate"><span class="pre">street-trees.csv</span></code> for our demo.</p>
+<p>Locate your file and click <em><strong>Open</strong></em>.</p>
+<a class="reference internal image-reference" href="../_images/picking.png"><img alt="404 image" src="../_images/picking.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>After you’ve selected you’ll be directed to a new screen where you’ll be asked to <em><strong>Update now</strong></em> or <em><strong>Automatically Update</strong></em>. I generally select the former.</p>
+<a class="reference internal image-reference" href="../_images/updatenow.png"><img alt="404 image" src="../_images/updatenow.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will now give you a view of the data that the csv has to offer.</p>
+<a class="reference internal image-reference" href="../_images/datasee.png"><img alt="404 image" src="../_images/datasee.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This is where you’ll see some symbols on top of each column.</p>
+<a class="reference internal image-reference" href="../_images/coltypes.png"><img alt="404 image" src="../_images/coltypes.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>What are these?</p>
+</div>
+<div class="section" id="introduction-to-data-types">
+<h2>Introduction to data types<a class="headerlink" href="#introduction-to-data-types" title="Permalink to this headline">¶</a></h2>
+<p>Each column in your data will have a data type. This represents the kind of information that is stored in a column.</p>
+<p>Tableau will designate a data type when you connect to a source.</p>
+<p>The data types offered in Tableau are as follows: (<a class="reference external" href="https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm">source</a>).</p>
+<table cellspacing="0" class="TableStyle-Basic-Border" style="margin-left: 0px; margin-right: auto;"><colgroup><col class="TableStyle-Basic-Border-Column-Column1" style="width: auto;"> <col class="TableStyle-Basic-Border-Column-Column1" style="width: auto;"></colgroup><thead><tr class="TableStyle-Basic-Border-Head-Header1"><th class="TableStyle-Basic-Border-HeadE-Column1-Header1">Icon</th> <th class="TableStyle-Basic-Border-HeadD-Column1-Header1">Data type</th></tr></thead> <tbody><tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_text.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Text (string) values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_date.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Date values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_datetime.png"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Date &amp; Time values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_number.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Numerical values</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/symbol_bool.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Boolean values (relational only)</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/geoicon.png" style="text-align: center;"></td> <td class="TableStyle-Basic-Border-BodyD-Column1-Body1">Geographic values (used with maps)</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/Schema_Viewer_Group_Cluster_Discrete_25x20.png"></td> <td class="TableStyle-Basic-Border-BodyA-Column1-Body1">Cluster Group (used with <a href="clustering.htm" target="_blank" class="MCXref xref">Find Clusters in Data<span class="sr-only">(Link opens in a new window)</span></a>)</td></tr></tbody></table>
+<br>
+<br>
+<p>Note that generally speaking Tableau will guess which type goes with each column but you’ll soon find out that Tableau isn’t always right. For example, the column <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> should be changed to a “Date” data type and <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> and <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> should be both be Geographic data types.</p>
+<a class="reference internal image-reference" href="../_images/3cols.png"><img alt="404 image" src="../_images/3cols.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>The good news is this is easy to fix!</p>
+<p>Let’s convert the column <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> first.<br />
+Simply click on the icon (ABC in this case) and select the desired type. We are changing this to a date.</p>
+<a class="reference internal image-reference" href="../_images/colchange.png"><img alt="404 image" src="../_images/colchange.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>To convert the columns <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> and <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> will take 2 steps instead.</p>
+<p>We can’t convert it straight to a geographical location since <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> or <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> isn’t an option when the column is of type string.</p>
+<a class="reference internal image-reference" href="../_images/strlong.png"><img alt="404 image" src="../_images/strlong.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>So we need to change it to a “Number (decimal)” first!</p>
+<a class="reference internal image-reference" href="../_images/geonumb.png"><img alt="404 image" src="../_images/geonumb.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Once the column is a number, we can then select the appropriate <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> option under the Geographical Location menu.</p>
+<a class="reference internal image-reference" href="../_images/numblong2.png"><img alt="404 image" src="../_images/numblong2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Ta-Da! Now we have the appropriate globe icon, meaning the column is now a Geographical data type.</p>
+<a class="reference internal image-reference" href="../_images/globe.png"><img alt="404 image" src="../_images/globe.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We will have to repeat this for the <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> column now.</p>
+</div>
+<div class="section" id="tableau-setup">
+<h2>Tableau Setup<a class="headerlink" href="#tableau-setup" title="Permalink to this headline">¶</a></h2>
+<p>Let’s stop playing with our data for a second and get into the actual visualization screen!</p>
+<p>Clicking on <em><strong>Sheet 1</strong></em> will take us to a worksheet where we can make our first plot.</p>
+<a class="reference internal image-reference" href="../_images/sheet1.png"><img alt="404 image" src="../_images/sheet1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/worksheethome.png"><img alt="404 image" src="../_images/worksheethome.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="section" id="workspace">
+<h3>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h3>
+<p>Tableau has a great <a class="reference external" href="https://help.tableau.com/current/pro/desktop/en-us/environment_workspace.htm">image</a> that will help you identify what you need in your workspace but here is my version.</p>
+<a class="reference internal image-reference" href="../_images/workspace.png"><img alt="404 image" src="../_images/workspace.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p><a class="reference internal" href="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png"><img alt="404 image" src="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png" style="width: 3%;" /></a> : On the top left of the workspace you’ll see this symbol, this will take you back to the home page that displays all your projects.</p>
+<p style="font-size:30px; color:#9929BD">Toolbar</p>
+<p>I’m not showing all the options but the ones you’ll use often.</p>
+<a class="reference internal image-reference" href="../_images/toolbar3.png"><img alt="404 image" src="../_images/toolbar3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p style="font-size:30px; color:#D54A7A">Shelves</p>
+<p>This is essentially your x and y-axis and where you can designate one of your data source’s columns.</p>
+<p style="font-size:30px; color:#77BB41">Cards</p>
+<p>Assigning columns to cards can build on your visualization by encoding marks with colour, size, shape, text, and details like hovers.</p>
+<p style="font-size:30px; color:#C4BC00">Viz Area</p>
+<p>Also known as the <strong>“View”</strong>, this is exactly what it sounds like; this is where your visualization will be displayed.</p>
+<p style="font-size:30px; color:#3A88FE">Show Me Window</p>
+<p>This is going to be a really useful window when you first start using Tableau. If you have already selected columns in any of the shelves or cards, Tableau will give you the option of several types of graphs that could be appropriate for the columns selected. It will also highlight the graph type that best matches the data.</p>
+<p style="font-size:30px; color:#00FDFF">Data or Analytics Pane</p>
+<p>This is going to be a busy pane for you. Here is where all your data columns are displayed. Your columns are split into 2 different types (with the possibility of more) and 2 different colours. What do they mean though?!</p>
+</div>
+<div class="section" id="data-pane">
+<h3>Data Pane<a class="headerlink" href="#data-pane" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="dimensions-vs-measures">
+<h4>Dimensions vs Measures<a class="headerlink" href="#dimensions-vs-measures" title="Permalink to this headline">¶</a></h4>
+<p>There is a faint line that splits the columns from the data source into 2 categories.</p>
+<ul class="simple">
+<li><p><strong>Dimensions</strong> and,</p></li>
+<li><p><strong>Measures</strong></p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/mandd.png"><img alt="404 image" src="../_images/mandd.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Tableau describes <strong>Dimensions</strong> as “qualitative values (such as names, dates, or geographical data)” whereas <strong>Measures</strong> are numeric, quantitative values.</p>
+<p>This is important to know since sometimes you’ll have to switch a column to be expressed as one or the other which it may not have automatically been defaulted to.</p>
+</div>
+<div class="section" id="continuous-vs-discrete-columns">
+<h4>Continuous vs Discrete columns<a class="headerlink" href="#continuous-vs-discrete-columns" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/greenblue.png"><img alt="404 image" src="../_images/greenblue.png" style="width: 30%;" /></a>
+<br>
+<br>
+<p>Have you notices there are 2 different colours of icons?</p>
+<p><span style="color:#48A67F">Green</span> measures and dimensions means the field (column) is being expressed in a continuous manner.
+Continuous data is data that can take on any possible value. An example would be a person’s height or the time it takes to microwave popcorn.</p>
+<p><span style="color:#5794AD; page-break-inside: avoid;">Blue</span> measures and dimensions means the field (column) is being expressed discretely.
+Discrete data can only take certain values. Examples include the number of employees at a company. We can’t really have half an employee, would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis.</p>
+</div>
+</div>
+<div class="section" id="calculations-sets-parameters">
+<h3>Calculations, Sets, Parameters<a class="headerlink" href="#calculations-sets-parameters" title="Permalink to this headline">¶</a></h3>
+<p>You’ll possible have to make other data types besides dimensions and measures such as</p>
+<p>Calculation: These are values or calculations from existing columns that are not currently in your data source.
+You can create these new fields using a formula, calculating the values and saving them as part of your data.</p>
+<p>Sets: A section of the data that you define from a column from your data source and a desired criteria.
+For example, you may want a subsection of the data that doesn’t include retail customers and only corporate customers.</p>
+<p>Parameters: These are values that can be used as placeholders in formulas for calculations and filters.</p>
+<p>We may touch on this later on, but for now, let’s move on.</p>
+</div>
+<div class="section" id="worksheets-vs-dashboards-vs-story">
+<h3>Worksheets vs Dashboards vs Story<a class="headerlink" href="#worksheets-vs-dashboards-vs-story" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/workdashstory.png"><img alt="404 image" src="../_images/workdashstory.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p style="font-size:30px; color:#D54A7A">Worksheet</p>
+<a class="reference internal image-reference" href="../_images/ex_worksheet.png"><img alt="404 image" src="../_images/ex_worksheet.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This is where you create each individual visualization. You create 1 viz per worksheet.</p>
+<p style="font-size:30px; color:#9929BD">Dashboard</p>
+<a class="reference internal image-reference" href="../_images/ex_dash.png"><img alt="404 image" src="../_images/ex_dash.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>A dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user.</p>
+<p>You can only add worksheets that have been already made. That means that if you want to add a graph to a dashboard, you have to first make it from a worksheet.</p>
+<p>It’s likely as well that you’ll have more worksheets and graphs than you want to place in your dashboard. We will talk a little bit more about this in our section on Exploratory Data Visualization.</p>
+<p style="font-size:30px; color:#00C7FC">Story</p>
+<a class="reference internal image-reference" href="https://help.tableau.com/current/pro/desktop/en-us/Img/story_earthquake6.png"><img alt="404 image" src="https://help.tableau.com/current/pro/desktop/en-us/Img/story_earthquake6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>A sequence of worksheets or dashboards that work together to tell a story.</p>
+<p>You can create stories to tell a data narrative, provide context, demonstrate how decisions relate to outcomes, or simply make a compelling case.</p>
+<p>Each individual sheet in a story is called a story point.</p>
+<p>We will discuss more on the importance of storytelling later on in this course, but this will likely be one of the tabs you use less frequently.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Quick Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> Connecting to a MySQL server is relatively simple.</p></li>
+<li><p>Tableau sorts data columns into how many different data types?</p></li>
+<li><p>Which of the following is not part of the Tableau Workspace: Toolbar, Cards, Data Pane, Calculation Keys, Show Me Window.</p></li>
+<li><p>What is the difference between Dimensions and Measures?</p></li>
+<li><p><strong>True or False:</strong> Columns that are blue are continuous data, whereas columns in green are discrete.</p></li>
+</ol>
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. 7
+3. Calculation Keys
+4. Dimensions are qualitative fields and Measures and quantitative fields. 
+5. False
+
+``` //-->
+</div>
+<div class="section" id="making-some-viz-it-s-about-time">
+<h2>Making some Viz! (It’s about time!)<a class="headerlink" href="#making-some-viz-it-s-about-time" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bar">
+<h3>Bar<a class="headerlink" href="#bar" title="Permalink to this headline">¶</a></h3>
+<p>Our question that we want to answer with this plot is <em><strong>how many trees there are in each Vancouver neighbourhood?</strong></em></p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. We are going to drag from the left-hand side under the heading “Tables” the column named <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> to the <strong>Column</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/columns_names.png"><img alt="404 image" src="../_images/columns_names.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. We are interested in the count of trees in each neighbourhood. We don’t have a count of trees as a column, but since the column <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> is unique (that means that every row in the data has a different value for <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code>) we can use it to count the rows (you can use multiple different columns here though). Let’s drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> column from the left of the screen to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/treeid_rows.png"><img alt="404 image" src="../_images/treeid_rows.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. We need to convert this <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> variable to a “Measure” specifically a “Count” so that we get 1 value for each neighbourhood. We can do this by right-clicking on it and selecting <strong>Count</strong>.</p>
+<a class="reference internal image-reference" href="../_images/count_tree.png"><img alt="404 image" src="../_images/count_tree.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Voila! A bar chart!</p>
+<a class="reference internal image-reference" href="../_images/bartrees.png"><img alt="404 image" src="../_images/bartrees.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Let’s change the colour. Go to the <strong>Marks</strong> card and select a new colour.</p>
+<a class="reference internal image-reference" href="../_images/tree_colour.png"><img alt="404 image" src="../_images/tree_colour.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. Let’s edit our y-axis label. Right-click on the axis and click “Edit Axis…”</p>
+<a class="reference internal image-reference" href="../_images/ylabel_tree.png"><img alt="404 image" src="../_images/ylabel_tree.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Under “Axis”, you can edit your axis “Title”.</p>
+<a class="reference internal image-reference" href="../_images/labely.png"><img alt="404 image" src="../_images/labely.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>You can edit the title of the graph in two ways;</p>
+<ul class="simple">
+<li><p>By editing the title or…</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/title1.png"><img alt="404 image" src="../_images/title1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<ul class="simple">
+<li><p>By editing the sheet name by double-clicking the sheet at the bottom. (I prefer this way)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/title2.png"><img alt="404 image" src="../_images/title2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/title3.png"><img alt="404 image" src="../_images/title3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. You can sort the bars by clicking the icon beside the axis title or the icon in the toolbar.</p>
+<a class="reference internal image-reference" href="../_images/sorttrees.png"><img alt="404 image" src="../_images/sorttrees.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. Let’s convert it to a verticle bar chart. On the toolbar right above <strong>Columns</strong> you’ll see a <em>Swap rows and columns</em>* icon. This transposes your graph.</p>
+<a class="reference internal image-reference" href="../_images/transposetrees.png"><img alt="404 image" src="../_images/transposetrees.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="bubble">
+<h3>Bubble<a class="headerlink" href="#bubble" title="Permalink to this headline">¶</a></h3>
+<p>To answer the same question we could also have done a bubble chart.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Click on the <strong>Show Me</strong> in the top right corner of the workspace.</p>
+<a class="reference internal image-reference" href="../_images/bubble1.png"><img alt="404 image" src="../_images/bubble1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. This will drop down other suggested plots for the measures and dimensions we have dragged to the <strong>Columns</strong> and <strong>Rows</strong> shelves.</p>
+<p>Select the bubble diagram that’s at the bottom right of the <strong>Show Me</strong> menu.</p>
+<a class="reference internal image-reference" href="../_images/bubble2.png"><img alt="404 image" src="../_images/bubble2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>And Voila! Bubble plot! Easy as that!</p>
+<a class="reference internal image-reference" href="../_images/bubble3.png"><img alt="404 image" src="../_images/bubble3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>It would be nice to add some colour no?</p>
+<p>4. To add colour to a field, we can drag it to the colour option on the <strong>Marks</strong> card. Here we are dragging <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/bubble4.png"><img alt="404 image" src="../_images/bubble4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This was a problematic choice though, there seem to be duplicate colours and it’s not an effective colour channel.</p>
+<p>5. Let’s remove the <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> from the colour channel by right-clicking it in the <strong>Marks</strong> card and selecting <strong>Remove</strong> from the dropdown menu.</p>
+<a class="reference internal image-reference" href="../_images/bubble5.png"><img alt="404 image" src="../_images/bubble5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6.  Let’s instead drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> column to the colour channel.</p>
+<a class="reference internal image-reference" href="../_images/bubble6.png"><img alt="404 image" src="../_images/bubble6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Now, this looks bad but we want the count of trees to be represented by a colour scale.</p>
+<p>7. We can change this by right-clicking <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> in the <strong>Marks</strong> card and converting it to a <strong>Count</strong> Measure.</p>
+<a class="reference internal image-reference" href="../_images/bubble7.png"><img alt="404 image" src="../_images/bubble7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. Now we can see that the number of trees in each neighbourhood is not only represented by the size of each bubble but also the colour.  The scale on the right side of the plot gives us an idea of how the colour translate to quantity.</p>
+<a class="reference internal image-reference" href="../_images/bubble8b.png"><img alt="404 image" src="../_images/bubble8b.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="highlight-table">
+<h3>Highlight Table<a class="headerlink" href="#highlight-table" title="Permalink to this headline">¶</a></h3>
+<p>We could also do a “highlight table” to answer this question as well.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Let’s go back to the <strong>Show Me</strong> menu and click the highlight table option.</p>
+<a class="reference internal image-reference" href="../_images/tabletrees.png"><img alt="404 image" src="../_images/tabletrees.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>And we are done! That’s all 1 step needed!</p>
+</div>
+<div class="section" id="making-a-new-worksheet">
+<h3>Making a New Worksheet<a class="headerlink" href="#making-a-new-worksheet" title="Permalink to this headline">¶</a></h3>
+<p>To create a new viz we need to make a new worksheet. We can do this in 2 ways:</p>
+<ol class="simple">
+<li><p>by clicking the dropdown menu on the icon in the toolbar and selecting <strong>New Worksheet</strong></p></li>
+<li><p>Clicking the icon at the bottom left of the workspace.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/new_wb.png"><img alt="404 image" src="../_images/new_wb.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+</div>
+<div class="section" id="aggregation-plots">
+<h2>Aggregation Plots<a class="headerlink" href="#aggregation-plots" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="drill-down-and-hiearcha-data">
+<h2>Drill Down and Hiearcha data<a class="headerlink" href="#drill-down-and-hiearcha-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="maps">
+<h3>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h3>
+<p>Maps seem to be pretty intimidating as they can be complex and provide a lot of information in a small space. Luckily for us, maps can be quick friendly and easy to do with Tableau.</p>
+<p><strong>Step by Step Instructions</strong>
+1. Drag <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> to the <strong>Columns</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/map1.png"><img alt="404 image" src="../_images/map1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/map2.png"><img alt="404 image" src="../_images/map2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>And you have made a map with all the trees!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This won’t work so easily if you have not specified a geographical datatype for the columns.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>If you don’t have latitude and longitude columns, you may still be able to make a map if you have any of the following geographical data types that you can designate to the column.</p>
+<ul class="simple">
+<li><p>Airport</p></li>
+<li><p>US telephone Area Code</p></li>
+<li><p>U.S. Core Based Statistical Areas (CBSA)</p></li>
+<li><p>Country/Region</p></li>
+<li><p>County (U.S. counties, French départements, German kriese, etc)</p></li>
+<li><p>NUTS Europe</p></li>
+<li><p>State/Province</p></li>
+<li><p>Code/Postcode</p></li>
+</ul>
+</div>
+<ol class="simple">
+<li><p>Let’s tidy this up a bit though. Decrease the size of your markers by clicking the <strong>Size</strong> icon under the <strong>Marks</strong> card.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/map3.png"><img alt="404 image" src="../_images/map3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<ol class="simple">
+<li><p>Right-click the map and select <strong>Map Layers…</strong> from the dropdown. This gives you the ability to customize the appearance of your map.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/map4.png"><img alt="404 image" src="../_images/map4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. Change the map <em>Style</em> to <strong>Normal</strong>.</p>
+<a class="reference internal image-reference" href="../_images/map5.png"><img alt="404 image" src="../_images/map5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. Add opacity to the map with <strong>Washout</strong>.</p>
+<a class="reference internal image-reference" href="../_images/map6.png"><img alt="404 image" src="../_images/map6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. Add different Map Layers such as <strong>Streets, Highways, Routes</strong> and <strong>Zip Code Boundaries</strong>.</p>
+<a class="reference internal image-reference" href="../_images/map7.png"><img alt="404 image" src="../_images/map7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>9. Add a title like you’ve done before and you’ve got a functioning map in &lt; 5 mins.</p>
+<a class="reference internal image-reference" href="../_images/map8.png"><img alt="404 image" src="../_images/map8.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+</div>
+<div class="section" id="distributing-and-saving">
+<h2>Distributing and Saving<a class="headerlink" href="#distributing-and-saving" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="workbook-twb">
+<h3>Workbook (<code class="docutils literal notranslate"><span class="pre">.twb</span></code>)<a class="headerlink" href="#workbook-twb" title="Permalink to this headline">¶</a></h3>
+<p>Tableau by default will save all your sheets and dashboards as a workbook, a <code class="docutils literal notranslate"><span class="pre">.twb</span></code> file.</p>
+<p>This does require you to connect to the data source locally.</p>
+<p>If you send this to colleagues, you will need to send them the data you used, along with any images or additional files you used in your dashboard or worksheets.</p>
+</div>
+<div class="section" id="packaged-workbook-twbx">
+<h3>Packaged Workbook (<code class="docutils literal notranslate"><span class="pre">.twbx</span></code>)<a class="headerlink" href="#packaged-workbook-twbx" title="Permalink to this headline">¶</a></h3>
+<p>Instead, you could save your work as a packaged workbook where now all of the files and data sources used are contained in the space. The extension for this file type is <code class="docutils literal notranslate"><span class="pre">.twbx</span></code>.</p>
+<p>That means the workbook is no longer linked to the original data source or images.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Quick Quiz<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Where can we find the button/tool necessary to sort your plot?</p></li>
+<li><p>What is one way we can convert a dimension to a measure?</p></li>
+<li><p><strong>True or False:</strong> When using the “Show me” window and changing the graph to a different type, the fields can change shelves and/or from dimensions or measures.</p></li>
+<li><p><strong>True or False:</strong> It’s important that every plot has a dimension/measure in the Columns and Rows shelves.</p></li>
+<li><p>Which file extension does not save the data in the workbook?</p></li>
+</ol>
+<!-- ```{admonition} Solutions!
+:class: dropdown
+
+1. In the toolbar or by clicking the sort icon on the axis of the plot.
+2. Right-clicking and selecting the appropriate statistic. We can also right-click and convert them in the Data pane. 
+3. True
+4. False
+5. `.tbw`
+
+``` //-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

@@ -46,9 +46,8 @@ Details about class meetings will appear here as they become available.
 - Connecting to csv, excel (differences)
 - Connecting to SQL Server
 - Introduction to data types (Ordinal, Nominal, Quantitative & continuous, discrete, binary, ordered, unordered, DateTime, text, etc.)
-- Tableau buttons (show me menu, filter and marks)
+- Tableau buttons (show me menu, filter and marks, sorting)
 - Dimensions and Measures
-- 	Drill down, Hierarchies and Sorting
 - Discrete vs continuous
 - Worksheets vs dashboards vs story
 - Quick viz examples and effectiveness 
@@ -60,7 +59,8 @@ Details about class meetings will appear here as they become available.
 - Create separate plots using worksheets 
 - Change datatype
 - Create a bar chart 
-- Create a scatter plot 
+- Create a map
+- Asking questions to explore
 
 ### Lesson 2 - Viz Types and the Tableau Dashboard
 
@@ -71,8 +71,11 @@ Details about class meetings will appear here as they become available.
 - Developing the 6 types of statistical questions (exploratory, descriptive, inferential {frequentist, Bayesian}, causal, mechanistic, predictive)
 
 ### Tableau Applications 
-- Calculations 
-- Creating time and geographical plots
+
+- Drill down, Hierarchies 
+- Scatter plot 
+- Bins - Histograms and density plots 
+- Calculations - converting to booleans 
 - Dashboards
 - Filtering 
 - Tooltips 

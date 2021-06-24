@@ -412,30 +412,35 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregation-plots">
+     1.15.5. Aggregation Plots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drill-down-and-hierarchies">
+     1.15.6. Drill Down and hierarchies
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#maps">
-     1.15.5. Maps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-series">
-     1.15.6. Time Series
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#drill-down-hierarchies-if-time">
-     1.15.7. Drill down, Hierarchies (if time)
+     1.15.7. Maps
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series">
+   1.16. Time Series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#distributing-and-saving">
-   1.16. Distributing and Saving
+   1.17. Distributing and Saving
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#workbook-twb">
-     1.16.1. Workbook (
+     1.17.1. Workbook (
      <code class="docutils literal notranslate">
       <span class="pre">
        .twb
@@ -446,7 +451,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#packaged-workbook-twbx">
-     1.16.2. Packaged Workbook (
+     1.17.2. Packaged Workbook (
      <code class="docutils literal notranslate">
       <span class="pre">
        .twbx
@@ -459,7 +464,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   1.17. Quick Quiz
+   1.18. Quick Quiz
   </a>
  </li>
 </ul>
@@ -780,7 +785,7 @@ For example, you may want a subsection of the data that doesn’t include retail
 <a class="reference internal image-reference" href="../_images/ex_dash.png"><img alt="404 image" src="../_images/ex_dash.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>A dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user.</p>
+<p>A dashboard is where you lay out your different worksheets and add any filtering toggles that want to make available for the user.</p>
 <p>You can only add worksheets that have been already made. That means that if you want to add a graph to a dashboard, you have to first make it from a worksheet.</p>
 <p>It’s likely as well that you’ll have more worksheets and graphs than you want to place in your dashboard. We will talk a little bit more about this in our section on Exploratory Data Visualization.</p>
 <p style="font-size:30px; color:#00C7FC">Story</p>
@@ -934,8 +939,74 @@ For example, you may want a subsection of the data that doesn’t include retail
 <br>
 <br>
 </div>
+<div class="section" id="aggregation-plots">
+<h3><span class="section-number">1.15.5. </span>Aggregation Plots<a class="headerlink" href="#aggregation-plots" title="Permalink to this headline">¶</a></h3>
+<p>This is very similar to how you would make a COUNT bar plot with one minor difference, we no longer are using a “Count” <strong>Measure</strong> but instead perhaps <strong>Average</strong>, <strong>Median</strong>, <strong>Max</strong> and <strong>Min</strong>.</p>
+<p>Our question now is: <em><strong>What is the average diameter of each tree genus?</strong></em>.</p>
+<p><strong>Step by Step Instructions:</strong></p>
+<p>1. Drag from the left-hand side under the heading “Tables” the column named <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code> to the <strong>Columns</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/agg1.png"><img alt="404 image" src="../_images/agg1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2.We want the mean diameter for each genus so we can drag diameter to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/agg2.png"><img alt="404 image" src="../_images/agg2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3.This is where things differ. We right-click the diameter and transform it to a <strong>Measure</strong> specifying <strong>Average</strong>.</p>
+<a class="reference internal image-reference" href="../_images/agg3.png"><img alt="404 image" src="../_images/agg3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4.Instead of using a bar chart, Maybe using a dot plot would be more ideal. We can convert it by clicking the dropdown menu under the “Marks” card. Selecting “Circle” or “Shape” will instantly convert it.</p>
+<a class="reference internal image-reference" href="../_images/agg4.png"><img alt="404 image" src="../_images/agg4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/agg5.png"><img alt="404 image" src="../_images/agg5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. I am going to rotate the axis since I find this to be a more effective plot.</p>
+<a class="reference internal image-reference" href="../_images/agg6.png"><img alt="404 image" src="../_images/agg6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>You can add your own shape icons by adding a folder to your “My Tableau Repository” folder under “Shapes”.</p>
+<p>We will show you how to do this in Class 3 or 4.</p>
+</div>
+</div>
+<div class="section" id="drill-down-and-hierarchies">
+<h3><span class="section-number">1.15.6. </span>Drill Down and hierarchies<a class="headerlink" href="#drill-down-and-hierarchies" title="Permalink to this headline">¶</a></h3>
+<p>You’ll notice that with this tree data a tree can have a Genus and a species. There are multiple species in each genus.</p>
+<p>We can create a hierarchy from these columns so that we can make a “Drilling down” action between each field in the graph.</p>
+<a class="reference internal image-reference" href="../_images/tree_genus.png"><img alt="404 image" src="../_images/tree_genus.png" style="width: 65%;" /></a>
+<br>
+<br>
+<p>1. First, we identify the second step in our hierarchy and drag it under the field that it encompasses.</p>
+<a class="reference internal image-reference" href="../_images/dd1.png"><img alt="404 image" src="../_images/dd1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>For us, this means dragging <code class="docutils literal notranslate"><span class="pre">Species</span> <span class="pre">Name</span></code> under <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/dd2.png"><img alt="404 image" src="../_images/dd2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. This will produce a popup to create the hierarchy. You can name this anything from Tree types or as we did simply the steps in the Hierarchy.</p>
+<a class="reference internal image-reference" href="../_images/dd3.png"><img alt="404 image" src="../_images/dd3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Once the hierarchy is made, you’ll see the steps under the title you just wrote as well as a small + icon next to the <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code> field in the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/dd4.png"><img alt="404 image" src="../_images/dd4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. If we click the plus next to <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code> species will populate beside it.</p>
+<a class="reference internal image-reference" href="../_images/dd5.png"><img alt="404 image" src="../_images/dd5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5.  The graph will now reflect the hierarchy and sort the trees accordingly.</p>
+<a class="reference internal image-reference" href="../_images/dd6.png"><img alt="404 image" src="../_images/dd6.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
 <div class="section" id="maps">
-<h3><span class="section-number">1.15.5. </span>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.15.7. </span>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h3>
 <p>Maps seem to be pretty intimidating as they can be complex and provide a lot of information in a small space. Luckily for us, maps can be quick friendly and easy to do with Tableau.</p>
 <p><strong>Step by Step Instructions</strong>
 1. Drag <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> to the <strong>Columns</strong> shelf.</p>
@@ -977,65 +1048,136 @@ For example, you may want a subsection of the data that doesn’t include retail
 <a class="reference internal image-reference" href="../_images/map4.png"><img alt="404 image" src="../_images/map4.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>6. Change the map <em>Style</em> to <strong>Normal</strong>.</p>
+<p>5. Change the map <em>Style</em> to <strong>Normal</strong>.</p>
 <a class="reference internal image-reference" href="../_images/map5.png"><img alt="404 image" src="../_images/map5.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>7. Add opacity to the map with <strong>Washout</strong>.</p>
+<p>6. Add opacity to the map with <strong>Washout</strong>.</p>
 <a class="reference internal image-reference" href="../_images/map6.png"><img alt="404 image" src="../_images/map6.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>8. Add different Map Layers such as <strong>Streets, Highways, Routes</strong> and <strong>Zip Code Boundaries</strong>.</p>
+<p>7. Add different Map Layers such as <strong>Streets, Highways, Routes</strong> and <strong>Zip Code Boundaries</strong>.</p>
 <a class="reference internal image-reference" href="../_images/map7.png"><img alt="404 image" src="../_images/map7.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>9. Add a title like you’ve done before and you’ve got a functioning map in &lt; 5 mins.</p>
+<p>8. Add a title like you’ve done before and you’ve got a functioning map in &lt; 5 mins.</p>
 <a class="reference internal image-reference" href="../_images/map8.png"><img alt="404 image" src="../_images/map8.png" style="width: 85%;" /></a>
 <br>
 <br>
 </div>
+</div>
 <div class="section" id="time-series">
-<h3><span class="section-number">1.15.6. </span>Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h3>
-<p>We are now interested in the number of trees planted and the date they were planted so our two columns of interest are <code class="docutils literal notranslate"><span class="pre">date_plated</span></code> and <code class="docutils literal notranslate"><span class="pre">tree_id</span></code>.</p>
+<h2><span class="section-number">1.16. </span>Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h2>
+<p>We are now interested in answering the question *<strong>How many trees were planted over the years?</strong></p>
+<p>Before you start, let’s make a new worksheet.</p>
 <p><strong>Step by Step Instructions</strong></p>
-<ol class="simple">
-<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">date_planted</span></code> variable to the “<strong>Columns</strong>” toolbar and again the <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to “<strong>Rows</strong>”. We are again interested in the number of trees planted at selected dates so once again we want to transform this to a “<strong>Count</strong>” type “<strong>Measure</strong>”.</p></li>
-<li><p>Since `date_planted’ is a continuous variable, it’s a good idea to right-click and transform this into a <strong>Continuous</strong> Dimension.</p></li>
-<li><p>This automatically generates the number of trees planted each year (but there are null values!)</p></li>
-<li><p>We can change this to:</p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> field to the <strong>Columns</strong> shelve and the <code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/ts1.png"><img alt="404 image" src="../_images/ts1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2.\ We are again interested in the number of trees planted at selected dates so once again, we want to transform this field to a <strong>Count</strong> <strong>Measure</strong>.</p>
+<a class="reference internal image-reference" href="../_images/ts2.png"><img alt="404 image" src="../_images/ts2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Since <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> is a continuous variable, it’s a good idea to right-click and transform this field into a <strong>Continuous</strong> Dimension.</p>
+<a class="reference internal image-reference" href="../_images/ts4.png"><img alt="404 image" src="../_images/ts4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. This automatically generates the number of trees planted each year (but there are null values!)</p>
+<a class="reference internal image-reference" href="../_images/ts5.png"><img alt="404 image" src="../_images/ts5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. We can change the <code class="docutils literal notranslate"><span class="pre">YEAR(Date</span> <span class="pre">Planted)</span></code> field to:</p>
 <ul class="simple">
-<li><p>month - discrete (Top month choice when right-clicking)  which aggregates months together for all years</p></li>
-<li><p>month - continuous (Bottom month choice when right-clicking) which will make a sequential plot.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MONTH(Date</span> <span class="pre">Panted)</span></code> (top month choice when right-clicking) - which aggregates months together for all years.</p></li>
 </ul>
-</li>
-<li><p>Combining scatterplot onto our line graph by adding an identical <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to rows and converting it to a counting measurement again. At first, we should get 2 graphs on top of each other. We can right-click one of them and select “<strong>Dual Axis</strong>”.
-This will superimpose one on another with a left and a right axis title. We can hide the one on the right by right-clicking the axis and unticking the “<strong>Show Header</strong>” option.</p></li>
-<li><p>To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the “<strong>All</strong>” tab under the “<strong>Marks</strong>” card on the right.</p></li>
-<li><p>Don’t forget to give it a title and edit the y-axis label as we did earlier.</p></li>
-</ol>
-<p><em>💡Tableau also has a forecasting option. We can obtain it by right-clicking the plot and selecting “<strong>Forcast</strong>” then “<strong>Show Forcast</strong>”. You can customize this by right-clicking again and Selecting “<strong>Forcast Options ..</strong>”. I am going to stop here because this is NOT recommended. It’s here but we can do better than this.</em></p>
-<p>Make a new worksheet by going to the menu bar under “<strong>Worksheet</strong>” and clicking “<strong>New Worksheet</strong>” (Or command T on a Macbook).</p>
+<a class="reference internal image-reference" href="../_images/ts6.png"><img alt="404 image" src="../_images/ts6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts7.png"><img alt="404 image" src="../_images/ts7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MONTH(Date</span> <span class="pre">Panted)</span></code> (Bottom month choice when right-clicking) - which will make a sequential plot.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/ts8.png"><img alt="404 image" src="../_images/ts8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts9.png"><img alt="404 image" src="../_images/ts9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We are going to stick with the year dimension though!</p>
+<a class="reference internal image-reference" href="../_images/ts10.png"><img alt="404 image" src="../_images/ts10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts11.png"><img alt="404 image" src="../_images/ts11.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. We can add a circle for clarity at each year as part of our line graph by dragging a second  <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/ts12.png"><img alt="404 image" src="../_images/ts12.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You may get a popup warning when you do this where I specify <strong>Add All Members</strong> since we are converting it to a COUNT measure after this.</p>
+<a class="reference internal image-reference" href="../_images/ts13.png"><img alt="404 image" src="../_images/ts13.png" style="width: 85%;" /></a>
 </div>
-<div class="section" id="drill-down-hierarchies-if-time">
-<h3><span class="section-number">1.15.7. </span>Drill down, Hierarchies (if time)<a class="headerlink" href="#drill-down-hierarchies-if-time" title="Permalink to this headline">¶</a></h3>
-</div>
+<p>6. We need to make sure we also convert it to a <code class="docutils literal notranslate"><span class="pre">Count</span></code> measure.</p>
+<a class="reference internal image-reference" href="../_images/ts14.png"><img alt="404 image" src="../_images/ts14.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>At first, we should get 2 graphs on top of each other.</p>
+<a class="reference internal image-reference" href="../_images/ts15.png"><img alt="404 image" src="../_images/ts15.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. We can right-click one of them and select “<strong>Dual Axis</strong>”.</p>
+<a class="reference internal image-reference" href="../_images/ts16.png"><img alt="404 image" src="../_images/ts16.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will superimpose one on another with a left and a right axis title.</p>
+<a class="reference internal image-reference" href="../_images/ts17.png"><img alt="404 image" src="../_images/ts17.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. We can hide the one on the right by right-clicking the axis and unticking the “<strong>Show Header</strong>” option.</p>
+<a class="reference internal image-reference" href="../_images/ts18.png"><img alt="404 image" src="../_images/ts18.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts19.png"><img alt="404 image" src="../_images/ts19.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>9. In the <strong>Marks</strong> card, select the `CNT(Tree Id)(2), and from the dropdown, select <strong>circle</strong>.</p>
+<a class="reference internal image-reference" href="../_images/ts20.png"><img alt="404 image" src="../_images/ts20.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Now we have a line plot with points!</p>
+<a class="reference internal image-reference" href="../_images/ts21.png"><img alt="404 image" src="../_images/ts21.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>10. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the “<strong>All</strong>” tab under the “<strong>Marks</strong>” card on the right.</p>
+<a class="reference internal image-reference" href="../_images/ts22.png"><img alt="404 image" src="../_images/ts22.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>11. Don’t forget to give it a title and edit the y-axis label as we did before!.</p>
+<a class="reference internal image-reference" href="../_images/ts23.png"><img alt="404 image" src="../_images/ts23.png" style="width: 85%;" /></a>
+<br>
+<br>
 </div>
 <div class="section" id="distributing-and-saving">
-<h2><span class="section-number">1.16. </span>Distributing and Saving<a class="headerlink" href="#distributing-and-saving" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.17. </span>Distributing and Saving<a class="headerlink" href="#distributing-and-saving" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="workbook-twb">
-<h3><span class="section-number">1.16.1. </span>Workbook (<code class="docutils literal notranslate"><span class="pre">.twb</span></code>)<a class="headerlink" href="#workbook-twb" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.17.1. </span>Workbook (<code class="docutils literal notranslate"><span class="pre">.twb</span></code>)<a class="headerlink" href="#workbook-twb" title="Permalink to this headline">¶</a></h3>
 <p>Tableau by default will save all your sheets and dashboards as a workbook, a <code class="docutils literal notranslate"><span class="pre">.twb</span></code> file.</p>
 <p>This does require you to connect to the data source locally.</p>
 <p>If you send this to colleagues, you will need to send them the data you used, along with any images or additional files you used in your dashboard or worksheets.</p>
 </div>
 <div class="section" id="packaged-workbook-twbx">
-<h3><span class="section-number">1.16.2. </span>Packaged Workbook (<code class="docutils literal notranslate"><span class="pre">.twbx</span></code>)<a class="headerlink" href="#packaged-workbook-twbx" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.17.2. </span>Packaged Workbook (<code class="docutils literal notranslate"><span class="pre">.twbx</span></code>)<a class="headerlink" href="#packaged-workbook-twbx" title="Permalink to this headline">¶</a></h3>
 <p>Instead, you could save your work as a packaged workbook where now all of the files and data sources used are contained in the space. The extension for this file type is <code class="docutils literal notranslate"><span class="pre">.twbx</span></code>.</p>
 <p>That means the workbook is no longer linked to the original data source or images.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">1.17. </span>Quick Quiz<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.18. </span>Quick Quiz<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Where can we find the button/tool necessary to sort your plot?</p></li>
 <li><p>What is one way we can convert a dimension to a measure?</p></li>
