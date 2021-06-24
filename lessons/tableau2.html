@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 1: Making Your First Viz &#8212; Data Visualization with Tableau</title>
+    <title>Plot types and the Dashboard &#8212; Data Visualization with Tableau</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -52,22 +52,20 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/activities/activity1.html" />
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau2.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Attribution" href="../things_to_know/attribution.html" />
-    <link rel="prev" title="1. Introduction to Tableau" href="../lessons/tableau1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/activities/activity1.html" />
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau2.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Lesson 1: Making Your First Viz" />
-<meta property="og:description" content="Lesson 1: Making Your First Viz  I believe that in order to firmly grasp a concept, it requires some application.  HR has provided me with some sample data that" />
+<meta property="og:title"       content="Plot types and the Dashboard" />
+<meta property="og:description" content="Plot types and the Dashboard  Time Series  We are now interested in the number of trees planted and the date they were planted so our two columns of interest ar" />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -120,7 +118,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/lesson1.html">
+  <a class="reference internal" href="lesson1.html">
    1. Visualization Importance
   </a>
  </li>
@@ -132,7 +130,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/tableau1.html">
+  <a class="reference internal" href="tableau1.html">
    1. Introduction to Tableau
   </a>
  </li>
@@ -142,9 +140,9 @@
   Activities
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
    Lesson 1: Making Your First Viz
   </a>
  </li>
@@ -200,7 +198,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/activities/activity1.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/lessons/tableau2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -220,10 +218,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Factivities/activity1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/tableau2.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/activities/activity1.md"><button
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/tableau2.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -249,18 +247,8 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1-connecting-to-the-data-and-asking-questions">
-   Exercise 1: Connecting to the data and asking questions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2-making-a-bar-plot">
-   Exercise 2: Making a Bar Plot
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3-map">
-   Exercise 3: Map
+  <a class="reference internal nav-link" href="#time-series">
+   Time Series
   </a>
  </li>
 </ul>
@@ -275,48 +263,24 @@
         
               <div>
                 
-  <div class="section" id="lesson-1-making-your-first-viz">
-<h1>Lesson 1: Making Your First Viz<a class="headerlink" href="#lesson-1-making-your-first-viz" title="Permalink to this headline">¶</a></h1>
-<p>I believe that in order to firmly grasp a concept, it requires some application.</p>
-<p>HR has provided me with some sample data that many of you will, or have worked with. I’m going to build some tasks for your to try on your own using the skills you learned during the class.</p>
-<div class="section" id="exercise-1-connecting-to-the-data-and-asking-questions">
-<h2>Exercise 1: Connecting to the data and asking questions<a class="headerlink" href="#exercise-1-connecting-to-the-data-and-asking-questions" title="Permalink to this headline">¶</a></h2>
-<p>I’ll provide you with the sample data given to me by one of your colleagues. We will be using the excel spreadsheet named <code class="docutils literal notranslate"><span class="pre">compensation.xlsx</span></code>.</p>
+  <div class="section" id="plot-types-and-the-dashboard">
+<h1>Plot types and the Dashboard<a class="headerlink" href="#plot-types-and-the-dashboard" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="time-series">
+<h2>Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h2>
+<p>We are now interested in the number of trees planted and the date they were planted so our two columns of interest are <code class="docutils literal notranslate"><span class="pre">date_plated</span></code> and <code class="docutils literal notranslate"><span class="pre">tree_id</span></code>.</p>
+<p><strong>Step by Step Instructions</strong></p>
 <ol class="simple">
-<li><p>Connect Tableau to the <code class="docutils literal notranslate"><span class="pre">compensation</span></code> excel sheet.</p></li>
-<li><p>Convert the <code class="docutils literal notranslate"><span class="pre">CTC</span></code> column to a number.</p></li>
-<li><p>Go to sheet 1. Did tableau generate any columns that were not there before? If so, which ones?</p></li>
-<li><p>How many geographical dimensions are there?</p></li>
-<li><p>How many date measures are there?</p></li>
-<li><p>Are there any questions that you have from this dataset? Write down a few questions you want to explore in the data.</p></li>
+<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">date_planted</span></code> variable to the “<strong>Columns</strong>” toolbar and again the <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to “<strong>Rows</strong>”. We are again interested in the number of trees planted at selected dates so once again we want to transform this to a “<strong>Count</strong>” type “<strong>Measure</strong>”.</p></li>
 </ol>
-</div>
-<div class="section" id="exercise-2-making-a-bar-plot">
-<h2>Exercise 2: Making a Bar Plot<a class="headerlink" href="#exercise-2-making-a-bar-plot" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>We want to know how many employees there are in each country. Use the appropriate columns to generate a bar plot.</p></li>
-<li><p>Sort these values in descending order.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Which country has the largest number of employees?</p></li>
-<li><p>Which country has the least amount of employees?</p></li>
-</ul>
-<ol class="simple">
-<li><p>Can you transpose your plot?</p></li>
-<li><p>Change the colour of your plot to a colour of your choice.</p></li>
-<li><p>Try decreasing the width of the bars.</p></li>
-</ol>
-</div>
-<div class="section" id="exercise-3-map">
-<h2>Exercise 3: Map<a class="headerlink" href="#exercise-3-map" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Make a new worksheet.</p></li>
-<li><p>Create a world map using the latitude and longitude fields.</p></li>
-<li><p>We want to now explore what is the AVERAGE CTC is of each country. Do some countries have higher a higher CTC value than others? We are first going to have to drag the <code class="docutils literal notranslate"><span class="pre">Country</span></code> column to the <code class="docutils literal notranslate"><span class="pre">Detail</span></code> option on the <strong>Marks</strong> card. Without doing this, Tableau will not know to give an average to any of the countries since that field is not used in the plot!</p></li>
-<li><p>Let’s specify AVERAGE CTC by colour. Drag this column to the <strong>Color</strong> Mark.</p></li>
-<li><p>Is this giving the average value? Can you change it to reflect the average stip percentage now?</p></li>
-<li><p>Which countries have higher average CTC values?</p></li>
-</ol>
+<p>2. Since `date_planted’ is a continuous variable, it’s a good idea to right-click and transform this into a <strong>Continuous</strong> Dimension.</p>
+<p>3. This automatically generates the number of trees planted each year (but there are null values!)</p>
+<p>4. We can change this to:
+- month - discrete (Top month choice when right-clicking)  which aggregates months together for all years
+- month - continuous (Bottom month choice when right-clicking) which will make a sequential plot.</p>
+<p>5. Combining scatterplot onto our line graph by adding an identical <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to rows and converting it to a counting measurement again. At first, we should get 2 graphs on top of each other. We can right-click one of them and select “<strong>Dual Axis</strong>”.
+This will superimpose one on another with a left and a right axis title. We can hide the one on the right by right-clicking the axis and unticking the “<strong>Show Header</strong>” option.</p>
+<p>6. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the “<strong>All</strong>” tab under the “<strong>Marks</strong>” card on the right.</p>
+<p>7. Don’t forget to give it a title and edit the y-axis label as we did earlier.</p>
 </div>
 </div>
 
@@ -333,7 +297,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./activities"
+            path: "./lessons"
         },
         predefinedOutput: true
     }
@@ -345,8 +309,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../lessons/tableau1.html" title="previous page"><span class="section-number">1. </span>Introduction to Tableau</a>
-    <a class='right-next' id="next-link" href="../things_to_know/attribution.html" title="next page">Attribution</a>
 
         </div>
         

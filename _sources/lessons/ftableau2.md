@@ -440,7 +440,7 @@ This is where you create each individual visualization. You create 1 viz per wor
 <br>
 <br>
 
-A dashboard is where you lay out your different worksheets and add any filtering toggles that want to make available for the user. 
+A dashboard is where you layout your different worksheets and add any filtering toggles that want to make available for the user. 
 
 You can only add worksheets that have been already made. That means that if you want to add a graph to a dashboard, you have to first make it from a worksheet. 
 
@@ -680,119 +680,11 @@ To create a new viz we need to make a new worksheet. We can do this in 2 ways:
 <br>
 
 
-### Aggregation Plots 
-
-This is very similar to how you would make a COUNT bar plot with one minor difference, we no longer are using a "Count" **Measure** but instead perhaps **Average**, **Median**, **Max** and **Min**.
-
-Our question now is: ***What is the average diameter of each tree genus?***.
-
-**Step by Step Instructions:**
-
-1\. Drag from the left-hand side under the heading "Tables" the column named `Genus Name` to the **Columns** shelf.
-
-<img src="imgs/agg1.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-2\.We want the mean diameter for each genus so we can drag diameter to the **Rows** shelf.
-
-<img src="imgs/agg2.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-3\.This is where things differ. We right-click the diameter and transform it to a **Measure** specifying **Average**.
-
-<img src="imgs/agg3.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-4\.Instead of using a bar chart, Maybe using a dot plot would be more ideal. We can convert it by clicking the dropdown menu under the "Marks" card. Selecting "Circle" or "Shape" will instantly convert it.
-
-<img src="imgs/agg4.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
+## Aggregation Plots 
 
 
-<img src="imgs/agg5.png"  width = "85%" alt="404 image" />
 
-<br>
-<br>
-
-5\. I am going to rotate the axis since I find this to be a more effective plot. 
-
-
-<img src="imgs/agg6.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-```{admonition} Tip!
-:class: tip
-You can add your own shape icons by adding a folder to your "My Tableau Repository" folder under "Shapes". 
-
-We will show you how to do this in Class 3 or 4. 
-```
-
-
-### Drill Down and hierarchies  
-
-You'll notice that with this tree data a tree can have a Genus and a species. There are multiple species in each genus. 
-
-We can create a hierarchy from these columns so that we can make a "Drilling down" action between each field in the graph. 
-
-
-<img src="imgs/tree_genus.png"  width = "65%" alt="404 image" />
-
-<br>
-<br>
-
-1\. First, we identify the second step in our hierarchy and drag it under the field that it encompasses. 
-
-<img src="imgs/dd1.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-For us, this means dragging `Species Name` under `Genus Name`. 
-
-
-<img src="imgs/dd2.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-2\. This will produce a popup to create the hierarchy. You can name this anything from Tree types or as we did simply the steps in the Hierarchy.  
-
-<img src="imgs/dd3.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-3\. Once the hierarchy is made, you'll see the steps under the title you just wrote as well as a small + icon next to the `Genus Name` field in the **Rows** shelf.
-
-<img src="imgs/dd4.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-4\. If we click the plus next to `Genus Name` species will populate beside it.
-
-<img src="imgs/dd5.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-5\.  The graph will now reflect the hierarchy and sort the trees accordingly.   
-
-<img src="imgs/dd6.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
+## Drill Down and Hiearcha data 
 
 ### Maps 
 
@@ -847,7 +739,7 @@ If you don't have latitude and longitude columns, you may still be able to make 
 <br>
 
 
-5\. Change the map *Style* to **Normal**. 
+6\. Change the map *Style* to **Normal**. 
 
 <img src="imgs/map5.png"  width = "85%" alt="404 image" />
 
@@ -855,7 +747,7 @@ If you don't have latitude and longitude columns, you may still be able to make 
 <br>
 
 
-6\. Add opacity to the map with **Washout**.
+7\. Add opacity to the map with **Washout**.
 
 <img src="imgs/map6.png"  width = "85%" alt="404 image" />
 
@@ -863,7 +755,7 @@ If you don't have latitude and longitude columns, you may still be able to make 
 <br>
 
 
-7\. Add different Map Layers such as **Streets, Highways, Routes** and **Zip Code Boundaries**.
+8\. Add different Map Layers such as **Streets, Highways, Routes** and **Zip Code Boundaries**.
 
 <img src="imgs/map7.png"  width = "85%" alt="404 image" />
 
@@ -871,181 +763,13 @@ If you don't have latitude and longitude columns, you may still be able to make 
 <br>
 
     
-8\. Add a title like you've done before and you've got a functioning map in < 5 mins. 
+9\. Add a title like you've done before and you've got a functioning map in < 5 mins. 
 
 <img src="imgs/map8.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-
-## Time Series 
-
-We are now interested in answering the question ***How many trees were planted over the years?** 
-
-Before you start, let's make a new worksheet. 
-
-**Step by Step Instructions**
-
-1\. Drag the `Date Planted` field to the **Columns** shelve and the `tree Id` field to the **Rows** shelf.
-
-<img src="imgs/ts1.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-2.\ We are again interested in the number of trees planted at selected dates so once again, we want to transform this field to a **Count** **Measure**. 
-
-<img src="imgs/ts2.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-3\. Since `Date Planted` is a continuous variable, it's a good idea to right-click and transform this field into a **Continuous** Dimension. 
-
-<img src="imgs/ts4.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-4\. This automatically generates the number of trees planted each year (but there are null values!)
-
-<img src="imgs/ts5.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-4\. We can change the `YEAR(Date Planted)` field to:
-
-- `MONTH(Date Panted)` (top month choice when right-clicking) - which aggregates months together for all years.
-    
-<img src="imgs/ts6.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-<img src="imgs/ts7.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-    
-    
-- `MONTH(Date Panted)` (Bottom month choice when right-clicking) - which will make a sequential plot.
-    
-    
-<img src="imgs/ts8.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-<img src="imgs/ts9.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-    
-We are going to stick with the year dimension though! 
-
-<img src="imgs/ts10.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-    
-    
-<img src="imgs/ts11.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-    
-    
-5\. We can add a circle for clarity at each year as part of our line graph by dragging a second  `Tree Id` field to the **Rows** shelf. 
-
-<img src="imgs/ts12.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-```{warning}
-You may get a popup warning when you do this where I specify **Add All Members** since we are converting it to a COUNT measure after this. 
-
-<img src="imgs/ts13.png"  width = "85%" alt="404 image" />
-```
-    
-6\. We need to make sure we also convert it to a `Count` measure. 
-
-<img src="imgs/ts14.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-At first, we should get 2 graphs on top of each other. 
-
-<img src="imgs/ts15.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-7\. We can right-click one of them and select "**Dual Axis**". 
-
-<img src="imgs/ts16.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-This will superimpose one on another with a left and a right axis title.
-
-
-<img src="imgs/ts17.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-8\. We can hide the one on the right by right-clicking the axis and unticking the "**Show Header**" option. 
-
-<img src="imgs/ts18.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-<img src="imgs/ts19.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-9\. In the **Marks** card, select the `CNT(Tree Id)(2), and from the dropdown, select **circle**. 
-
-<img src="imgs/ts20.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-Now we have a line plot with points! 
-
-<img src="imgs/ts21.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-10\. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the "**All**" tab under the "**Marks**" card on the right. 
-
-
-<img src="imgs/ts22.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-11\. Don't forget to give it a title and edit the y-axis label as we did before!.  
-
-<img src="imgs/ts23.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
 
 ## Distributing and Saving
 
