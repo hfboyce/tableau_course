@@ -51,6 +51,9 @@ Details about class meetings will appear here as they become available.
 - Discrete vs continuous
 - Worksheets vs dashboards vs story
 - Quick viz examples and effectiveness 
+    - Aggregate
+    - Drill down, Hierarchies 
+    - Maps
 - Distributing and saving
 
 #### Exercise 
@@ -72,7 +75,7 @@ Details about class meetings will appear here as they become available.
 
 ### Tableau Applications 
 
-- Drill down, Hierarchies 
+- 
 - Scatter plot 
 - Bins - Histograms and density plots 
 - Calculations - converting to booleans 

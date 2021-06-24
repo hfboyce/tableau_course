@@ -124,7 +124,7 @@ A slight setback if you do not have a Tableau Server.
 1. What must you have in order for us to have some form of version control beyond saving files with different names?
 2. Who is Tableau's Co-founder and technical advisor?
 3. Name me a company that uses Tableau.
-4. What Visualization tool was acquired by Google?
+4. What visualization tool was acquired by Google?
 5. **True or False:** You must have some coding experience to use Tableau. 
 
 
@@ -1049,6 +1049,12 @@ Now we have a line plot with points!
 
 ## Distributing and Saving
 
+We can save our work by clicking the floppy disk icon on the top left of the toolbar. 
+
+<img src="imgs/saving.png"  width = "85%" alt="404 image" />
+
+<br>
+
 ### Workbook (`.twb`)
 
 Tableau by default will save all your sheets and dashboards as a workbook, a `.twb` file. 
@@ -1057,11 +1063,18 @@ This does require you to connect to the data source locally.
 
 If you send this to colleagues, you will need to send them the data you used, along with any images or additional files you used in your dashboard or worksheets. 
 
+You're more likely to use this is you are using dynamic data. This means that you are connected to a data source that updates regularly.
+
 ### Packaged Workbook (`.twbx`)
 
 Instead, you could save your work as a packaged workbook where now all of the files and data sources used are contained in the space. The extension for this file type is `.twbx`. 
 
 That means the workbook is no longer linked to the original data source or images. 
+
+If you are working with static data or want to send your colleague your dashboard as a sample, this is likely the better option! Just remember that this format will take up more storage space. 
+
+
+
 
 ## Quick Quiz
 
