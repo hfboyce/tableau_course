@@ -259,7 +259,7 @@ The moral of the story here is although statistics and calculation can help desc
 This is why it's so important to use visualizations to effectively communicate our data insights. 
 
 
-## Why Good Data Visualization is So Important 
+## Why Good Data Visualization is so Important 
 
 Sometimes it's best to actually experience a case where analysis improvements occurred to really solidify the effect of good visualizations. Using a case study from the course [Data Visualization](https://viz-learn.mds.ubc.ca/en/module2) that I co-developed and its source from [here](https://www.cs.ubc.ca/~tmm/courses/547-19/slides/borkin-artery-subset-slides.pdf), let's experience a real occurrence, where changing the visualizations resulted in concrete analysis improvements. 
 
