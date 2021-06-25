@@ -2,7 +2,7 @@
 
 ## What is Tableau 
 
-By now, you'll know that tableau is going to help you make sense of your data but how? 
+By now, you'll know that Tableau is going to help you make sense of your data but how? 
 
 Tableau is a visualization software used in businesses to create static and dynamic plots that can easily be shared within and across organizations.
 
@@ -128,7 +128,7 @@ A slight setback if you do not have a Tableau Server.
 5. **True or False:** You must have some coding experience to use Tableau. 
 
 
-<!-- ```{admonition} Solutions!
+```{admonition} Solutions!
 :class: dropdown
 
 1. Tableau Server
@@ -137,7 +137,7 @@ A slight setback if you do not have a Tableau Server.
 4. Looker
 5. False
 
-``` //-->
+```
 
 ## Getting Started 
 
@@ -210,6 +210,8 @@ In addition to Tableau connecting to a server, there are a multitude of file typ
 We are going to use a CSV named `street-trees.csv` for our demo. 
 
 Locate your file and click ***Open***.
+
+I'll be using the `street-trees.csv` file located in this [Google Drive file](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV)
 
 
 <img src="imgs/picking.png"  width = "85%" alt="404 image" />
@@ -471,7 +473,7 @@ We will discuss more on the importance of storytelling later on in this course, 
 5. **True or False:** Columns that are blue are continuous data, whereas columns in green are discrete. 
 
 
-<!-- ```{admonition} Solutions!
+```{admonition} Solutions!
 :class: dropdown
 
 1. True
@@ -480,7 +482,7 @@ We will discuss more on the importance of storytelling later on in this course, 
 4. Dimensions are qualitative fields and Measures and quantitative fields. 
 5. False
 
-``` //-->
+```
 
 ## Making some Viz! (It's about time!)
 
@@ -1085,7 +1087,7 @@ If you are working with static data or want to send your colleague your dashboar
 5. Which file extension does not save the data in the workbook?
 
 
-<!-- ```{admonition} Solutions!
+```{admonition} Solutions!
 :class: dropdown
 
 1. In the toolbar or by clicking the sort icon on the axis of the plot.
@@ -1094,4 +1096,4 @@ If you are working with static data or want to send your colleague your dashboar
 4. False
 5. `.tbw`
 
-``` //-->
+```
