@@ -30,6 +30,14 @@ Details about class meetings will appear here as they become available.
 | 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Exploratory Data Visualization, Asthetics and Trends |  | 
 | 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  |  | 
 | 5 | Jul/23 9:00am - 11ish  |Jul/22 8:30-10:30PM  |  Dashboard Presentations | |
+
+
+## Data
+
+Any data that I'll be using will be available in the data file [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV).
+
+
+
 ## Class Outline
 
 ### Lesson 1 - Introduction to Tableau and Visualization Importance
