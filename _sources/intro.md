@@ -83,36 +83,46 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 ### Tableau Applications 
 
-- 
+- Pie chart
+- Stacked bars 
+- Side by side bars 
 - Scatter plot 
-- Bins - Histograms and density plots 
-- Calculations - converting to booleans 
+- line graph
+- Bins - Histograms
+- Boxplot
+- Heatmap
 - Dashboards
 - Filtering 
 - Tooltips 
 - layouts 
-- Forecasting
+- publishing data sources
+- Forecasting if time 
 
 #### Exercise 
 
-- Create a map
+- Create a histograph
 - Create a time series
+- Heatmap 
 - Add to a dashboard
 - Add filters 
 - Add tooltips and change the layout
+
 
 ### Lesson 3 - Exploratory Data Visualization, Aesthetics and Trends
 
 #### Theory 
 
-- Why are EDAs important?
-- How to approach an EDA? (Exercise)
-- Conclusion and next steps in an EDA  
-- Importance of colour, titles etc. 
-
+- What should you absolutely not do? Data Science Ducks
+- Common pitfalls (8-10 examples)
+- A game of Good vs Evil
+- Best practices
+- Storytelling 
 
 ### Tableau Applications 
 
+- Chloropleth map 
+- Calculations -> string conversions
+- Calculations - converting to booleans 
 - Not every EDA will make it in the Dashboard
 - Joining, unions 
 - Titles
@@ -129,11 +139,11 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 #### Theory 
 
-- What should you absolutely not do? Data Science Ducks
-- Common pitfalls (8-10 examples)
-- A game of Good vs Evil
-- Best practices
-- Storytelling 
+- Why are EDAs important?
+- How to approach an EDA? (Exercise)
+- Conclusion and next steps in an EDA  
+- Importance of colour, titles etc. 
+
 ### Tableau Applications 
 
 - Clicks and hovers 
@@ -148,6 +158,7 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Create a tableau story 
 
 Next class, take any dataset, make a mini dashboard (What is your question?) then present it in the next class. 
+
 ### Lesson 5 - Dashboard Presentations
 
 - Present your dashboards.
