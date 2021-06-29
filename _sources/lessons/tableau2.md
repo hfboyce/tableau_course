@@ -2,13 +2,13 @@
 
 ## More Plotting Examples
 
-Alright, let's now take a shot on creating some of the plots we just learned about. 
+Alright, let's now take a shot at creating some of the plots we just learned about. 
 
 ### Pie Chart
 
-Let's say we want to see the proportion of tree planted with root barrier to trees planted without root barriers. 
+Let's say we want to see the proportion of trees planted with root barriers to trees planted without root barriers. 
 
-First make a new worksheet. 
+First, make a new worksheet. 
 
 **Step by Step Instructions**
 
@@ -36,7 +36,7 @@ First make a new worksheet.
 <br>
 
 
-4\. Click on the **Show Me** menue on the top right side of the workspace.  
+4\. Click on the **Show Me** menu on the top right side of the workspace.  
 
 <img src="imgs/pie4.png"  width = "85%" alt="404 image" />
 
@@ -63,9 +63,9 @@ And voila! We <del>baked</del> made a pie chart 🥧!
 
 ### Stacked Bars 
 
-A pie chart may not be the best visualization to see the proportion of tree planted with root barrier to trees planted without root barriers. 
+A pie chart may not be the best visualization to see the proportion of trees planted with root barriers to trees planted without root barriers. 
 
-Let's see how it looks as a stacked Bar chart. 
+Let's see how it looks like as a stacked Bar chart. 
 
 Make a new worksheet or clear the current sheet you are on. 
 
@@ -79,7 +79,7 @@ Make a new worksheet or clear the current sheet you are on.
 <br>
 
 
-2\.Convert this field to a **Count** **Measure** by right clicking and selecting the appropriate measure.
+2\.Convert this field to a **Count** **Measure** by right-clicking and selecting the appropriate measure.
 
 <img src="imgs/stacked2.png"  width = "85%" alt="404 image" />
 
@@ -141,7 +141,7 @@ You may have to indicate that want to **Add All Members**
 <img src="imgs/ssb2.png"  width = "85%" alt="404 image" />
 
 
-3\. Convert the `Tree Id` field to a **Count** **Measure** by right clicking and selecting the appropriate measure.
+3\. Convert the `Tree Id` field to a **Count** **Measure** by right-clicking and selecting the appropriate measure.
 
 <img src="imgs/ssb3.png"  width = "85%" alt="404 image" />
 
@@ -150,7 +150,7 @@ You may have to indicate that want to **Add All Members**
 
 
 
-4\. Let's add a little bit of colour to this plot. This isn't a nessessary step, however we are doing this for consistency to compare to the last three charts.
+4\. Let's add a little bit of colour to this plot. This isn't a necessary step, however, we are doing this for consistency to compare to the last three charts.
 
 <img src="imgs/ssb3.5.png"  width = "85%" alt="404 image" />
 
@@ -166,13 +166,13 @@ Now that we've done that, which plot out of the pie, stacked bars and side-by-si
 
 ### Scatter Plot 
 
-With this particular data source we don't really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it. 
+With this particular data source, we don't really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it. 
 
 Let's plot and see if there is a relationship between the diameter of the trees' trunks and their height. 
 
 **Step by Step Instructions**
 
-1\. First, let's convert the `Height Range Id` column to a **Measure**. We can do this by right clicking on it and selecting **Measure**.   
+1\. First, let's convert the `Height Range Id` column to a **Measure**. We can do this by right-clicking on it and selecting **Measure**.   
 
 <img src="imgs/scat2.png"  width = "85%" alt="404 image" />
 
@@ -407,6 +407,32 @@ Now we have a line plot with points!
 
 ### Heatmap
 
+## Quick Quiz
+
+1. **True or False:** Using the same data, a histogram’s shape can change depending on the bin size.
+2. **True or False:** When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.
+3. What does the middle line of a box plot represent?
+4. Which visualization type can show multiple summary statistics of data as well as their distributions?  
+5. What is another name for a density plot?
+6. What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?
+
+
+
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
+
+
 ## Dashboards
 
 ### Layout 
@@ -416,4 +442,31 @@ Now we have a line plot with points!
 ### Tooltips 
 
 ## Publishing data sources
+
+## Quick Quiz
+
+1. **True or False:** Using the same data, a histogram’s shape can change depending on the bin size.
+2. **True or False:** When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.
+3. What does the middle line of a box plot represent?
+4. Which visualization type can show multiple summary statistics of data as well as their distributions?  
+5. What is another name for a density plot?
+6. What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?
+
+
+
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
+
+
 

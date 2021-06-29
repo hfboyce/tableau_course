@@ -67,7 +67,7 @@
 <meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau2.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Plot types and the Dashboard" />
-<meta property="og:description" content="Plot types and the Dashboard  More Plotting Examples  Alright, let’s now take a shot on creating some of the plots we just learned about.  Pie Chart  Let’s say " />
+<meta property="og:description" content="Plot types and the Dashboard  More Plotting Examples  Alright, let’s now take a shot at creating some of the plots we just learned about.  Pie Chart  Let’s say " />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -306,30 +306,40 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   2.2. Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dashboards">
-   2.2. Dashboards
+   2.3. Dashboards
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#layout">
-     2.2.1. Layout
+     2.3.1. Layout
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#filtering">
-     2.2.2. Filtering
+     2.3.2. Filtering
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tooltips">
-     2.2.3. Tooltips
+     2.3.3. Tooltips
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#publishing-data-sources">
-   2.3. Publishing data sources
+   2.4. Publishing data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.5. Quick Quiz
   </a>
  </li>
 </ul>
@@ -348,11 +358,11 @@
 <h1><span class="section-number">2. </span>Plot types and the Dashboard<a class="headerlink" href="#plot-types-and-the-dashboard" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="more-plotting-examples">
 <h2><span class="section-number">2.1. </span>More Plotting Examples<a class="headerlink" href="#more-plotting-examples" title="Permalink to this headline">¶</a></h2>
-<p>Alright, let’s now take a shot on creating some of the plots we just learned about.</p>
+<p>Alright, let’s now take a shot at creating some of the plots we just learned about.</p>
 <div class="section" id="pie-chart">
 <h3><span class="section-number">2.1.1. </span>Pie Chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h3>
-<p>Let’s say we want to see the proportion of tree planted with root barrier to trees planted without root barriers.</p>
-<p>First make a new worksheet.</p>
+<p>Let’s say we want to see the proportion of trees planted with root barriers to trees planted without root barriers.</p>
+<p>First, make a new worksheet.</p>
 <p><strong>Step by Step Instructions</strong></p>
 <p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> field to the <strong>Color</strong> mark icon.</p>
 <a class="reference internal image-reference" href="../_images/pie1.png"><img alt="404 image" src="../_images/pie1.png" style="width: 85%;" /></a>
@@ -366,7 +376,7 @@
 <a class="reference internal image-reference" href="../_images/pie3.png"><img alt="404 image" src="../_images/pie3.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>4. Click on the <strong>Show Me</strong> menue on the top right side of the workspace.</p>
+<p>4. Click on the <strong>Show Me</strong> menu on the top right side of the workspace.</p>
 <a class="reference internal image-reference" href="../_images/pie4.png"><img alt="404 image" src="../_images/pie4.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -381,15 +391,15 @@
 </div>
 <div class="section" id="stacked-bars">
 <h3><span class="section-number">2.1.2. </span>Stacked Bars<a class="headerlink" href="#stacked-bars" title="Permalink to this headline">¶</a></h3>
-<p>A pie chart may not be the best visualization to see the proportion of tree planted with root barrier to trees planted without root barriers.</p>
-<p>Let’s see how it looks as a stacked Bar chart.</p>
+<p>A pie chart may not be the best visualization to see the proportion of trees planted with root barriers to trees planted without root barriers.</p>
+<p>Let’s see how it looks like as a stacked Bar chart.</p>
 <p>Make a new worksheet or clear the current sheet you are on.</p>
 <p><strong>Step by Step Instructions</strong></p>
 <p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
 <a class="reference internal image-reference" href="../_images/stacked1.png"><img alt="404 image" src="../_images/stacked1.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>2.Convert this field to a <strong>Count</strong> <strong>Measure</strong> by right clicking and selecting the appropriate measure.</p>
+<p>2.Convert this field to a <strong>Count</strong> <strong>Measure</strong> by right-clicking and selecting the appropriate measure.</p>
 <a class="reference internal image-reference" href="../_images/stacked2.png"><img alt="404 image" src="../_images/stacked2.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -420,11 +430,11 @@
 <br>
 <p>You may have to indicate that want to <strong>Add All Members</strong></p>
 <a class="reference internal image-reference" href="../_images/ssb2.png"><img alt="404 image" src="../_images/ssb2.png" style="width: 85%;" /></a>
-<p>3. Convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to a <strong>Count</strong> <strong>Measure</strong> by right clicking and selecting the appropriate measure.</p>
+<p>3. Convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to a <strong>Count</strong> <strong>Measure</strong> by right-clicking and selecting the appropriate measure.</p>
 <a class="reference internal image-reference" href="../_images/ssb3.png"><img alt="404 image" src="../_images/ssb3.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>4. Let’s add a little bit of colour to this plot. This isn’t a nessessary step, however we are doing this for consistency to compare to the last three charts.</p>
+<p>4. Let’s add a little bit of colour to this plot. This isn’t a necessary step, however, we are doing this for consistency to compare to the last three charts.</p>
 <a class="reference internal image-reference" href="../_images/ssb3.5.png"><img alt="404 image" src="../_images/ssb3.5.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -435,10 +445,10 @@
 </div>
 <div class="section" id="scatter-plot">
 <h3><span class="section-number">2.1.4. </span>Scatter Plot<a class="headerlink" href="#scatter-plot" title="Permalink to this headline">¶</a></h3>
-<p>With this particular data source we don’t really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it.</p>
+<p>With this particular data source, we don’t really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it.</p>
 <p>Let’s plot and see if there is a relationship between the diameter of the trees’ trunks and their height.</p>
 <p><strong>Step by Step Instructions</strong></p>
-<p>1. First, let’s convert the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> column to a <strong>Measure</strong>. We can do this by right clicking on it and selecting <strong>Measure</strong>.</p>
+<p>1. First, let’s convert the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> column to a <strong>Measure</strong>. We can do this by right-clicking on it and selecting <strong>Measure</strong>.</p>
 <a class="reference internal image-reference" href="../_images/scat2.png"><img alt="404 image" src="../_images/scat2.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -574,20 +584,68 @@
 <h3><span class="section-number">2.1.8. </span>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
+<div class="section" id="quick-quiz">
+<h2><span class="section-number">2.2. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
+<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
+<li><p>What does the middle line of a box plot represent?</p></li>
+<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
+<li><p>What is another name for a density plot?</p></li>
+<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
+</div>
 <div class="section" id="dashboards">
-<h2><span class="section-number">2.2. </span>Dashboards<a class="headerlink" href="#dashboards" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Dashboards<a class="headerlink" href="#dashboards" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="layout">
-<h3><span class="section-number">2.2.1. </span>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1. </span>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="filtering">
-<h3><span class="section-number">2.2.2. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="tooltips">
-<h3><span class="section-number">2.2.3. </span>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3. </span>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="publishing-data-sources">
-<h2><span class="section-number">2.3. </span>Publishing data sources<a class="headerlink" href="#publishing-data-sources" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Publishing data sources<a class="headerlink" href="#publishing-data-sources" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.5. </span>Quick Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
+<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
+<li><p>What does the middle line of a box plot represent?</p></li>
+<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
+<li><p>What is another name for a density plot?</p></li>
+<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
 </div>
 </div>
 
