@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Visualization Types &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson2.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Introduction to Tableau" href="tableau1.html" />
+    <link rel="prev" title="1. Visualization Importance" href="lesson1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson2.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Visualization Types" />
+<meta property="og:description" content="Visualization Types  Introduction  In the theory portion of lesson 2, we’re going to discuss the different types of visualizations possible and when/how they ar" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Visualization Types
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau2.html">
+   2. Plot types and the Dashboard
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/lesson2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/lesson2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/lesson2.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   2.1. Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graph-types">
+   2.2. Graph Types
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-vs-position">
+     2.2.1. Area vs Position
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pie-charts">
+     2.2.2. Pie Charts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stacked-bar-charts">
+     2.2.3. Stacked Bar Charts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-by-side-bars">
+     2.2.4. Side by Side Bars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparing-pie-stacked-bar-and-side-by-side-bar-plots">
+     2.2.5. Comparing Pie, Stacked Bar and Side by Side Bar Plots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d">
+     2.2.6. 3-D
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scatter-plot">
+     2.2.7. Scatter Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#line-graphs">
+     2.2.8. Line Graphs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geographical">
+     2.2.9. Geographical
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   2.3. Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distributions">
+   2.4. Distributions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-a-numeric-column">
+     2.4.1. Visualizing a Numeric Column
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#histograms">
+       2.4.1.1. Histograms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#density">
+       2.4.1.2. Density
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-2-numeric-columns">
+     2.4.2. Visualizing 2 numeric columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-the-distribution-of-categorical-columns">
+     2.4.3. Visualizing the Distribution of Categorical Columns
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#box-plot">
+       2.4.3.1. Box Plot
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#violin-plot">
+       2.4.3.2. Violin plot
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-the-distribution-of-2-categoric-columns">
+     2.4.4. Visualizing the distribution of 2 Categoric Columns
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#heatmaps">
+       2.4.4.1. Heatmaps
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plots-using-marker-size">
+       2.4.4.2. Plots Using Marker Size
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.5. Quick Quiz
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="visualization-types">
+<h1><span class="section-number">2. </span>Visualization Types<a class="headerlink" href="#visualization-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2><span class="section-number">2.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>In the theory portion of lesson 2, we’re going to discuss the different types of visualizations possible and when/how they are used to communicate the data to an audience.</p>
+<p>There are MANY different graphs and unfortunately, we are only going to scrape a small surface.</p>
+<p>A great resource to use to discover different visualization types is <a class="reference external" href="https://datavizcatalogue.com/">The Data Visualisation Catalogue</a>. Now, remember that just because the viz type exists, doesn’t necessarily mean it’s the most effective plot for communication.</p>
+</div>
+<div class="section" id="graph-types">
+<h2><span class="section-number">2.2. </span>Graph Types<a class="headerlink" href="#graph-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="area-vs-position">
+<h3><span class="section-number">2.2.1. </span>Area vs Position<a class="headerlink" href="#area-vs-position" title="Permalink to this headline">¶</a></h3>
+<p>First, let’s get into channel types. When we make plots we often use either an area or a position channel to represent data. Let’s compare how these two channels can impact the efficiency of our interpretation of plots.</p>
+<p>This exercise was replicated from the <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module2">Data Visualization</a> course I co-created with <a class="reference external" href="https://joelostblom.com/">Joel Ostblom</a> where we adapted the examples given from <a class="reference external" href="https://www.youtube.com/watch?v=hsfWtPH2kDg">Jeffrey Heer’s PyData talk</a>.</p>
+<p>First, try to estimate how many times larger circle B is compared to circle A.</p>
+<a class="reference internal image-reference" href="../_images/circles1.png"><img alt="404 image" src="../_images/circles1.png" style="width: 60%;" /></a>
+<br>
+<br>
+<p>Not exactly easy is it? Let’s try it with bars now.</p>
+<p>How many times <em>longer</em> is bar B than bar A?</p>
+<a class="reference internal image-reference" href="../_images/bars1.png"><img alt="404 image" src="../_images/bars1.png" style="width: 25%;" /></a>
+<br>
+<br>
+<p>Well, the answer is the same in both examples the bar B is 8 times longer than bar A and circle B is 8 times larger than the area of circle A.</p>
+<p>Even if you were right with both of these estimates, you would have likely found it easier to compare the length of the bars over the area of the circles. The other question that may come to mind is are you suppose to compare diameter, radius, or area?</p>
+<p>With bars, so long are the widths are the same the ambiguity is lower for comparing objects.</p>
+<p>This is something that really should be on your mind when using visualizations to communicate insights.</p>
+</div>
+<div class="section" id="pie-charts">
+<h3><span class="section-number">2.2.2. </span>Pie Charts<a class="headerlink" href="#pie-charts" title="Permalink to this headline">¶</a></h3>
+<p>A pie chart is a circular graph (a pie 🥧 if you will) that is broken into slices to illustrate the numerical proportion of a whole.</p>
+<p>In pie charts, the arc length, angle and area of each slice are proportional to the value it’s representing.</p>
+<a class="reference internal image-reference" href="../_images/pies.png"><img alt="404 image" src="../_images/pies.png" style="width: 100%;" /></a>
+<p>Pie charts generally work well when the values are easy fractions like a half or quarter or when the datasets are small but this figure has a bad reputation in data science and is often criticized by experts.</p>
+<p>This communication of information can instead be displayed with either a stacked bar chart or side-by-side bar charts.</p>
+</div>
+<div class="section" id="stacked-bar-charts">
+<h3><span class="section-number">2.2.3. </span>Stacked Bar Charts<a class="headerlink" href="#stacked-bar-charts" title="Permalink to this headline">¶</a></h3>
+<p>Stacked bar charts communicate the same information as a pie chart however often it is argued that this is easier to compare values.</p>
+<p>Often stacked bar charts are ideal when there are only two categories since both segments will be easy to compare between categories.</p>
+<a class="reference internal image-reference" href="../_images/stacked.png"><img alt="404 image" src="../_images/stacked.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="side-by-side-bars">
+<h3><span class="section-number">2.2.4. </span>Side by Side Bars<a class="headerlink" href="#side-by-side-bars" title="Permalink to this headline">¶</a></h3>
+<p>The last option is if we simply displayed the information using position only and split up the categories into separate bars.</p>
+<a class="reference internal image-reference" href="../_images/sidebars.png"><img alt="404 image" src="../_images/sidebars.png" style="width: 100%;" /></a>
+<p>Here we can see not only the values of each category quickly and clearly but we don’t have to do any hard approximation of how many times larger one category is from another.</p>
+</div>
+<div class="section" id="comparing-pie-stacked-bar-and-side-by-side-bar-plots">
+<h3><span class="section-number">2.2.5. </span>Comparing Pie, Stacked Bar and Side by Side Bar Plots<a class="headerlink" href="#comparing-pie-stacked-bar-and-side-by-side-bar-plots" title="Permalink to this headline">¶</a></h3>
+<p>Clause Wike has the following useful table from his <a class="reference external" href="https://clauswilke.com/dataviz/visualizing-proportions.html#a-case-for-pie-charts">Data Viz</a> resource that explains how the 3 types of plots can most effectively be used.</p>
+<table>
+<caption><span id="tab:pros-cons-pie-bar">Table from <a href="https://clauswilke.com/dataviz/visualizing-proportions.html#a-case-for-pie-charts">Clause Wilke's</a> </span> pros and cons of common approaches to visualizing proportions: pie charts, stacked bars, and side-by-side bars.</caption>
+<colgroup>
+<col width="34%">
+<col width="21%">
+<col width="21%">
+<col width="21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Pie chart</th>
+<th align="center">Stacked bars</th>
+<th align="center">Side-by-side bars</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Clearly visualizes the data as proportions of a whole</td>
+<td align="center">✔</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+</tr>
+<tr class="even">
+<td>Allows easy visual comparison of the relative proportions</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+</tr>
+<tr class="odd">
+<td>Visually emphasizes simple fractions, such as 1/2, 1/3, 1/4</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+</tr>
+<tr class="even">
+<td>Looks visually appealing even for very small datasets</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+</tr>
+<tr class="odd">
+<td>Works well when the whole is broken into many pieces</td>
+<td align="center">✖</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+</tr>
+<tr class="even">
+<td>Works well for the visualization of many sets of proportions or time series of proportions</td>
+<td align="center">✖</td>
+<td align="center">✔</td>
+<td align="center">✖</td>
+</tr>
+</tbody>
+</table>
+<p>My simple rule of thumb is when possible use side-by-side plots unless there are 2 categories where you want a quick identification of when a category is greater.</p>
+</div>
+<div class="section" id="d">
+<h3><span class="section-number">2.2.6. </span>3-D<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h3>
+<p>Ahhhh, The 3D plot. We mentioned this very quickly on the very first day of our course and we saw how changing the dimension of a plot visualizing the ESS of blood vessels increased the identification of low ESS from 71% to 91%.</p>
+<p><a class="reference internal" href="../_images/heart2.png"><img alt="404 image" src="../_images/heart2.png" style="width: 50%;" /></a><a class="reference internal" href="../_images/heart3.png"><img alt="404 image" src="../_images/heart3.png" style="width: 50%;" /></a></p>
+<p>This alone should be enough of an argument to explain why 3D plots should not be used unnecessarily.</p>
+<p>The most common time to avoid 3-dimensional plots is in a bar or pie chart or when you have no way of rotating your plot to see all the views possible.</p>
+<p>Let’s look at a clear example where this method is deceiving.</p>
+<a class="reference internal image-reference" href="../_images/bad-3d-barchart.png"><img alt="404 image" src="../_images/bad-3d-barchart.png" style="width: 70%;" /></a>
+<p><a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module2">Source: Joel Ostblom</a></p>
+<p>The values of each of these bars appear to have the values  A=0.7, B=1.7, C=2.7 and D=3.7.</p>
+<p>However, in reality, the true values of A, B, C and D are 1,2,3, and 4 and it’s only because of the angle and point of view of the plot, do we see deceiving values.</p>
+<p>This being said, 3D plots can be extremely communicative in animative plots or in topographical maps or when you have control over the view.</p>
+</div>
+<div class="section" id="scatter-plot">
+<h3><span class="section-number">2.2.7. </span>Scatter Plot<a class="headerlink" href="#scatter-plot" title="Permalink to this headline">¶</a></h3>
+<p>A scatter plot is a type of plot used to visualize 2 columns that both have continuous values.</p>
+<a class="reference internal image-reference" href="../_images/scatter1.png"><img alt="404 image" src="../_images/scatter1.png" style="width: 50%;" /></a>
+<p>Scatter plots are also used to observe relationships between variables.
+For example, if when the values of x increases, the y values tend to increase, there appears to be a positive relationship between the 2 columns.</p>
+<a class="reference internal image-reference" href="https://mat117.wisconsin.edu/wp-content/uploads/2014/12/Sec-4.png"><img alt="404 image" src="https://mat117.wisconsin.edu/wp-content/uploads/2014/12/Sec-4.png" style="width: 60%;" /></a>
+<p>You’ll likely be using these frequently as they are easy to interpret and they also can show the distribution of 2 columns simultaneously. (We will talk a little more about this later.)</p>
+</div>
+<div class="section" id="line-graphs">
+<h3><span class="section-number">2.2.8. </span>Line Graphs<a class="headerlink" href="#line-graphs" title="Permalink to this headline">¶</a></h3>
+<p>You’ll often see these when trying to visualize time as a variable. Time is a continuous feature usually plotted on the x-axis.</p>
+<p>Data is plotted and a line is created to connect the data between intervals.</p>
+<a class="reference internal image-reference" href="../_images/line1.png"><img alt="404 image" src="../_images/line1.png" style="width: 75%;" /></a>
+<p>Line graphs are quite common in the wild because they are easy to understand.</p>
+<p>Rarely, (if ever) will you see line graphs visualizing categorical data.</p>
+<p>Don’t mistake line graphs with lines of best fit or trend lines. These are quite different.</p>
+<a class="reference internal image-reference" href="../_images/trend1.png"><img alt="404 image" src="../_images/trend1.png" style="width: 75%;" /></a>
+<br>
+<br>
+<p>A trend line won’t connect the data points and instead will find a suitable equation for a line that approximately represents the data as a straight line, whereas line graphs connect the data together.</p>
+</div>
+<div class="section" id="geographical">
+<h3><span class="section-number">2.2.9. </span>Geographical<a class="headerlink" href="#geographical" title="Permalink to this headline">¶</a></h3>
+<p>When displaying data with a geospatial component we generally need to use some form of a map. We saw already that Tableau takes coordinates such as latitude and longitude and projects them onto a flat surface.</p>
+<a class="reference internal image-reference" href="../_images/geospace1.png"><img alt="404 image" src="../_images/geospace1.png" style="width: 75%;" /></a>
+<br>
+<br>
+<p>We also often colour different regions based on specific data values. These are called <strong>Choropleth maps</strong>. We will learn how to make these in Lesson 3.</p>
+<a class="reference internal image-reference" href="../_images/geospace2.png"><img alt="404 image" src="../_images/geospace2.png" style="width: 75%;" /></a>
+<br>
+<br>
+</div>
+</div>
+<div class="section" id="quick-quiz">
+<h2><span class="section-number">2.3. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Between area and position, which is generally easier to compare when analyzing?</p></li>
+<li><p>What is the name of the graph we use to compare proportions that is circular in shape?</p></li>
+<li><p><strong>True or False:</strong> Plotting in 3D can distort the data depending on the view.</p></li>
+<li><p><strong>True or False:</strong> There acceptable times to present a 3D plot.</p></li>
+<li><p>Which graph is used to visualize how the value of something changes over time?</p></li>
+<li><p><strong>True or False:</strong> Scatter plots are generally used to visualize the data of 2 discrete variables (columns).</p></li>
+<li><p>What is the name of a geospatial map where regions and certain areas are coloured or patterned in proportion to a column value or calculation?</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. Position
+2. Pie chart
+3. True
+4. True
+5. Line graph
+6. False
+7. Choropleth maps
+
+
+```
+-->
+</div>
+<div class="section" id="distributions">
+<h2><span class="section-number">2.4. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h2>
+<p>Often when we are trying to understand our data better, we dive deeper into particular columns and examine how frequently certain values occur, or the range it spans over.</p>
+<p>Visualizing the distribution of these columns allows us to identify both of these measures.</p>
+<div class="section" id="visualizing-a-numeric-column">
+<h3><span class="section-number">2.4.1. </span>Visualizing a Numeric Column<a class="headerlink" href="#visualizing-a-numeric-column" title="Permalink to this headline">¶</a></h3>
+<p>The simplest way to see how a column from a dataframe is distributed is by plotting all the values on a single axis.</p>
+<p>This is like a single axis of a scatter plot.</p>
+<a class="reference internal image-reference" href="../_images/dist1.png"><img alt="404 image" src="../_images/dist1.png" style="width: 100%;" /></a>
+<br>
+<br>
+<p>Now, this looks fine with a few values but what happens when we have thousands or hundreds of thousands of rows?</p>
+<a class="reference internal image-reference" href="../_images/dist2.png"><img alt="404 image" src="../_images/dist2.png" style="width: 100%;" /></a>
+<br>
+<br>
+<p>It’s now extremely difficult to make sense of the distribution as the points are all overlapping.</p>
+<p>We call this type of behaviour in plots “over-saturated”.</p>
+<p>So what can we use instead?</p>
+<div class="section" id="histograms">
+<h4><span class="section-number">2.4.1.1. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h4>
+<p>We can instead group the values into bins and show the number of observations in each bin (the count) on the y-axis.</p>
+<p>This ends up looking like a bar chart but instead of a categorical column on one of the axis, we have displayed our continuous, numeric column into groups.</p>
+<a class="reference internal image-reference" href="../_images/hist1.png"><img alt="404 image" src="../_images/hist1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This distribution could be potentially changed with different axis transformations but we can talk about that later on.</p>
+<p>Some distributions have a bell shape distribution which we call “normal”. Others can have many peaks or no peaks at all which we would call “uniform”.</p>
+</div>
+<div class="section" id="density">
+<h4><span class="section-number">2.4.1.2. </span>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h4>
+<p>One of the problems with histograms is that we can vary the shape of the distribution depending on the width we assign to each bin. For example, the bins could be $100 wide or $500 wide and our distribution would then change.</p>
+<a class="reference internal image-reference" href="../_images/hist2.png"><img alt="404 image" src="../_images/hist2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>A histogram is not completely unbias and when we have a small dataset, this can be much more problematic.</p>
+<p>We often use histograms because they have been used for centuries now and easy to draw without too many problems.</p>
+<p>With our new age of technology though, we can use other plotting types that have less bias.</p>
+<p>The density plot is a solution to this!</p>
+<a class="reference internal image-reference" href="https://clauswilke.com/dataviz/visualizing_distributions_I_files/figure-html/titanic-ages-dens1-1.png"><img alt="404 image" src="https://clauswilke.com/dataviz/visualizing_distributions_I_files/figure-html/titanic-ages-dens1-1.png" style="width: 75%;" /></a>
+<p>Density plots visualize uses <strong>kernel smoothing</strong> to visualize the underlying probability distribution of the data.</p>
+<p>Essentially we can create bell-shaped bins for the data instead of square ones in the histograms. These bell-shaped bins are called kernels and added up together to give a smooth distribution.</p>
+<p>Although we often call this a “density plot”, the proper name is <strong>Kernel Density Estimate</strong> (KDE).</p>
+<p>The funny thing about everything we said above is that Tableau does not facilitate the creation of density plots easily. Of course, there are workarounds for this but we have histograms to work with instead.</p>
+</div>
+</div>
+<div class="section" id="visualizing-2-numeric-columns">
+<h3><span class="section-number">2.4.2. </span>Visualizing 2 numeric columns<a class="headerlink" href="#visualizing-2-numeric-columns" title="Permalink to this headline">¶</a></h3>
+<p>If we want to compare the distributions of 2 numeric columns, the easiest plot to create would simply be a scatter plot!</p>
+<a class="reference internal image-reference" href="../_images/scatter2.png"><img alt="404 image" src="../_images/scatter2.png" style="width: 75%;" /></a>
+<p>We can also see the relationship between the two columns, the frequency of the values of each axis, as well as the range.</p>
+</div>
+<div class="section" id="visualizing-the-distribution-of-categorical-columns">
+<h3><span class="section-number">2.4.3. </span>Visualizing the Distribution of Categorical Columns<a class="headerlink" href="#visualizing-the-distribution-of-categorical-columns" title="Permalink to this headline">¶</a></h3>
+<p>We’ve seen that bar charts work as a method of displaying the number of observations for each category in a categorical column which is somewhat like a distribution but is most commonly referred to as just showing the counts of the categories.</p>
+<a class="reference internal image-reference" href="../_images/boxplot0.png"><img alt="404 image" src="../_images/boxplot0.png" style="width: 20%;" /></a>
+<br>
+<br>
+<p>However, this only shows a single value for each category though whether it be the count, mean, median, etc and we know that can be quite restrictive. It will hide a lot of the variation that may be occurring in the data and potentially lead to incorrect analysis.</p>
+<p>So what can we use instead?</p>
+<div class="section" id="box-plot">
+<h4><span class="section-number">2.4.3.1. </span>Box Plot<a class="headerlink" href="#box-plot" title="Permalink to this headline">¶</a></h4>
+<p>A boxplot is a graph that shows some key summary statistics and often outlying individual values.</p>
+<a class="reference internal image-reference" href="../_images/boxplot1.png"><img alt="404 image" src="../_images/boxplot1.png" style="width: 20%;" /></a>
+<br>
+<br>
+<p>Box plots will show not just the median value, but also the lower and upper quartiles, and often the min and max values or extreme values.</p>
+<a class="reference internal image-reference" href="https://datavizcatalogue.com/methods/images/anatomy/box_plot.png"><img alt="404 image" src="https://datavizcatalogue.com/methods/images/anatomy/box_plot.png" style="width: 55%;" /></a>
+<p><a class="reference external" href="https://datavizcatalogue.com/methods/images/anatomy/box_plot.png">Source: https://datavizcatalogue.com</a>
+<br>
+<br></p>
+<ul class="simple">
+<li><p>The middle line represents the data’s median value.</p></li>
+<li><p>The box is the data’s interquartile range (IQR) which is the 25th to the 75th percentile.</p></li>
+<li><p>The <strong>whiskers</strong> often indicates the variability outside the upper and lower quartiles.</p></li>
+<li><p>Sometimes outliers are displayed as individual marks.</p></li>
+</ul>
+</div>
+<div class="section" id="violin-plot">
+<h4><span class="section-number">2.4.3.2. </span>Violin plot<a class="headerlink" href="#violin-plot" title="Permalink to this headline">¶</a></h4>
+<p>Although Tableau isn’t capable of making violin plots in an easy straightforward way, it’s important that we mention them.</p>
+<a class="reference internal image-reference" href="https://datavizcatalogue.com/methods/images/top_images/SVG/violin_plot.svg"><img alt="404 image" src="https://datavizcatalogue.com/methods/images/top_images/SVG/violin_plot.svg" width="90%" /></a>
+<p><a class="reference external" href="https://datavizcatalogue.com/methods/images/top_images/SVG/violin_plot.svg">Source: https://datavizcatalogue.com</a>
+<br>
+<br></p>
+<p>Boxplots are effective for showing multiple statistics, however, they are not effective in showing distributions with multiple peaks.</p>
+<a class="reference internal image-reference" href="https://d2f99xq7vri1nk.cloudfront.net/BoxViolinSmaller.gif"><img alt="404 image" src="https://d2f99xq7vri1nk.cloudfront.net/BoxViolinSmaller.gif" style="width: 95%;" /></a>
+<p><a class="reference external" href="https://www.autodesk.com/research/publications/same-stats-different-graphs">Source: Justin Matejka, George Fitzmaurice</a>
+<br>
+<br></p>
+<p>Violin plots essentially give us a rotated distribution of the data and help us interpret the data more effectively than a box plot.</p>
+</div>
+</div>
+<div class="section" id="visualizing-the-distribution-of-2-categoric-columns">
+<h3><span class="section-number">2.4.4. </span>Visualizing the distribution of 2 Categoric Columns<a class="headerlink" href="#visualizing-the-distribution-of-2-categoric-columns" title="Permalink to this headline">¶</a></h3>
+<p>Often we may want to see the number of observations that are in 2 specific columns.</p>
+<p>For example, if a movie genre is contained in 1 column, and the rating is a second column, how many movies in our data are of the “Action” genre and are rated 13A?</p>
+<p>You often will have questions that are dependent on knowing how many observations are present in 2 different column categories.</p>
+<div class="section" id="heatmaps">
+<h4><span class="section-number">2.4.4.1. </span>Heatmaps<a class="headerlink" href="#heatmaps" title="Permalink to this headline">¶</a></h4>
+<p>Heatmaps are a way to effectively visualize the counts of observations from two-dimensional categorical data.</p>
+<a class="reference internal image-reference" href="../_images/heatmap1.png"><img alt="404 image" src="../_images/heatmap1.png" style="width: 75%;" /></a>
+<br>
+<br>
+<p>In this heatmap, we can see that the consumer segment ships the majority of their orders with Standard Class. In fact for all segments, Standard Class appears to be the most frequent.</p>
+<p>We can really get a sense of our data when comparing 2 categorical columns, and heatmaps are an effective way to do so, however, they do not give the exact count for each colour tint so adjusting the plot accordingly could sometimes be helpful in some scenarios.</p>
+<a class="reference internal image-reference" href="../_images/heatmap2.png"><img alt="404 image" src="../_images/heatmap2.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="plots-using-marker-size">
+<h4><span class="section-number">2.4.4.2. </span>Plots Using Marker Size<a class="headerlink" href="#plots-using-marker-size" title="Permalink to this headline">¶</a></h4>
+<p>We talked about how relying on a single colour channel to communicate information can pose some problems for those with colourblindness and it’s often harder to see small variations in colour as we can with position or size channels.</p>
+<p>To accommodate for these issues, we can either add the values as we showed above or we can use size <strong>AND</strong> colour for these plots.</p>
+<a class="reference internal image-reference" href="../_images/heatmap3.png"><img alt="404 image" src="../_images/heatmap3.png" style="width: 75%;" /></a>
+<br>
+<br>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.5. </span>Quick Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
+<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
+<li><p>What does the middle line of a box plot represent?</p></li>
+<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
+<li><p>What is another name for a density plot?</p></li>
+<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lesson1.html" title="previous page"><span class="section-number">1. </span>Visualization Importance</a>
+    <a class='right-next' id="next-link" href="tableau1.html" title="next page"><span class="section-number">1. </span>Introduction to Tableau</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

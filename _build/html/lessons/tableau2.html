@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plot types and the Dashboard &#8212; Data Visualization with Tableau</title>
+    <title>2. Plot types and the Dashboard &#8212; Data Visualization with Tableau</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,6 +56,8 @@
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson 1: Making Your First Viz" href="../activities/activity1.html" />
+    <link rel="prev" title="1. Introduction to Tableau" href="tableau1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -65,7 +67,7 @@
 <meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau2.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Plot types and the Dashboard" />
-<meta property="og:description" content="Plot types and the Dashboard  Time Series  We are now interested in the number of trees planted and the date they were planted so our two columns of interest ar" />
+<meta property="og:description" content="Plot types and the Dashboard  More Plotting Examples  Alright, let’s now take a shot at creating some of the plots we just learned about.  Pie Chart  Let’s say " />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -122,16 +124,26 @@
    1. Visualization Importance
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson2.html">
+   2. Visualization Types
+  </a>
+ </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
   Lessons - Tableau
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="tableau1.html">
    1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Plot types and the Dashboard
   </a>
  </li>
 </ul>
@@ -247,8 +259,87 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-series">
-   Time Series
+  <a class="reference internal nav-link" href="#more-plotting-examples">
+   2.1. More Plotting Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pie-chart">
+     2.1.1. Pie Chart
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stacked-bars">
+     2.1.2. Stacked Bars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#side-by-side-bars">
+     2.1.3. Side-by-Side Bars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scatter-plot">
+     2.1.4. Scatter Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#line-graph">
+     2.1.5. Line Graph
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histograms">
+     2.1.6. Histograms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boxplot">
+     2.1.7. Boxplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heatmap">
+     2.1.8. Heatmap
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   2.2. Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dashboards">
+   2.3. Dashboards
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout">
+     2.3.1. Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtering">
+     2.3.2. Filtering
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tooltips">
+     2.3.3. Tooltips
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishing-data-sources">
+   2.4. Publishing data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.5. Quick Quiz
   </a>
  </li>
 </ul>
@@ -264,23 +355,297 @@
               <div>
                 
   <div class="section" id="plot-types-and-the-dashboard">
-<h1>Plot types and the Dashboard<a class="headerlink" href="#plot-types-and-the-dashboard" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="time-series">
-<h2>Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h2>
-<p>We are now interested in the number of trees planted and the date they were planted so our two columns of interest are <code class="docutils literal notranslate"><span class="pre">date_plated</span></code> and <code class="docutils literal notranslate"><span class="pre">tree_id</span></code>.</p>
+<h1><span class="section-number">2. </span>Plot types and the Dashboard<a class="headerlink" href="#plot-types-and-the-dashboard" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="more-plotting-examples">
+<h2><span class="section-number">2.1. </span>More Plotting Examples<a class="headerlink" href="#more-plotting-examples" title="Permalink to this headline">¶</a></h2>
+<p>Alright, let’s now take a shot at creating some of the plots we just learned about.</p>
+<div class="section" id="pie-chart">
+<h3><span class="section-number">2.1.1. </span>Pie Chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">¶</a></h3>
+<p>Let’s say we want to see the proportion of trees planted with root barriers to trees planted without root barriers.</p>
+<p>First, make a new worksheet.</p>
 <p><strong>Step by Step Instructions</strong></p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> field to the <strong>Color</strong> mark icon.</p>
+<a class="reference internal image-reference" href="../_images/pie1.png"><img alt="404 image" src="../_images/pie1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Area</strong> mark icon.</p>
+<a class="reference internal image-reference" href="../_images/pie2.png"><img alt="404 image" src="../_images/pie2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to a <strong>Count</strong> <strong>Measure</strong> by right-clicking it and selecting from the dropdown menu.</p>
+<a class="reference internal image-reference" href="../_images/pie3.png"><img alt="404 image" src="../_images/pie3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Click on the <strong>Show Me</strong> menu on the top right side of the workspace.</p>
+<a class="reference internal image-reference" href="../_images/pie4.png"><img alt="404 image" src="../_images/pie4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. Select the pie chart icon.</p>
+<a class="reference internal image-reference" href="../_images/pie5.png"><img alt="404 image" src="../_images/pie5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>And voila! We <del>baked</del> made a pie chart 🥧!</p>
+<a class="reference internal image-reference" href="../_images/pie6.png"><img alt="404 image" src="../_images/pie6.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="stacked-bars">
+<h3><span class="section-number">2.1.2. </span>Stacked Bars<a class="headerlink" href="#stacked-bars" title="Permalink to this headline">¶</a></h3>
+<p>A pie chart may not be the best visualization to see the proportion of trees planted with root barriers to trees planted without root barriers.</p>
+<p>Let’s see how it looks like as a stacked Bar chart.</p>
+<p>Make a new worksheet or clear the current sheet you are on.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/stacked1.png"><img alt="404 image" src="../_images/stacked1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2.Convert this field to a <strong>Count</strong> <strong>Measure</strong> by right-clicking and selecting the appropriate measure.</p>
+<a class="reference internal image-reference" href="../_images/stacked2.png"><img alt="404 image" src="../_images/stacked2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. We can now add the stacking part of this bar chart by dragging <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> to the <strong>Color</strong> icon in the <strong>Marks</strong> card.</p>
+<a class="reference internal image-reference" href="../_images/stacked3.5.png"><img alt="404 image" src="../_images/stacked3.5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Let’s transpose this graph so it’s a little clearer by clicking the <strong>Swap Rows and Columns</strong> icon in the toolbar.</p>
+<a class="reference internal image-reference" href="../_images/stacked3.png"><img alt="404 image" src="../_images/stacked3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Great! Here is our stacked bar chart!</p>
+<a class="reference internal image-reference" href="../_images/stacked4.png"><img alt="404 image" src="../_images/stacked4.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="side-by-side-bars">
+<h3><span class="section-number">2.1.3. </span>Side-by-Side Bars<a class="headerlink" href="#side-by-side-bars" title="Permalink to this headline">¶</a></h3>
+<p>Still maybe not the right plot for this question. Let’s go with a barplot with the categories side-by-side.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> field to the <strong>Columns</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/ssb1.png"><img alt="404 image" src="../_images/ssb1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf again.</p>
+<a class="reference internal image-reference" href="../_images/ssb1.5.png"><img alt="404 image" src="../_images/ssb1.5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>You may have to indicate that want to <strong>Add All Members</strong></p>
+<a class="reference internal image-reference" href="../_images/ssb2.png"><img alt="404 image" src="../_images/ssb2.png" style="width: 85%;" /></a>
+<p>3. Convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to a <strong>Count</strong> <strong>Measure</strong> by right-clicking and selecting the appropriate measure.</p>
+<a class="reference internal image-reference" href="../_images/ssb3.png"><img alt="404 image" src="../_images/ssb3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Let’s add a little bit of colour to this plot. This isn’t a necessary step, however, we are doing this for consistency to compare to the last three charts.</p>
+<a class="reference internal image-reference" href="../_images/ssb3.5.png"><img alt="404 image" src="../_images/ssb3.5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Now that we’ve done that, which plot out of the pie, stacked bars and side-by-side plot do you most prefer?</p>
+<a class="reference internal image-reference" href="../_images/ssb4.png"><img alt="404 image" src="../_images/ssb4.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="scatter-plot">
+<h3><span class="section-number">2.1.4. </span>Scatter Plot<a class="headerlink" href="#scatter-plot" title="Permalink to this headline">¶</a></h3>
+<p>With this particular data source, we don’t really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it.</p>
+<p>Let’s plot and see if there is a relationship between the diameter of the trees’ trunks and their height.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. First, let’s convert the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> column to a <strong>Measure</strong>. We can do this by right-clicking on it and selecting <strong>Measure</strong>.</p>
+<a class="reference internal image-reference" href="../_images/scat2.png"><img alt="404 image" src="../_images/scat2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag the newly transformed <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> measure to the <strong>Columns</strong> shelf.  Note that this is going to change it to a <strong>SUM</strong> aggregate. This is ok because we will be summing over values of <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">ID</span></code> and thankfully this is a unique column!</p>
+<a class="reference internal image-reference" href="../_images/scat3.png"><img alt="404 image" src="../_images/scat3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Next drag the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> <strong>Measure</strong> to the <strong>Rows</strong> shelf. This will again transform into an aggregate <strong>SUM</strong>.</p>
+<a class="reference internal image-reference" href="../_images/scat4.png"><img alt="404 image" src="../_images/scat4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This only gives us a single point. We need to split it up so we have a point for each tree.</p>
+<p>4. Dragging <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> to the <strong>Details</strong> icon in <strong>Marks</strong> Card will cause another popup window where we can “Add all members”.</p>
+<a class="reference internal image-reference" href="../_images/scat5.png"><img alt="404 image" src="../_images/scat5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. We then can change the mark type to a <strong>Circle</strong>…</p>
+<a class="reference internal image-reference" href="../_images/scat6.png"><img alt="404 image" src="../_images/scat6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. …And decrease the point size.</p>
+<a class="reference internal image-reference" href="../_images/scat9.png"><img alt="404 image" src="../_images/scat9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Great!</p>
+<a class="reference internal image-reference" href="../_images/scat9.9.png"><img alt="404 image" src="../_images/scat9.9.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="line-graph">
+<h3><span class="section-number">2.1.5. </span>Line Graph<a class="headerlink" href="#line-graph" title="Permalink to this headline">¶</a></h3>
+<p>We are now interested in answering the question <em><strong>How many trees were planted over the years?</strong></em></p>
+<p>Before you start, let’s make a new worksheet.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> field to the <strong>Columns</strong> shelve and the <code class="docutils literal notranslate"><span class="pre">tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/ts1.png"><img alt="404 image" src="../_images/ts1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2.\ We are again interested in the number of trees planted at selected dates so once again, we want to transform this field to a <strong>Count</strong> <strong>Measure</strong>.</p>
+<a class="reference internal image-reference" href="../_images/ts2.png"><img alt="404 image" src="../_images/ts2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Since <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Planted</span></code> is a continuous variable, it’s a good idea to right-click and transform this field into a <strong>Continuous</strong> Dimension.</p>
+<a class="reference internal image-reference" href="../_images/ts4.png"><img alt="404 image" src="../_images/ts4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. This automatically generates the number of trees planted each year (but there are null values!)</p>
+<a class="reference internal image-reference" href="../_images/ts5.png"><img alt="404 image" src="../_images/ts5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. We can change the <code class="docutils literal notranslate"><span class="pre">YEAR(Date</span> <span class="pre">Planted)</span></code> field to:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MONTH(Date</span> <span class="pre">Panted)</span></code> (top month choice when right-clicking) - which aggregates months together for all years.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/ts6.png"><img alt="404 image" src="../_images/ts6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts7.png"><img alt="404 image" src="../_images/ts7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MONTH(Date</span> <span class="pre">Panted)</span></code> (Bottom month choice when right-clicking) - which will make a sequential plot.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/ts8.png"><img alt="404 image" src="../_images/ts8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts9.png"><img alt="404 image" src="../_images/ts9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We are going to stick with the year dimension though!</p>
+<a class="reference internal image-reference" href="../_images/ts10.png"><img alt="404 image" src="../_images/ts10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts11.png"><img alt="404 image" src="../_images/ts11.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. We can add a circle for clarity at each year as part of our line graph by dragging a second  <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/ts12.png"><img alt="404 image" src="../_images/ts12.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You may get a popup warning when you do this where I specify <strong>Add All Members</strong> since we are converting it to a COUNT measure after this.</p>
+<a class="reference internal image-reference" href="../_images/ts13.png"><img alt="404 image" src="../_images/ts13.png" style="width: 85%;" /></a>
+</div>
+<p>6. We need to make sure we also convert it to a <code class="docutils literal notranslate"><span class="pre">Count</span></code> measure.</p>
+<a class="reference internal image-reference" href="../_images/ts14.png"><img alt="404 image" src="../_images/ts14.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>At first, we should get 2 graphs on top of each other.</p>
+<a class="reference internal image-reference" href="../_images/ts15.png"><img alt="404 image" src="../_images/ts15.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. We can right-click one of them and select “<strong>Dual Axis</strong>”.</p>
+<a class="reference internal image-reference" href="../_images/ts16.png"><img alt="404 image" src="../_images/ts16.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will superimpose one on another with a left and a right axis title.</p>
+<a class="reference internal image-reference" href="../_images/ts17.png"><img alt="404 image" src="../_images/ts17.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. We can hide the one on the right by right-clicking the axis and unticking the “<strong>Show Header</strong>” option.</p>
+<a class="reference internal image-reference" href="../_images/ts18.png"><img alt="404 image" src="../_images/ts18.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/ts19.png"><img alt="404 image" src="../_images/ts19.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>9. In the <strong>Marks</strong> card, select the `CNT(Tree Id)(2), and from the dropdown, select <strong>circle</strong>.</p>
+<a class="reference internal image-reference" href="../_images/ts20.png"><img alt="404 image" src="../_images/ts20.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Now we have a line plot with points!</p>
+<a class="reference internal image-reference" href="../_images/ts21.png"><img alt="404 image" src="../_images/ts21.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>10. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the “<strong>All</strong>” tab under the “<strong>Marks</strong>” card on the right.</p>
+<a class="reference internal image-reference" href="../_images/ts22.png"><img alt="404 image" src="../_images/ts22.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>11. Don’t forget to give it a title and edit the y-axis label as we did before!.</p>
+<a class="reference internal image-reference" href="../_images/ts23.png"><img alt="404 image" src="../_images/ts23.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="histograms">
+<h3><span class="section-number">2.1.6. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="boxplot">
+<h3><span class="section-number">2.1.7. </span>Boxplot<a class="headerlink" href="#boxplot" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="heatmap">
+<h3><span class="section-number">2.1.8. </span>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="quick-quiz">
+<h2><span class="section-number">2.2. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">date_planted</span></code> variable to the “<strong>Columns</strong>” toolbar and again the <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to “<strong>Rows</strong>”. We are again interested in the number of trees planted at selected dates so once again we want to transform this to a “<strong>Count</strong>” type “<strong>Measure</strong>”.</p></li>
+<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
+<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
+<li><p>What does the middle line of a box plot represent?</p></li>
+<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
+<li><p>What is another name for a density plot?</p></li>
+<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
 </ol>
-<p>2. Since `date_planted’ is a continuous variable, it’s a good idea to right-click and transform this into a <strong>Continuous</strong> Dimension.</p>
-<p>3. This automatically generates the number of trees planted each year (but there are null values!)</p>
-<p>4. We can change this to:
-- month - discrete (Top month choice when right-clicking)  which aggregates months together for all years
-- month - continuous (Bottom month choice when right-clicking) which will make a sequential plot.</p>
-<p>5. Combining scatterplot onto our line graph by adding an identical <code class="docutils literal notranslate"><span class="pre">tree_id</span></code> to rows and converting it to a counting measurement again. At first, we should get 2 graphs on top of each other. We can right-click one of them and select “<strong>Dual Axis</strong>”.
-This will superimpose one on another with a left and a right axis title. We can hide the one on the right by right-clicking the axis and unticking the “<strong>Show Header</strong>” option.</p>
-<p>6. To change the colour of the line and the points, we need to make sure we change the colour of both measures by selecting the “<strong>All</strong>” tab under the “<strong>Marks</strong>” card on the right.</p>
-<p>7. Don’t forget to give it a title and edit the y-axis label as we did earlier.</p>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
+</div>
+<div class="section" id="dashboards">
+<h2><span class="section-number">2.3. </span>Dashboards<a class="headerlink" href="#dashboards" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="layout">
+<h3><span class="section-number">2.3.1. </span>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="filtering">
+<h3><span class="section-number">2.3.2. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tooltips">
+<h3><span class="section-number">2.3.3. </span>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="publishing-data-sources">
+<h2><span class="section-number">2.4. </span>Publishing data sources<a class="headerlink" href="#publishing-data-sources" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.5. </span>Quick Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
+<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
+<li><p>What does the middle line of a box plot represent?</p></li>
+<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
+<li><p>What is another name for a density plot?</p></li>
+<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. True
+2. True
+3. Median
+4. Violin plot
+5. Kernel Density Estimate (KDE)
+6. Scatter plot
+
+```
+-->
 </div>
 </div>
 
@@ -309,6 +674,8 @@ This will superimpose one on another with a left and a right axis title. We can 
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="tableau1.html" title="previous page"><span class="section-number">1. </span>Introduction to Tableau</a>
+    <a class='right-next' id="next-link" href="../activities/activity1.html" title="next page">Lesson 1: Making Your First Viz</a>
 
         </div>
         

@@ -19,7 +19,7 @@
   numbered: true
   chapters:
     - file: lessons/tableau1
-    #- file: lessons/tableau2
+    - file: lessons/tableau2
     #- file: lessons/tableau3
     #- file: lessons/tableau4
     #- file: lessons/tableau5
@@ -28,6 +28,7 @@
   numbered: false
   chapters:
     - file: activities/activity1
+    - file: activities/activity2
 
 - part: References
   chapters:

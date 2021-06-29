@@ -28,6 +28,17 @@ By the end of the lesson, learners are expected to be able to:
 
 ### Lecture 2
 
+By the end of the lesson, learners are expected to be able to:
+
+- Explain the difference between a scatter, line, pie, and bar plot.
+- Recognize when 3D plots are appropriate. 
+- Select an appropriate distribution plot for the data.
+- Choose effective visual channels for information display.
+- Visualize frequencies with bar plots.
+- Create line, scatter and histogram plot using Tableau.
+- Combine worksheets to make a Dashboard.
+- Use different filtering types on a Dashboard. 
+- Identify the different tools needed to make a dashboard layout in Tableau.
 
 
 ### Lecture 3
