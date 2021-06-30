@@ -303,6 +303,11 @@
      2.1.8. Heatmap
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heatmap-with-size-channel">
+     2.1.9. Heatmap with Size Channel
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -316,18 +321,82 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#layout">
-     2.3.1. Layout
+    <a class="reference internal nav-link" href="#workspace">
+     2.3.1. Workspace
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tiled-example">
+       2.3.1.1. Tiled example
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#floating-example">
+       2.3.1.2. Floating example
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#images">
+       2.3.1.3. images
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#webpage">
+       2.3.1.4. webpage
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#text">
+       2.3.1.5. Text
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#download">
+       2.3.1.6. Download
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-elements">
+     2.3.2. Adding elements
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sheets">
+       2.3.2.1. sheets
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       2.3.2.2. images
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       2.3.2.3. webpage
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     2.3.3.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changes-to-all-sheets">
+     2.3.4. Changes to all sheets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-sheets">
+     2.3.5. Connecting sheets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#filtering">
-     2.3.2. Filtering
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tooltips">
-     2.3.3. Tooltips
+     2.3.6. Filtering
     </a>
    </li>
   </ul>
@@ -338,7 +407,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#id4">
    2.5. Quick Quiz
   </a>
  </li>
@@ -364,11 +433,11 @@
 <p>Let’s say we want to see the proportion of trees planted with root barriers to trees planted without root barriers.</p>
 <p>First, make a new worksheet.</p>
 <p><strong>Step by Step Instructions</strong></p>
-<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> field to the <strong>Color</strong> mark icon.</p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> field to the <strong>Color</strong> icon.</p>
 <a class="reference internal image-reference" href="../_images/pie1.png"><img alt="404 image" src="../_images/pie1.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>2. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Area</strong> mark icon.</p>
+<p>2. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Area</strong> icon.</p>
 <a class="reference internal image-reference" href="../_images/pie2.png"><img alt="404 image" src="../_images/pie2.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -452,7 +521,7 @@
 <a class="reference internal image-reference" href="../_images/scat2.png"><img alt="404 image" src="../_images/scat2.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>2. Drag the newly transformed <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> measure to the <strong>Columns</strong> shelf.  Note that this is going to change it to a <strong>SUM</strong> aggregate. This is ok because we will be summing over values of <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">ID</span></code> and thankfully this is a unique column!</p>
+<p>2. Drag the newly transformed <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> measure to the <strong>Columns</strong> shelf.  Note that this is going to change it to a <strong>SUM</strong> aggregate. This is ok because we will be summing over the values of <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">ID</span></code> and thankfully this is a unique column!</p>
 <a class="reference internal image-reference" href="../_images/scat3.png"><img alt="404 image" src="../_images/scat3.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -576,55 +645,293 @@
 </div>
 <div class="section" id="histograms">
 <h3><span class="section-number">2.1.6. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now start practicing making distributions. Tableau doesn’t easily facilitate density plots, so we are going to stick with learning how to make histograms.</p>
+<p>Perhaps we are interested in the distribution of tree trunk diameter length. Remember histograms are used to visualize the distribution of a numeric continuous variable.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. First, drag the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> <strong>Measure</strong> to the <strong>Columns</strong> shelf</p>
+<a class="reference internal image-reference" href="../_images/easy_hist1.png"><img alt="404 image" src="../_images/easy_hist1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. You can then go to the <strong>Show Me</strong> menu and click on the <em><strong>Histogram</strong></em> option. Tableau will then assign the correct measures to the shelves and cards.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist2.png"><img alt="404 image" src="../_images/easy_hist2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. And there you have a histogram! Now, this already seems a little problematic because we didn’t choose the bin size and clearly our distribution is skewed.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist3.png"><img alt="404 image" src="../_images/easy_hist3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>It might also be helpful to see this distribution shape without the outliers on the far right and with different bin size.<br />
+The majority of the data looks like it’s between 0-50 so let’s make the bin size 2 and limit the axis to 0-50.</p>
+<p>4. You’ll notice that Tableau’s been kind and has actually made us a new continuous dimension named <code class="docutils literal notranslate"><span class="pre">Diameter</span> <span class="pre">(bin)</span></code>. Right-click on this new field and click on <strong>Edit</strong> from the dropdown menus.</p>
+<p>This is where we are going to change the bin size.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist4.png"><img alt="404 image" src="../_images/easy_hist4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. This will result in a popup window where we can change the size of the bins. Let’s go ahead and change it to 2. Remember bin size can cause bias in your plots so be careful when choosing this value. Click <strong>OK</strong>.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist5.png"><img alt="404 image" src="../_images/easy_hist5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. Now we can see that our bars are a lot thinner (If only exercising was this easy).</p>
+<a class="reference internal image-reference" href="../_images/easy_hist6.png"><img alt="404 image" src="../_images/easy_hist6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. Let’s fix the axis range now. You’ll not have to do this often but for this particular problem and question, removing the outliers could give us a bit of a clearer distribution shape.</p>
+<p>Right-click the axis we want to limit and from the dropdown click <strong>Edit Axis…</strong>.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist7.png"><img alt="404 image" src="../_images/easy_hist7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. From the popup, select a <strong>Fixed Range</strong> and Fixed end at 50 for this plot.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist8.png"><img alt="404 image" src="../_images/easy_hist8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Great!</p>
+<p>9. We Are going to go one step forward and change the tick mark intervals too. Click on the <strong>Tick Marks</strong> option at the top of the popup window.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist9.png"><img alt="404 image" src="../_images/easy_hist9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>10. We can decrease the tick interval to 2 to help make our bar values easier to identify.</p>
+<a class="reference internal image-reference" href="../_images/easy_hist10.png"><img alt="404 image" src="../_images/easy_hist10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>And we did it!</p>
+<a class="reference internal image-reference" href="../_images/easy_hist11.png"><img alt="404 image" src="../_images/easy_hist11.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We now can see that the majority of trees in Vancouver have a diameter between 2 and 3 cms. We also see that it’s very skewed to the right.</p>
 </div>
 <div class="section" id="boxplot">
 <h3><span class="section-number">2.1.7. </span>Boxplot<a class="headerlink" href="#boxplot" title="Permalink to this headline">¶</a></h3>
+<p>Although there is an option to make boxplots using the <strong>Show Me</strong> menu, I find that it can often plot things differently than how I want them to. These are the steps I generally take.</p>
+<p>Suppose that we want to see if the difference between the distributions of trunk diameter between trees planted with root barriers and without root barriers.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Begin by dragging <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> to the <strong>Columns</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/box1.png"><img alt="404 image" src="../_images/box1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Next, you’ll want to drag the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> field to the <strong>Rows</strong> shelf. You’ll have a beautiful bar plot now measuring the sum of all the trees diameters for each barrier type.</p>
+<a class="reference internal image-reference" href="../_images/box2.png"><img alt="404 image" src="../_images/box2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Since we want individual observations for each tree (somewhat), we need to drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Detail</strong> icon in the <strong>Marks</strong> card. This will populate the message where we indicate that we want to ** Add all members**.</p>
+<a class="reference internal image-reference" href="../_images/box3.png"><img alt="404 image" src="../_images/box3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Let’s change the mark. Convert the mark from Automatic to <strong>Circle</strong>.</p>
+<a class="reference internal image-reference" href="../_images/box5.png"><img alt="404 image" src="../_images/box5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will produce a circle for each tree now.</p>
+<p>5. This is where we make the box part of our boxplot! Right-click on the axis with the continuous variable - in our case, that’s <code class="docutils literal notranslate"><span class="pre">Diameter</span></code>. Select the <strong>Add Reference Line</strong> option.</p>
+<a class="reference internal image-reference" href="../_images/box6.png"><img alt="404 image" src="../_images/box6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. When we select this option, a popup with many different option tabs displays. We want the <strong>Boxplot</strong> tab!</p>
+<a class="reference internal image-reference" href="../_images/box7.png"><img alt="404 image" src="../_images/box7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. Here we want to “Hide the underlying marks (except outliers)”. The reason we are hiding them, in this case, is because we have THOUSANDS of them! If our dataset was smaller, it might be a good idea to show all the underlying marks.</p>
+<a class="reference internal image-reference" href="../_images/box8.png"><img alt="404 image" src="../_images/box8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. We can also change the colour of the box <strong>Fill</strong> to a green palette which goes nicely with our tree theme.</p>
+<a class="reference internal image-reference" href="../_images/box9.png"><img alt="404 image" src="../_images/box9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We can now leave this popup screen by clicking <strong>OK</strong>.</p>
+<a class="reference internal image-reference" href="../_images/box10.png"><img alt="404 image" src="../_images/box10.png" style="width: 85%;" /></a>
+<p>9. Ok, so our outlying observations are rather large right now. Let’s decrease the size.</p>
+<a class="reference internal image-reference" href="../_images/box11.png"><img alt="404 image" src="../_images/box11.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Ahh, that’s a bit cleaner.</p>
+<a class="reference internal image-reference" href="../_images/box12.png"><img alt="404 image" src="../_images/box12.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>10. We can also change the points to a green colour to go with the rest of the plot. This can be done by clicking the <strong>Color</strong> icon.</p>
+<a class="reference internal image-reference" href="../_images/box13.png"><img alt="404 image" src="../_images/box13.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>11. This is a completed boxplot! One thing you can do to get a better idea of the distributions is to transpose it.</p>
+<a class="reference internal image-reference" href="../_images/box14.png"><img alt="404 image" src="../_images/box14.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Ahh, beautiful!</p>
+<a class="reference internal image-reference" href="../_images/box15.png"><img alt="404 image" src="../_images/box15.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>When you have multiple boxplots and you want to sort them in some order, using the sorting buttons in the toolbar won’t quite sort them properly or may not sort them how you are intending them to.</p>
+<p>The best way to sort your boxplots to some criteria is as follows:</p>
+<p>1. Click on the dimension field - here it’s our <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> column and from the dropdown select <strong>Sort…</strong></p>
+<a class="reference internal image-reference" href="../_images/boxsort1.png"><img alt="404 image" src="../_images/boxsort1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. This will produce a popup window where we selected a <strong>Nested</strong> option to sort our data by.</p>
+<a class="reference internal image-reference" href="../_images/boxsort2.png"><img alt="404 image" src="../_images/boxsort2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. We can select if we want the field to be sorted in <strong>Ascending</strong> or <strong>Descending</strong> order and then choose an Aggregation. Here we are going to be selecting <strong>Median</strong> which is the center line of our boxes in the boxplot.</p>
+<a class="reference internal image-reference" href="../_images/boxsort3.png"><img alt="404 image" src="../_images/boxsort3.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
 </div>
 <div class="section" id="heatmap">
 <h3><span class="section-number">2.1.8. </span>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h3>
+<p>Let’s see what the joint distribution is for the presence of a curb and if the tree has root barriers or not.</p>
+<p>This will need a heat map or a heat map with a size channel. let’s explore the former first.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> to the <strong>Columns</strong> shelf- here we will first drag the <code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">Barrier</span></code> column.</p>
+<a class="reference internal image-reference" href="../_images/heat1.png"><img alt="404 image" src="../_images/heat1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. We then can drag our second discrete dimension to the <strong>Rows</strong> shelf. We will drag the <code class="docutils literal notranslate"><span class="pre">Crub</span></code> column.</p>
+<a class="reference internal image-reference" href="../_images/heat2.png"><img alt="404 image" src="../_images/heat2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. To add a count field, we will drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> to the <strong>Detail</strong> icon in the <strong>Marks</strong> card. As we have done before, we “Add all members” when prompted by the popup.</p>
+<a class="reference internal image-reference" href="../_images/heat3.png"><img alt="404 image" src="../_images/heat3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. We now transform this field to a <strong>Count Measure</strong> by right-clicking and selecting it from the drop-down.</p>
+<a class="reference internal image-reference" href="../_images/heat4.png"><img alt="404 image" src="../_images/heat4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/heat5.png"><img alt="404 image" src="../_images/heat5.png" style="width: 85%;" /></a>
+<p>5. Although we already have square marks, let solidify it and convert the <strong>Automatic</strong> mark to a <strong>Square</strong> mark. This is to make sure nothing is transformed when we add additional fields to our graph.</p>
+<a class="reference internal image-reference" href="../_images/heat6.png"><img alt="404 image" src="../_images/heat6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. We can include a value in each quadrant by dragging the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> to the <strong>Label</strong> mark.</p>
+<a class="reference internal image-reference" href="../_images/heat7.png"><img alt="404 image" src="../_images/heat7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. We then must convert it to a <strong>Count Measure</strong> by right-clicking and selecting it accordingly.</p>
+<a class="reference internal image-reference" href="../_images/heat8.png"><img alt="404 image" src="../_images/heat8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Nice!</p>
+<a class="reference internal image-reference" href="../_images/heat9.png"><img alt="404 image" src="../_images/heat9.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="heatmap-with-size-channel">
+<h3><span class="section-number">2.1.9. </span>Heatmap with Size Channel<a class="headerlink" href="#heatmap-with-size-channel" title="Permalink to this headline">¶</a></h3>
+<p>If we also want to include an area channel in the plot, we can continue from the steps of the heatmap.</p>
+<p>1. Here we will add all the counts of the trees by dragging the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> to the <strong>Size</strong> icon.</p>
+<a class="reference internal image-reference" href="../_images/heat10.png"><img alt="404 image" src="../_images/heat10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. As we have seen many times before we transform the dimension to a <strong>Count Measure</strong> by clicking and selecting from the dropdown menu.</p>
+<a class="reference internal image-reference" href="../_images/heat11.png"><img alt="404 image" src="../_images/heat11.png" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../_images/heat12.png"><img alt="404 image" src="../_images/heat12.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>9. The labels seem to ruin the esthetics of this plot, so let’s remove this from the plot by right-clicking and selecting <strong>Remove</strong>.</p>
+<a class="reference internal image-reference" href="../_images/heat13.png"><img alt="404 image" src="../_images/heat13.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>That’s better. Nice job!</p>
+<a class="reference internal image-reference" href="../_images/heat14.png"><img alt="404 image" src="../_images/heat14.png" style="width: 85%;" /></a>
+<br>
+<br>
 </div>
 </div>
 <div class="section" id="quick-quiz">
 <h2><span class="section-number">2.2. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
-<li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>
-<li><p>What does the middle line of a box plot represent?</p></li>
-<li><p>Which visualization type can show multiple summary statistics of data as well as their distributions?</p></li>
-<li><p>What is another name for a density plot?</p></li>
-<li><p>What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?</p></li>
+<li><p><strong>True or False</strong>: Sorting a boxplot can be done by using the sort buttons on the toolbar.</p></li>
+<li><p><strong>True or False</strong>: Histograms can be made with a click from the <strong>Show Me</strong> window.</p></li>
+<li><p>What column type are the fields used in the <strong>Columns</strong> and <strong>Rows</strong> shelf - Continuous or discrete?</p></li>
+<li><p>Which of the following fields acts as a hierarchy by default <code class="docutils literal notranslate"><span class="pre">Row</span> <span class="pre">Id</span></code>, <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Issued</span></code>, <code class="docutils literal notranslate"><span class="pre">Gender</span></code>, <code class="docutils literal notranslate"><span class="pre">Latitude</span></code>?</p></li>
+<li><p>What mark shape is needed for a heatmap?</p></li>
 </ol>
 <!--
 ```{admonition} Solutions!
 :class: dropdown
 
-1. True
+1. False 
 2. True
-3. Median
-4. Violin plot
-5. Kernel Density Estimate (KDE)
-6. Scatter plot
+3. Continuous
+4. `Date Issued`
+5. Square
 
 ```
 -->
 </div>
 <div class="section" id="dashboards">
 <h2><span class="section-number">2.3. </span>Dashboards<a class="headerlink" href="#dashboards" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="layout">
-<h3><span class="section-number">2.3.1. </span>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h3>
+<p>The moment we’ve all been waiting for! This is where we can take our visualizations from our worksheets, combine them into 1 page (or multiple) and add filters making them dynamic in nature.</p>
+<p>Let’s begin by creating a new Dashboard.</p>
+<p>1. Click on the Dashboard icon at the bottom of your workspace.</p>
+<a class="reference internal image-reference" href="../_images/dash0.png"><img alt="404 image" src="../_images/dash0.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/dash00.png"><img alt="404 image" src="../_images/dash00.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Here we can displays images, worksheets, filters  and even website pages.</p>
+<div class="section" id="workspace">
+<h3><span class="section-number">2.3.1. </span>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h3>
+<p>Here we can examine the buttons are tools we will need to create our dashboards.</p>
+<a class="reference internal image-reference" href="../_images/dash_workspace.png"><img alt="404 image" src="../_images/dash_workspace.png" style="width: 100%;" /></a>
+<br>
+<br>
+<p style="font-size:30px; color:#FFF995">Size</p>
+<p style="font-size:30px; color:#73FCD6">Sheets</p>
+<p style="font-size:30px; color:#76D6FF">Tiled/Floating</p>
+<div class="section" id="tiled-example">
+<h4><span class="section-number">2.3.1.1. </span>Tiled example<a class="headerlink" href="#tiled-example" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="floating-example">
+<h4><span class="section-number">2.3.1.2. </span>Floating example<a class="headerlink" href="#floating-example" title="Permalink to this headline">¶</a></h4>
+<p style="font-size:30px; color:#FF85FF">Objects</p>
+</div>
+<div class="section" id="images">
+<h4><span class="section-number">2.3.1.3. </span>images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="webpage">
+<h4><span class="section-number">2.3.1.4. </span>webpage<a class="headerlink" href="#webpage" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="text">
+<h4><span class="section-number">2.3.1.5. </span>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="download">
+<h4><span class="section-number">2.3.1.6. </span>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h4>
+<p style="font-size:30px; color:#9437FF">Device Preview</p>
+</div>
+</div>
+<div class="section" id="adding-elements">
+<h3><span class="section-number">2.3.2. </span>Adding elements<a class="headerlink" href="#adding-elements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sheets">
+<h4><span class="section-number">2.3.2.1. </span>sheets<a class="headerlink" href="#sheets" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id1">
+<h4><span class="section-number">2.3.2.2. </span>images<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id2">
+<h4><span class="section-number">2.3.2.3. </span>webpage<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">2.3.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="changes-to-all-sheets">
+<h3><span class="section-number">2.3.4. </span>Changes to all sheets<a class="headerlink" href="#changes-to-all-sheets" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="connecting-sheets">
+<h3><span class="section-number">2.3.5. </span>Connecting sheets<a class="headerlink" href="#connecting-sheets" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="filtering">
-<h3><span class="section-number">2.3.2. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="tooltips">
-<h3><span class="section-number">2.3.3. </span>Tooltips<a class="headerlink" href="#tooltips" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.6. </span>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="publishing-data-sources">
 <h2><span class="section-number">2.4. </span>Publishing data sources<a class="headerlink" href="#publishing-data-sources" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">2.5. </span>Quick Quiz<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2><span class="section-number">2.5. </span>Quick Quiz<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p><strong>True or False:</strong> Using the same data, a histogram’s shape can change depending on the bin size.</p></li>
 <li><p><strong>True or False:</strong> When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.</p></li>

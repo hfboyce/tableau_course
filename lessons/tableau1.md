@@ -334,7 +334,7 @@ Tableau has a great [image](https://help.tableau.com/current/pro/desktop/en-us/e
 <br>
 <br>
 
-<img src="https://png2.cleanpng.com/sh/9de52d45e0fc3daca314678ad52a82c3/L0KzQYm3VsA1N6RtgJH0aYP2gLBuTgRiap1qeec2c3BphMjokvUua5DyiOd9ZYKwg7FtlQdiepYyfNN9YT35ecT8gfxqgpJ5ReV4ZoT6ccPsTcVjOWY6SqRqNXTkRIO6TsE4OGM9UaQ9MUW1SIK5U8k1PmQ9S6g3cH7q/kisspng-tableau-software-computer-software-data-visualizat-software-5b15522a5da423.1702892415281239463836.png"  width = "3%" alt="404 image" /> : On the top left of the workspace you'll see this symbol, this will take you back to the home page that displays all your projects. 
+<img src="imgs/logo.png"  width = "5%" alt="404 image" /> : On the top left of the workspace you'll see this symbol, this will take you back to the home page that displays all your projects. 
 
 
 <p style="font-size:30px; color:#9929BD">Toolbar</p>

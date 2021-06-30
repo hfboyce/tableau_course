@@ -92,11 +92,11 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Boxplot
 - Heatmap
 - Dashboards
-- Filtering 
-- Tooltips 
-- layouts 
-- publishing data sources
-- Forecasting if time 
+    - layouts 
+    - Changes to all sheets 
+    - Connecting sheets 
+    - Filtering 
+- Publishing data sources
 
 #### Exercise 
 
@@ -112,20 +112,20 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 #### Theory 
 
-- What should you absolutely not do? Data Science Ducks
-- Common pitfalls (8-10 examples)
-- A game of Good vs Evil
-- Best practices
-- Storytelling 
+- Why are EDAs important?
+- How to approach an EDA? (Exercise)
+- Conclusion and next steps in an EDA  
 
 ### Tableau Applications 
 
-- Chloropleth map 
+- Grouping
+- Sets, filters, slicing
+- Facetting
+- Chloropleth map (if time -advanced)
 - Calculations -> string conversions
 - Calculations - converting to booleans 
 - Not every EDA will make it in the Dashboard
 - Joining, unions 
-- Titles
 - Trend lines
 - Forecasting 
 
@@ -139,16 +139,21 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 #### Theory 
 
-- Why are EDAs important?
-- How to approach an EDA? (Exercise)
-- Conclusion and next steps in an EDA  
+- What should you absolutely not do? Data Science Ducks
+- Common pitfalls (8-10 examples)
+- A game of Good vs Evil
+- Best practices
+- Storytelling 
 - Importance of colour, titles etc. 
 
 ### Tableau Applications 
 
+- Titles
+- Tooltip
 - Clicks and hovers 
-- palettes 
-- extensions  
+- Palettes 
+- Extensions  
+- Navigation
 - Tableau Story
 
 ## Exercise 
