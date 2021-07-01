@@ -4,6 +4,8 @@
 
 Alright, let's now take a shot at creating some of the plots we just learned about. 
 
+I'm going to be using the `street-trees.csv` file as a data source available in the Google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV?usp=sharing). 
+
 ### Pie Chart
 
 Let's say we want to see the proportion of trees planted with root barriers to trees planted without root barriers. 
