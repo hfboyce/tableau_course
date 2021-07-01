@@ -7,7 +7,7 @@ HR has provided me with some sample data that many of you will, or have worked w
 ## Exercise 1: Connecting to the data and asking questions 
 I'll provide you with the sample data given to me by one of your colleagues. We will be using the excel spreadsheet named `compensation.xlsx`.
 
-Please download it at the link below stored on the google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV?usp=sharing).
+Please download it at the link below stored on my google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV?usp=sharing).
 
 1. Connect Tableau to the `compensation` excel sheet. 
 
