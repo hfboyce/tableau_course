@@ -724,6 +724,8 @@ Nice!
 
 If we also want to include an area channel in the plot, we can continue from the steps of the heatmap. 
 
+
+
 1\. Here we will add all the counts of the trees by dragging the `Tree Id` to the **Size** icon. 
 
 <img src="imgs/heat10.png"  width = "85%" alt="404 image" />
@@ -810,48 +812,351 @@ Here we can examine the buttons are tools we will need to create our dashboards.
 
 <p style="font-size:30px; color:#FFF995">Size</p>
 
+It's important that you select the size of the screen your dashboard is expected to be displayed on. 
+The [options](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm) are:
+
+- Fixed: The dashboard remains the same size no matter the screen used to display it. If the dashboard is bigger than the designated window, the dashboard will be scrollable. 
+- Range: The dashboard scales between minimum and maximum sizes that you specify.
+- **Automatic** - This is what I generally suggest since the dashboard will automatically resize to fit the screen it's display on. When using Automatic I also firmly suggest using a **Tiled** dashboard layout (explained below). 
+
+<img src="imgs/dash_size1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/dash_size2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
 <p style="font-size:30px; color:#73FCD6">Sheets</p>
+
+Here is where we can select the plots we made on the worksheets and bring them together collectively on a dashboard. 
+
+All we have to do, is drag the sheet to the visualization space. 
+
+<img src="imgs/dash_sheet1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/dash_sheet2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
 
 <p style="font-size:30px; color:#76D6FF">Tiled/Floating</p>
 
 #### Tiled example 
 
+You'll notice that when we dragged these sheet they snapped into a position. This is creating tiles. I only recommend using this layout method when using the Automatic sizing option. 
+
+
+<img src="imgs/tiled.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
 
 #### Floating example 
 
+If we instead used the floating option, we could place the plot anywhere but it can prove problematic when the screen size is fixed. 
+
+<img src="imgs/floating.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
 <p style="font-size:30px; color:#FF85FF">Objects</p>
+
+We are not restricted to only putting worksheets and graphs on our dashboard. We can also add images, webpages inbedded in the sheets as well as Text boxes, downloading and navigation button options.
 
 #### images
 
+We can place images in our dashboards just as easily as we cant sheets. 
+
+**Step by Step Instructions**
+
+1\. We first drag the **Image** option where we wish to place it in the dashboard. 
+
+<img src="imgs/image1.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. We then must select our desired images from our file directory, here I'm using the `trees.png` file which I've also made available on the Google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaVhttps://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV).
+
+<img src="imgs/image2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+3\. I select the **Fit Image** option so that the image is fix to the dimension of the dashboard tile. 
+<img src="imgs/image3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+And there you have it! 
+<img src="imgs/image4.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+
 #### webpage
+
+We can even embed complete working websites in our dashboards. 
+
+**Step by Step Instructions**
+
+1\. We drag the **Web Page** option to the dashboard and it will result in a popup asking for the desired page. 
+
+<img src="imgs/object2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+And it's as simple of that! We have the website active now! 
+
+<img src="imgs/object3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
 
 #### Text
 
-#### Download 
+Adding text for titles or explanations (I've even added axis titles using this option when in a pinch) works the same as images and webpages. We can drag and then format our text. 
+
+<img src="imgs/object5.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/object6.png"  width = "85%" alt="404 image" />
+
+
+#### Download
+
+To create an option to download a static copy of your dashboard, you can add a button allowing the viewer to do so. 
+
+**Step by Step Instructions**
+
+1\. Like the other object, we drag the **Download** icon to the dashboard.
+<img src="imgs/object7.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. To format it, we need to double click and select the desired export or button type and format the font. 
+<img src="imgs/object8.png"  width = "85%" alt="404 image" />
+
+
+3\. We can also adjust the background colour.
+
+<img src="imgs/object9.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/object10.png"  width = "85%" alt="404 image" />
+
+
+#### Navigation
+
+There often time where on your dashboard you'd like to navigate to either a different dashboard or perhaps dive deeper into a worksheet. I needed this for my own dashboards when I had the list of customers pop up with certain filters and I wanted to navigate back to the main dashboard. 
+
+**Step by Step Instructions**
+
+1\.This can be down by dragging the **Navigation** icon onto the dashboard.
+<img src="imgs/object11.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. We don't need to do this for our dashboard, but you can then select where clicking this button with navigate you to. 
+
+<img src="imgs/object12.png"  width = "85%" alt="404 image" />
+
+
+
+#### Extensions 
+
+For certain additional actions and features we can also add extensions that other people have made and shared publicly. 
+
+We will discuss this in the 4th lesson if we have time. 
 
 
 <p style="font-size:30px; color:#9437FF">Device Preview</p>
 
 
+You can check and preview what your dashboard will look for other devices by clicking this **Device Preview** and scrolling through the options like **Desktop**, **Tablet** and **Phone**
 
-### Adding elements 
+<img src="imgs/preview1.png"  width = "85%" alt="404 image" />
 
-#### sheets
+<br>
+<br>
 
-#### images
+<img src="imgs/preview2.png"  width = "85%" alt="404 image" />
 
-#### webpage
+<br>
+<br>
 
-### 
+<img src="imgs/preview3.png"  width = "85%" alt="404 image" />
 
 
-### Changes to all sheets 
+## Filtering 
 
-### Connecting sheets 
+Here is where the fun starts! Since Tableau is an excellent tool to use for dynamic plots, let's go ahead and see why first hand. 
 
-### Filtering 
+**Step by Step Instructions**
+
+1\. Click on the sheet you wish to filter. On the right side of the plot you'll see a **More Options** button. 
+
+<img src="imgs/filter2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This will produce a dropdown where we want to select a field to filter on. Under **Filters** we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now let's select  `Sum of Diameter`.
+
+<img src="imgs/filter3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+2\. Selecting the field desired will then produce a filter! 
+
+<img src="imgs/filter4.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+
+
+3\.let's add another. Let's add the `Sum of Height Range Id` as a filter too.
+
+<img src="imgs/filter6.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/filter7.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+I'm going to move the plot so that we can focus of the filters and see all the popups here 
+
+<img src="imgs/filter8.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+4\. If we click on the filter we can then see a **More Options** icon. 
+
+<img src="imgs/filter9.png"  width = "85%" alt="404 image" />
+
+This is where we can see all the filter style options. 
+
+
+<img src="imgs/filter10.png"  width = "85%" alt="404 image" />
+
+Since both of these fields as measures, we can filters in the following ways: 
+
+- **Range of Values/Dates:** This means you can filter the data to include or exclude more values. You can pick the minimum and maximum values. 
+
+- **At Least/Starting Date:** This has a fixed maximum value and with an open ended minimum value that the user chooses.
+
+- **At Most/Ending Date:** This has a fix minimum values with an open ended maximum value that the user chooses.
+
+For time periods there are are 2 more called **Relative to Now** and **Browse periods** where the values must be continuous. 
+
+
+
+5\. In order to filter the graphs by other columns, we must add it to the **Filters** card on the Worksheet page of the plot. 
+
+Locate yourself to the appropriate sheet using the tab at the bottom. Select the column you wish to filter the plot on and drag it to the **Filters** card. Here we are going to drag the **Neighbourhood Name** column. 
+
+<img src="imgs/filter0.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This will create a pop-up where we can select the categories and values we wish to include. I will be selecting **All**
+
+<img src="imgs/filter11.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+<img src="imgs/filter12.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+6\. We can then return to our dashboard, click on the plot and see that `Neighbourhood Name` has need added to the choice of filters. 
+
+<img src="imgs/filter14.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+This produces a list of all the neighbourhoods now. 
+<img src="imgs/filter00.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+7\. Clicking on this filter and selecting the **More Option** icon, you'll see all the different filtering styles.
+
+<img src="imgs/filter15.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+`Neighbourhood Name` is a Dimension. Dimensions have the following possible filtering styles ([Source: help.tableau.com](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm)): 
+
+- **Single Value (List):** A full list of all the possible values of the filter as radio buttons but only 1 can be selected at a time.
+
+- **Multiple Values (List):** Shows all the values in the filter as a list of check boxes where multiple values can be selected.
+
+- **Single Value (Dropdown):** Displays the values of the filter in a drop-down list where only a single value can be selected at a time.
+
+- **Multiple Values(Dropdown):** Displays the values of the filter in a drop-down list where multiple values can be selected.
+
+- **Single Value (Slider):** Displays the values of the filter along the range of a slider. Only a single value can be selected at a time. This option is useful for dimensions that have an implicit order such as dates.
+
+- **Multiple Values (Custom List):** Displays a text box where you can type a few characters and search for the value. 
+
+- **Wildcard Match:** Displays a text box where you can type a few characters. All values that match those characters are automatically selected. 
+ 
+
+We are going to select the Multiple Values(Dropdown)
+
+
+<img src="imgs/filter16.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+### Filter All Sheets 
+
+
+### Plots as filters 
+
+
 
 ## Publishing data sources
+
+
+
 
 ## Quick Quiz
 
