@@ -18,14 +18,17 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 1. Are there any columns that would be appropriate for a pie chart? 
 2. Create a new worksheet and create a Stacked bar chart from the `Species` column. 
-3. Is this easy to see quantity value of each of the penguin species?
+3. Is it easy to see the quantity value of each of the penguin species?
 4. Convert the stacked bar plot into a side-by-side bar plot. 
   - Sort the bars in descending order 
   - Add a colour to each species if you want to. 
 3. Open a new worksheet and create a scatterplot between the `Body Mass (g)` and `flipper Length` fields. 
   - Change the mark style to a circle and decrease the point size. 
   - Add the species field to the colour channel.
-  - What kind of relationship did you identify?
+  - What kind of relationship did you identify? 
+  - Which penguin species tend to have the greatest flipper length?
+4. Create a line graph that shows the number of egg clutches over the research period.
+  - Does the field appear to have a cyclical component? If so, how long is 1 cycle approximately? 
 
 
 
@@ -38,22 +41,21 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 ## Exercise 4: Creating Dashboards  
 
-- Convert Size to automatic
-- From the google drive, download this [image](https://drive.google.com/file/d/1TxMXniYyPTFpEMGupStr91FefDqHgCEh/view?usp=sharing)
-- Create a Text box with your title. 
-- Add sheets
-- Create filters for col1 col2 col3 
-- filter for all sheets
-- Make the heatmap a filter
+1. Convert Dashboard **Size** to automatic
+2. From the google drive, download this [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. 
+3. Create a Text box with your Dashboard title and have it "Float" over the image. 
+-------
+4. Add sheets
+5. Create filters for col1 col2 col3 
 - Change the filter style for  ... to ....
+6. Filter for all sheets
+7. Make the heatmap a filter
+
 
 
 ## Attribution
 
-- Data: Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081. doi:10.1371/journal.pone.0090081
-
-Obtained from [Kaggle](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_lter.csv) 
-
+- Data: Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081. doi:10.1371/journal.pone.0090081, Obtained from [Kaggle](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_lter.csv).
 
 - Image: <a href="https://unsplash.com/@evanescentlight?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Parker</a> on <a href="https://unsplash.com/s/photos/penguins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
