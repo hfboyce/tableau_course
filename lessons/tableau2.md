@@ -172,27 +172,9 @@ Let's plot and see if there is a relationship between the diameter of the trees'
 
 **Step by Step Instructions**
 
-1\. First, let's convert the `Height Range Id` column to a **Measure**. We can do this by right-clicking on it and selecting **Measure**.   
+1\. First, let's drag the `Height Range Id` column to the **Columns** shelf.   
 
-<img src="imgs/scat2.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-
-
-2\. Drag the newly transformed `Height Range Id` measure to the **Columns** shelf.  Note that this is going to change it to a **SUM** aggregate. This is ok because we will be summing over the values of `Tree ID` and thankfully this is a unique column!
-
-<img src="imgs/scat3.png"  width = "85%" alt="404 image" />
-
-<br>
-<br>
-
-
-3\. Next drag the `Diameter` **Measure** to the **Rows** shelf. This will again transform into an aggregate **SUM**. 
-
-<img src="imgs/scat4.png"  width = "85%" alt="404 image" />
+<img src="imgs/scatx1.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
@@ -200,38 +182,37 @@ Let's plot and see if there is a relationship between the diameter of the trees'
 
 
 
-This only gives us a single point. We need to split it up so we have a point for each tree. 
+2\. Let's make sure this is a continuous field and convert it by right clicking and selecting **Continuous** from the drop down. 
 
-
-
-4\. Dragging `Tree Id` to the **Details** icon in **Marks** Card will cause another popup window where we can "Add all members".
-
-<img src="imgs/scat5.png"  width = "85%" alt="404 image" />
+<img src="imgs/scatx2.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-5\. We then can change the mark type to a **Circle**...
 
-<img src="imgs/scat6.png"  width = "85%" alt="404 image" />
+3\. Next drag the `Diameter` **Measure** to the **Rows** shelf.
+
+<img src="imgs/scatx3.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-6\. ...And decrease the point size. 
 
-<img src="imgs/scat9.png"  width = "85%" alt="404 image" />
+
+
+4\. We need to make sure this `Diameter` field becomes a continuous **Dimension** as well, which we can do by right clicking and selecting it from the drop-down. 
+
+<img src="imgs/scatx4.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
 Great! 
 
-<img src="imgs/scat9.9.png"  width = "85%" alt="404 image" />
+<img src="imgs/scatx5.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
-
 
 ### Line Graph
 
@@ -533,7 +514,7 @@ Suppose that we want to see if the difference between the distributions of trunk
 <br>
 
 
-3\. Since we want individual observations for each tree (somewhat), we need to drag the `Tree Id` field to the **Detail** icon in the **Marks** card. This will populate the message where we indicate that we want to ** Add all members**. 
+3\. Since we want individual observations for each tree (somewhat), we need to convert the `Diameter` column to a dimension. 
 
 <img src="imgs/box3.png"  width = "85%" alt="404 image" />
 
@@ -549,6 +530,12 @@ Suppose that we want to see if the difference between the distributions of trunk
 <br>
 
 This will produce a circle for each tree now. 
+
+<img src="imgs/box55.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
 
 
 5\. This is where we make the box part of our boxplot! Right-click on the axis with the continuous variable - in our case, that's `Diameter`. Select the **Add Reference Line** option. 
@@ -566,7 +553,7 @@ This will produce a circle for each tree now.
 <br>
 
 
-7\. Here we want to "Hide the underlying marks (except outliers)". The reason we are hiding them, in this case, is because we have THOUSANDS of them! If our dataset was smaller, it might be a good idea to show all the underlying marks. 
+7\. Here we want to "Hide the underlying marks (except outliers)". The reason we are hiding them, in this case, is because we have THOUSANDS of observations! If our dataset was smaller, it might be a good idea to show all the underlying marks. 
 
 <img src="imgs/box8.png"  width = "85%" alt="404 image" />
 
@@ -583,11 +570,10 @@ This will produce a circle for each tree now.
 
 We can now leave this popup screen by clicking **OK**. 
 
-<img src="imgs/box10.png"  width = "85%" alt="404 image" />
 
 9\. Ok, so our outlying observations are rather large right now. Let's decrease the size.
 
-<img src="imgs/box11.png"  width = "85%" alt="404 image" />
+<img src="imgs/box10.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
@@ -641,7 +627,7 @@ The best way to sort your boxplots to some criteria is as follows:
 <br>
 
 
-3\. We can select if we want the field to be sorted in **Ascending** or **Descending** order and then choose an Aggregation. Here we are going to be selecting **Median** which is the center line of our boxes in the boxplot. 
+3\. We can select if we want the field to be sorted in **Ascending** or **Descending** order, choose a field name (`Diameter` for us) and then choose an Aggregation. We are going to be selecting **Median** which is the center line of our boxes in the boxplot. 
 
 <img src="imgs/boxsort3.png"  width = "85%" alt="404 image" />
 
@@ -762,7 +748,7 @@ That's better. Nice job!
 
 1. **True or False**: Sorting a boxplot can be done by using the sort buttons on the toolbar.
 2. **True or False**: Histograms can be made with a click from the **Show Me** window. 
-3. What column type are the fields used in the **Columns** and **Rows** shelf - Continuous or discrete? 
+3. What column type are the fields used in the **Columns** and **Rows** shelf for scatter plots- Continuous or Discrete? 
 4. Which of the following fields acts as a hierarchy by default `Row Id`, `Date Issued`, `Gender`, `Latitude`? 
 5. What mark shape is needed for a heatmap? 
 
@@ -1020,7 +1006,7 @@ Here is where the fun starts! Since Tableau is an excellent tool to use for dyna
 <br>
 <br>
 
-This will produce a dropdown where we want to select a field to filter on. Under **Filters** we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now, let's select  `Sum of Diameter`.
+This will produce a dropdown where we want to select a field to filter on. Under **Filters** we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now, let's select  `Diameter`.
 
 <img src="imgs/filter3.png"  width = "85%" alt="404 image" />
 
@@ -1037,7 +1023,7 @@ This will produce a dropdown where we want to select a field to filter on. Under
 
 
 
-3\. Let's add another. Let's add the `Sum of Height Range Id` as a filter too.
+3\. Let's add another. Let's add the `Height Range Id` as a filter too.
 
 <img src="imgs/filter6.png"  width = "85%" alt="404 image" />
 
