@@ -5,7 +5,7 @@ This exercise will require you to use the data named [penguins](https://www.kagg
 
 ## Exercise 1: Loading in the data
 
-1. Load in the `penguin.csv` data. 
+1\. Load in the `penguin.csv` data.      
 - How many geographical columns are there?
 - How many Measures are there?
 - How many continuous columns?
@@ -16,40 +16,40 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 ## Exercise 2: Basic plots
 
-1. Are there any columns that would be appropriate for a pie chart? 
-2. Create a new worksheet and create a Stacked bar chart from the `Species` column. 
-3. Is it easy to see the quantity value of each of the penguin species?
-4. Convert the stacked bar plot into a side-by-side bar plot. 
+1\. Are there any columns that would be appropriate for a pie chart?      
+2\. Create a new worksheet and create a Stacked bar chart from the `Species` column.      
+3\. Is it easy to see the quantity value of each of the penguin species?     
+4\. Convert the stacked bar plot into a side-by-side bar plot.       
 - Sort the bars in descending order 
 - Add a colour to each species if you want to. 
-4. Open a new worksheet and create a scatterplot between the `Body Mass (g)` and `flipper Length` fields. 
+5\. Open a new worksheet and create a scatterplot between the `Body Mass (g)` and `flipper Length` fields.        
 - Change the mark style to a circle and decrease the point size. 
 - Add the species field to the colour channel.
 - What kind of relationship did you identify? 
 - Which penguin species tend to have the greatest flipper length?
-5. Create a line graph that shows the number of egg clutches over the research period.
+6\. Create a line graph that shows the number of egg clutches over the research period.  
 - Does the field appear to have a cyclical component? If so, how long is 1 cycle approximately? 
 
 
 
 ## Exercise 3: Creating Distributions 
-1. Create a histogram for the `Culmen Length (mm)` field.
+1\. Create a histogram for the `Culmen Length (mm)` field.
 - Change the size of the bins to 1.
 - What type of shape does it have? (uniform, bell?)
 - How many "peaks" does it have? 
 - Add the species dimension to either the **Columns** shelf or the colour channel. Which species tends to have the shortest culmen lengths? 
   
-2. Create a histogram for the `Culmen Depth (mm)` column now. 
+2\. Create a histogram for the `Culmen Depth (mm)` column now. 
 - Change the size of the bins to 0.5  now. 
 - What is the range of values?
 - Add the species dimension to either the **Columns** shelf or the colour channel. Which species tends to have the most shallow culmens? 
   
-3. Now let's try and compare the bodyweight distributions between the penguin sexes using a box plot. Exclude the observation that has an unmarked value by right-clicking it and selecting **Hide**. 
+3\. Now let's try and compare the bodyweight distributions between the penguin sexes using a box plot. Exclude the observation that has an unmarked value by right-clicking it and selecting **Hide**.      
 - Are there any outliers displayed as marks on the boxplots? 
 - Sort the boxplots in descending order by the median. 
 - Which sex has the higher median body mass?
 
-4. Create a new worksheet and let's create a heatmap between the `Island` and `Species` columns. 
+4\. Create a new worksheet and let's create a heatmap between the `Island` and `Species` columns.       
 - Which island has only 1 species inhabiting it?
 - Which species is only inhabiting on a single island?
 - Add the count of the penguins as a label to each mark.
@@ -59,9 +59,9 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 ## Exercise 4: Creating Dashboards  
 
-1. Convert Dashboard **Size** to automatic.
-2. From the google drive, download this [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. 
-3. Create a Text box with your Dashboard title and have it "Float" over the image. 
+1\. Convert Dashboard **Size** to automatic.     
+2\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard.      
+3\. Create a Text box with your Dashboard title and have it "Float" over the image.    
 
 <!--
 4. Add sheets
