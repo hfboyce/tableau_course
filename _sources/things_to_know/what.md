@@ -44,7 +44,6 @@ By the end of the lesson, learners are expected to be able to:
 ### Lecture 3
 
 
-
 ### Lecture 4
 
 
