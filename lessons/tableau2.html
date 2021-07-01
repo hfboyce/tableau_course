@@ -507,33 +507,24 @@
 <p>With this particular data source, we don’t really have 2 good continuous numeric columns. To demonstrate how to make a scatter plot, we are going to use what we have and make the best of it.</p>
 <p>Let’s plot and see if there is a relationship between the diameter of the trees’ trunks and their height.</p>
 <p><strong>Step by Step Instructions</strong></p>
-<p>1. First, let’s convert the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> column to a <strong>Measure</strong>. We can do this by right-clicking on it and selecting <strong>Measure</strong>.</p>
-<a class="reference internal image-reference" href="../_images/scat2.png"><img alt="404 image" src="../_images/scat2.png" style="width: 85%;" /></a>
+<p>1. First, let’s drag the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> column to the <strong>Columns</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/scatx1.png"><img alt="404 image" src="../_images/scatx1.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>2. Drag the newly transformed <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> measure to the <strong>Columns</strong> shelf.  Note that this is going to change it to a <strong>SUM</strong> aggregate. This is ok because we will be summing over the values of <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">ID</span></code> and thankfully this is a unique column!</p>
-<a class="reference internal image-reference" href="../_images/scat3.png"><img alt="404 image" src="../_images/scat3.png" style="width: 85%;" /></a>
+<p>2. Let’s make sure this is a continuous field and convert it by right clicking and selecting <strong>Continuous</strong> from the drop down.</p>
+<a class="reference internal image-reference" href="../_images/scatx2.png"><img alt="404 image" src="../_images/scatx2.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>3. Next drag the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> <strong>Measure</strong> to the <strong>Rows</strong> shelf. This will again transform into an aggregate <strong>SUM</strong>.</p>
-<a class="reference internal image-reference" href="../_images/scat4.png"><img alt="404 image" src="../_images/scat4.png" style="width: 85%;" /></a>
+<p>3. Next drag the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> <strong>Measure</strong> to the <strong>Rows</strong> shelf.</p>
+<a class="reference internal image-reference" href="../_images/scatx3.png"><img alt="404 image" src="../_images/scatx3.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>This only gives us a single point. We need to split it up so we have a point for each tree.</p>
-<p>4. Dragging <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> to the <strong>Details</strong> icon in <strong>Marks</strong> Card will cause another popup window where we can “Add all members”.</p>
-<a class="reference internal image-reference" href="../_images/scat5.png"><img alt="404 image" src="../_images/scat5.png" style="width: 85%;" /></a>
-<br>
-<br>
-<p>5. We then can change the mark type to a <strong>Circle</strong>…</p>
-<a class="reference internal image-reference" href="../_images/scat6.png"><img alt="404 image" src="../_images/scat6.png" style="width: 85%;" /></a>
-<br>
-<br>
-<p>6. …And decrease the point size.</p>
-<a class="reference internal image-reference" href="../_images/scat9.png"><img alt="404 image" src="../_images/scat9.png" style="width: 85%;" /></a>
+<p>4. We need to make sure this <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> field becomes a continuous <strong>Dimension</strong> as well, which we can do by right clicking and selecting it from the drop-down.</p>
+<a class="reference internal image-reference" href="../_images/scatx4.png"><img alt="404 image" src="../_images/scatx4.png" style="width: 85%;" /></a>
 <br>
 <br>
 <p>Great!</p>
-<a class="reference internal image-reference" href="../_images/scat9.9.png"><img alt="404 image" src="../_images/scat9.9.png" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="lessons/imgs/scatx5.png"><img alt="404 image" src="lessons/imgs/scatx5.png" style="width: 85%;" /></a>
 <br>
 <br>
 </div>
@@ -702,7 +693,7 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <a class="reference internal image-reference" href="../_images/box2.png"><img alt="404 image" src="../_images/box2.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>3. Since we want individual observations for each tree (somewhat), we need to drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the <strong>Detail</strong> icon in the <strong>Marks</strong> card. This will populate the message where we indicate that we want to ** Add all members**.</p>
+<p>3. Since we want individual observations for each tree (somewhat), we need to convert the <code class="docutils literal notranslate"><span class="pre">Diameter</span></code> column to a dimension.</p>
 <a class="reference internal image-reference" href="../_images/box3.png"><img alt="404 image" src="../_images/box3.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -711,6 +702,9 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <br>
 <br>
 <p>This will produce a circle for each tree now.</p>
+<a class="reference internal image-reference" href="../_images/box55.png"><img alt="404 image" src="../_images/box55.png" style="width: 85%;" /></a>
+<br>
+<br>
 <p>5. This is where we make the box part of our boxplot! Right-click on the axis with the continuous variable - in our case, that’s <code class="docutils literal notranslate"><span class="pre">Diameter</span></code>. Select the <strong>Add Reference Line</strong> option.</p>
 <a class="reference internal image-reference" href="../_images/box6.png"><img alt="404 image" src="../_images/box6.png" style="width: 85%;" /></a>
 <br>
@@ -719,7 +713,7 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <a class="reference internal image-reference" href="../_images/box7.png"><img alt="404 image" src="../_images/box7.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>7. Here we want to “Hide the underlying marks (except outliers)”. The reason we are hiding them, in this case, is because we have THOUSANDS of them! If our dataset was smaller, it might be a good idea to show all the underlying marks.</p>
+<p>7. Here we want to “Hide the underlying marks (except outliers)”. The reason we are hiding them, in this case, is because we have THOUSANDS of observations! If our dataset was smaller, it might be a good idea to show all the underlying marks.</p>
 <a class="reference internal image-reference" href="../_images/box8.png"><img alt="404 image" src="../_images/box8.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -728,9 +722,8 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <br>
 <br>
 <p>We can now leave this popup screen by clicking <strong>OK</strong>.</p>
-<a class="reference internal image-reference" href="../_images/box10.png"><img alt="404 image" src="../_images/box10.png" style="width: 85%;" /></a>
 <p>9. Ok, so our outlying observations are rather large right now. Let’s decrease the size.</p>
-<a class="reference internal image-reference" href="../_images/box11.png"><img alt="404 image" src="../_images/box11.png" style="width: 85%;" /></a>
+<a class="reference internal image-reference" href="../_images/box10.png"><img alt="404 image" src="../_images/box10.png" style="width: 85%;" /></a>
 <br>
 <br>
 <p>Ahh, that’s a bit cleaner.</p>
@@ -761,7 +754,7 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <a class="reference internal image-reference" href="../_images/boxsort2.png"><img alt="404 image" src="../_images/boxsort2.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>3. We can select if we want the field to be sorted in <strong>Ascending</strong> or <strong>Descending</strong> order and then choose an Aggregation. Here we are going to be selecting <strong>Median</strong> which is the center line of our boxes in the boxplot.</p>
+<p>3. We can select if we want the field to be sorted in <strong>Ascending</strong> or <strong>Descending</strong> order, choose a field name (<code class="docutils literal notranslate"><span class="pre">Diameter</span></code> for us) and then choose an Aggregation. We are going to be selecting <strong>Median</strong> which is the center line of our boxes in the boxplot.</p>
 <a class="reference internal image-reference" href="../_images/boxsort3.png"><img alt="404 image" src="../_images/boxsort3.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -833,7 +826,7 @@ The majority of the data looks like it’s between 0-50 so let’s make the bin 
 <ol class="simple">
 <li><p><strong>True or False</strong>: Sorting a boxplot can be done by using the sort buttons on the toolbar.</p></li>
 <li><p><strong>True or False</strong>: Histograms can be made with a click from the <strong>Show Me</strong> window.</p></li>
-<li><p>What column type are the fields used in the <strong>Columns</strong> and <strong>Rows</strong> shelf - Continuous or discrete?</p></li>
+<li><p>What column type are the fields used in the <strong>Columns</strong> and <strong>Rows</strong> shelf for scatter plots- Continuous or Discrete?</p></li>
 <li><p>Which of the following fields acts as a hierarchy by default <code class="docutils literal notranslate"><span class="pre">Row</span> <span class="pre">Id</span></code>, <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Issued</span></code>, <code class="docutils literal notranslate"><span class="pre">Gender</span></code>, <code class="docutils literal notranslate"><span class="pre">Latitude</span></code>?</p></li>
 <li><p>What mark shape is needed for a heatmap?</p></li>
 </ol>
@@ -1001,7 +994,7 @@ The <a class="reference external" href="https://help.tableau.com/current/pro/des
 <a class="reference internal image-reference" href="../_images/filter2.png"><img alt="404 image" src="../_images/filter2.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>This will produce a dropdown where we want to select a field to filter on. Under <strong>Filters</strong> we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now, let’s select  <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">of</span> <span class="pre">Diameter</span></code>.</p>
+<p>This will produce a dropdown where we want to select a field to filter on. Under <strong>Filters</strong> we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now, let’s select  <code class="docutils literal notranslate"><span class="pre">Diameter</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/filter3.png"><img alt="404 image" src="../_images/filter3.png" style="width: 85%;" /></a>
 <br>
 <br>
@@ -1009,7 +1002,7 @@ The <a class="reference external" href="https://help.tableau.com/current/pro/des
 <a class="reference internal image-reference" href="../_images/filter4.png"><img alt="404 image" src="../_images/filter4.png" style="width: 85%;" /></a>
 <br>
 <br>
-<p>3. Let’s add another. Let’s add the <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">of</span> <span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> as a filter too.</p>
+<p>3. Let’s add another. Let’s add the <code class="docutils literal notranslate"><span class="pre">Height</span> <span class="pre">Range</span> <span class="pre">Id</span></code> as a filter too.</p>
 <a class="reference internal image-reference" href="../_images/filter6.png"><img alt="404 image" src="../_images/filter6.png" style="width: 85%;" /></a>
 <br>
 <br>
