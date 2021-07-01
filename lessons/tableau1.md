@@ -18,7 +18,7 @@ to name a few.
 
 Not only do many different occupations use it but companies ranging in size including giants like:
 
-- Amazon,  Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, etc.
+- Amazon,  Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, PayPal, etc.
 
 <img src="imgs/brands.png"  width = "100%" alt="404 image" />
 
@@ -74,7 +74,7 @@ There are 3 main characters involved:
 
 
 **Chris Stolte who is the Co-founder and technical advisor**
-- Ph.D. in Computer Science (from Standford University)
+- Ph.D. in Computer Science (from Stanford University)
 - Co-inventor on five software patents related to information visualization
 
 <img src="https://www.tableau.com/sites/default/files/pages/hanrahan_1.jpg"  width = "45%" alt="404 image" />
@@ -87,7 +87,7 @@ There are 3 main characters involved:
 <img src="https://www.tableau.com/sites/default/files/pages/chabot_1.jpg"  width = "45%" alt="404 image" />  
 
 **Christian Chabot, who is the Co-founder and chairman** 
-- MBA from Standford University
+- MBA from Stanford University
 - CEO and co-founder of BeeLine Software, a pioneer of next-generation digital mapping technology
 
 
@@ -117,7 +117,7 @@ A slight setback if you do not have a Tableau Server.
 ## Where is visualization situated in the grand scheme of data science? 
 
 - Visualization can absolutely be an end-goal! 
-- Visualization dashboards can be used used to target individuals for sales, find shortcomings in production, as well as help, identify trends in the data which can help with a prediction component. 
+- Visualization dashboards can be used to target individuals for sales, find shortcomings in production, as well as help, identify trends in the data which can help with a prediction component. 
 
 ## Quick Quiz
 
@@ -133,7 +133,7 @@ A slight setback if you do not have a Tableau Server.
 
 1. Tableau Server
 2. Chris Stolte
-3. Amazon, Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, Paypal, Nokia Dell, Lenovo, Cisco, Forbes, eBay, Intel, Ferrari, Deloitte etc. 
+3. Amazon, Apple, CIBC, Coca-Cola, Lululemon, Lenovo, LinkedIn, PayPal, Nokia Dell, Lenovo, Cisco, Forbes, eBay, Intel, Ferrari, Deloitte etc. 
 4. Looker
 5. False
 
@@ -284,7 +284,7 @@ We can't convert it straight to a geographical location since `Longitude` or `La
 <br>
 <br>
 
-So we need to change it to a "Number (decimal)" first! 
+So, we need to change it to a "Number (decimal)" first! 
 
 <img src="imgs/geonumb.png"  width = "85%" alt="404 image" />
 
@@ -401,7 +401,7 @@ Have you notices there are 2 different colours of icons?
 Continuous data is data that can take on any possible value. An example would be a person's height or the time it takes to microwave popcorn. 
 
 <span style="color:#5794AD; page-break-inside: avoid;">Blue</span> measures and dimensions means the field (column) is being expressed discretely. 
-Discrete data can only take certain values. Examples include the number of employees at a company. We can't really have half an employee, would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis. 
+Discrete data can only take certain values. Examples include the number of employees at a company. We can't really have half an employee; would that be the left or the right side?  Or the number of vehicles each company produces on a yearly basis. 
 
 ### Calculations, Sets, Parameters
 You'll possible have to make other data types besides dimensions and measures such as 
@@ -571,7 +571,7 @@ You can edit the title of the graph in two ways;
 <br>
 <br>
 
-7\. Let's convert it to a verticle bar chart. On the toolbar right above **Columns** you'll see a *Swap rows and columns** icon. This transposes your graph.
+7\. Let's convert it to a vertical bar chart. On the toolbar right above **Columns** you'll see a *Swap rows and columns** icon. This transposes your graph.
 
 <img src="imgs/transposetrees.png"  width = "85%" alt="404 image" />
 
@@ -580,7 +580,7 @@ You can edit the title of the graph in two ways;
 
 ### Bubble
 
-To answer the same question we could also have done a bubble chart.  
+To answer the same question, we could also have done a bubble chart.  
 
 **Step by Step Instructions**
 
@@ -684,7 +684,7 @@ To create a new viz we need to make a new worksheet. We can do this in 2 ways:
 
 ### Aggregation Plots 
 
-This is very similar to how you would make a COUNT bar plot with one minor difference, we no longer are using a "Count" **Measure** but instead perhaps **Average**, **Median**, **Max** and **Min**.
+This is very similar to how you would make a COUNT bar plot with one minor difference; we no longer are using a "Count" **Measure** but instead perhaps **Average**, **Median**, **Max** and **Min**.
 
 Our question now is: ***What is the average diameter of each tree genus?***.
 
@@ -828,7 +828,7 @@ If you don't have latitude and longitude columns, you may still be able to make 
 - US telephone Area Code 
 - U.S. Core Based Statistical Areas (CBSA)
 - Country/Region
-- County (U.S. counties, French départements, German kriese, etc)
+- County (U.S. counties, French départements, German kriese, etc.)
 - NUTS Europe
 - State/Province	
 - Code/Postcode
@@ -930,3 +930,4 @@ If you are working with static data or want to send your colleague your dashboar
 5. `.tbw`
 
 ```
+

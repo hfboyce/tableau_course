@@ -38,7 +38,7 @@ How many times *longer* is bar B than bar A?
 
 Well, the answer is the same in both examples the bar B is 8 times longer than bar A and circle B is 8 times larger than the area of circle A. 
 
-Even if you were right with both of these estimates, you would have likely found it easier to compare the length of the bars over the area of the circles. The other question that may come to mind is are you suppose to compare diameter, radius, or area? 
+Even if you were right with both of these estimates, you would have likely found it easier to compare the length of the bars over the area of the circles. The other question that may come to mind is are you supposed to compare diameter, radius, or area? 
 
 With bars, so long are the widths are the same the ambiguity is lower for comparing objects. 
 
@@ -276,7 +276,7 @@ It's now extremely difficult to make sense of the distribution as the points are
 
 We call this type of behaviour in plots "over-saturated".
 
-So what can we use instead? 
+So, what can we use instead? 
 
 #### Histograms 
 
@@ -303,7 +303,7 @@ One of the problems with histograms is that we can vary the shape of the distrib
 <br>
 <br>
 
-A histogram is not completely unbias and when we have a small dataset, this can be much more problematic.
+A histogram is not completely unbiased and when we have a small dataset, this can be much more problematic.
 
 We often use histograms because they have been used for centuries now and easy to draw without too many problems. 
 
@@ -347,9 +347,9 @@ We've seen that bar charts work as a method of displaying the number of observat
 <br>
 <br>
 
-However, this only shows a single value for each category though whether it be the count, mean, median, etc and we know that can be quite restrictive. It will hide a lot of the variation that may be occurring in the data and potentially lead to incorrect analysis. 
+However, this only shows a single value for each category though whether it be the count, mean, median, etc. and we know that can be quite restrictive. It will hide a lot of the variation that may be occurring in the data and potentially lead to incorrect analysis. 
 
-So what can we use instead? 
+So, what can we use instead? 
 
 #### Box Plot 
 
@@ -415,7 +415,7 @@ Heatmaps are a way to effectively visualize the counts of observations from two-
 <br>
 
 
-In this heatmap, we can see that the consumer segment ships the majority of their orders with Standard Class. In fact for all segments, Standard Class appears to be the most frequent. 
+In this heatmap, we can see that the consumer segment ships the majority of their orders with Standard Class. In fact, for all segments, Standard Class appears to be the most frequent. 
 
 We can really get a sense of our data when comparing 2 categorical columns, and heatmaps are an effective way to do so, however, they do not give the exact count for each colour tint so adjusting the plot accordingly could sometimes be helpful in some scenarios. 
 
@@ -424,7 +424,7 @@ We can really get a sense of our data when comparing 2 categorical columns, and 
 
 #### Plots Using Marker Size 
 
-We talked about how relying on a single colour channel to communicate information can pose some problems for those with colourblindness and it's often harder to see small variations in colour as we can with position or size channels. 
+We talked about how relying on a single colour channel to communicate information can pose some problems for those with colorblindness and it's often harder to see small variations in colour as we can with position or size channels. 
 
 To accommodate for these issues, we can either add the values as we showed above or we can use size **AND** colour for these plots. 
 
@@ -460,4 +460,5 @@ To accommodate for these issues, we can either add the values as we showed above
 
 ```
 -->
+
 

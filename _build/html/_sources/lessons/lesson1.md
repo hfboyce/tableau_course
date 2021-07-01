@@ -245,7 +245,7 @@ If we plotted the sets, we would get the following visualizations.
 
 <img src="imgs/sets.png"  width = "100%" alt="404 image" />
 
-So although they do share similar means, and standard deviations, we can clearly see that they are vastly different from one another. 
+So, although they do share similar means, and standard deviations, we can clearly see that they are vastly different from one another. 
 
 Another great illustration to drive home our point is the graphic below from <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" target="_blank">
 Matejka and Fitzmaurice, 2017</a>. 
@@ -279,7 +279,7 @@ Using this visualization, doctors were able to identify the areas of concern 39%
 
 Researchers then went off to see how changes to this visualization affected identification rates.
 
-Researchers changed the colour to something more interpretable. It's important to note that colourblindness affects many individuals particularly the specific red-green colour blindness. Not only that but it's not always completely clear what values are the ones doctors should be particularly concerned with. The researchers adapted the colours so that low ESS stands out more, and highlighted the area with a red colour, and the rest are in black and white.
+Researchers changed the colour to something more interpretable. It's important to note that colorblindness affects many individuals particularly the specific red-green colour blindness. Not only that but it's not always completely clear what values are the ones doctors should be particularly concerned with. The researchers adapted the colours so that low ESS stands out more, and highlighted the area with a red colour, and the rest are in black and white.
 
 <img src="imgs/heart21.png"  width = "80%" alt="404 image" />
 
@@ -299,4 +299,5 @@ This definitely was the case for the doctors as the 2D representation changed th
 This goes to show how important colour and dimensionality are to effective visualization and thus your analysis. 
 
 <br> 
-<br> 
+<br>
+

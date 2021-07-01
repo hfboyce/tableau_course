@@ -4,6 +4,9 @@
 <workbook source-build='2021.1.2 (20211.21.0511.0935)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <_.fcp.DashboardExportButton.true...DashboardExportButton />
     <IntuitiveSorting />
     <IntuitiveSorting_SP2 />
     <_.fcp.MarkAnimation.true...MarkAnimation />
@@ -13,6 +16,7 @@
     <_.fcp.SetMembershipControl.true...SetMembershipControl />
     <SheetIdentifierTracking />
     <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
   </document-format-change-manifest>
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
@@ -389,6 +393,12 @@
       <column caption='Std Street' datatype='string' name='[std_street]' role='dimension' type='nominal' />
       <column caption='Street Side Name' datatype='string' name='[street_side_name]' role='dimension' type='nominal' />
       <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
+      <group caption='Action (Root Barrier,Tree Id)' hidden='true' name='[Action (Root Barrier,Tree Id)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[root_barrier]' />
+          <groupfilter function='level-members' level='[tree_id]' />
+        </groupfilter>
+      </group>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
@@ -428,6 +438,30 @@
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
   </datasources>
+  <shared-views>
+    <shared-view name='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
+      <datasources>
+        <datasource caption='street-trees' name='federated.1p1l0si0hy5nby19rd2w50go8sr2' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
+        <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+        <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]'>
+        <groupfilter function='level-members' level='[none:neighbourhood_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_5F89529868E242A98D09332DFEE99C12]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 5' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
   <worksheets>
     <worksheet name='Sheet 1'>
       <table>
@@ -437,10 +471,15 @@
           </datasources>
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column-instance column='[tree_id]' derivation='Count' name='[cnt:tree_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
             <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -469,9 +508,14 @@
             <datasource caption='street-trees' name='federated.1p1l0si0hy5nby19rd2w50go8sr2' />
           </datasources>
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
           </datasource-dependencies>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -497,11 +541,480 @@
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column caption='Diameter' datatype='real' name='[diameter]' role='measure' type='quantitative' />
             <column caption='Height Range Id' datatype='integer' name='[height_range_id]' role='measure' type='quantitative' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[tree_id]' derivation='None' name='[none:tree_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
             <column-instance column='[diameter]' derivation='Sum' name='[sum:diameter:qk]' pivot='key' type='quantitative' />
             <column-instance column='[height_range_id]' derivation='Sum' name='[sum:height_range_id:qk]' pivot='key' type='quantitative' />
             <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[Action (Root Barrier,Tree Id)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_5F89529868E242A98D09332DFEE99C12]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[root_barrier]' member='&quot;Y&quot;' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[tree_id]' member='2641' />
+                <groupfilter function='member' level='[tree_id]' member='2643' />
+                <groupfilter function='member' level='[tree_id]' member='2753' />
+                <groupfilter function='member' level='[tree_id]' member='2780' />
+                <groupfilter function='member' level='[tree_id]' member='3390' />
+                <groupfilter function='member' level='[tree_id]' member='5148' />
+                <groupfilter function='member' level='[tree_id]' member='7572' />
+                <groupfilter function='member' level='[tree_id]' member='10942' />
+                <groupfilter function='member' level='[tree_id]' member='12041' />
+                <groupfilter function='member' level='[tree_id]' member='12057' />
+                <groupfilter function='member' level='[tree_id]' member='12082' />
+                <groupfilter function='member' level='[tree_id]' member='13386' />
+                <groupfilter function='member' level='[tree_id]' member='13442' />
+                <groupfilter function='member' level='[tree_id]' member='13454' />
+                <groupfilter function='member' level='[tree_id]' member='16164' />
+                <groupfilter function='member' level='[tree_id]' member='16367' />
+                <groupfilter function='member' level='[tree_id]' member='19446' />
+                <groupfilter function='member' level='[tree_id]' member='28770' />
+                <groupfilter function='member' level='[tree_id]' member='30717' />
+                <groupfilter function='member' level='[tree_id]' member='35072' />
+                <groupfilter function='member' level='[tree_id]' member='38925' />
+                <groupfilter function='member' level='[tree_id]' member='39078' />
+                <groupfilter function='member' level='[tree_id]' member='42280' />
+                <groupfilter function='member' level='[tree_id]' member='46151' />
+                <groupfilter function='member' level='[tree_id]' member='55001' />
+                <groupfilter function='member' level='[tree_id]' member='58706' />
+                <groupfilter function='member' level='[tree_id]' member='58745' />
+                <groupfilter function='member' level='[tree_id]' member='63636' />
+                <groupfilter function='member' level='[tree_id]' member='68186' />
+                <groupfilter function='member' level='[tree_id]' member='73444' />
+                <groupfilter function='member' level='[tree_id]' member='73452' />
+                <groupfilter function='member' level='[tree_id]' member='78650' />
+                <groupfilter function='member' level='[tree_id]' member='79890' />
+                <groupfilter function='member' level='[tree_id]' member='79891' />
+                <groupfilter function='member' level='[tree_id]' member='79892' />
+                <groupfilter function='member' level='[tree_id]' member='79893' />
+                <groupfilter function='member' level='[tree_id]' member='82210' />
+                <groupfilter function='member' level='[tree_id]' member='82223' />
+                <groupfilter function='member' level='[tree_id]' member='82235' />
+                <groupfilter function='member' level='[tree_id]' member='82236' />
+                <groupfilter function='member' level='[tree_id]' member='82247' />
+                <groupfilter function='member' level='[tree_id]' member='82248' />
+                <groupfilter function='member' level='[tree_id]' member='82320' />
+                <groupfilter function='member' level='[tree_id]' member='82387' />
+                <groupfilter function='member' level='[tree_id]' member='86627' />
+                <groupfilter function='member' level='[tree_id]' member='86628' />
+                <groupfilter function='member' level='[tree_id]' member='86631' />
+                <groupfilter function='member' level='[tree_id]' member='86808' />
+                <groupfilter function='member' level='[tree_id]' member='87972' />
+                <groupfilter function='member' level='[tree_id]' member='88023' />
+                <groupfilter function='member' level='[tree_id]' member='88877' />
+                <groupfilter function='member' level='[tree_id]' member='97203' />
+                <groupfilter function='member' level='[tree_id]' member='97227' />
+                <groupfilter function='member' level='[tree_id]' member='97228' />
+                <groupfilter function='member' level='[tree_id]' member='97265' />
+                <groupfilter function='member' level='[tree_id]' member='97277' />
+                <groupfilter function='member' level='[tree_id]' member='98457' />
+                <groupfilter function='member' level='[tree_id]' member='98600' />
+                <groupfilter function='member' level='[tree_id]' member='99173' />
+                <groupfilter function='member' level='[tree_id]' member='99509' />
+                <groupfilter function='member' level='[tree_id]' member='99520' />
+                <groupfilter function='member' level='[tree_id]' member='104017' />
+                <groupfilter function='member' level='[tree_id]' member='106593' />
+                <groupfilter function='member' level='[tree_id]' member='106690' />
+                <groupfilter function='member' level='[tree_id]' member='107328' />
+                <groupfilter function='member' level='[tree_id]' member='109713' />
+                <groupfilter function='member' level='[tree_id]' member='109717' />
+                <groupfilter function='member' level='[tree_id]' member='109725' />
+                <groupfilter function='member' level='[tree_id]' member='109727' />
+                <groupfilter function='member' level='[tree_id]' member='109730' />
+                <groupfilter function='member' level='[tree_id]' member='109741' />
+                <groupfilter function='member' level='[tree_id]' member='109743' />
+                <groupfilter function='member' level='[tree_id]' member='109749' />
+                <groupfilter function='member' level='[tree_id]' member='109750' />
+                <groupfilter function='member' level='[tree_id]' member='110546' />
+                <groupfilter function='member' level='[tree_id]' member='113238' />
+                <groupfilter function='member' level='[tree_id]' member='114750' />
+                <groupfilter function='member' level='[tree_id]' member='115037' />
+                <groupfilter function='member' level='[tree_id]' member='115038' />
+                <groupfilter function='member' level='[tree_id]' member='120722' />
+                <groupfilter function='member' level='[tree_id]' member='124202' />
+                <groupfilter function='member' level='[tree_id]' member='125706' />
+                <groupfilter function='member' level='[tree_id]' member='138457' />
+                <groupfilter function='member' level='[tree_id]' member='138566' />
+                <groupfilter function='member' level='[tree_id]' member='139597' />
+                <groupfilter function='member' level='[tree_id]' member='139603' />
+                <groupfilter function='member' level='[tree_id]' member='141491' />
+                <groupfilter function='member' level='[tree_id]' member='141548' />
+                <groupfilter function='member' level='[tree_id]' member='148661' />
+                <groupfilter function='member' level='[tree_id]' member='162564' />
+                <groupfilter function='member' level='[tree_id]' member='163039' />
+                <groupfilter function='member' level='[tree_id]' member='163211' />
+                <groupfilter function='member' level='[tree_id]' member='163990' />
+                <groupfilter function='member' level='[tree_id]' member='166763' />
+                <groupfilter function='member' level='[tree_id]' member='166768' />
+                <groupfilter function='member' level='[tree_id]' member='166769' />
+                <groupfilter function='member' level='[tree_id]' member='168167' />
+                <groupfilter function='member' level='[tree_id]' member='168737' />
+                <groupfilter function='member' level='[tree_id]' member='169546' />
+                <groupfilter function='member' level='[tree_id]' member='169582' />
+                <groupfilter function='member' level='[tree_id]' member='175315' />
+                <groupfilter function='member' level='[tree_id]' member='178484' />
+                <groupfilter function='member' level='[tree_id]' member='178654' />
+                <groupfilter function='member' level='[tree_id]' member='180186' />
+                <groupfilter function='member' level='[tree_id]' member='180343' />
+                <groupfilter function='member' level='[tree_id]' member='185113' />
+                <groupfilter function='member' level='[tree_id]' member='188978' />
+                <groupfilter function='member' level='[tree_id]' member='189040' />
+                <groupfilter function='member' level='[tree_id]' member='190059' />
+                <groupfilter function='member' level='[tree_id]' member='190060' />
+                <groupfilter function='member' level='[tree_id]' member='190157' />
+                <groupfilter function='member' level='[tree_id]' member='190158' />
+                <groupfilter function='member' level='[tree_id]' member='190159' />
+                <groupfilter function='member' level='[tree_id]' member='190160' />
+                <groupfilter function='member' level='[tree_id]' member='190161' />
+                <groupfilter function='member' level='[tree_id]' member='190163' />
+                <groupfilter function='member' level='[tree_id]' member='191206' />
+                <groupfilter function='member' level='[tree_id]' member='192111' />
+                <groupfilter function='member' level='[tree_id]' member='192112' />
+                <groupfilter function='member' level='[tree_id]' member='193861' />
+                <groupfilter function='member' level='[tree_id]' member='194305' />
+                <groupfilter function='member' level='[tree_id]' member='194350' />
+                <groupfilter function='member' level='[tree_id]' member='194355' />
+                <groupfilter function='member' level='[tree_id]' member='194869' />
+                <groupfilter function='member' level='[tree_id]' member='194870' />
+                <groupfilter function='member' level='[tree_id]' member='195183' />
+                <groupfilter function='member' level='[tree_id]' member='196277' />
+                <groupfilter function='member' level='[tree_id]' member='196299' />
+                <groupfilter function='member' level='[tree_id]' member='196301' />
+                <groupfilter function='member' level='[tree_id]' member='196685' />
+                <groupfilter function='member' level='[tree_id]' member='196800' />
+                <groupfilter function='member' level='[tree_id]' member='199384' />
+                <groupfilter function='member' level='[tree_id]' member='199386' />
+                <groupfilter function='member' level='[tree_id]' member='199388' />
+                <groupfilter function='member' level='[tree_id]' member='199391' />
+                <groupfilter function='member' level='[tree_id]' member='199393' />
+                <groupfilter function='member' level='[tree_id]' member='199396' />
+                <groupfilter function='member' level='[tree_id]' member='200729' />
+                <groupfilter function='member' level='[tree_id]' member='200731' />
+                <groupfilter function='member' level='[tree_id]' member='200737' />
+                <groupfilter function='member' level='[tree_id]' member='200738' />
+                <groupfilter function='member' level='[tree_id]' member='200739' />
+                <groupfilter function='member' level='[tree_id]' member='200740' />
+                <groupfilter function='member' level='[tree_id]' member='200748' />
+                <groupfilter function='member' level='[tree_id]' member='200757' />
+                <groupfilter function='member' level='[tree_id]' member='200773' />
+                <groupfilter function='member' level='[tree_id]' member='200775' />
+                <groupfilter function='member' level='[tree_id]' member='200777' />
+                <groupfilter function='member' level='[tree_id]' member='200780' />
+                <groupfilter function='member' level='[tree_id]' member='200781' />
+                <groupfilter function='member' level='[tree_id]' member='200789' />
+                <groupfilter function='member' level='[tree_id]' member='200791' />
+                <groupfilter function='member' level='[tree_id]' member='200793' />
+                <groupfilter function='member' level='[tree_id]' member='200804' />
+                <groupfilter function='member' level='[tree_id]' member='200816' />
+                <groupfilter function='member' level='[tree_id]' member='200817' />
+                <groupfilter function='member' level='[tree_id]' member='200818' />
+                <groupfilter function='member' level='[tree_id]' member='200859' />
+                <groupfilter function='member' level='[tree_id]' member='200876' />
+                <groupfilter function='member' level='[tree_id]' member='200877' />
+                <groupfilter function='member' level='[tree_id]' member='200922' />
+                <groupfilter function='member' level='[tree_id]' member='200973' />
+                <groupfilter function='member' level='[tree_id]' member='201333' />
+                <groupfilter function='member' level='[tree_id]' member='202528' />
+                <groupfilter function='member' level='[tree_id]' member='202529' />
+                <groupfilter function='member' level='[tree_id]' member='203163' />
+                <groupfilter function='member' level='[tree_id]' member='203321' />
+                <groupfilter function='member' level='[tree_id]' member='203570' />
+                <groupfilter function='member' level='[tree_id]' member='204236' />
+                <groupfilter function='member' level='[tree_id]' member='204291' />
+                <groupfilter function='member' level='[tree_id]' member='204784' />
+                <groupfilter function='member' level='[tree_id]' member='204785' />
+                <groupfilter function='member' level='[tree_id]' member='204786' />
+                <groupfilter function='member' level='[tree_id]' member='204787' />
+                <groupfilter function='member' level='[tree_id]' member='204789' />
+                <groupfilter function='member' level='[tree_id]' member='204973' />
+                <groupfilter function='member' level='[tree_id]' member='205252' />
+                <groupfilter function='member' level='[tree_id]' member='205253' />
+                <groupfilter function='member' level='[tree_id]' member='205254' />
+                <groupfilter function='member' level='[tree_id]' member='205396' />
+                <groupfilter function='member' level='[tree_id]' member='205397' />
+                <groupfilter function='member' level='[tree_id]' member='205398' />
+                <groupfilter function='member' level='[tree_id]' member='205512' />
+                <groupfilter function='member' level='[tree_id]' member='205993' />
+                <groupfilter function='member' level='[tree_id]' member='206037' />
+                <groupfilter function='member' level='[tree_id]' member='206047' />
+                <groupfilter function='member' level='[tree_id]' member='206517' />
+                <groupfilter function='member' level='[tree_id]' member='206519' />
+                <groupfilter function='member' level='[tree_id]' member='206913' />
+                <groupfilter function='member' level='[tree_id]' member='206927' />
+                <groupfilter function='member' level='[tree_id]' member='206928' />
+                <groupfilter function='member' level='[tree_id]' member='207060' />
+                <groupfilter function='member' level='[tree_id]' member='207257' />
+                <groupfilter function='member' level='[tree_id]' member='207360' />
+                <groupfilter function='member' level='[tree_id]' member='207361' />
+                <groupfilter function='member' level='[tree_id]' member='207362' />
+                <groupfilter function='member' level='[tree_id]' member='207363' />
+                <groupfilter function='member' level='[tree_id]' member='207364' />
+                <groupfilter function='member' level='[tree_id]' member='207399' />
+                <groupfilter function='member' level='[tree_id]' member='207400' />
+                <groupfilter function='member' level='[tree_id]' member='207401' />
+                <groupfilter function='member' level='[tree_id]' member='207403' />
+                <groupfilter function='member' level='[tree_id]' member='207404' />
+                <groupfilter function='member' level='[tree_id]' member='207413' />
+                <groupfilter function='member' level='[tree_id]' member='207414' />
+                <groupfilter function='member' level='[tree_id]' member='207416' />
+                <groupfilter function='member' level='[tree_id]' member='207418' />
+                <groupfilter function='member' level='[tree_id]' member='207421' />
+                <groupfilter function='member' level='[tree_id]' member='207520' />
+                <groupfilter function='member' level='[tree_id]' member='207521' />
+                <groupfilter function='member' level='[tree_id]' member='207526' />
+                <groupfilter function='member' level='[tree_id]' member='207527' />
+                <groupfilter function='member' level='[tree_id]' member='207814' />
+                <groupfilter function='member' level='[tree_id]' member='207892' />
+                <groupfilter function='member' level='[tree_id]' member='208177' />
+                <groupfilter function='member' level='[tree_id]' member='208709' />
+                <groupfilter function='member' level='[tree_id]' member='208722' />
+                <groupfilter function='member' level='[tree_id]' member='208723' />
+                <groupfilter function='member' level='[tree_id]' member='209078' />
+                <groupfilter function='member' level='[tree_id]' member='209169' />
+                <groupfilter function='member' level='[tree_id]' member='209296' />
+                <groupfilter function='member' level='[tree_id]' member='209297' />
+                <groupfilter function='member' level='[tree_id]' member='209298' />
+                <groupfilter function='member' level='[tree_id]' member='209325' />
+                <groupfilter function='member' level='[tree_id]' member='209592' />
+                <groupfilter function='member' level='[tree_id]' member='209594' />
+                <groupfilter function='member' level='[tree_id]' member='209595' />
+                <groupfilter function='member' level='[tree_id]' member='209597' />
+                <groupfilter function='member' level='[tree_id]' member='210323' />
+                <groupfilter function='member' level='[tree_id]' member='210704' />
+                <groupfilter function='member' level='[tree_id]' member='210705' />
+                <groupfilter function='member' level='[tree_id]' member='210706' />
+                <groupfilter function='member' level='[tree_id]' member='210923' />
+                <groupfilter function='member' level='[tree_id]' member='210924' />
+                <groupfilter function='member' level='[tree_id]' member='210925' />
+                <groupfilter function='member' level='[tree_id]' member='210926' />
+                <groupfilter function='member' level='[tree_id]' member='210943' />
+                <groupfilter function='member' level='[tree_id]' member='211146' />
+                <groupfilter function='member' level='[tree_id]' member='211147' />
+                <groupfilter function='member' level='[tree_id]' member='211150' />
+                <groupfilter function='member' level='[tree_id]' member='211153' />
+                <groupfilter function='member' level='[tree_id]' member='211154' />
+                <groupfilter function='member' level='[tree_id]' member='211155' />
+                <groupfilter function='member' level='[tree_id]' member='211156' />
+                <groupfilter function='member' level='[tree_id]' member='211157' />
+                <groupfilter function='member' level='[tree_id]' member='211186' />
+                <groupfilter function='member' level='[tree_id]' member='211187' />
+                <groupfilter function='member' level='[tree_id]' member='211188' />
+                <groupfilter function='member' level='[tree_id]' member='211189' />
+                <groupfilter function='member' level='[tree_id]' member='211697' />
+                <groupfilter function='member' level='[tree_id]' member='211698' />
+                <groupfilter function='member' level='[tree_id]' member='211805' />
+                <groupfilter function='member' level='[tree_id]' member='211806' />
+                <groupfilter function='member' level='[tree_id]' member='211807' />
+                <groupfilter function='member' level='[tree_id]' member='211808' />
+                <groupfilter function='member' level='[tree_id]' member='213403' />
+                <groupfilter function='member' level='[tree_id]' member='214093' />
+                <groupfilter function='member' level='[tree_id]' member='214094' />
+                <groupfilter function='member' level='[tree_id]' member='214278' />
+                <groupfilter function='member' level='[tree_id]' member='216511' />
+                <groupfilter function='member' level='[tree_id]' member='216908' />
+                <groupfilter function='member' level='[tree_id]' member='219348' />
+                <groupfilter function='member' level='[tree_id]' member='219466' />
+                <groupfilter function='member' level='[tree_id]' member='219467' />
+                <groupfilter function='member' level='[tree_id]' member='219487' />
+                <groupfilter function='member' level='[tree_id]' member='219506' />
+                <groupfilter function='member' level='[tree_id]' member='219507' />
+                <groupfilter function='member' level='[tree_id]' member='219508' />
+                <groupfilter function='member' level='[tree_id]' member='219509' />
+                <groupfilter function='member' level='[tree_id]' member='219511' />
+                <groupfilter function='member' level='[tree_id]' member='220386' />
+                <groupfilter function='member' level='[tree_id]' member='220792' />
+                <groupfilter function='member' level='[tree_id]' member='220800' />
+                <groupfilter function='member' level='[tree_id]' member='220804' />
+                <groupfilter function='member' level='[tree_id]' member='220806' />
+                <groupfilter function='member' level='[tree_id]' member='220807' />
+                <groupfilter function='member' level='[tree_id]' member='220808' />
+                <groupfilter function='member' level='[tree_id]' member='220811' />
+                <groupfilter function='member' level='[tree_id]' member='220812' />
+                <groupfilter function='member' level='[tree_id]' member='221140' />
+                <groupfilter function='member' level='[tree_id]' member='221332' />
+                <groupfilter function='member' level='[tree_id]' member='221374' />
+                <groupfilter function='member' level='[tree_id]' member='221661' />
+                <groupfilter function='member' level='[tree_id]' member='221753' />
+                <groupfilter function='member' level='[tree_id]' member='221754' />
+                <groupfilter function='member' level='[tree_id]' member='221756' />
+                <groupfilter function='member' level='[tree_id]' member='221757' />
+                <groupfilter function='member' level='[tree_id]' member='221759' />
+                <groupfilter function='member' level='[tree_id]' member='221760' />
+                <groupfilter function='member' level='[tree_id]' member='221761' />
+                <groupfilter function='member' level='[tree_id]' member='221762' />
+                <groupfilter function='member' level='[tree_id]' member='221763' />
+                <groupfilter function='member' level='[tree_id]' member='221764' />
+                <groupfilter function='member' level='[tree_id]' member='221765' />
+                <groupfilter function='member' level='[tree_id]' member='221766' />
+                <groupfilter function='member' level='[tree_id]' member='221805' />
+                <groupfilter function='member' level='[tree_id]' member='221807' />
+                <groupfilter function='member' level='[tree_id]' member='221810' />
+                <groupfilter function='member' level='[tree_id]' member='221811' />
+                <groupfilter function='member' level='[tree_id]' member='221813' />
+                <groupfilter function='member' level='[tree_id]' member='221814' />
+                <groupfilter function='member' level='[tree_id]' member='221815' />
+                <groupfilter function='member' level='[tree_id]' member='221816' />
+                <groupfilter function='member' level='[tree_id]' member='221817' />
+                <groupfilter function='member' level='[tree_id]' member='221818' />
+                <groupfilter function='member' level='[tree_id]' member='221819' />
+                <groupfilter function='member' level='[tree_id]' member='221820' />
+                <groupfilter function='member' level='[tree_id]' member='221821' />
+                <groupfilter function='member' level='[tree_id]' member='221822' />
+                <groupfilter function='member' level='[tree_id]' member='221823' />
+                <groupfilter function='member' level='[tree_id]' member='221963' />
+                <groupfilter function='member' level='[tree_id]' member='221966' />
+                <groupfilter function='member' level='[tree_id]' member='221967' />
+                <groupfilter function='member' level='[tree_id]' member='221970' />
+                <groupfilter function='member' level='[tree_id]' member='221971' />
+                <groupfilter function='member' level='[tree_id]' member='221976' />
+                <groupfilter function='member' level='[tree_id]' member='221979' />
+                <groupfilter function='member' level='[tree_id]' member='222086' />
+                <groupfilter function='member' level='[tree_id]' member='222087' />
+                <groupfilter function='member' level='[tree_id]' member='222088' />
+                <groupfilter function='member' level='[tree_id]' member='222089' />
+                <groupfilter function='member' level='[tree_id]' member='222090' />
+                <groupfilter function='member' level='[tree_id]' member='222091' />
+                <groupfilter function='member' level='[tree_id]' member='222092' />
+                <groupfilter function='member' level='[tree_id]' member='222095' />
+                <groupfilter function='member' level='[tree_id]' member='222398' />
+                <groupfilter function='member' level='[tree_id]' member='222472' />
+                <groupfilter function='member' level='[tree_id]' member='222474' />
+                <groupfilter function='member' level='[tree_id]' member='222552' />
+                <groupfilter function='member' level='[tree_id]' member='222588' />
+                <groupfilter function='member' level='[tree_id]' member='222589' />
+                <groupfilter function='member' level='[tree_id]' member='222645' />
+                <groupfilter function='member' level='[tree_id]' member='223143' />
+                <groupfilter function='member' level='[tree_id]' member='223147' />
+                <groupfilter function='member' level='[tree_id]' member='223829' />
+                <groupfilter function='member' level='[tree_id]' member='223830' />
+                <groupfilter function='member' level='[tree_id]' member='223832' />
+                <groupfilter function='member' level='[tree_id]' member='223833' />
+                <groupfilter function='member' level='[tree_id]' member='223835' />
+                <groupfilter function='member' level='[tree_id]' member='223836' />
+                <groupfilter function='member' level='[tree_id]' member='223840' />
+                <groupfilter function='member' level='[tree_id]' member='223841' />
+                <groupfilter function='member' level='[tree_id]' member='223842' />
+                <groupfilter function='member' level='[tree_id]' member='223843' />
+                <groupfilter function='member' level='[tree_id]' member='223925' />
+                <groupfilter function='member' level='[tree_id]' member='223926' />
+                <groupfilter function='member' level='[tree_id]' member='224264' />
+                <groupfilter function='member' level='[tree_id]' member='224265' />
+                <groupfilter function='member' level='[tree_id]' member='224358' />
+                <groupfilter function='member' level='[tree_id]' member='224359' />
+                <groupfilter function='member' level='[tree_id]' member='224360' />
+                <groupfilter function='member' level='[tree_id]' member='224362' />
+                <groupfilter function='member' level='[tree_id]' member='224364' />
+                <groupfilter function='member' level='[tree_id]' member='224365' />
+                <groupfilter function='member' level='[tree_id]' member='224366' />
+                <groupfilter function='member' level='[tree_id]' member='224368' />
+                <groupfilter function='member' level='[tree_id]' member='224369' />
+                <groupfilter function='member' level='[tree_id]' member='224472' />
+                <groupfilter function='member' level='[tree_id]' member='224473' />
+                <groupfilter function='member' level='[tree_id]' member='224474' />
+                <groupfilter function='member' level='[tree_id]' member='224486' />
+                <groupfilter function='member' level='[tree_id]' member='224539' />
+                <groupfilter function='member' level='[tree_id]' member='224772' />
+                <groupfilter function='member' level='[tree_id]' member='225209' />
+                <groupfilter function='member' level='[tree_id]' member='225640' />
+                <groupfilter function='member' level='[tree_id]' member='225836' />
+                <groupfilter function='member' level='[tree_id]' member='225837' />
+                <groupfilter function='member' level='[tree_id]' member='225988' />
+                <groupfilter function='member' level='[tree_id]' member='226021' />
+                <groupfilter function='member' level='[tree_id]' member='226139' />
+                <groupfilter function='member' level='[tree_id]' member='226140' />
+                <groupfilter function='member' level='[tree_id]' member='226141' />
+                <groupfilter function='member' level='[tree_id]' member='226644' />
+                <groupfilter function='member' level='[tree_id]' member='227246' />
+                <groupfilter function='member' level='[tree_id]' member='227271' />
+                <groupfilter function='member' level='[tree_id]' member='227273' />
+                <groupfilter function='member' level='[tree_id]' member='227375' />
+                <groupfilter function='member' level='[tree_id]' member='227398' />
+                <groupfilter function='member' level='[tree_id]' member='227399' />
+                <groupfilter function='member' level='[tree_id]' member='227465' />
+                <groupfilter function='member' level='[tree_id]' member='227769' />
+                <groupfilter function='member' level='[tree_id]' member='227770' />
+                <groupfilter function='member' level='[tree_id]' member='227771' />
+                <groupfilter function='member' level='[tree_id]' member='227772' />
+                <groupfilter function='member' level='[tree_id]' member='227773' />
+                <groupfilter function='member' level='[tree_id]' member='227774' />
+                <groupfilter function='member' level='[tree_id]' member='227775' />
+                <groupfilter function='member' level='[tree_id]' member='227776' />
+                <groupfilter function='member' level='[tree_id]' member='227779' />
+                <groupfilter function='member' level='[tree_id]' member='227780' />
+                <groupfilter function='member' level='[tree_id]' member='227781' />
+                <groupfilter function='member' level='[tree_id]' member='227939' />
+                <groupfilter function='member' level='[tree_id]' member='228457' />
+                <groupfilter function='member' level='[tree_id]' member='231531' />
+                <groupfilter function='member' level='[tree_id]' member='231532' />
+                <groupfilter function='member' level='[tree_id]' member='233543' />
+                <groupfilter function='member' level='[tree_id]' member='233584' />
+                <groupfilter function='member' level='[tree_id]' member='233770' />
+                <groupfilter function='member' level='[tree_id]' member='247340' />
+                <groupfilter function='member' level='[tree_id]' member='247341' />
+                <groupfilter function='member' level='[tree_id]' member='248381' />
+                <groupfilter function='member' level='[tree_id]' member='248382' />
+                <groupfilter function='member' level='[tree_id]' member='248383' />
+                <groupfilter function='member' level='[tree_id]' member='248384' />
+                <groupfilter function='member' level='[tree_id]' member='248385' />
+                <groupfilter function='member' level='[tree_id]' member='248386' />
+                <groupfilter function='member' level='[tree_id]' member='248387' />
+                <groupfilter function='member' level='[tree_id]' member='248388' />
+                <groupfilter function='member' level='[tree_id]' member='248389' />
+                <groupfilter function='member' level='[tree_id]' member='248391' />
+                <groupfilter function='member' level='[tree_id]' member='248392' />
+                <groupfilter function='member' level='[tree_id]' member='248393' />
+                <groupfilter function='member' level='[tree_id]' member='248394' />
+                <groupfilter function='member' level='[tree_id]' member='249140' />
+                <groupfilter function='member' level='[tree_id]' member='249141' />
+                <groupfilter function='member' level='[tree_id]' member='249142' />
+                <groupfilter function='member' level='[tree_id]' member='249143' />
+                <groupfilter function='member' level='[tree_id]' member='254569' />
+                <groupfilter function='member' level='[tree_id]' member='254570' />
+                <groupfilter function='member' level='[tree_id]' member='254572' />
+                <groupfilter function='member' level='[tree_id]' member='254683' />
+                <groupfilter function='member' level='[tree_id]' member='254764' />
+                <groupfilter function='member' level='[tree_id]' member='255400' />
+                <groupfilter function='member' level='[tree_id]' member='255579' />
+                <groupfilter function='member' level='[tree_id]' member='255580' />
+                <groupfilter function='member' level='[tree_id]' member='255581' />
+                <groupfilter function='member' level='[tree_id]' member='255582' />
+                <groupfilter function='member' level='[tree_id]' member='255583' />
+                <groupfilter function='member' level='[tree_id]' member='256183' />
+                <groupfilter function='member' level='[tree_id]' member='256681' />
+                <groupfilter function='member' level='[tree_id]' member='257461' />
+                <groupfilter function='member' level='[tree_id]' member='257462' />
+                <groupfilter function='member' level='[tree_id]' member='257701' />
+                <groupfilter function='member' level='[tree_id]' member='257702' />
+                <groupfilter function='member' level='[tree_id]' member='257703' />
+                <groupfilter function='member' level='[tree_id]' member='257704' />
+                <groupfilter function='member' level='[tree_id]' member='257705' />
+                <groupfilter function='member' level='[tree_id]' member='257706' />
+                <groupfilter function='member' level='[tree_id]' member='257727' />
+                <groupfilter function='member' level='[tree_id]' member='257728' />
+                <groupfilter function='member' level='[tree_id]' member='258740' />
+                <groupfilter function='member' level='[tree_id]' member='258742' />
+                <groupfilter function='member' level='[tree_id]' member='258743' />
+                <groupfilter function='member' level='[tree_id]' member='258744' />
+                <groupfilter function='member' level='[tree_id]' member='262536' />
+                <groupfilter function='member' level='[tree_id]' member='262537' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:diameter:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>435.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:height_range_id:qk]' included-values='in-range'>
+            <max>4</max>
+          </filter>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:diameter:qk]</column>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:height_range_id:qk]</column>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[Action (Root Barrier,Tree Id)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -539,8 +1052,469 @@
             </column>
             <column-instance column='[diameter]' derivation='Count' name='[cnt:diameter:qk]' pivot='key' type='quantitative' />
             <column caption='Diameter' datatype='real' name='[diameter]' role='measure' type='quantitative' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
             <column-instance column='[Diameter (bin)]' derivation='None' name='[none:Diameter (bin):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
+            <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
+            <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[Action (Root Barrier,Tree Id)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_5F89529868E242A98D09332DFEE99C12]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[root_barrier]' member='&quot;Y&quot;' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[tree_id]' member='2641' />
+                <groupfilter function='member' level='[tree_id]' member='2643' />
+                <groupfilter function='member' level='[tree_id]' member='2753' />
+                <groupfilter function='member' level='[tree_id]' member='2780' />
+                <groupfilter function='member' level='[tree_id]' member='3390' />
+                <groupfilter function='member' level='[tree_id]' member='5148' />
+                <groupfilter function='member' level='[tree_id]' member='7572' />
+                <groupfilter function='member' level='[tree_id]' member='10942' />
+                <groupfilter function='member' level='[tree_id]' member='12041' />
+                <groupfilter function='member' level='[tree_id]' member='12057' />
+                <groupfilter function='member' level='[tree_id]' member='12082' />
+                <groupfilter function='member' level='[tree_id]' member='13386' />
+                <groupfilter function='member' level='[tree_id]' member='13442' />
+                <groupfilter function='member' level='[tree_id]' member='13454' />
+                <groupfilter function='member' level='[tree_id]' member='16164' />
+                <groupfilter function='member' level='[tree_id]' member='16367' />
+                <groupfilter function='member' level='[tree_id]' member='19446' />
+                <groupfilter function='member' level='[tree_id]' member='28770' />
+                <groupfilter function='member' level='[tree_id]' member='30717' />
+                <groupfilter function='member' level='[tree_id]' member='35072' />
+                <groupfilter function='member' level='[tree_id]' member='38925' />
+                <groupfilter function='member' level='[tree_id]' member='39078' />
+                <groupfilter function='member' level='[tree_id]' member='42280' />
+                <groupfilter function='member' level='[tree_id]' member='46151' />
+                <groupfilter function='member' level='[tree_id]' member='55001' />
+                <groupfilter function='member' level='[tree_id]' member='58706' />
+                <groupfilter function='member' level='[tree_id]' member='58745' />
+                <groupfilter function='member' level='[tree_id]' member='63636' />
+                <groupfilter function='member' level='[tree_id]' member='68186' />
+                <groupfilter function='member' level='[tree_id]' member='73444' />
+                <groupfilter function='member' level='[tree_id]' member='73452' />
+                <groupfilter function='member' level='[tree_id]' member='78650' />
+                <groupfilter function='member' level='[tree_id]' member='79890' />
+                <groupfilter function='member' level='[tree_id]' member='79891' />
+                <groupfilter function='member' level='[tree_id]' member='79892' />
+                <groupfilter function='member' level='[tree_id]' member='79893' />
+                <groupfilter function='member' level='[tree_id]' member='82210' />
+                <groupfilter function='member' level='[tree_id]' member='82223' />
+                <groupfilter function='member' level='[tree_id]' member='82235' />
+                <groupfilter function='member' level='[tree_id]' member='82236' />
+                <groupfilter function='member' level='[tree_id]' member='82247' />
+                <groupfilter function='member' level='[tree_id]' member='82248' />
+                <groupfilter function='member' level='[tree_id]' member='82320' />
+                <groupfilter function='member' level='[tree_id]' member='82387' />
+                <groupfilter function='member' level='[tree_id]' member='86627' />
+                <groupfilter function='member' level='[tree_id]' member='86628' />
+                <groupfilter function='member' level='[tree_id]' member='86631' />
+                <groupfilter function='member' level='[tree_id]' member='86808' />
+                <groupfilter function='member' level='[tree_id]' member='87972' />
+                <groupfilter function='member' level='[tree_id]' member='88023' />
+                <groupfilter function='member' level='[tree_id]' member='88877' />
+                <groupfilter function='member' level='[tree_id]' member='97203' />
+                <groupfilter function='member' level='[tree_id]' member='97227' />
+                <groupfilter function='member' level='[tree_id]' member='97228' />
+                <groupfilter function='member' level='[tree_id]' member='97265' />
+                <groupfilter function='member' level='[tree_id]' member='97277' />
+                <groupfilter function='member' level='[tree_id]' member='98457' />
+                <groupfilter function='member' level='[tree_id]' member='98600' />
+                <groupfilter function='member' level='[tree_id]' member='99173' />
+                <groupfilter function='member' level='[tree_id]' member='99509' />
+                <groupfilter function='member' level='[tree_id]' member='99520' />
+                <groupfilter function='member' level='[tree_id]' member='104017' />
+                <groupfilter function='member' level='[tree_id]' member='106593' />
+                <groupfilter function='member' level='[tree_id]' member='106690' />
+                <groupfilter function='member' level='[tree_id]' member='107328' />
+                <groupfilter function='member' level='[tree_id]' member='109713' />
+                <groupfilter function='member' level='[tree_id]' member='109717' />
+                <groupfilter function='member' level='[tree_id]' member='109725' />
+                <groupfilter function='member' level='[tree_id]' member='109727' />
+                <groupfilter function='member' level='[tree_id]' member='109730' />
+                <groupfilter function='member' level='[tree_id]' member='109741' />
+                <groupfilter function='member' level='[tree_id]' member='109743' />
+                <groupfilter function='member' level='[tree_id]' member='109749' />
+                <groupfilter function='member' level='[tree_id]' member='109750' />
+                <groupfilter function='member' level='[tree_id]' member='110546' />
+                <groupfilter function='member' level='[tree_id]' member='113238' />
+                <groupfilter function='member' level='[tree_id]' member='114750' />
+                <groupfilter function='member' level='[tree_id]' member='115037' />
+                <groupfilter function='member' level='[tree_id]' member='115038' />
+                <groupfilter function='member' level='[tree_id]' member='120722' />
+                <groupfilter function='member' level='[tree_id]' member='124202' />
+                <groupfilter function='member' level='[tree_id]' member='125706' />
+                <groupfilter function='member' level='[tree_id]' member='138457' />
+                <groupfilter function='member' level='[tree_id]' member='138566' />
+                <groupfilter function='member' level='[tree_id]' member='139597' />
+                <groupfilter function='member' level='[tree_id]' member='139603' />
+                <groupfilter function='member' level='[tree_id]' member='141491' />
+                <groupfilter function='member' level='[tree_id]' member='141548' />
+                <groupfilter function='member' level='[tree_id]' member='148661' />
+                <groupfilter function='member' level='[tree_id]' member='162564' />
+                <groupfilter function='member' level='[tree_id]' member='163039' />
+                <groupfilter function='member' level='[tree_id]' member='163211' />
+                <groupfilter function='member' level='[tree_id]' member='163990' />
+                <groupfilter function='member' level='[tree_id]' member='166763' />
+                <groupfilter function='member' level='[tree_id]' member='166768' />
+                <groupfilter function='member' level='[tree_id]' member='166769' />
+                <groupfilter function='member' level='[tree_id]' member='168167' />
+                <groupfilter function='member' level='[tree_id]' member='168737' />
+                <groupfilter function='member' level='[tree_id]' member='169546' />
+                <groupfilter function='member' level='[tree_id]' member='169582' />
+                <groupfilter function='member' level='[tree_id]' member='175315' />
+                <groupfilter function='member' level='[tree_id]' member='178484' />
+                <groupfilter function='member' level='[tree_id]' member='178654' />
+                <groupfilter function='member' level='[tree_id]' member='180186' />
+                <groupfilter function='member' level='[tree_id]' member='180343' />
+                <groupfilter function='member' level='[tree_id]' member='185113' />
+                <groupfilter function='member' level='[tree_id]' member='188978' />
+                <groupfilter function='member' level='[tree_id]' member='189040' />
+                <groupfilter function='member' level='[tree_id]' member='190059' />
+                <groupfilter function='member' level='[tree_id]' member='190060' />
+                <groupfilter function='member' level='[tree_id]' member='190157' />
+                <groupfilter function='member' level='[tree_id]' member='190158' />
+                <groupfilter function='member' level='[tree_id]' member='190159' />
+                <groupfilter function='member' level='[tree_id]' member='190160' />
+                <groupfilter function='member' level='[tree_id]' member='190161' />
+                <groupfilter function='member' level='[tree_id]' member='190163' />
+                <groupfilter function='member' level='[tree_id]' member='191206' />
+                <groupfilter function='member' level='[tree_id]' member='192111' />
+                <groupfilter function='member' level='[tree_id]' member='192112' />
+                <groupfilter function='member' level='[tree_id]' member='193861' />
+                <groupfilter function='member' level='[tree_id]' member='194305' />
+                <groupfilter function='member' level='[tree_id]' member='194350' />
+                <groupfilter function='member' level='[tree_id]' member='194355' />
+                <groupfilter function='member' level='[tree_id]' member='194869' />
+                <groupfilter function='member' level='[tree_id]' member='194870' />
+                <groupfilter function='member' level='[tree_id]' member='195183' />
+                <groupfilter function='member' level='[tree_id]' member='196277' />
+                <groupfilter function='member' level='[tree_id]' member='196299' />
+                <groupfilter function='member' level='[tree_id]' member='196301' />
+                <groupfilter function='member' level='[tree_id]' member='196685' />
+                <groupfilter function='member' level='[tree_id]' member='196800' />
+                <groupfilter function='member' level='[tree_id]' member='199384' />
+                <groupfilter function='member' level='[tree_id]' member='199386' />
+                <groupfilter function='member' level='[tree_id]' member='199388' />
+                <groupfilter function='member' level='[tree_id]' member='199391' />
+                <groupfilter function='member' level='[tree_id]' member='199393' />
+                <groupfilter function='member' level='[tree_id]' member='199396' />
+                <groupfilter function='member' level='[tree_id]' member='200729' />
+                <groupfilter function='member' level='[tree_id]' member='200731' />
+                <groupfilter function='member' level='[tree_id]' member='200737' />
+                <groupfilter function='member' level='[tree_id]' member='200738' />
+                <groupfilter function='member' level='[tree_id]' member='200739' />
+                <groupfilter function='member' level='[tree_id]' member='200740' />
+                <groupfilter function='member' level='[tree_id]' member='200748' />
+                <groupfilter function='member' level='[tree_id]' member='200757' />
+                <groupfilter function='member' level='[tree_id]' member='200773' />
+                <groupfilter function='member' level='[tree_id]' member='200775' />
+                <groupfilter function='member' level='[tree_id]' member='200777' />
+                <groupfilter function='member' level='[tree_id]' member='200780' />
+                <groupfilter function='member' level='[tree_id]' member='200781' />
+                <groupfilter function='member' level='[tree_id]' member='200789' />
+                <groupfilter function='member' level='[tree_id]' member='200791' />
+                <groupfilter function='member' level='[tree_id]' member='200793' />
+                <groupfilter function='member' level='[tree_id]' member='200804' />
+                <groupfilter function='member' level='[tree_id]' member='200816' />
+                <groupfilter function='member' level='[tree_id]' member='200817' />
+                <groupfilter function='member' level='[tree_id]' member='200818' />
+                <groupfilter function='member' level='[tree_id]' member='200859' />
+                <groupfilter function='member' level='[tree_id]' member='200876' />
+                <groupfilter function='member' level='[tree_id]' member='200877' />
+                <groupfilter function='member' level='[tree_id]' member='200922' />
+                <groupfilter function='member' level='[tree_id]' member='200973' />
+                <groupfilter function='member' level='[tree_id]' member='201333' />
+                <groupfilter function='member' level='[tree_id]' member='202528' />
+                <groupfilter function='member' level='[tree_id]' member='202529' />
+                <groupfilter function='member' level='[tree_id]' member='203163' />
+                <groupfilter function='member' level='[tree_id]' member='203321' />
+                <groupfilter function='member' level='[tree_id]' member='203570' />
+                <groupfilter function='member' level='[tree_id]' member='204236' />
+                <groupfilter function='member' level='[tree_id]' member='204291' />
+                <groupfilter function='member' level='[tree_id]' member='204784' />
+                <groupfilter function='member' level='[tree_id]' member='204785' />
+                <groupfilter function='member' level='[tree_id]' member='204786' />
+                <groupfilter function='member' level='[tree_id]' member='204787' />
+                <groupfilter function='member' level='[tree_id]' member='204789' />
+                <groupfilter function='member' level='[tree_id]' member='204973' />
+                <groupfilter function='member' level='[tree_id]' member='205252' />
+                <groupfilter function='member' level='[tree_id]' member='205253' />
+                <groupfilter function='member' level='[tree_id]' member='205254' />
+                <groupfilter function='member' level='[tree_id]' member='205396' />
+                <groupfilter function='member' level='[tree_id]' member='205397' />
+                <groupfilter function='member' level='[tree_id]' member='205398' />
+                <groupfilter function='member' level='[tree_id]' member='205512' />
+                <groupfilter function='member' level='[tree_id]' member='205993' />
+                <groupfilter function='member' level='[tree_id]' member='206037' />
+                <groupfilter function='member' level='[tree_id]' member='206047' />
+                <groupfilter function='member' level='[tree_id]' member='206517' />
+                <groupfilter function='member' level='[tree_id]' member='206519' />
+                <groupfilter function='member' level='[tree_id]' member='206913' />
+                <groupfilter function='member' level='[tree_id]' member='206927' />
+                <groupfilter function='member' level='[tree_id]' member='206928' />
+                <groupfilter function='member' level='[tree_id]' member='207060' />
+                <groupfilter function='member' level='[tree_id]' member='207257' />
+                <groupfilter function='member' level='[tree_id]' member='207360' />
+                <groupfilter function='member' level='[tree_id]' member='207361' />
+                <groupfilter function='member' level='[tree_id]' member='207362' />
+                <groupfilter function='member' level='[tree_id]' member='207363' />
+                <groupfilter function='member' level='[tree_id]' member='207364' />
+                <groupfilter function='member' level='[tree_id]' member='207399' />
+                <groupfilter function='member' level='[tree_id]' member='207400' />
+                <groupfilter function='member' level='[tree_id]' member='207401' />
+                <groupfilter function='member' level='[tree_id]' member='207403' />
+                <groupfilter function='member' level='[tree_id]' member='207404' />
+                <groupfilter function='member' level='[tree_id]' member='207413' />
+                <groupfilter function='member' level='[tree_id]' member='207414' />
+                <groupfilter function='member' level='[tree_id]' member='207416' />
+                <groupfilter function='member' level='[tree_id]' member='207418' />
+                <groupfilter function='member' level='[tree_id]' member='207421' />
+                <groupfilter function='member' level='[tree_id]' member='207520' />
+                <groupfilter function='member' level='[tree_id]' member='207521' />
+                <groupfilter function='member' level='[tree_id]' member='207526' />
+                <groupfilter function='member' level='[tree_id]' member='207527' />
+                <groupfilter function='member' level='[tree_id]' member='207814' />
+                <groupfilter function='member' level='[tree_id]' member='207892' />
+                <groupfilter function='member' level='[tree_id]' member='208177' />
+                <groupfilter function='member' level='[tree_id]' member='208709' />
+                <groupfilter function='member' level='[tree_id]' member='208722' />
+                <groupfilter function='member' level='[tree_id]' member='208723' />
+                <groupfilter function='member' level='[tree_id]' member='209078' />
+                <groupfilter function='member' level='[tree_id]' member='209169' />
+                <groupfilter function='member' level='[tree_id]' member='209296' />
+                <groupfilter function='member' level='[tree_id]' member='209297' />
+                <groupfilter function='member' level='[tree_id]' member='209298' />
+                <groupfilter function='member' level='[tree_id]' member='209325' />
+                <groupfilter function='member' level='[tree_id]' member='209592' />
+                <groupfilter function='member' level='[tree_id]' member='209594' />
+                <groupfilter function='member' level='[tree_id]' member='209595' />
+                <groupfilter function='member' level='[tree_id]' member='209597' />
+                <groupfilter function='member' level='[tree_id]' member='210323' />
+                <groupfilter function='member' level='[tree_id]' member='210704' />
+                <groupfilter function='member' level='[tree_id]' member='210705' />
+                <groupfilter function='member' level='[tree_id]' member='210706' />
+                <groupfilter function='member' level='[tree_id]' member='210923' />
+                <groupfilter function='member' level='[tree_id]' member='210924' />
+                <groupfilter function='member' level='[tree_id]' member='210925' />
+                <groupfilter function='member' level='[tree_id]' member='210926' />
+                <groupfilter function='member' level='[tree_id]' member='210943' />
+                <groupfilter function='member' level='[tree_id]' member='211146' />
+                <groupfilter function='member' level='[tree_id]' member='211147' />
+                <groupfilter function='member' level='[tree_id]' member='211150' />
+                <groupfilter function='member' level='[tree_id]' member='211153' />
+                <groupfilter function='member' level='[tree_id]' member='211154' />
+                <groupfilter function='member' level='[tree_id]' member='211155' />
+                <groupfilter function='member' level='[tree_id]' member='211156' />
+                <groupfilter function='member' level='[tree_id]' member='211157' />
+                <groupfilter function='member' level='[tree_id]' member='211186' />
+                <groupfilter function='member' level='[tree_id]' member='211187' />
+                <groupfilter function='member' level='[tree_id]' member='211188' />
+                <groupfilter function='member' level='[tree_id]' member='211189' />
+                <groupfilter function='member' level='[tree_id]' member='211697' />
+                <groupfilter function='member' level='[tree_id]' member='211698' />
+                <groupfilter function='member' level='[tree_id]' member='211805' />
+                <groupfilter function='member' level='[tree_id]' member='211806' />
+                <groupfilter function='member' level='[tree_id]' member='211807' />
+                <groupfilter function='member' level='[tree_id]' member='211808' />
+                <groupfilter function='member' level='[tree_id]' member='213403' />
+                <groupfilter function='member' level='[tree_id]' member='214093' />
+                <groupfilter function='member' level='[tree_id]' member='214094' />
+                <groupfilter function='member' level='[tree_id]' member='214278' />
+                <groupfilter function='member' level='[tree_id]' member='216511' />
+                <groupfilter function='member' level='[tree_id]' member='216908' />
+                <groupfilter function='member' level='[tree_id]' member='219348' />
+                <groupfilter function='member' level='[tree_id]' member='219466' />
+                <groupfilter function='member' level='[tree_id]' member='219467' />
+                <groupfilter function='member' level='[tree_id]' member='219487' />
+                <groupfilter function='member' level='[tree_id]' member='219506' />
+                <groupfilter function='member' level='[tree_id]' member='219507' />
+                <groupfilter function='member' level='[tree_id]' member='219508' />
+                <groupfilter function='member' level='[tree_id]' member='219509' />
+                <groupfilter function='member' level='[tree_id]' member='219511' />
+                <groupfilter function='member' level='[tree_id]' member='220386' />
+                <groupfilter function='member' level='[tree_id]' member='220792' />
+                <groupfilter function='member' level='[tree_id]' member='220800' />
+                <groupfilter function='member' level='[tree_id]' member='220804' />
+                <groupfilter function='member' level='[tree_id]' member='220806' />
+                <groupfilter function='member' level='[tree_id]' member='220807' />
+                <groupfilter function='member' level='[tree_id]' member='220808' />
+                <groupfilter function='member' level='[tree_id]' member='220811' />
+                <groupfilter function='member' level='[tree_id]' member='220812' />
+                <groupfilter function='member' level='[tree_id]' member='221140' />
+                <groupfilter function='member' level='[tree_id]' member='221332' />
+                <groupfilter function='member' level='[tree_id]' member='221374' />
+                <groupfilter function='member' level='[tree_id]' member='221661' />
+                <groupfilter function='member' level='[tree_id]' member='221753' />
+                <groupfilter function='member' level='[tree_id]' member='221754' />
+                <groupfilter function='member' level='[tree_id]' member='221756' />
+                <groupfilter function='member' level='[tree_id]' member='221757' />
+                <groupfilter function='member' level='[tree_id]' member='221759' />
+                <groupfilter function='member' level='[tree_id]' member='221760' />
+                <groupfilter function='member' level='[tree_id]' member='221761' />
+                <groupfilter function='member' level='[tree_id]' member='221762' />
+                <groupfilter function='member' level='[tree_id]' member='221763' />
+                <groupfilter function='member' level='[tree_id]' member='221764' />
+                <groupfilter function='member' level='[tree_id]' member='221765' />
+                <groupfilter function='member' level='[tree_id]' member='221766' />
+                <groupfilter function='member' level='[tree_id]' member='221805' />
+                <groupfilter function='member' level='[tree_id]' member='221807' />
+                <groupfilter function='member' level='[tree_id]' member='221810' />
+                <groupfilter function='member' level='[tree_id]' member='221811' />
+                <groupfilter function='member' level='[tree_id]' member='221813' />
+                <groupfilter function='member' level='[tree_id]' member='221814' />
+                <groupfilter function='member' level='[tree_id]' member='221815' />
+                <groupfilter function='member' level='[tree_id]' member='221816' />
+                <groupfilter function='member' level='[tree_id]' member='221817' />
+                <groupfilter function='member' level='[tree_id]' member='221818' />
+                <groupfilter function='member' level='[tree_id]' member='221819' />
+                <groupfilter function='member' level='[tree_id]' member='221820' />
+                <groupfilter function='member' level='[tree_id]' member='221821' />
+                <groupfilter function='member' level='[tree_id]' member='221822' />
+                <groupfilter function='member' level='[tree_id]' member='221823' />
+                <groupfilter function='member' level='[tree_id]' member='221963' />
+                <groupfilter function='member' level='[tree_id]' member='221966' />
+                <groupfilter function='member' level='[tree_id]' member='221967' />
+                <groupfilter function='member' level='[tree_id]' member='221970' />
+                <groupfilter function='member' level='[tree_id]' member='221971' />
+                <groupfilter function='member' level='[tree_id]' member='221976' />
+                <groupfilter function='member' level='[tree_id]' member='221979' />
+                <groupfilter function='member' level='[tree_id]' member='222086' />
+                <groupfilter function='member' level='[tree_id]' member='222087' />
+                <groupfilter function='member' level='[tree_id]' member='222088' />
+                <groupfilter function='member' level='[tree_id]' member='222089' />
+                <groupfilter function='member' level='[tree_id]' member='222090' />
+                <groupfilter function='member' level='[tree_id]' member='222091' />
+                <groupfilter function='member' level='[tree_id]' member='222092' />
+                <groupfilter function='member' level='[tree_id]' member='222095' />
+                <groupfilter function='member' level='[tree_id]' member='222398' />
+                <groupfilter function='member' level='[tree_id]' member='222472' />
+                <groupfilter function='member' level='[tree_id]' member='222474' />
+                <groupfilter function='member' level='[tree_id]' member='222552' />
+                <groupfilter function='member' level='[tree_id]' member='222588' />
+                <groupfilter function='member' level='[tree_id]' member='222589' />
+                <groupfilter function='member' level='[tree_id]' member='222645' />
+                <groupfilter function='member' level='[tree_id]' member='223143' />
+                <groupfilter function='member' level='[tree_id]' member='223147' />
+                <groupfilter function='member' level='[tree_id]' member='223829' />
+                <groupfilter function='member' level='[tree_id]' member='223830' />
+                <groupfilter function='member' level='[tree_id]' member='223832' />
+                <groupfilter function='member' level='[tree_id]' member='223833' />
+                <groupfilter function='member' level='[tree_id]' member='223835' />
+                <groupfilter function='member' level='[tree_id]' member='223836' />
+                <groupfilter function='member' level='[tree_id]' member='223840' />
+                <groupfilter function='member' level='[tree_id]' member='223841' />
+                <groupfilter function='member' level='[tree_id]' member='223842' />
+                <groupfilter function='member' level='[tree_id]' member='223843' />
+                <groupfilter function='member' level='[tree_id]' member='223925' />
+                <groupfilter function='member' level='[tree_id]' member='223926' />
+                <groupfilter function='member' level='[tree_id]' member='224264' />
+                <groupfilter function='member' level='[tree_id]' member='224265' />
+                <groupfilter function='member' level='[tree_id]' member='224358' />
+                <groupfilter function='member' level='[tree_id]' member='224359' />
+                <groupfilter function='member' level='[tree_id]' member='224360' />
+                <groupfilter function='member' level='[tree_id]' member='224362' />
+                <groupfilter function='member' level='[tree_id]' member='224364' />
+                <groupfilter function='member' level='[tree_id]' member='224365' />
+                <groupfilter function='member' level='[tree_id]' member='224366' />
+                <groupfilter function='member' level='[tree_id]' member='224368' />
+                <groupfilter function='member' level='[tree_id]' member='224369' />
+                <groupfilter function='member' level='[tree_id]' member='224472' />
+                <groupfilter function='member' level='[tree_id]' member='224473' />
+                <groupfilter function='member' level='[tree_id]' member='224474' />
+                <groupfilter function='member' level='[tree_id]' member='224486' />
+                <groupfilter function='member' level='[tree_id]' member='224539' />
+                <groupfilter function='member' level='[tree_id]' member='224772' />
+                <groupfilter function='member' level='[tree_id]' member='225209' />
+                <groupfilter function='member' level='[tree_id]' member='225640' />
+                <groupfilter function='member' level='[tree_id]' member='225836' />
+                <groupfilter function='member' level='[tree_id]' member='225837' />
+                <groupfilter function='member' level='[tree_id]' member='225988' />
+                <groupfilter function='member' level='[tree_id]' member='226021' />
+                <groupfilter function='member' level='[tree_id]' member='226139' />
+                <groupfilter function='member' level='[tree_id]' member='226140' />
+                <groupfilter function='member' level='[tree_id]' member='226141' />
+                <groupfilter function='member' level='[tree_id]' member='226644' />
+                <groupfilter function='member' level='[tree_id]' member='227246' />
+                <groupfilter function='member' level='[tree_id]' member='227271' />
+                <groupfilter function='member' level='[tree_id]' member='227273' />
+                <groupfilter function='member' level='[tree_id]' member='227375' />
+                <groupfilter function='member' level='[tree_id]' member='227398' />
+                <groupfilter function='member' level='[tree_id]' member='227399' />
+                <groupfilter function='member' level='[tree_id]' member='227465' />
+                <groupfilter function='member' level='[tree_id]' member='227769' />
+                <groupfilter function='member' level='[tree_id]' member='227770' />
+                <groupfilter function='member' level='[tree_id]' member='227771' />
+                <groupfilter function='member' level='[tree_id]' member='227772' />
+                <groupfilter function='member' level='[tree_id]' member='227773' />
+                <groupfilter function='member' level='[tree_id]' member='227774' />
+                <groupfilter function='member' level='[tree_id]' member='227775' />
+                <groupfilter function='member' level='[tree_id]' member='227776' />
+                <groupfilter function='member' level='[tree_id]' member='227779' />
+                <groupfilter function='member' level='[tree_id]' member='227780' />
+                <groupfilter function='member' level='[tree_id]' member='227781' />
+                <groupfilter function='member' level='[tree_id]' member='227939' />
+                <groupfilter function='member' level='[tree_id]' member='228457' />
+                <groupfilter function='member' level='[tree_id]' member='231531' />
+                <groupfilter function='member' level='[tree_id]' member='231532' />
+                <groupfilter function='member' level='[tree_id]' member='233543' />
+                <groupfilter function='member' level='[tree_id]' member='233584' />
+                <groupfilter function='member' level='[tree_id]' member='233770' />
+                <groupfilter function='member' level='[tree_id]' member='247340' />
+                <groupfilter function='member' level='[tree_id]' member='247341' />
+                <groupfilter function='member' level='[tree_id]' member='248381' />
+                <groupfilter function='member' level='[tree_id]' member='248382' />
+                <groupfilter function='member' level='[tree_id]' member='248383' />
+                <groupfilter function='member' level='[tree_id]' member='248384' />
+                <groupfilter function='member' level='[tree_id]' member='248385' />
+                <groupfilter function='member' level='[tree_id]' member='248386' />
+                <groupfilter function='member' level='[tree_id]' member='248387' />
+                <groupfilter function='member' level='[tree_id]' member='248388' />
+                <groupfilter function='member' level='[tree_id]' member='248389' />
+                <groupfilter function='member' level='[tree_id]' member='248391' />
+                <groupfilter function='member' level='[tree_id]' member='248392' />
+                <groupfilter function='member' level='[tree_id]' member='248393' />
+                <groupfilter function='member' level='[tree_id]' member='248394' />
+                <groupfilter function='member' level='[tree_id]' member='249140' />
+                <groupfilter function='member' level='[tree_id]' member='249141' />
+                <groupfilter function='member' level='[tree_id]' member='249142' />
+                <groupfilter function='member' level='[tree_id]' member='249143' />
+                <groupfilter function='member' level='[tree_id]' member='254569' />
+                <groupfilter function='member' level='[tree_id]' member='254570' />
+                <groupfilter function='member' level='[tree_id]' member='254572' />
+                <groupfilter function='member' level='[tree_id]' member='254683' />
+                <groupfilter function='member' level='[tree_id]' member='254764' />
+                <groupfilter function='member' level='[tree_id]' member='255400' />
+                <groupfilter function='member' level='[tree_id]' member='255579' />
+                <groupfilter function='member' level='[tree_id]' member='255580' />
+                <groupfilter function='member' level='[tree_id]' member='255581' />
+                <groupfilter function='member' level='[tree_id]' member='255582' />
+                <groupfilter function='member' level='[tree_id]' member='255583' />
+                <groupfilter function='member' level='[tree_id]' member='256183' />
+                <groupfilter function='member' level='[tree_id]' member='256681' />
+                <groupfilter function='member' level='[tree_id]' member='257461' />
+                <groupfilter function='member' level='[tree_id]' member='257462' />
+                <groupfilter function='member' level='[tree_id]' member='257701' />
+                <groupfilter function='member' level='[tree_id]' member='257702' />
+                <groupfilter function='member' level='[tree_id]' member='257703' />
+                <groupfilter function='member' level='[tree_id]' member='257704' />
+                <groupfilter function='member' level='[tree_id]' member='257705' />
+                <groupfilter function='member' level='[tree_id]' member='257706' />
+                <groupfilter function='member' level='[tree_id]' member='257727' />
+                <groupfilter function='member' level='[tree_id]' member='257728' />
+                <groupfilter function='member' level='[tree_id]' member='258740' />
+                <groupfilter function='member' level='[tree_id]' member='258742' />
+                <groupfilter function='member' level='[tree_id]' member='258743' />
+                <groupfilter function='member' level='[tree_id]' member='258744' />
+                <groupfilter function='member' level='[tree_id]' member='262536' />
+                <groupfilter function='member' level='[tree_id]' member='262537' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[Action (Root Barrier,Tree Id)]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -573,6 +1547,8 @@
           </datasources>
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column caption='Diameter' datatype='real' name='[diameter]' role='measure' type='quantitative' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column-instance column='[tree_id]' derivation='None' name='[none:tree_id:ok]' pivot='key' type='ordinal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
@@ -582,6 +1558,9 @@
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:root_barrier:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:diameter:qk]' shelf='rows' />
           </shelf-sorts>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -622,11 +1601,16 @@
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column-instance column='[tree_id]' derivation='Count' name='[cnt:tree_id:qk]' pivot='key' type='quantitative' />
             <column caption='Curb' datatype='string' name='[curb]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
             <column-instance column='[curb]' derivation='None' name='[none:curb:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
             <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -654,12 +1638,17 @@
           </datasources>
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column caption='Curb' datatype='string' name='[curb]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
             <column-instance column='[curb]' derivation='None' name='[none:curb:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column-instance column='[tree_id]' derivation='None' name='[none:tree_id:ok]' pivot='key' type='ordinal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
             <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -688,11 +1677,16 @@
           <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
             <column-instance column='[tree_id]' derivation='Count' name='[cnt:tree_id:qk]' pivot='key' type='quantitative' />
             <column caption='Curb' datatype='string' name='[curb]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
             <column-instance column='[curb]' derivation='None' name='[none:curb:nk]' pivot='key' type='nominal' />
+            <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[root_barrier]' derivation='None' name='[none:root_barrier:nk]' pivot='key' type='nominal' />
             <column caption='Root Barrier' datatype='string' name='[root_barrier]' role='dimension' type='nominal' />
             <column caption='Tree Id' datatype='integer' name='[tree_id]' role='dimension' type='ordinal' />
           </datasource-dependencies>
+          <slices>
+            <column>[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style />
@@ -724,10 +1718,108 @@
     <dashboard name='Dashboard 1'>
       <style />
       <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='street-trees' name='federated.1p1l0si0hy5nby19rd2w50go8sr2' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1p1l0si0hy5nby19rd2w50go8sr2'>
+        <column caption='Diameter' datatype='real' name='[diameter]' role='measure' type='quantitative' />
+        <column caption='Height Range Id' datatype='integer' name='[height_range_id]' role='measure' type='quantitative' />
+        <column caption='Neighbourhood Name' datatype='string' name='[neighbourhood_name]' role='dimension' type='nominal' />
+        <column-instance column='[neighbourhood_name]' derivation='None' name='[none:neighbourhood_name:nk]' pivot='key' type='nominal' />
+        <column-instance column='[diameter]' derivation='Sum' name='[sum:diameter:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[height_range_id]' derivation='Sum' name='[sum:height_range_id:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
       <zones>
         <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='8' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='9' param='vert' w='98400' x='800' y='1000'>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='10' w='98400' x='800' y='1000' />
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97516' id='22' param='horz' w='49189' x='811' y='1242'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97516' id='9' param='vert' w='32978' x='811' y='1242'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='97516' id='10' w='32978' x='811' y='1242'>
+                <zone h='30919' id='12' name='Sheet 5' w='32978' x='811' y='12534'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='55305' id='13' name='Sheet 3' w='32978' x='811' y='43453'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' h='11292' id='14' is-centered='0' is-scaled='1' param='/Users/icics-user/Documents/workshops/mds_tableau_workshop/data/trees.png' w='7648' x='811' y='1242'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='11292' id='15' w='4716' x='8459' y='1242'>
+                  <formatted-text>
+                    <run bold='true' fontsize='18'>Vancouver Trees </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='dashboard-object' _.fcp.SetMembershipControl.true...type-v2='dashboard-object' h='11292' id='16' w='8249' x='25540' y='1242'>
+                  <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action='' button-type='text'>
+                    <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{F3D7FE71-29D2-41B9-868F-95341B92DE47}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
+                    <button-visual-state>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='8' />
+                      <format attr='background-color' value='#59a14f' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='97516' id='21' is-fixed='true' param='vert' w='16211' x='33789' y='1242'>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='10714' id='23' name='Sheet 3' param='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:diameter:qk]' values='database' w='16211' x='33789' y='1242'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='10714' id='24' name='Sheet 3' param='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[sum:height_range_id:qk]' show-null-ctrls='false' show-reldate-picker='false' values='database' w='16211' x='33789' y='11956'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='8074' id='25' mode='checkdropdown' name='Sheet 3' param='[federated.1p1l0si0hy5nby19rd2w50go8sr2].[none:neighbourhood_name:nk]' values='database' w='16211' x='33789' y='22670'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='97516' id='11' name='Sheet 4' w='49189' x='50000' y='1242'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
           </zone>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -739,10 +1831,75 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <size maxheight='1050' minheight='1050' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='6' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='97714' id='5' param='vert' w='95734' x='2133' y='1143' />
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='20' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98476' id='19' param='vert' w='95734' x='2133' y='762'>
+                <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='82' h='8572' id='14' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/icics-user/Documents/workshops/mds_tableau_workshop/data/trees.png' w='95734' x='2133' y='762'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='3905' id='15' w='95734' x='2133' y='9334'>
+                  <formatted-text>
+                    <run bold='true' fontsize='18'>Vancouver Trees </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='dashboard-object' _.fcp.SetMembershipControl.true...type-v2='dashboard-object' h='4952' id='16' w='95734' x='2133' y='13239'>
+                  <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action='' button-type='text'>
+                    <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{F3D7FE71-29D2-41B9-868F-95341B92DE47}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
+                    <button-visual-state>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='8' />
+                      <format attr='background-color' value='#59a14f' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='27429' id='11' is-fixed='true' name='Sheet 4' w='95734' x='2133' y='18191'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='240' h='23619' id='12' is-fixed='true' name='Sheet 5' w='95734' x='2133' y='45620'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='27429' id='13' is-fixed='true' name='Sheet 3' w='95734' x='2133' y='69239'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -964,9 +2121,19 @@
       <simple-id uuid='{D21B1E67-60A6-455F-8277-2DC2C1C06BFD}' />
     </window>
     <window class='dashboard' maximized='true' name='Dashboard 1'>
-      <viewpoints />
-      <active id='10' />
-      <device-preview selected='Desktop' />
+      <viewpoints>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 5' />
+      </viewpoints>
+      <active id='25' />
+      <device-preview visible='true'>
+        <device name='Medium Desktop Monitor' type='Desktop' />
+      </device-preview>
       <simple-id uuid='{5EA6453C-DC85-49C7-9418-C6762EB5D613}' />
     </window>
   </windows>
