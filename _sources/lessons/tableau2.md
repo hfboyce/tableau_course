@@ -425,7 +425,7 @@ Perhaps we are interested in the distribution of tree trunk diameter length. Rem
 <br>
 
 
-3\. And there you have a histogram! Now, this already seems a little problematic because we didn't choose the bin size and clearly our distribution is skewed. 
+3\. And there you have a histogram! Now, this already seems a little problematic because we didn't choose the bin size and it's clear that our distribution is skewed. 
 
 <img src="imgs/easy_hist3.png"  width = "85%" alt="404 image" />
 
@@ -437,7 +437,7 @@ The majority of the data looks like it's between 0-50 so let's make the bin size
 
 
 
-4\. You'll notice that Tableau's been kind and has actually made us a new continuous dimension named `Diameter (bin)`. Right-click on this new field and click on **Edit** from the dropdown menus. 
+4\. You'll notice that Tableau's been kind and has made us a new continuous dimension named `Diameter (bin)`. Right-click on this new field and click on **Edit** from the dropdown menus. 
 
 This is where we are going to change the bin size. 
 
@@ -606,7 +606,7 @@ Ahh, that's a bit cleaner.
 <br>
 <br>
 
-11\. This is a completed boxplot! One thing you can do to get a better idea of the distributions is to transpose it.
+11\. This is a completed boxplot! One thing you can do to get a better idea of the distributions is to transpose them.
 
 <img src="imgs/box14.png"  width = "85%" alt="404 image" />
 
@@ -665,7 +665,7 @@ This will need a heat map or a heat map with a size channel. let's explore the f
 <br>
 <br>
 
-2\. We then can drag our second discrete dimension to the **Rows** shelf. We will drag the `Crub` column. 
+2\. We then can drag our second discrete dimension to the **Rows** shelf. We will drag the `Curb` column. 
 
 <img src="imgs/heat2.png"  width = "85%" alt="404 image" />
 
@@ -799,7 +799,7 @@ Let's begin by creating a new Dashboard.
 <br>
 <br>
 
-Here we can displays images, worksheets, filters  and even website pages. 
+Here we can display images, worksheets, filters and even website pages. 
 
 ### Workspace 
 
@@ -816,8 +816,8 @@ It's important that you select the size of the screen your dashboard is expected
 The [options](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm) are:
 
 - Fixed: The dashboard remains the same size no matter the screen used to display it. If the dashboard is bigger than the designated window, the dashboard will be scrollable. 
-- Range: The dashboard scales between minimum and maximum sizes that you specify.
-- **Automatic** - This is what I generally suggest since the dashboard will automatically resize to fit the screen it's display on. When using Automatic I also firmly suggest using a **Tiled** dashboard layout (explained below). 
+- Range: The dashboard scales between a minimum and a maximum size that you specify.
+- **Automatic** - This is what I generally suggest since the dashboard will automatically resize to fit the screen it's displayed on. When using Automatic I also firmly suggest using a **Tiled** dashboard layout (explained below). 
 
 <img src="imgs/dash_size1.png"  width = "85%" alt="404 image" />
 
@@ -833,7 +833,7 @@ The [options](https://help.tableau.com/current/pro/desktop/en-us/dashboards_orga
 
 Here is where we can select the plots we made on the worksheets and bring them together collectively on a dashboard. 
 
-All we have to do, is drag the sheet to the visualization space. 
+All we have to do is drag the sheet to the visualization space. 
 
 <img src="imgs/dash_sheet1.png"  width = "85%" alt="404 image" />
 
@@ -849,7 +849,7 @@ All we have to do, is drag the sheet to the visualization space.
 
 #### Tiled example 
 
-You'll notice that when we dragged these sheet they snapped into a position. This is creating tiles. I only recommend using this layout method when using the Automatic sizing option. 
+You'll notice that when we dragged these sheets they snapped into a position. This is creating tiles. I only recommend using this layout method when using the Automatic sizing option. 
 
 
 <img src="imgs/tiled.png"  width = "85%" alt="404 image" />
@@ -868,11 +868,11 @@ If we instead used the floating option, we could place the plot anywhere but it 
 
 <p style="font-size:30px; color:#FF85FF">Objects</p>
 
-We are not restricted to only putting worksheets and graphs on our dashboard. We can also add images, webpages inbedded in the sheets as well as Text boxes, downloading and navigation button options.
+We are not restricted to only putting worksheets and graphs on our dashboard. We can also add images, webpages embedded in the sheets as well as Text boxes, downloading and navigation button options.
 
 #### images
 
-We can place images in our dashboards just as easily as we cant sheets. 
+We can place images in our dashboards just as easily as we can sheets. 
 
 **Step by Step Instructions**
 
@@ -883,7 +883,7 @@ We can place images in our dashboards just as easily as we cant sheets.
 <br>
 <br>
 
-2\. We then must select our desired images from our file directory, here I'm using the `trees.png` file which I've also made available on the Google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaVhttps://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV).
+2\. We then must select our desired images from our file directory, here I'm using the `trees.png` file which I've also made available on my Google drive [here](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaVhttps://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV).
 
 <img src="imgs/image2.png"  width = "85%" alt="404 image" />
 
@@ -891,7 +891,7 @@ We can place images in our dashboards just as easily as we cant sheets.
 <br>
 
 
-3\. I select the **Fit Image** option so that the image is fix to the dimension of the dashboard tile. 
+3\. I select the **Fit Image** option so that the image is fixed to the dimension of the dashboard tile. 
 <img src="imgs/image3.png"  width = "85%" alt="404 image" />
 
 <br>
@@ -918,7 +918,7 @@ We can even embed complete working websites in our dashboards.
 <br>
 <br>
 
-And it's as simple of that! We have the website active now! 
+And it's as simple as that! We have the website active now! 
 
 <img src="imgs/object3.png"  width = "85%" alt="404 image" />
 
@@ -966,7 +966,7 @@ To create an option to download a static copy of your dashboard, you can add a b
 
 #### Navigation
 
-There often time where on your dashboard you'd like to navigate to either a different dashboard or perhaps dive deeper into a worksheet. I needed this for my own dashboards when I had the list of customers pop up with certain filters and I wanted to navigate back to the main dashboard. 
+There are may be times where on your dashboard you'd like to navigate to either a different dashboard or perhaps dive deeper into a worksheet. I needed this for my own dashboards when I had the list of customers pop up with certain filters and I wanted to navigate back to the main dashboard. 
 
 **Step by Step Instructions**
 
@@ -976,7 +976,7 @@ There often time where on your dashboard you'd like to navigate to either a diff
 <br>
 <br>
 
-2\. We don't need to do this for our dashboard, but you can then select where clicking this button with navigate you to. 
+2\. We don't need to do this for our dashboard, but you can then select where this button will navigate you to. 
 
 <img src="imgs/object12.png"  width = "85%" alt="404 image" />
 
@@ -984,7 +984,7 @@ There often time where on your dashboard you'd like to navigate to either a diff
 
 #### Extensions 
 
-For certain additional actions and features we can also add extensions that other people have made and shared publicly. 
+For certain additional actions and features, we can also add extensions that other people have made and shared publicly. 
 
 We will discuss this in the 4th lesson if we have time. 
 
@@ -1013,14 +1013,14 @@ Here is where the fun starts! Since Tableau is an excellent tool to use for dyna
 
 **Step by Step Instructions**
 
-1\. Click on the sheet you wish to filter. On the right side of the plot you'll see a **More Options** button. 
+1\. Click on the sheet you wish to filter. On the right side of the plot, you'll see a **More Options** button. 
 
 <img src="imgs/filter2.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>
 
-This will produce a dropdown where we want to select a field to filter on. Under **Filters** we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now let's select  `Sum of Diameter`.
+This will produce a dropdown where we want to select a field to filter on. Under **Filters** we can then select the columns displayed. These are currently the ones we are using in the plot already. We will show you how to filter on additional columns momentarily. For now, let's select  `Sum of Diameter`.
 
 <img src="imgs/filter3.png"  width = "85%" alt="404 image" />
 
@@ -1037,7 +1037,7 @@ This will produce a dropdown where we want to select a field to filter on. Under
 
 
 
-3\.let's add another. Let's add the `Sum of Height Range Id` as a filter too.
+3\. Let's add another. Let's add the `Sum of Height Range Id` as a filter too.
 
 <img src="imgs/filter6.png"  width = "85%" alt="404 image" />
 
@@ -1049,7 +1049,7 @@ This will produce a dropdown where we want to select a field to filter on. Under
 <br>
 <br>
 
-I'm going to move the plot so that we can focus of the filters and see all the popups here 
+I'm going to move the plot so that we can focus on the filters and see all the popups here.
 
 <img src="imgs/filter8.png"  width = "85%" alt="404 image" />
 
@@ -1066,15 +1066,15 @@ This is where we can see all the filter style options.
 
 <img src="imgs/filter10.png"  width = "85%" alt="404 image" />
 
-Since both of these fields as measures, we can filters in the following ways: 
+Since both of these fields as measures, we can filter in the following ways: 
 
 - **Range of Values/Dates:** This means you can filter the data to include or exclude more values. You can pick the minimum and maximum values. 
 
-- **At Least/Starting Date:** This has a fixed maximum value and with an open ended minimum value that the user chooses.
+- **At Least/Starting Date:** This has a fixed maximum value and an open-ended minimum value that the user chooses.
 
-- **At Most/Ending Date:** This has a fix minimum values with an open ended maximum value that the user chooses.
+- **At Most/Ending Date:** This has a fixed minimum value with an open-ended maximum value that the user chooses.
 
-For time periods there are are 2 more called **Relative to Now** and **Browse periods** where the values must be continuous. 
+For periods there, there are 2 more called **Relative to Now** and **Browse periods** where the values must be continuous. 
 
 
 
@@ -1124,7 +1124,7 @@ This produces a list of all the neighbourhoods now.
 
 - **Single Value (List):** A full list of all the possible values of the filter as radio buttons but only 1 can be selected at a time.
 
-- **Multiple Values (List):** Shows all the values in the filter as a list of check boxes where multiple values can be selected.
+- **Multiple Values (List):** Shows all the values in the filter as a list of checkboxes where multiple values can be selected.
 
 - **Single Value (Dropdown):** Displays the values of the filter in a drop-down list where only a single value can be selected at a time.
 
@@ -1137,7 +1137,7 @@ This produces a list of all the neighbourhoods now.
 - **Wildcard Match:** Displays a text box where you can type a few characters. All values that match those characters are automatically selected. 
  
 
-We are going to select the Multiple Values(Dropdown)
+We are going to select the Multiple Values Dropdown
 
 
 <img src="imgs/filter16.png"  width = "85%" alt="404 image" />
@@ -1146,26 +1146,101 @@ We are going to select the Multiple Values(Dropdown)
 <br>
 
 
-### Filter All Sheets 
+### Filter All Sheets using Same Data Source
+
+One of the great things about Tableau is now we can take the filter we made for one of our plots and use it for some of the other plots in our dashboard. 
+
+If we are using multiple sources that share columns, we can program our filter so that it's applied to multiple worksheets. 
+
+Selecting **All using Related Data Sources** and now all the plots that have this field name will work with it. 
+
+In our case, we can use the **All Using this Data Source** option which will now filter all the worksheets using the `street-trees.csv`  data file. 
+
+This is done by clicking the desired filter, and selecting the **More options** icon. 
+
+Under the dropdown menu, we can **Apply to Worksheets** and select **All Using this Data Source**.
 
 
-### Plots as filters 
+<img src="imgs/filterx2.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Now when we use this filter and select no neighbourhoods (None), none of our graphs show up! This filter is now working for all our graphs.
+
+<img src="imgs/filterx3.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
 
 
+If we change the filter to **Kitsilano**, all our graphs are filtered accordingly now! 
 
-## Publishing data sources
+<img src="imgs/filterx4.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
 
 
+If we only wanted this filter to only affect a few of the graphs, we can select the **Selected Worksheets** and then chose the worksheets we wish to depend on the filter. 
+
+
+<img src="imgs/filterx9.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+<img src="imgs/filterx8.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+
+### Plots as Filters 
+
+Tableau also gives the option of using a graph itself as a filter. Here we will use our boxplot as a filter for the other two. 
+
+We can do this in 2 ways. 
+
+1. By using the funnel icon when we click the plot
+
+2. Selecting it from the **More Options** menu. 
+
+
+<img src="imgs/filterx6.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+Now when we click on the Boxplot with `Root Barrier = Y`, our plots filter accordingly. 
+
+<img src="imgs/filterx7.png"  width = "85%" alt="404 image" />
+
+<br>
+<br>
+
+## Publishing Dashboards 
+
+You can either publish your dashboard on your company's Tableau server or using Tableau online. 
+
+I don't have access to either of these so it makes it difficult to demonstrate this to you. 
+
+I can link you to [this easy to follow step-by-step guide](https://help.tableau.com/current/pro/desktop/en-us/publish_workbooks_share.htm) that walks you through the steps to publish your work. 
+
+You'll also be able to publish your work on [Tableau Public]() (If the data you are using is not sensitive and you are allowed to do so) which is where we saw some of the other dashboard examples. 
+
+*Note that publishing to Tableau public is only recommended for personal projects using open source data.* 
 
 
 ## Quick Quiz
 
-1. **True or False:** Using the same data, a histogram’s shape can change depending on the bin size.
-2. **True or False:** When we are visualizing data from a single column, we are (usually) more interested in the shape/distribution in general, than individual points.
-3. What does the middle line of a box plot represent?
-4. Which visualization type can show multiple summary statistics of data as well as their distributions?  
-5. What is another name for a density plot?
-6. What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?
+1. **True or False:** Dimensions have more filtering style options than Measures. 
+2. If we want to filter on a field/column that isn't used in the plot where must we make this adjustment, on the dashboard or on the plot's corresponding worksheet? 
+3. Which of the following is not an option for Device Preview: Phone, Desktop, Embedded webpage, Tablet. 
+4. Which of the following file type is not an option to export your dashboard as with a **Download** object; PowerPoint, Crosstab, image, Word document? 
+5. Which layout type is recommended when choosing **Automatic** as a Dashboard size?
+6. **True or False:** You can only have 1 dashboard tab for each file. 
 
 
 
@@ -1174,11 +1249,12 @@ We are going to select the Multiple Values(Dropdown)
 :class: dropdown
 
 1. True
-2. True
-3. Median
-4. Violin plot
-5. Kernel Density Estimate (KDE)
-6. Scatter plot
+2. The plot's corresponding worksheet
+3. Embedded webpage
+4. Word document
+5. Tiled
+6. False
 
 ```
 -->
+
