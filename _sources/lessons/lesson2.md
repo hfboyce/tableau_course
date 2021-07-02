@@ -228,13 +228,11 @@ We also often colour different regions based on specific data values. These are 
 1. Between area and position, which is generally easier to compare when analyzing?
 2. What is the name of the graph we use to compare proportions that is circular in shape? 
 3. **True or False:** Plotting in 3D can distort the data depending on the view. 
-4. **True or False:** There acceptable times to present a 3D plot.  
+4. **True or False:** There are acceptable times to present a 3D plot.  
 5. Which graph is used to visualize how the value of something changes over time?
 6. **True or False:** Scatter plots are generally used to visualize the data of 2 discrete variables (columns).  
 7. What is the name of a geospatial map where regions and certain areas are coloured or patterned in proportion to a column value or calculation?
 
-
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -248,7 +246,6 @@ We also often colour different regions based on specific data values. These are 
 
 
 ```
--->
 
 
 ## Distributions 
@@ -449,8 +446,6 @@ To accommodate for these issues, we can either add the values as we showed above
 6. What plot type is most appropriate if we are interested in visualizing the relationship between two numeric/quantitative columns?
 
 
-
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -462,6 +457,5 @@ To accommodate for these issues, we can either add the values as we showed above
 6. Scatter plot
 
 ```
--->
 
 

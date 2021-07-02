@@ -756,7 +756,6 @@ That's better. Nice job!
 
 
 
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -767,7 +766,6 @@ That's better. Nice job!
 5. Square
 
 ```
--->
 
 ## Dashboards
 
@@ -1252,8 +1250,6 @@ You'll also be able to publish your work on [Tableau Public]() (If the data you 
 6. **True or False:** You can only have 1 dashboard tab for each file. 
 
 
-
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -1265,5 +1261,4 @@ You'll also be able to publish your work on [Tableau Public]() (If the data you 
 6. False
 
 ```
--->
 
