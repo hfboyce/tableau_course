@@ -87,12 +87,12 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Stacked bars 
 - Side by side bars 
 - Scatter plot 
-- line graph
+- Line graph
 - Bins - Histograms
 - Boxplot
 - Heatmap
 - Dashboards
-    - layouts 
+    - Layouts 
     - Changes to all sheets 
     - Connecting sheets 
     - Filtering 

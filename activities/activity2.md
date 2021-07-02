@@ -29,6 +29,7 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 - Which penguin species tend to have the greatest flipper length?
 6\. Create a line graph that shows the number of egg clutches over the research period.  
 - Does the field appear to have a cyclical component? If so, how long is 1 cycle approximately? 
+7\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer. 
 
 
 
@@ -37,12 +38,12 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 - Change the size of the bins to 1.
 - What type of shape does it have? (uniform, bell?)
 - How many "peaks" does it have? 
-- Add the species dimension to either the **Columns** shelf or the colour channel. Which species tends to have the shortest culmen lengths? 
+- Add the species dimension to both the **Columns** shelf and the colour channel. Which species tends to have the shortest culmen lengths? 
   
 2\. Create a histogram for the `Culmen Depth (mm)` column now. 
 - Change the size of the bins to 0.5  now. 
 - What is the range of values?
-- Add the species dimension to either the **Columns** shelf or the colour channel. Which species tends to have the most shallow culmens? 
+- Add the species dimension to both the **Columns** shelf and the colour channel. Which species tends to have the most shallow culmens? 
   
 3\. Now let's try and compare the bodyweight distributions between the penguin sexes using a box plot. Exclude the observation that has an unmarked value by right-clicking it and selecting **Hide**.      
 - Are there any outliers displayed as marks on the boxplots? 
@@ -54,22 +55,21 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 - Which species is only inhabiting on a single island?
 - Add the count of the penguins as a label to each mark.
 - How many Gentoo penguins are on Biscoe island? 
-
+5\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer. 
 
 
 ## Exercise 4: Creating Dashboards  
 
-1\. Convert Dashboard **Size** to automatic.     
-2\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard.      
-3\. Create a Text box with your Dashboard title and have it "Float" over the image.    
+1\. Create a new Dashboard page.
+2\. Convert Dashboard **Size** to automatic.     
+3\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. I recommend to"fit the image"" to the outline.   
+4\. Add the scatterplot,the heatmap and both of the histograms to your dashboard.
+5\. Create a sex filters for the scatterplot that is in the style of dropdown and you can select multiple categories.       
+- Adjust this filter so it works for all the plots.     
+6. Create a bodymass filter, that only works on the 2 histograms. 
 
-<!--
-4. Add sheets
-5. Create filters for col1 col2 col3 
-- Change the filter style for  ... to ....
-6. Filter for all sheets
-7. Make the heatmap a filter
--->
+7\. Create a text box with your Dashboard title and have it "Float" over the image.    
+
 
 
 ## Attribution
@@ -80,7 +80,16 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
   
   
   
+## Need a little inspiration? 
 
+Below is a ***very*** rough and quick version of the above activity. Only click to see if you need a little help. 
+
+```{admonition} Hayley's Fast Dash
+:class: dropdown
+
+<img src="../lessons/imgs/fast_dash.png"  width = "85%" alt="404 image" />
+
+```
 
 
 
