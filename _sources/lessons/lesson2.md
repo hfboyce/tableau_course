@@ -174,7 +174,10 @@ A scatter plot is a type of plot used to visualize 2 columns that both have cont
 Scatter plots are also used to observe relationships between variables.
 For example, if when the values of x increases, the y values tend to increase, there appears to be a positive relationship between the 2 columns. 
 
-<img src="https://mat117.wisconsin.edu/wp-content/uploads/2014/12/Sec-4.png"  width = "60%" alt="404 image" />
+<img src="https://www.emathzone.com/wp-content/uploads/2014/10/scatter-diagram.jpg"  width = "60%" alt="404 image" />
+<br>
+[Source: www.emathzone.com](https://www.emathzone.com/tutorials/basic-statistics/scatter-diagram.html)
+
 
 You'll likely be using these frequently as they are easy to interpret and they also can show the distribution of 2 columns simultaneously. (We will talk a little more about this later.)
 

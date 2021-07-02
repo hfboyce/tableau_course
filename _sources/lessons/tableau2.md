@@ -848,16 +848,20 @@ You'll notice that when we dragged these sheets they snapped into a position. Th
 
 ```{admonition} Tip!
 :class: tip
-When you drag sheets into the Dashboard, you can have them displayed in the standard view, or if you want the vizualization to take up more space in the boundaries, you can: 1. Click on the desired plot.
-2. Select the **More Options** icon.
-3. Under the **Fit** option, you can select "**Entire View**"
+When you drag sheets into the Dashboard, you can have them displayed in the standard view, or if you want the vizualization to take up more space in the boundaries, you can:
 
-<img src="imgs/fit_bar.png"  width = "85%" alt="404 image" />
+1\. Click on the desired plot.     
+2\. Select the **More Options** icon.      
+3\. Under the **Fit** option, you can select "**Entire View**"      
+
+<img src="imgs/fit_bar.png"  width = "35%" alt="404 image" />
 
 <br>
 <br>
 
-<img src="imgs/fit.png"  width = "85%" alt="404 image" />
+And we can see the difference using our boxplot as an example.
+
+<img src="imgs/fit.png"  width = "85%" alt="404 image" />  
 
 
 ```
