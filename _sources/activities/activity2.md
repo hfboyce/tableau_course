@@ -87,7 +87,7 @@ Below is a ***very*** rough and quick version of the above activity. Only click 
 ```{admonition} Hayley's Fast Dash
 :class: dropdown
 
-<img src="imgs/fast_dash.png"  width = "85%" alt="404 image" />
+<img src="../lessons/imgs/fast_dash.png"  width = "85%" alt="404 image" />
 
 ```
 
