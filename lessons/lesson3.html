@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Asking Question and Exploring Your Data &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson3.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Introduction to Tableau" href="tableau1.html" />
+    <link rel="prev" title="2. Visualization Types" href="lesson2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson3.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Asking Question and Exploring Your Data" />
+<meta property="og:description" content="Asking Question and Exploring Your Data  We spoke earlier that when we make data visualizations it stems from 2 reasons; we have a question we want to answer to" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson2.html">
+   2. Visualization Types
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Asking Question and Exploring Your Data
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau2.html">
+   2. Plot types and the Dashboard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau3.html">
+   3. Dashboards
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity2.html">
+   Lesson 2: Plots and Dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity3.html">
+   Lesson 3: Dashboards and EDA
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/lesson3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/lesson3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/lesson3.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-question">
+   3.1. What is the Question?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descriptive">
+     3.1.1. Descriptive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory">
+     3.1.2. Exploratory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inferential">
+     3.1.3. Inferential
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predictive">
+     3.1.4. Predictive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#causal">
+     3.1.5. Causal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mechanistic">
+     3.1.6. Mechanistic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
+   3.2. Exploratory Data Analysis (EDA)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-approach-an-eda">
+     3.2.1. How to approach an EDA?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   3.3. Quick Quiz
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="asking-question-and-exploring-your-data">
+<h1><span class="section-number">3. </span>Asking Question and Exploring Your Data<a class="headerlink" href="#asking-question-and-exploring-your-data" title="Permalink to this headline">¶</a></h1>
+<p>We spoke earlier that when we make data visualizations it stems from 2 reasons; we have a question we want to answer to we want to provoke new questions with said visualization.</p>
+<p>Before we make our visualization it’s important to determine which of those actions we are attempting.</p>
+<p>In today’s lesson, we are going to discuss both.</p>
+<div class="section" id="what-is-the-question">
+<h2><span class="section-number">3.1. </span>What is the Question?<a class="headerlink" href="#what-is-the-question" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start with what kind of questions we are asking before we try to answer them.</p>
+<a class="reference internal image-reference" href="../_images/questions.png"><img alt="404 image" src="../_images/questions.png" style="width: 45%;" /></a>
+<br>
+<br>
+<p>This section is mostly being referenced from <a class="reference external" href="https://leanpub.com/artofdatascience">Roger D. Peng and Elizabeth Matsui - The Art of Data Science</a></p>
+<p>According to a paper published by Roger and Jeff Leek, understanding the types of questions you are asking is crucial to your interpretation of your final insights and result.</p>
+<p>They state that there are 6 types of data analysis questions.</p>
+<ol class="simple">
+<li><p>Descriptive</p></li>
+<li><p>Exploratory</p></li>
+<li><p>Inferential</p></li>
+<li><p>Predictive</p></li>
+<li><p>Causal</p></li>
+<li><p>Mechanistic</p></li>
+</ol>
+<div class="section" id="descriptive">
+<h3><span class="section-number">3.1.1. </span>Descriptive<a class="headerlink" href="#descriptive" title="Permalink to this headline">¶</a></h3>
+<p>A descriptive question hopes to summarize a characteristic of a dataset without interpretation.</p>
+<p>Remember summary statistics? This is a question involving those!</p>
+<p>Examples of this type of question include:</p>
+<ul class="simple">
+<li><p>What is the proportion of high school graduates of Google’s employees?</p></li>
+<li><p>What is the mean salary of employees at Schneider Electric?</p></li>
+<li><p>How prevalent is a certain illness among individuals in Canada?</p></li>
+</ul>
+</div>
+<div class="section" id="exploratory">
+<h3><span class="section-number">3.1.2. </span>Exploratory<a class="headerlink" href="#exploratory" title="Permalink to this headline">¶</a></h3>
+<p>An exploratory question is a type of question that analyzes the data for patterns, trends or relationships between variables. This question often is used in hypotheses for additional analysis and studies.</p>
+<a class="reference internal image-reference" href="../_images/explore2.png"><img alt="404 image" src="../_images/explore2.png" style="width: 45%;" /></a>
+<br>
+<br>
+<p>Examples of this type of question include:</p>
+<ul class="simple">
+<li><p>Is there a relationship between tree location and truck diameter in our <code class="docutils literal notranslate"><span class="pre">Street-trees.csv</span></code> dataset?</p></li>
+<li><p>Does profit change with the amount of investment capital for a dataset set containing 1500 start-up companies?</p></li>
+</ul>
+</div>
+<div class="section" id="inferential">
+<h3><span class="section-number">3.1.3. </span>Inferential<a class="headerlink" href="#inferential" title="Permalink to this headline">¶</a></h3>
+<p>Inferential questions are a restatement of a hypothesis we made and answered by analyzing a different dataset. Essentially we made a hypothesis from one dataset and see if this applies to a population (a whole).</p>
+<p>Examples include:</p>
+<p>-Does political party voting change with indicators of wealth for all people living in Canada?(<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p>
+<ul class="simple">
+<li><p>Does the high school graduation rate affect employment rates in the Indian population?</p></li>
+</ul>
+</div>
+<div class="section" id="predictive">
+<h3><span class="section-number">3.1.4. </span>Predictive<a class="headerlink" href="#predictive" title="Permalink to this headline">¶</a></h3>
+<p>Predictive questions are less interested in what *<em><strong>causes</strong></em> a particular result and more on <em><strong>if</strong></em> a particular result will occur. It generally asks what particular measurements or categories for an observation will be.</p>
+<a class="reference internal image-reference" href="../_images/predictive.png"><img alt="404 image" src="../_images/predictive.png" style="width: 45%;" /></a>
+<br>
+<br>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>What political party will someone vote for in the next Canadian election? (<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p></li>
+<li><p>What a house will sell for on the market?</p></li>
+<li><p>If an individual has a particular diagnosis or not.</p></li>
+</ul>
+</div>
+<div class="section" id="causal">
+<h3><span class="section-number">3.1.5. </span>Causal<a class="headerlink" href="#causal" title="Permalink to this headline">¶</a></h3>
+<p>A causal question asks if a change in one variable will result in a change in another, on average in a population.</p>
+<ul class="simple">
+<li><p>Does increases sugar quantities in an individual’s diet cause an increase in migraines?</p></li>
+<li><p>Does wealth lead to voting for a certain political party in Canadian elections?  (<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p></li>
+<li><p>Does the level of education increase an individual’s income?</p></li>
+</ul>
+</div>
+<div class="section" id="mechanistic">
+<h3><span class="section-number">3.1.6. </span>Mechanistic<a class="headerlink" href="#mechanistic" title="Permalink to this headline">¶</a></h3>
+<p>Mechanistic questions generally ask the <strong>how</strong>. How does the effect happen? These are generally quite hard to answer.</p>
+<a class="reference internal image-reference" href="../_images/how.png"><img alt="404 image" src="../_images/how.png" style="width: 45%;" /></a>
+<br>
+<br>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>How does wealth lead to voting for a certain political party in Canadian elections? (<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p></li>
+<li><p>How does diet lead to a reduction of a diabetes diagnosis?</p></li>
+<li><p>How does education increase individual income?</p></li>
+</ul>
+<p>Visualizations help us answer <strong>Descriptive</strong> and <strong>Exploratory</strong> questions.</p>
+<p>The questions you ask must be of interest to your expected audience.</p>
+</div>
+</div>
+<div class="section" id="exploratory-data-analysis-eda">
+<h2><span class="section-number">3.2. </span>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/explore.png"><img alt="404 image" src="../_images/explore.png" style="width: 45%;" /></a>
+<br>
+<br>
+<p>Exploratory data analysis (EDA), is an early on process of your data analysis that you get acquainted and familiar with your data. You are examining the columns (variables/fields)
+that you have, the potential relationship between columns and some summary statistics.</p>
+<p><strong>Why are EDAs important?</strong>
+EDA is important to your analysis and it can help you identify potential issues, shortcomings with your data or help you discover additional questions you may want to explore further.</p>
+<p>Data visualization is so important to this process as it gives an opportunity to identify patterns much easier than otherwise.</p>
+<p>EDA begins after loading the data and glancing at the dataframe.</p>
+<p>What are the columns? What data types are they? What values are contained in certain columns? Are there any particularly interesting summary statistics? What is the range of values of the variable?</p>
+<p>Personally, I find the EDA step of my analysis process the most fun. It’s like meeting someone for the first time and finding out what kind of person they are. Generally, you are hoping the person you are meeting is morally good and not full of lies, whereas, with your data, you are hoping it is unbiased and not full of NAs (missing values).</p>
+<div class="section" id="how-to-approach-an-eda">
+<h3><span class="section-number">3.2.1. </span>How to approach an EDA?<a class="headerlink" href="#how-to-approach-an-eda" title="Permalink to this headline">¶</a></h3>
+<p>Key steps to do during EDA:</p>
+<ol class="simple">
+<li><p>Read in your data:</p></li>
+</ol>
+<p>This step sounds like a natural step but of course, this may a bit more intensive than you think. Reading in your data may require permissions on the server, downloading data from multiple sources and making sure it’s being read in correctly.</p>
+<ol class="simple">
+<li><p>Assessing the columns:</p></li>
+</ol>
+<p>What columns do you have? Are they all the ones that you need? Are you expecting them to be restrictive? This is also a good time to address if there are any issues with your data and determine how you would resolve them.</p>
+<ol class="simple">
+<li><p>Look at your data:</p></li>
+</ol>
+<p>How many observations do you have?  What values are you missing? Is what you have enough to try and answer the question that you posed?</p>
+<ol class="simple">
+<li><p>Cleaning your data:</p></li>
+</ol>
+<p>This step is better done using Tableau Prep, this may mean removing columns, rows or splitting a single column into multiple.</p>
+<ol class="simple">
+<li><p>Summarize your data:</p></li>
+</ol>
+<p>Obtaining key summary statistics such as mean, median, maximum and minimum values can help somewhat understand our data a bit more. This is somewhat like reading the ingredient of a recipe but not seeing the instructions or a picture of the final result.</p>
+<ol class="simple">
+<li><p>Visualize:</p></li>
+</ol>
+<p>I like to look at the distributions of the columns I am interested in. It’s also a good idea to try and concentrate on the columns that are needed to answer your question. That being said, you may find some useful insights in columns that you don’t expect. When making plots for EDA, since it is done mainly for you and getting acquainted with your data, proper axis labels and titles are less of a concern.</p>
+<p>Once you have done your EDA you can collect all the information and produce a report from your insights, a dashboard useful to answer your question, or if your question is predictive you may continue with a predictive statistical or machine learning model.</p>
+</div>
+</div>
+<div class="section" id="quick-quiz">
+<h2><span class="section-number">3.3. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>“What are the most common cancer diagnoses in the world?” is a type of which kind of question?</p></li>
+<li><p>“Does sun exposure cause an increase in cancer diagnosis?” is a type of which kind of question?</p></li>
+<li><p>“How does sun exposure lead to an increase in cancer diagnosis?” is a type of which kind of question?</p></li>
+<li><p>“Does a certain individual have cancer?” is a type of which kind of question?
+5.”Is there a relationship between the time exposed in the sun and cancer diagnosis in the Indian population?” is a type of which kind of question?</p></li>
+<li><p><strong>True or False</strong>: EDA visualizations are less concerned about plotting details such as axis labels and titles.</p></li>
+<li><p>Which of the following is not a part of EDA?</p></li>
+</ol>
+<ul class="simple">
+<li><p>a) Obtaining statistics of the data.</p></li>
+<li><p>b) Understanding the missing values from your data.</p></li>
+<li><p>c) Visualizing the data</p></li>
+<li><p>d) Creating a predictive model from the data</p></li>
+</ul>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. Descriptive
+2. Causal
+3. Mechanic
+4. Predictive
+5. Inferential
+6. True
+7. d)  Creating a predictive model from the data
+
+```
+-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lesson2.html" title="previous page"><span class="section-number">2. </span>Visualization Types</a>
+    <a class='right-next' id="next-link" href="tableau1.html" title="next page"><span class="section-number">1. </span>Introduction to Tableau</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
