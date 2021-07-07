@@ -36,12 +36,20 @@ By the end of the lesson, learners are expected to be able to:
 - Choose effective visual channels for information display.
 - Visualize frequencies with bar plots.
 - Create line, scatter and histogram plot using Tableau.
+
+### Lecture 3
+
+By the end of the lesson, learners are expected to be able to:
+
 - Combine worksheets to make a Dashboard.
 - Use different filtering types on a Dashboard. 
 - Identify the different tools needed to make a dashboard layout in Tableau.
-
-
-### Lecture 3
+- Define and describe the 6 possible data analysis questions. 
+- Summarize the importants of Exploratory Data Analysis (EDA).
+- Impliment calculations in Tableau.
+- Add trend lines and sumary lines to a plot.
+- Experiment with clustering and forcasting.
+- Combining data sources using relationships and joins. 
 
 
 ### Lecture 4

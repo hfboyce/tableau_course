@@ -1,4 +1,4 @@
-# Plot types and the Dashboard 
+# Plot Types
 
 ## More Plotting Examples
 
@@ -631,7 +631,7 @@ The best way to sort your boxplots to some criteria is as follows:
 
 3\. We can select if we want the field to be sorted in **Ascending** or **Descending** order, choose a field name (`Diameter` for us) and then choose an Aggregation. We are going to be selecting **Median** which is the center line of our boxes in the boxplot. 
 
-<img src="imgs/boxsort3.png"  width = "85%" alt="404 image" />
+<img src="imgs/bosort3.png"  width = "85%" alt="404 image" />
 
 <br>
 <br>

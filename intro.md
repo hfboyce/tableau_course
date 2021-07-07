@@ -79,7 +79,6 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 - Common visualization types (bar, line, points, intervals, geo-spatial, chord, etc.)
 - When do we use what?
-- Developing the 6 types of statistical questions (exploratory, descriptive, inferential {frequentist, Bayesian}, causal, mechanistic, predictive)
 
 ### Tableau Applications 
 
@@ -112,28 +111,29 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 #### Theory 
 
+- Developing the 6 types of statistical questions (exploratory, descriptive, inferential {frequentist, Bayesian}, causal, mechanistic, predictive)
 - Why are EDAs important?
-- How to approach an EDA? (Exercise)
+- How to approach an EDA?
 - Conclusion and next steps in an EDA  
 
 ### Tableau Applications 
 
-- Grouping
-- Sets, filters, slicing
+- Dashboards 
+- EDA
 - Facetting
-- Chloropleth map (if time -advanced)
-- Calculations -> string conversions
-- Calculations - converting to booleans 
-- Not every EDA will make it in the Dashboard
-- Joining, unions 
 - Trend lines
 - Forecasting 
+- Calculations breifly
+- unions joins, relationships.
+- Chloropleth map 
 
 #### Exercise
+
+- Dashboard practice
+- Facetting
+- Calculations (briefly)
+- Chloropleth
 - Combine 2 dataframes
-- Removing or editing titles 
-- Adding titles manually? 
-- Adding a trend line 
 
 ### Lesson 4 - Good vs Evil, Tableau Stories and Extras
 
@@ -144,17 +144,21 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - A game of Good vs Evil
 - Best practices
 - Storytelling 
-- Importance of colour, titles etc. 
 
 ### Tableau Applications 
 
-- Titles
 - Tooltip
-- Clicks and hovers 
+- sets, slicing
+- Formatting
+
+If time:
+
+- Clicks and hovers  
 - Palettes 
+- Shapes
 - Extensions  
 - Navigation
-- Tableau Story
+
 
 ## Exercise 
 - Add a hover to your dashboard

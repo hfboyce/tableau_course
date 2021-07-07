@@ -13,14 +13,13 @@
     - file: lessons/lesson2
     - file: lessons/lesson3
     - file: lessons/lesson4
-    - file: lessons/lesson5
 
 - part: Lessons - Tableau
   numbered: true
   chapters:
     - file: lessons/tableau1
     - file: lessons/tableau2
-    #- file: lessons/tableau3
+    - file: lessons/tableau3
     #- file: lessons/tableau4
     #- file: lessons/tableau5
 
@@ -29,6 +28,7 @@
   chapters:
     - file: activities/activity1
     - file: activities/activity2
+    - file: activities/activity3
 
 - part: References
   chapters:
