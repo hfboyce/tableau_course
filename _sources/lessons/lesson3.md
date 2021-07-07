@@ -121,7 +121,7 @@ The questions you ask must be of interest to your expected audience.
 <br>
 
 
-Exploratory data analysis (EDA), is an early on process of your data analysis that you get acquainted and familiar with your data. You are examining the columns (variables/fields)
+Exploratory data analysis (EDA), is an early-on process of your data analysis that you get acquainted and familiar with your data. You are examining the columns (variables/fields)
 that you have, the potential relationship between columns and some summary statistics. 
 
 **Why are EDAs important?**     
