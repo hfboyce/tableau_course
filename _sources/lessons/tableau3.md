@@ -503,7 +503,7 @@ Exploring your data in Tableau is not quite as intuitive as hoped and it's likel
 
 ### Tableau Prep
 
-Tableau Prep is not covered in this curriculum and I, unfortunately, have restricted access to Tableau Prep but I'm going to give you some minimal notes and screenshots that should help with EDA (Unfortunately due to my restriction I cannot demonstrate this live). 
+Tableau Prep is not covered in this curriculum but I'm going to give you a tiny tiny demo and some minimal notes and screenshots that should help with EDA. 
 
 **Step by Step Instructions**
 
