@@ -148,13 +148,14 @@ Any data that I'll be using will be available in the data file [here](https://dr
 ### Tableau Applications 
 
 - Tooltip
-- sets, filters, slicing
-- formatting
+- sets, slicing
+- Formatting
 
 If time:
 
 - Clicks and hovers  
 - Palettes 
+- Shapes
 - Extensions  
 - Navigation
 

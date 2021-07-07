@@ -247,7 +247,7 @@ You can check and preview what your dashboard will look for other devices by cli
 <img src="imgs/preview3.png"  width = "85%" alt="404 image" />
 
 
-## Filtering 
+### Filtering 
 
 Here is where the fun starts! Since Tableau is an excellent tool to use for dynamic plots, let's go ahead and see why first hand. 
 
@@ -1260,7 +1260,7 @@ To delete a Data Source, click on the Data tab in the uppermost toolbar and then
 7. What should be done before we cluster to make sure that we can drag the **Cluster** icon to the visualization pane?
 8. Why default what does Tableau use to connect your data sources: Joins, Relationships, Glue, Connections?
 9. What "join" type is used to stack data on top of each other?
-10. What join type only keeps rows present in both tables
+10. What join type only keeps rows present in both tables?
 
 <!--
 ```{admonition} Solutions!
