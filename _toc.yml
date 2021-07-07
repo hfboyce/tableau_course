@@ -3,7 +3,6 @@
 - part: Things to Know
   chapters:
   - file: things_to_know/who
-  - file: things_to_know/how
   - file: things_to_know/what
 
 - part: Lessons - Theory

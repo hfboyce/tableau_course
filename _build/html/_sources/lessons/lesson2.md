@@ -457,5 +457,3 @@ To accommodate for these issues, we can either add the values as we showed above
 6. Scatter plot
 
 ```
-
-

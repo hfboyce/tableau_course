@@ -468,7 +468,7 @@ I don't have access to either of these so it makes it difficult to demonstrate t
 
 I can link you to [this easy to follow step-by-step guide](https://help.tableau.com/current/pro/desktop/en-us/publish_workbooks_share.htm) that walks you through the steps to publish your work. 
 
-You'll also be able to publish your work on [Tableau Public]() (If the data you are using is not sensitive and you are allowed to do so) which is where we saw some of the other dashboard examples. 
+You'll also be able to publish your work on [Tableau Public](https://help.tableau.com/current/pro/desktop/en-us/publish_workbooks_tableaupublic.htm) (If the data you are using is not sensitive and you are allowed to do so) which is where we saw some of the other dashboard examples. 
 
 *Note that publishing to Tableau public is only recommended for personal projects using open source data.* 
 
