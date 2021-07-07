@@ -747,7 +747,6 @@ You'll notice that with this tree data a tree can have a Genus and a species. Th
 
 We can create a hierarchy from these columns so that we can make a "Drilling down" action between each field in the graph. 
 
-
 <img src="imgs/tree_genus.png"  width = "65%" alt="404 image" />
 
 <br>

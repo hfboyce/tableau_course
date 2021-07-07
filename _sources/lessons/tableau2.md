@@ -1261,4 +1261,3 @@ You'll also be able to publish your work on [Tableau Public]() (If the data you 
 6. False
 
 ```
-
