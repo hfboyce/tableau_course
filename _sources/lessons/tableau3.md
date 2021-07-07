@@ -543,7 +543,7 @@ You should be able to see all the column names and some sample values that are c
 <br>
 <br>
 
-5\. This will produce a drop-down menu where you'll want to ** + Add Step**
+5\. This will produce a drop-down menu where you'll want to **+ Add Step**
 
 <img src="imgs/tableauprep7.png"  width = "85%" alt="404 image" />
 
@@ -1126,7 +1126,7 @@ That all being said here are some ways you can join your data if you really need
 
 #### Types of joins 
 
-<table class="table--plain"><colgroup><col style="width: 10%;"> <col></colgroup><tbody><tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1" style="font-weight: bold;">Join Type</td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1" style="font-weight: bold;">Explanation</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Inner</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_inner.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>Using an inner join to combine tables will result in a data source that only contains rows that are present in both tables. Any rows that are present in a single table gets thrown out.</p>></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Left</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_left.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>Joining tables using a left join will create a table that contains all rows from the left table and corresponding matches from the right table. Any rows only present in the right table are thrown out. Any rows that are present in the left table and not in the right will produce NA values for any corresponding columns obtain from the right column.</p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Right </p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_right.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>This produces similar results to the Left join, however this time any rows not present in the right table now are thrown out and all the rows from the right table are kept. </p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Full outer</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_fullouter.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>A full outer join will keep all rows no matter if they match or not from both tables. When a row from either table doesn't have a match with the other table, NA values will be displayed.</p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><i>Union</i> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_union.png"></p></td> <td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><p>Unions are used to stack data on top of each other. This works best if the columns in both tables are identical. See <a href="union.htm" xrefformat="{paratext}" class="MCXref xref">Union Your Data</a> for more information regarding this.</p></td></tr></tbody></table>
+<table class="table--plain"><colgroup><col style="width: 10%;"> <col></colgroup><tbody><tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1" style="font-weight: bold;">Join Type</td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1" style="font-weight: bold;">Explanation</td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Inner</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_inner.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>Using an inner join to combine tables will result in a data source that only contains rows that are present in both tables. Any rows that are present in a single table gets thrown out.</p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Left</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_left.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>Joining tables using a left join will create a table that contains all rows from the left table and corresponding matches from the right table. Any rows only present in the right table are thrown out. Any rows that are present in the left table and not in the right will produce NA values for any corresponding columns obtain from the right column.</p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Right </p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_right.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>This produces similar results to the Left join, however this time any rows not present in the right table now are thrown out and all the rows from the right table are kept. </p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p> Full outer</p> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_fullouter.png"></p></td> <td class="TableStyle-Basic-Border-BodyE-Column1-Body1"><p>A full outer join will keep all rows no matter if they match or not from both tables. When a row from either table doesn't have a match with the other table, NA values will be displayed.</p></td></tr> <tr class="TableStyle-Basic-Border-Body-Body1"><td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><i>Union</i> <p><img alt="" src="https://help.tableau.com/current/pro/desktop/en-us/Img/join_type_union.png"></p></td> <td class="TableStyle-Basic-Border-BodyB-Column1-Body1"><p>Unions are used to stack data on top of each other. This works best if the columns in both tables are identical. See <a href="union.htm" xrefformat="{paratext}" class="MCXref xref">Union Your Data</a> for more information regarding this.</p></td></tr></tbody></table>
 
 [Source: This table is adapted from the one available at help.tableau.com ](https://help.tableau.com/current/pro/desktop/en-us/joining_tables.htm)
 
@@ -1248,6 +1248,38 @@ To delete a Data Source, click on the Data tab in the uppermost toolbar and then
 <br>
 
 ```
+
+## Quick Quiz
+
+1. **True or False:** Using Describe in Tableau will tell us summary statistics about our column like average and mean.
+2. What is the name of the Card that we use to make multiple plots for different values of a field?
+3. Which tab do we need to navigate to, to create reference, summary and trend lines?
+4. Which of the following is not an option for a trend line; Linear, Normal, Logarithmic, Exponential, Polynomial, or Power?
+5. **True or False:** When we use the forecast feature, we will allocate the colour channel to show the Actual vs Estimated values.
+6. Which algorithm does Tableau Clustering use?
+7. What should be done before we cluster to make sure that we can drag the **Cluster** icon to the visualization pane?
+8. Why default what does Tableau use to connect your data sources: Joins, Relationships, Glue, Connections?
+9. What "join" type is used to stack data on top of each other?
+10. What join type only keeps rows present in both tables
+
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. False
+2. Pages
+3. Analysis
+4. Normal
+5. True
+6. K-means
+7. Deselect **Aggregate Measure** under the **Analysis** tab in the toolbar.
+8. Relationships
+9. Union
+10. Inner
+
+```
+-->
+
 
 ## Making a Choropleth Map
 
