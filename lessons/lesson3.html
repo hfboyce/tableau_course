@@ -148,12 +148,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tableau2.html">
-   2. Plot types and the Dashboard
+   2. Plot Types
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="tableau3.html">
-   3. Dashboards
+   3. Dashboards, EDA and Chloropleths
   </a>
  </li>
 </ul>
@@ -393,14 +393,14 @@
 <h3><span class="section-number">3.1.3. </span>Inferential<a class="headerlink" href="#inferential" title="Permalink to this headline">¶</a></h3>
 <p>Inferential questions are a restatement of a hypothesis we made and answered by analyzing a different dataset. Essentially we made a hypothesis from one dataset and see if this applies to a population (a whole).</p>
 <p>Examples include:</p>
-<p>-Does political party voting change with indicators of wealth for all people living in Canada?(<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p>
 <ul class="simple">
+<li><p>Does political party voting change with indicators of wealth for all people living in Canada?(<a class="reference external" href="https://ubc-dsci.github.io/introduction-to-datascience/index.html#chapter-learning-objectives">Source: Data Science: A First Introduction</a>)</p></li>
 <li><p>Does the high school graduation rate affect employment rates in the Indian population?</p></li>
 </ul>
 </div>
 <div class="section" id="predictive">
 <h3><span class="section-number">3.1.4. </span>Predictive<a class="headerlink" href="#predictive" title="Permalink to this headline">¶</a></h3>
-<p>Predictive questions are less interested in what *<em><strong>causes</strong></em> a particular result and more on <em><strong>if</strong></em> a particular result will occur. It generally asks what particular measurements or categories for an observation will be.</p>
+<p>Predictive questions are less interested in what <em><strong>causes</strong></em> a particular result and more on <em><strong>if</strong></em> a particular result will occur. It generally asks what particular measurements or categories for an observation will be.</p>
 <a class="reference internal image-reference" href="../_images/predictive.png"><img alt="404 image" src="../_images/predictive.png" style="width: 45%;" /></a>
 <br>
 <br>
@@ -443,7 +443,7 @@
 <br>
 <p>Exploratory data analysis (EDA), is an early on process of your data analysis that you get acquainted and familiar with your data. You are examining the columns (variables/fields)
 that you have, the potential relationship between columns and some summary statistics.</p>
-<p><strong>Why are EDAs important?</strong>
+<p><strong>Why are EDAs important?</strong><br />
 EDA is important to your analysis and it can help you identify potential issues, shortcomings with your data or help you discover additional questions you may want to explore further.</p>
 <p>Data visualization is so important to this process as it gives an opportunity to identify patterns much easier than otherwise.</p>
 <p>EDA begins after loading the data and glancing at the dataframe.</p>
@@ -452,29 +452,17 @@ EDA is important to your analysis and it can help you identify potential issues,
 <div class="section" id="how-to-approach-an-eda">
 <h3><span class="section-number">3.2.1. </span>How to approach an EDA?<a class="headerlink" href="#how-to-approach-an-eda" title="Permalink to this headline">¶</a></h3>
 <p>Key steps to do during EDA:</p>
-<ol class="simple">
-<li><p>Read in your data:</p></li>
-</ol>
+<p><strong>1. Read in your data:</strong></p>
 <p>This step sounds like a natural step but of course, this may a bit more intensive than you think. Reading in your data may require permissions on the server, downloading data from multiple sources and making sure it’s being read in correctly.</p>
-<ol class="simple">
-<li><p>Assessing the columns:</p></li>
-</ol>
+<p><strong>2. Assessing the columns:</strong></p>
 <p>What columns do you have? Are they all the ones that you need? Are you expecting them to be restrictive? This is also a good time to address if there are any issues with your data and determine how you would resolve them.</p>
-<ol class="simple">
-<li><p>Look at your data:</p></li>
-</ol>
+<p><strong>3. Look at your data:</strong></p>
 <p>How many observations do you have?  What values are you missing? Is what you have enough to try and answer the question that you posed?</p>
-<ol class="simple">
-<li><p>Cleaning your data:</p></li>
-</ol>
+<p><strong>4. Cleaning your data:</strong></p>
 <p>This step is better done using Tableau Prep, this may mean removing columns, rows or splitting a single column into multiple.</p>
-<ol class="simple">
-<li><p>Summarize your data:</p></li>
-</ol>
+<p><strong>5. Summarize your data:</strong></p>
 <p>Obtaining key summary statistics such as mean, median, maximum and minimum values can help somewhat understand our data a bit more. This is somewhat like reading the ingredient of a recipe but not seeing the instructions or a picture of the final result.</p>
-<ol class="simple">
-<li><p>Visualize:</p></li>
-</ol>
+<p><strong>6. Visualize:</strong></p>
 <p>I like to look at the distributions of the columns I am interested in. It’s also a good idea to try and concentrate on the columns that are needed to answer your question. That being said, you may find some useful insights in columns that you don’t expect. When making plots for EDA, since it is done mainly for you and getting acquainted with your data, proper axis labels and titles are less of a concern.</p>
 <p>Once you have done your EDA you can collect all the information and produce a report from your insights, a dashboard useful to answer your question, or if your question is predictive you may continue with a predictive statistical or machine learning model.</p>
 </div>
@@ -488,14 +476,12 @@ EDA is important to your analysis and it can help you identify potential issues,
 <li><p>“Does a certain individual have cancer?” is a type of which kind of question?
 5.”Is there a relationship between the time exposed in the sun and cancer diagnosis in the Indian population?” is a type of which kind of question?</p></li>
 <li><p><strong>True or False</strong>: EDA visualizations are less concerned about plotting details such as axis labels and titles.</p></li>
-<li><p>Which of the following is not a part of EDA?</p></li>
+<li><p>Which of the following is not a part of EDA?<br />
+a) Obtaining statistics of the data<br />
+b) Understanding the missing values from your data<br />
+c) Visualizing the data<br />
+d) Creating a predictive model from the data</p></li>
 </ol>
-<ul class="simple">
-<li><p>a) Obtaining statistics of the data.</p></li>
-<li><p>b) Understanding the missing values from your data.</p></li>
-<li><p>c) Visualizing the data</p></li>
-<li><p>d) Creating a predictive model from the data</p></li>
-</ul>
 <!--
 ```{admonition} Solutions!
 :class: dropdown

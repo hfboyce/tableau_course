@@ -28,7 +28,7 @@ By the end of the lesson, learners are expected to be able to:
 
 ### Lecture 2
 
-
+By the end of the lesson, learners are expected to be able to:
 
 - Explain the difference between a scatter, line, pie, and bar plot.
 - Recognize when 3D plots are appropriate. 
@@ -47,9 +47,9 @@ By the end of the lesson, learners are expected to be able to:
 - Define and describe the 6 possible data analysis questions. 
 - Summarize the importants of Exploratory Data Analysis (EDA).
 - Impliment calculations in Tableau.
-
-
-
+- Add trend lines and sumary lines to a plot.
+- Experiment with clustering and forcasting.
+- Combining data sources using relationships and joins. 
 
 
 ### Lecture 4

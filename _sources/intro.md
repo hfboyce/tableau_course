@@ -119,23 +119,21 @@ Any data that I'll be using will be available in the data file [here](https://dr
 ### Tableau Applications 
 
 - Dashboards 
-- Grouping
-- Sets, slicing
+- EDA
 - Facetting
-- Chloropleth map (if time - advanced)
-- Calculations -> string conversions
-- Calculations - converting to booleans 
-- Not every EDA will make it in the Dashboard 
-
-If time: 
-- Joining, unions 
 - Trend lines
 - Forecasting 
+- Calculations breifly
+- unions joins, relationships.
+- Chloropleth map 
 
 #### Exercise
-- Combine 2 dataframes
+
 - Dashboard practice
-- 
+- Facetting
+- Calculations (briefly)
+- Chloropleth
+- Combine 2 dataframes
 
 ### Lesson 4 - Good vs Evil, Tableau Stories and Extras
 
@@ -146,19 +144,19 @@ If time:
 - A game of Good vs Evil
 - Best practices
 - Storytelling 
-- Importance of colour, titles etc. 
 
 ### Tableau Applications 
 
 - Tooltip
+- sets, filters, slicing
+- formatting
+
+If time:
+
 - Clicks and hovers  
 - Palettes 
 - Extensions  
 - Navigation
-- Tableau Story
-- Formatting
--	Tool tips
-- Forecasting, clustering
 
 
 ## Exercise 
