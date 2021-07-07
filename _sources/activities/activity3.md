@@ -1,18 +1,20 @@
 #  Lesson 3: Dashboards and EDA
 
-## Exercise 1: Loading in the data and asking questions 
+## Exercise 1: Loading in the data 
 
 1\. Load in the .....
 2\. Ask questions 
 
-## Exercise 2: Exploratory plots
+## Exercise 2: Joining data
 
 
-## Exercise 3: Specific plots 
+## Exercise 3: Exploratory plots
 
 
+## Exercise 4: Specific plots 
 
-## Exercise 4: Creating Dashboards  
+
+## Exercise 5: Creating Dashboards  
 
 1\. Create a new Dashboard page.
 2\. Convert Dashboard **Size** to automatic.     
