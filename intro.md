@@ -26,8 +26,8 @@ Details about class meetings will appear here as they become available.
 |  #   | Date - India (IST) | Date - Vancouver (PST) | Topic | Link |
 | :---: | :---: | :---: | :---: | :---:|
 | 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Lesson 1 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson1.html),<br> [Lesson 1 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau1.html)|
-| 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Viz Types and the Tableau Dashboard  | [Lesson 2 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson2.html), <br> [Lesson 2 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau2.html) | 
-| 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Exploratory Data Visualization, Asthetics and Trends | [Lesson 3 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson3.html), <br> [Lesson 3 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau3.html) | 
+| 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Visualization Types and How to Create them in Tableau | [Lesson 2 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson2.html), <br> [Lesson 2 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau2.html) | 
+| 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Dashboards and Exploratory Data Visualization | [Lesson 3 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson3.html), <br> [Lesson 3 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau3.html) | 
 | 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  |  | 
 | 5 | Jul/23 9:00am - 11ish  |Jul/22 8:30-10:30PM  |  Dashboard Presentations | |
 
@@ -73,14 +73,14 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Create a map
 - Asking questions to explore
 
-### Lesson 2 - Viz Types and the Tableau Dashboard
+### Lesson 2 - Visualization Types and How to Create them in Tableau
 
 #### Theory 
 
 - Common visualization types (bar, line, points, intervals, geo-spatial, chord, etc.)
 - When do we use what?
 
-### Tableau Applications 
+#### Tableau Applications 
 
 - Pie chart
 - Stacked bars 
@@ -107,7 +107,7 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Add tooltips and change the layout
 
 
-### Lesson 3 - Exploratory Data Visualization, Aesthetics and Trends
+### Lesson 3 - Dashboards and Exploratory Data Visualization
 
 #### Theory 
 
@@ -116,7 +116,7 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - How to approach an EDA?
 - Conclusion and next steps in an EDA  
 
-### Tableau Applications 
+#### Tableau Applications 
 
 - Dashboards 
 - EDA
@@ -145,7 +145,7 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Best practices
 - Storytelling 
 
-### Tableau Applications 
+#### Tableau Applications 
 
 - Tooltip
 - sets, slicing
@@ -160,7 +160,7 @@ If time:
 - Navigation
 
 
-## Exercise 
+#### Exercise 
 - Add a hover to your dashboard
 - Create a palette 
 - Use an additional extension 
