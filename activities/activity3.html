@@ -343,8 +343,10 @@
 <li><p>How many continuous columns?</p></li>
 <li><p>What is the range (domain) of <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Capital</span></code>?</p></li>
 <li><p>Are there any date fields?</p></li>
-<li><p>How many unique values are there in <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code>?
-2. If you have Tableau Prep, try it out and load in the data.</p></li>
+<li><p>How many unique values are there in <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code>?</p></li>
+</ul>
+<p>2. If you have Tableau Prep, try it out and load in the data.</p>
+<ul class="simple">
 <li><p>Add a <strong>Clean Step</strong> so that you can look that the distributions and values of each column.</p></li>
 <li><p>Which <code class="docutils literal notranslate"><span class="pre">activity_description</span></code> is most prominent in the dataset?</p></li>
 <li><p>How many rows have over 2 billion dollars in <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code>?</p></li>
@@ -357,15 +359,21 @@
 <ul class="simple">
 <li><p>Change the bin size and exclude any points that are severely outlying by changing the axis range.</p></li>
 <li><p>Change the bin size to something more appropriate.</p></li>
-<li><p>Show a separate distribution for each <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code> using the <strong>Pages</strong> card.
-2. Create a scatter plot of <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code> vs <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Capital</span></code>.</p></li>
+<li><p>Show a separate distribution for each <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code> using the <strong>Pages</strong> card.</p></li>
+</ul>
+<p>2. Create a scatter plot of <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code> vs <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Capital</span></code>.</p>
+<ul class="simple">
 <li><p>Facet this scatter plot by <code class="docutils literal notranslate"><span class="pre">Category</span></code>.</p></li>
 <li><p>Add a linear trend line to each facet.</p></li>
-<li><p>Which category has a steeper plot?
-3. Create a heat map of the count of values from the columns <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code> and <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code>.</p></li>
+<li><p>Which category has a steeper plot?</p></li>
+</ul>
+<p>3. Create a heat map of the count of values from the columns <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code> and <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code>.</p>
+<ul class="simple">
 <li><p>Which Company Type and Activity Description has the largest count?</p></li>
-<li><p>Which Company Type(s) only have companies from 2 Activities?
-4. Create a line plot, showing the number of companies registered in 2021. Use the column <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">of</span> <span class="pre">Registration</span></code></p></li>
+<li><p>Which Company Type(s) only have companies from 2 Activities?</p></li>
+</ul>
+<p>4. Create a line plot, showing the number of companies registered in 2021. Use the column <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">of</span> <span class="pre">Registration</span></code></p>
+<ul class="simple">
 <li><p>You can facet this row-wise by <code class="docutils literal notranslate"><span class="pre">Category</span></code> and give them independent axes by right-clicking on an axis, clicking <strong>edit axis</strong>, and selecting <strong>Independent axis ranges for each row or column</strong>.</p></li>
 <li><p>Do you see something wrong here? Can you explain why this may happen?</p></li>
 <li><p>Now try this again using <code class="docutils literal notranslate"><span class="pre">date</span></code> instead. Although this is less precise, it’s more accurate and less prone to mistakes.</p></li>
@@ -375,9 +383,9 @@
 <h2>Exercise 3: Questions and Visualizations<a class="headerlink" href="#exercise-3-questions-and-visualizations" title="Permalink to this headline">¶</a></h2>
 <p>1. Ask 2 questions you will want to attempt to answer using visualizations.</p>
 <ul class="simple">
-<li><p>Which of the 6 question types do your questions belong to?
-2. Create 2 additional plots that answer your questions above. Remember these are not in the same explorative manner as you did earlier. That means you can recreate some of the plots above without the <strong>Pages</strong> tool or faceting.</p></li>
+<li><p>Which of the 6 question types do your questions belong to?</p></li>
 </ul>
+<p>2. Create 2 additional plots that answer your questions above. Remember these are not in the same explorative manner as you did earlier. That means you can recreate some of the plots above without the <strong>Pages</strong> tool or faceting.</p>
 </div>
 <div class="section" id="exercise-4-blending-data">
 <h2>Exercise 4: Blending data<a class="headerlink" href="#exercise-4-blending-data" title="Permalink to this headline">¶</a></h2>
@@ -385,10 +393,8 @@
 <ul class="simple">
 <li><p>Load in the <code class="docutils literal notranslate"><span class="pre">states_india.geojson</span></code> <em>spatial file</em> that is located in the google drive <a class="reference external" href="https://drive.google.com/file/d/1Mw9qKTDot-7ECGGNsWiWGPMR5_-Y65zW/view?usp=sharing">here</a>. This is the geojson file needed to make the state boundaries of India. Note that this data was acquired from the <a class="reference external" href="https://un-mapped.carto.com/tables/states_india/public/map">following source</a>.</p></li>
 </ul>
-<ol class="simple">
-<li><p>Connect the two sources by the <code class="docutils literal notranslate"><span class="pre">State</span></code> filed in the <code class="docutils literal notranslate"><span class="pre">indian_startups</span></code> data and the <code class="docutils literal notranslate"><span class="pre">St</span> <span class="pre">Nm</span></code> column in the <code class="docutils literal notranslate"><span class="pre">States_india</span></code>.
-data source.</p></li>
-</ol>
+<p>2. Connect the two sources by the <code class="docutils literal notranslate"><span class="pre">State</span></code> filed in the <code class="docutils literal notranslate"><span class="pre">indian_startups</span></code> data and the <code class="docutils literal notranslate"><span class="pre">St</span> <span class="pre">Nm</span></code> column in the <code class="docutils literal notranslate"><span class="pre">States_india</span></code>.
+data source.</p>
 <ul class="simple">
 <li><p>This will require you to <strong>Edit Blend Relationship</strong>.</p></li>
 </ul>
@@ -403,14 +409,14 @@ data source.</p></li>
 </div>
 <div class="section" id="exercise-5-creating-dashboards">
 <h2>Exercise 5: Creating Dashboards<a class="headerlink" href="#exercise-5-creating-dashboards" title="Permalink to this headline">¶</a></h2>
-<p>1. Create a new Dashboard page.
+<p>1. Create a new Dashboard page.<br />
 2. Convert Dashboard <strong>Size</strong> to automatic.<br />
 3. From the google drive, download this       <a class="reference external" href="https://drive.google.com/file/d/1wLpQDBJZnuqXGeyMNOvjt7f6kn0r_ayB/view?usp=sharing">image</a> and add it to your dashboard. I recommend to “fit the image” to the outline.<br />
-4. Add a title for your dashboard using a text box.
-5. Add a selection of the plots you made above but make sure to include the Choropleth graph. Not all of them must be included.
+4. Add a title for your dashboard using a text box.<br />
+5. Add a selection of the plots you made above but make sure to include the Choropleth graph. Not all of them must be included.<br />
 6. Create 2 filters for any of the plots.</p>
 <ul class="simple">
-<li><p>Adjust these filters so it works for all the plots.
+<li><p>Adjust these filters so it works for all the plots.<br />
 7. Use the Choropleth map as a filter so that the other plots are adjusted based on the state(s) selected.</p></li>
 <li><p>For this to work, the field (column) in both sources must be identical.</p></li>
 </ul>
