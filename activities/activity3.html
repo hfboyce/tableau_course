@@ -67,7 +67,7 @@
 <meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/activities/activity3.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Lesson 3: Dashboards and EDA" />
-<meta property="og:description" content="Lesson 3: Dashboards and EDA  Exercise 1: Loading in the data  1. Load in the ….. 2. Ask questions  Exercise 2: Joining data  Exercise 3: Exploratory plots  Exe" />
+<meta property="og:description" content="Lesson 3: Dashboards and EDA  This exercise will be using the data named indian_statups.csv that I’ve provided for you at this link from the google drive. This " />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -284,18 +284,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2-joining-data">
-   Exercise 2: Joining data
+  <a class="reference internal nav-link" href="#exercise-2-explorative-plots">
+   Exercise 2: Explorative Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3-exploratory-plots">
-   Exercise 3: Exploratory plots
+  <a class="reference internal nav-link" href="#exercise-3-questions-and-visualizations">
+   Exercise 3: Questions and Visualizations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4-specific-plots">
-   Exercise 4: Specific plots
+  <a class="reference internal nav-link" href="#exercise-4-blending-data">
+   Exercise 4: Blending data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4-choropleth">
+   Exercise 4: Choropleth
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -304,13 +309,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#attribution">
-   Attribution
+  <a class="reference internal nav-link" href="#exercise-6-formatting">
+   Exercise 6: Formatting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#need-a-little-inspiration">
-   Need a little inspiration?
+  <a class="reference internal nav-link" href="#attribution">
+   Attribution
   </a>
  </li>
 </ul>
@@ -327,49 +332,100 @@
                 
   <div class="section" id="lesson-3-dashboards-and-eda">
 <h1>Lesson 3: Dashboards and EDA<a class="headerlink" href="#lesson-3-dashboards-and-eda" title="Permalink to this headline">¶</a></h1>
+<p>This exercise will be using the data named <code class="docutils literal notranslate"><span class="pre">indian_statups.csv</span></code> that I’ve provided for you at <a class="reference external" href="https://drive.google.com/file/d/1zIwmqngMXQCy0ScS9VxXUdcl2TA0o-gG/view?usp=sharing">this link from the google drive</a>. This data was originally obtained from the <a class="reference external" href="https://www.kaggle.com/bhararthshiviah/indian-startups-2021?select=2021_registered_companies.csv"><strong>India Startup - 2021</strong></a> Kaggle dataset which has an<a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> license. This means that I must give attribution to Bharath Shivaiah for the data and indicate the changes I have made. I have wrangled the data, specifically the <code class="docutils literal notranslate"><span class="pre">state</span></code> columns so that any state codes have been converted to full state names and any misspellings have been fixed and added an additional <code class="docutils literal notranslate"><span class="pre">date</span></code> column.</p>
+<p>This also means that for my adapted data, the Attribution-NonCommercial-ShareAlike 4.0 International license must hold.</p>
 <div class="section" id="exercise-1-loading-in-the-data">
 <h2>Exercise 1: Loading in the data<a class="headerlink" href="#exercise-1-loading-in-the-data" title="Permalink to this headline">¶</a></h2>
-<p>1. Load in the …..
-2. Ask questions</p>
+<p>1. Load in the <code class="docutils literal notranslate"><span class="pre">indian_statups.csv</span></code> in Tableau Desktop.</p>
+<ul class="simple">
+<li><p>How many geographical columns are there?</p></li>
+<li><p>How many Measures are there?</p></li>
+<li><p>How many continuous columns?</p></li>
+<li><p>What is the range (domain) of <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Capital</span></code>?</p></li>
+<li><p>Are there any date fields?</p></li>
+<li><p>How many unique values are there in <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code>?
+2. If you have Tableau Prep, try it out and load in the data.</p></li>
+<li><p>Add a <strong>Clean Step</strong> so that you can look that the distributions and values of each column.</p></li>
+<li><p>Which <code class="docutils literal notranslate"><span class="pre">activity_description</span></code> is most prominent in the dataset?</p></li>
+<li><p>How many rows have over 2 billion dollars in <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code>?</p></li>
+<li><p>What percentage of the data is of private class?</p></li>
+</ul>
 </div>
-<div class="section" id="exercise-2-joining-data">
-<h2>Exercise 2: Joining data<a class="headerlink" href="#exercise-2-joining-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-2-explorative-plots">
+<h2>Exercise 2: Explorative Plots<a class="headerlink" href="#exercise-2-explorative-plots" title="Permalink to this headline">¶</a></h2>
+<p>1. Let’s make a histogram for the distribution of <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code>.</p>
+<ul class="simple">
+<li><p>Change the bin size and exclude any points that are severely outlying by changing the axis range.</p></li>
+<li><p>Change the bin size to something more appropriate.</p></li>
+<li><p>Show a separate distribution for each <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code> using the <strong>Pages</strong> card.
+2. Create a scatter plot of <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code> vs <code class="docutils literal notranslate"><span class="pre">Authorized</span> <span class="pre">Capital</span></code>.</p></li>
+<li><p>Facet this scatter plot by <code class="docutils literal notranslate"><span class="pre">Category</span></code>.</p></li>
+<li><p>Add a linear trend line to each facet.</p></li>
+<li><p>Which category has a steeper plot?
+3. Create a heat map of the count of values from the columns <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Type</span></code> and <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Description</span></code>.</p></li>
+<li><p>Which Company Type and Activity Description has the largest count?</p></li>
+<li><p>Which Company Type(s) only have companies from 2 Activities?
+4. Create a line plot, showing the number of companies registered in 2021. Use the column <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">of</span> <span class="pre">Registration</span></code></p></li>
+<li><p>You can facet this row-wise by <code class="docutils literal notranslate"><span class="pre">Category</span></code> and give them independent axes by right-clicking on an axis, clicking <strong>edit axis</strong>, and selecting <strong>Independent axis ranges for each row or column</strong>.</p></li>
+<li><p>Do you see something wrong here? Can you explain why this may happen?</p></li>
+<li><p>Now try this again using <code class="docutils literal notranslate"><span class="pre">date</span></code> instead. Although this is less precise, it’s more accurate and less prone to mistakes.</p></li>
+</ul>
 </div>
-<div class="section" id="exercise-3-exploratory-plots">
-<h2>Exercise 3: Exploratory plots<a class="headerlink" href="#exercise-3-exploratory-plots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-3-questions-and-visualizations">
+<h2>Exercise 3: Questions and Visualizations<a class="headerlink" href="#exercise-3-questions-and-visualizations" title="Permalink to this headline">¶</a></h2>
+<p>1. Ask 2 questions you will want to attempt to answer using visualizations.</p>
+<ul class="simple">
+<li><p>Which of the 6 question types do your questions belong to?
+2. Create 2 additional plots that answer your questions above. Remember these are not in the same explorative manner as you did earlier. That means you can recreate some of the plots above without the <strong>Pages</strong> tool or faceting.</p></li>
+</ul>
 </div>
-<div class="section" id="exercise-4-specific-plots">
-<h2>Exercise 4: Specific plots<a class="headerlink" href="#exercise-4-specific-plots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-4-blending-data">
+<h2>Exercise 4: Blending data<a class="headerlink" href="#exercise-4-blending-data" title="Permalink to this headline">¶</a></h2>
+<p>1. Connect to a new data source.</p>
+<ul class="simple">
+<li><p>Load in the <code class="docutils literal notranslate"><span class="pre">states_india.geojson</span></code> <em>spatial file</em> that is located in the google drive <a class="reference external" href="https://drive.google.com/file/d/1Mw9qKTDot-7ECGGNsWiWGPMR5_-Y65zW/view?usp=sharing">here</a>. This is the geojson file needed to make the state boundaries of India. Note that this data was acquired from the <a class="reference external" href="https://un-mapped.carto.com/tables/states_india/public/map">following source</a>.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Connect the two sources by the <code class="docutils literal notranslate"><span class="pre">State</span></code> filed in the <code class="docutils literal notranslate"><span class="pre">indian_startups</span></code> data and the <code class="docutils literal notranslate"><span class="pre">St</span> <span class="pre">Nm</span></code> column in the <code class="docutils literal notranslate"><span class="pre">States_india</span></code>.
+data source.</p></li>
+</ol>
+<ul class="simple">
+<li><p>This will require you to <strong>Edit Blend Relationship</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-4-choropleth">
+<h2>Exercise 4: Choropleth<a class="headerlink" href="#exercise-4-choropleth" title="Permalink to this headline">¶</a></h2>
+<p>1. Create a choropleth map that shows the <strong>Total</strong> <code class="docutils literal notranslate"><span class="pre">Paidup</span> <span class="pre">Capital</span></code> per state.</p>
+<ul class="simple">
+<li><p>Which state raised the most capital?</p></li>
+<li><p>Is this what you expect with your knowledge of the different states?</p></li>
+</ul>
 </div>
 <div class="section" id="exercise-5-creating-dashboards">
 <h2>Exercise 5: Creating Dashboards<a class="headerlink" href="#exercise-5-creating-dashboards" title="Permalink to this headline">¶</a></h2>
 <p>1. Create a new Dashboard page.
 2. Convert Dashboard <strong>Size</strong> to automatic.<br />
-3. From the google drive, download this       <a class="reference external" href="https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing">image</a> and add it to your dashboard. I recommend to”fit the image”” to the outline.<br />
-4. Add the scatterplot,the heatmap and both of the histograms to your dashboard.
-5. Create a sex filters for the scatterplot that is in the style of dropdown and you can select multiple categories.</p>
+3. From the google drive, download this       <a class="reference external" href="https://drive.google.com/file/d/1wLpQDBJZnuqXGeyMNOvjt7f6kn0r_ayB/view?usp=sharing">image</a> and add it to your dashboard. I recommend to “fit the image” to the outline.<br />
+4. Add a title for your dashboard using a text box.
+5. Add a selection of the plots you made above but make sure to include the Choropleth graph. Not all of them must be included.
+6. Create 2 filters for any of the plots.</p>
 <ul class="simple">
-<li><p>Adjust this filter so it works for all the plots.</p></li>
+<li><p>Adjust these filters so it works for all the plots.
+7. Use the Choropleth map as a filter so that the other plots are adjusted based on the state(s) selected.</p></li>
+<li><p>For this to work, the field (column) in both sources must be identical.</p></li>
 </ul>
-<ol class="simple">
-<li><p>Create a bodymass filter, that only works on the 2 histograms.</p></li>
-</ol>
-<p>7. Create a text box with your Dashboard title and have it “Float” over the image.</p>
+</div>
+<div class="section" id="exercise-6-formatting">
+<h2>Exercise 6: Formatting<a class="headerlink" href="#exercise-6-formatting" title="Permalink to this headline">¶</a></h2>
+<p>1. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you’d prefer.</p>
 </div>
 <div class="section" id="attribution">
 <h2>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Data: Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis). PLoS ONE 9(3): e90081. doi:10.1371/journal.pone.0090081, Obtained from <a class="reference external" href="https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_lter.csv">Kaggle</a>.</p></li>
-<li><p>Image: <a href="https://unsplash.com/@evanescentlight?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ian Parker</a> on <a href="https://unsplash.com/s/photos/penguins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p></li>
+<li><p>Data: Indian startups - 2021 List of companies registered in India - 2021 by Bharath Shivaiah obtained from <a class="reference external" href="https://www.kaggle.com/bhararthshiviah/indian-startups-2021">Kaggle</a>.</p></li>
+<li><p>Data: India States spatial data - <a class="reference external" href="https://carto.com/help/working-with-data/attribution/">CARTO</a> obtained from <a class="reference external" href="https://un-mapped.carto.com/tables/states_india/public/map">un-mapped.carto.com</a></p></li>
+<li><p>Image: <a href="https://unsplash.com/@myhq?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">myHQ Workspaces</a> on <a href="https://unsplash.com/s/photos/india-startup?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p></li>
 </ul>
-</div>
-<div class="section" id="need-a-little-inspiration">
-<h2>Need a little inspiration?<a class="headerlink" href="#need-a-little-inspiration" title="Permalink to this headline">¶</a></h2>
-<p>Below is a <em><strong>very</strong></em> rough and quick version of the above activity. Only click to see if you need a little help.</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Hayley’s Fast Dash</p>
-<a class="reference internal image-reference" href="../_images/fast_dash.png"><img alt="404 image" src="../_images/fast_dash.png" style="width: 85%;" /></a>
-</div>
 </div>
 </div>
 
