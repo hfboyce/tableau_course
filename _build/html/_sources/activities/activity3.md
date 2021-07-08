@@ -2,7 +2,7 @@
 
 This exercise will be using the data named `indian_statups.csv` that I've provided for you at [this link from the google drive](https://drive.google.com/file/d/1zIwmqngMXQCy0ScS9VxXUdcl2TA0o-gG/view?usp=sharing). 
 
-This data was originally obtained from the [**India Startup - 2021**](https://www.kaggle.com/bhararthshiviah/indian-startups-2021?select=2021_registered_companies.csv) Kaggle dataset which has an[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. This means that I must give attribution to Bharath Shivaiah for the data and indicate the changes I have made. 
+This data was originally obtained from the [**India Startup - 2021**](https://www.kaggle.com/bhararthshiviah/indian-startups-2021?select=2021_registered_companies.csv) Kaggle dataset which has an [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. This means that I must give attribution to Bharath Shivaiah for the data and indicate the changes I have made. 
 
 I have wrangled the data, specifically the `state` columns so that any state codes have been converted to full state names and any misspellings have been fixed and added an additional `date` column.
 
