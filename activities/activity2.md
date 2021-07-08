@@ -62,11 +62,11 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 1\. Create a new Dashboard page.
 2\. Convert Dashboard **Size** to automatic.     
-3\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. I recommend to"fit the image"" to the outline.   
+3\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. I recommend to "fit the image" to the outline.   
 4\. Add the scatterplot,the heatmap and both of the histograms to your dashboard.
 5\. Create a sex filters for the scatterplot that is in the style of dropdown and you can select multiple categories.       
 - Adjust this filter so it works for all the plots.     
-6. Create a bodymass filter, that only works on the 2 histograms. 
+6\. Create a bodymass filter, that only works on the 2 histograms. 
 
 7\. Create a text box with your Dashboard title and have it "Float" over the image.    
 

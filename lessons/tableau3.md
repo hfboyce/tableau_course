@@ -592,7 +592,9 @@ This will give a little information about the column including if any null value
 <br>
 <br>
 
-Let's try it now for a continuous Measure - `Diameter. Bring the dropdown menu up by clicking and then again select **Describe...**. 
+Let's try it now for a continuous Measure - `Diameter`. Bring the dropdown menu up by clicking and then again select **Describe...**. 
+
+
 <img src="imgs/describe5.png"  width = "85%" alt="404 image" />
 
 <br>
