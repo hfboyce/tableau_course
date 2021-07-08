@@ -61,7 +61,8 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 5\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer. 
 
 
-## Exercise 4: Creating Dashboards  
+## Exercise 4: Creating Dashboards (Optional - Only complete if you've skipped ahead to Lesson 3)
+
 
 1\. Create a new Dashboard page.           
 2\. Convert Dashboard **Size** to automatic.                
