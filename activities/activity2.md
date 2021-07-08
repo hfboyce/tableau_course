@@ -16,20 +16,22 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 
 ## Exercise 2: Basic plots
 
-1\. Are there any columns that would be appropriate for a pie chart?      
-2\. Create a new worksheet and create a Stacked bar chart from the `Species` column.      
-3\. Is it easy to see the quantity value of each of the penguin species?     
-4\. Convert the stacked bar plot into a side-by-side bar plot.       
+1\. Are there any columns that would be appropriate for a pie chart?         
+2\. Create a new worksheet and create a Stacked bar chart from the `Species` column.          
+3\. Is it easy to see the quantity value of each of the penguin species?         
+4\. Convert the stacked bar plot into a side-by-side bar plot.           
 - Sort the bars in descending order 
 - Add a colour to each species if you want to. 
-5\. Open a new worksheet and create a scatterplot between the `Body Mass (g)` and `flipper Length` fields.        
+5\. Open a new worksheet and create a scatterplot between the `Body Mass (g)` and `flipper Length` fields.             
 - Change the mark style to a circle and decrease the point size. 
 - Add the species field to the colour channel.
 - What kind of relationship did you identify? 
-- Which penguin species tend to have the greatest flipper length?
-6\. Create a line graph that shows the number of egg clutches over the research period.  
+- Which penguin species tend to have the greatest flipper length?       
+
+6\. Create a line graph that shows the number of egg clutches over the research period.            
 - Does the field appear to have a cyclical component? If so, how long is 1 cycle approximately? 
-7\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer. 
+
+7\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer.        
 
 
 
@@ -55,20 +57,20 @@ Note: There are no "unique" Identifying columns in this dataframe, so when we ar
 - Which species is only inhabiting on a single island?
 - Add the count of the penguins as a label to each mark.
 - How many Gentoo penguins are on Biscoe island? 
+
 5\. Give all the plots that you made in this exercise appropriate titles and axis names. Change the colours to something you'd prefer. 
 
 
 ## Exercise 4: Creating Dashboards  
 
-1\. Create a new Dashboard page.
-2\. Convert Dashboard **Size** to automatic.     
-3\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. I recommend to "fit the image" to the outline.   
-4\. Add the scatterplot,the heatmap and both of the histograms to your dashboard.
-5\. Create a sex filters for the scatterplot that is in the style of dropdown and you can select multiple categories.       
-- Adjust this filter so it works for all the plots.     
-6\. Create a bodymass filter, that only works on the 2 histograms. 
+1\. Create a new Dashboard page.           
+2\. Convert Dashboard **Size** to automatic.                
+3\. From the google drive, download this       [image](https://drive.google.com/file/d/10JhxST9v0axsBmKJ4ZR64lVicv8XQyTN/view?usp=sharing) and add it to your dashboard. I recommend to "fit the image" to the outline.                 
+4\. Add the scatterplot,the heatmap and both of the histograms to your dashboard.                  
+5\. Create a sex filters for the scatterplot that is in the style of dropdown and you can select multiple categories.      - Adjust this filter so it works for all the plots.     
+6\. Create a bodymass filter, that only works on the 2 histograms.          
 
-7\. Create a text box with your Dashboard title and have it "Float" over the image.    
+7\. Create a text box with your Dashboard title and have it "Float" over the image.            
 
 
 
