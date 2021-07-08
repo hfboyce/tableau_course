@@ -48,7 +48,8 @@ This also means that for my adapted data, the Attribution-NonCommercial-ShareAli
 1\. Ask 2 questions you will want to attempt to answer using visualizations.     
 - Which of the 6 question types do your questions belong to?
 
-2\. Create 2 additional plots that answer your questions above. Remember these are not in the same explorative manner as you did earlier. That means you can recreate some of the plots above without the **Pages** tool or faceting. 
+2\. Create 2 additional plots that answer your questions above.     
+- Remember these are not in the same explorative manner as you did earlier. That means you can recreate some of the plots above without the **Pages** tool or faceting. 
 
 ## Exercise 4: Blending data
 
