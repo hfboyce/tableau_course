@@ -25,9 +25,9 @@ Details about class meetings will appear here as they become available.
 
 |  #   | Date - India (IST) | Date - Vancouver (PST) | Topic | Link |
 | :---: | :---: | :---: | :---: | :---:|
-| 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Lesson 1 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson1.html), [Lesson 1 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau1.html)|
-| 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Viz Types and the Tableau Dashboard  | [Lesson 2 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson2.html), [Lesson 2 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau2.html) | 
-| 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Exploratory Data Visualization, Asthetics and Trends | [Lesson 3 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson3.html), [Lesson 3 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau3.html) | 
+| 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Lesson 1 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson1.html),<br> [Lesson 1 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau1.html)|
+| 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Viz Types and the Tableau Dashboard  | [Lesson 2 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson2.html), <br> [Lesson 2 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau2.html) | 
+| 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Exploratory Data Visualization, Asthetics and Trends | [Lesson 3 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson3.html), <br> [Lesson 3 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau3.html) | 
 | 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  |  | 
 | 5 | Jul/23 9:00am - 11ish  |Jul/22 8:30-10:30PM  |  Dashboard Presentations | |
 
