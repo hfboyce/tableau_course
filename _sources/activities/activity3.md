@@ -55,8 +55,7 @@ This also means that for my adapted data, the Attribution-NonCommercial-ShareAli
 1\. Connect to a new data source.      
 - Load in the `states_india.geojson` *spatial file* that is located in the google drive [here](https://drive.google.com/file/d/1Mw9qKTDot-7ECGGNsWiWGPMR5_-Y65zW/view?usp=sharing). This is the geojson file needed to make the state boundaries of India. Note that this data was acquired from the [following source](https://un-mapped.carto.com/tables/states_india/public/map). 
 
-2\. Connect the two sources by the `State` filed in the `indian_startups` data and the `St Nm` column in the `States_india`.
-data source. 
+2\. Connect the two sources by the `State` filed in the `indian_startups` data and the `St Nm` column in the `States_india` data source.   
 - This will require you to **Edit Blend Relationship**. 
 
 
@@ -74,8 +73,9 @@ data source.
 3\. From the google drive, download this       [image](https://drive.google.com/file/d/1wLpQDBJZnuqXGeyMNOvjt7f6kn0r_ayB/view?usp=sharing) and add it to your dashboard. I recommend to "fit the image" to the outline.                 
 4\. Add a title for your dashboard using a text box.              
 5\. Add a selection of the plots you made above but make sure to include the Choropleth graph. Not all of them must be included.                 
-6\. Create 2 filters for any of the plots.              
-- Adjust these filters so it works for all the plots.                            
+6\. Create 2 filters for any of the plots.               
+- Adjust these filters so it works for all the plots.  
+
 7\. Use the Choropleth map as a filter so that the other plots are adjusted based on the state(s) selected.              
 - For this to work, the field (column) in both sources must be identical. 
 
