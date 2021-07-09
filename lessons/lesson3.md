@@ -173,7 +173,7 @@ Once you have done your EDA you can collect all the information and produce a re
 1. "What are the most common cancer diagnoses in the world?" is a type of which kind of question? 
 2. "Does sun exposure cause an increase in cancer diagnosis?" is a type of which kind of question? 
 3. "How does sun exposure lead to an increase in cancer diagnosis?" is a type of which kind of question? 
-4. "Does a certain individual have cancer?" is a type of which kind of question? 
+4. "Does a certain individual have cancer?" is a type of which kind of question?     
 5."Is there a relationship between the time exposed in the sun and cancer diagnosis in the Indian population?" is a type of which kind of question? 
 6. **True or False**: EDA visualizations are less concerned about plotting details such as axis labels and titles.
 7. Which of the following is not a part of EDA?   
