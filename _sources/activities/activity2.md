@@ -1,6 +1,7 @@
 #  Lesson 2: Plots and Dashboards 
 
-This exercise will require you to use the data named [penguins](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_lter.csv) that you can find on the google drive [here](https://drive.google.com/file/d/1-KHqO4AEbNmpudl0oW4MCgzYexTZO3MJ/view?usp=sharing). 
+This exercise will require you to use the data named [penguins](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_lter.csv) that you can find on the [google drive](https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV?usp=sharing) [here](https://drive.google.com/file/d/1L15RRtEmvPvggfLsWVXwpTZVSOWAOoNF/view?usp=sharing). 
+
 
 
 ## Exercise 1: Loading in the data
