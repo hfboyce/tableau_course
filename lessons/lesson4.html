@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. The Good, the Bad, and the Ugly &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson4.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Introduction to Tableau" href="tableau1.html" />
+    <link rel="prev" title="3. Asking Question and Exploring Your Data" href="lesson3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/lesson4.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="The Good, the Bad, and the Ugly" />
+<meta property="og:description" content="The Good, the Bad, and the Ugly  When it comes to Visualization for communication, this mean Dashboards and graphs that are created to inform others (Not the pl" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson2.html">
+   2. Visualization Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson3.html">
+   3. Asking Question and Exploring Your Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. The Good, the Bad, and the Ugly
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau2.html">
+   2. Plot Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau3.html">
+   3. Dashboards, EDA and Choropleths
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau4.html">
+   4. Choropleths, Formatting and Dashboard Extra’s
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity2.html">
+   Lesson 2: Plots and Dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity3.html">
+   Lesson 3: Dashboards and EDA
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/lesson4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/lesson4.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/lesson4.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#story-telling">
+   4.1. Story telling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#best-practices">
+   4.2. Best Practices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aspect-ratios">
+     4.2.1. Aspect ratios
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#avoid-misleading-axes">
+     4.2.2. Avoid Misleading Axes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are-gridlines-or-labels-necessary">
+     4.2.3. Are Gridlines or Labels Necessary?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-informative-titles">
+     4.2.4. Add Informative Titles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#highlight-whats-important">
+     4.2.5. Highlight What’s Important
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#don-t-use-many-channels-for-different-fields">
+     4.2.6. Don’t use Many Channels for Different Fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-colour-effectively">
+     4.2.7. Use Colour Effectively
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#categorical-use">
+       4.2.7.1. Categorical Use
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numeric-use">
+       4.2.7.2. Numeric Use
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-things-go-wrong">
+   4.3. Where Things Go Wrong
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-xiaomi-stacks-up-against-the-world-s-biggest-smartphone-makers">
+     4.3.1. How Xiaomi Stacks up Against the World’s Biggest Smartphone Makers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-crisis-of-faith-in-democracy-new-york-times">
+     4.3.2. A crisis of faith in democracy? (New York Times.)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nature-climate-change">
+     4.3.3. Nature Climate Change
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-science-ducks">
+   4.4. Data Science Ducks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ipad">
+     4.4.1. Ipad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-up-better-plots">
+   4.5. Make-up (better) Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pizza">
+   4.6. Pizza
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-game-of-good-or-evil">
+   4.7. A Game of Good or Evil
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-good-the-bad-and-the-ugly">
+<h1><span class="section-number">4. </span>The Good, the Bad, and the Ugly<a class="headerlink" href="#the-good-the-bad-and-the-ugly" title="Permalink to this headline">¶</a></h1>
+<p>When it comes to Visualization for communication, this mean Dashboards and graphs that are created to inform others (Not the plots you make in EDA), a large component involves art and design.</p>
+<p>We can communicate different agendas depending on how we visualize our data.</p>
+<p>For example, let’s look at this award winning visualization named <a class="reference external" href="https://www.scmp.com/infographics/article/1284683/iraqs-bloody-toll"><strong>“Iraq’s Bloody Toll”</strong></a> created in 2011 by Simon Scarr which appeared in the South China Morning Post.</p>
+<a class="reference internal image-reference" href="../_images/iraq1.png"><img alt="404 image" src="../_images/iraq1.png" style="width: 65%;" /></a>
+<p><a class="reference external" href="https://www.infoworld.com/article/3088166/why-how-to-lie-with-statistics-did-us-a-disservice.html">Source:infoworld.com</a></p>
+<p>This visualization communicates the number of deaths per month in Iraq from 2003 until the beginning of the US withdrawal of troops at the end of 2011.</p>
+<p>How does this plot communicate with you right off the bat?</p>
+<p>It is designed in such a way so that it ressembles dripping blood, with it’s downward facing bars and blood-red colour. This is to really relay the negative measurement of the data; the deaths in Iraq as indicated in the title.</p>
+<p>If we instead change the colour, orientation of the bars, and title, we have a different story now.</p>
+<a class="reference internal image-reference" href="../_images/iraq2.png"><img alt="404 image" src="../_images/iraq2.png" style="width: 65%;" /></a>
+<p><a class="reference external" href="https://www.infoworld.com/article/3088166/why-how-to-lie-with-statistics-did-us-a-disservice.html">Source:infoworld.com</a></p>
+<p>Instead of the horrible stastics of how the war caused an increase in death rates, we have a figure that communicates the decline of deaths in Iraq.</p>
+<p>The green colour is less jaring and negatively associated with.  The bars showing the decrease in count also shows a happy story along with the title.</p>
+<p>Both figures show the same data, neither are being deceptive but with 3 small differences they  communicate quite different messages.</p>
+<div class="section" id="story-telling">
+<h2><span class="section-number">4.1. </span>Story telling<a class="headerlink" href="#story-telling" title="Permalink to this headline">¶</a></h2>
+<p>The above example is a great way to show how design choices are so important in the story telling process.</p>
+<p>Just like visualizations, storytelling is crucial to communicating your insights to your audience.</p>
+<a class="reference internal image-reference" href="../_images/story.png"><img alt="404 image" src="../_images/story.png" style="width: 45%;" /></a>
+<p>Generally speaking the below points will aid in creating an effective and compelling story.</p>
+<ol class="simple">
+<li><p><strong>What question(s) are we going to attempt to answer?</strong>: It shouldn’t come to a surprise that this is one of our items. We learned this in the last lesson and it should make complete sense that we want to communicate this in our storytelling. We want the audience to know what it is they are going to learn while viewing your visualization(s)?</p></li>
+<li><p><strong>Peak your audience’s interest:</strong> We want to captivate our readers interest early on in a manner that will make them want to learn more and continue viewing. This can take place in a striking figure, a problem that demands a solution.</p></li>
+<li><p><strong>Present facts in an engaging way without hyperbole:</strong> Remember that the audience often remembers the story and not the data, and so this part is extremely important to create a long lasting impression. It is also important that although the story should be exciting, the root of our visualizations is data and so the story must be maintained in fact. We want clear and honest communication. The visualization and narration <strong>MUST</strong> be true to maintain the trust and credibility of our reports and organizations.</p></li>
+<li><p><strong>Tailor it to the audience you have in mind:</strong> Keep in line with whom you are speaking with. That means, using technical language and answering questions that is fitting to the respective readers or else it can be ineffective in both directions.</p></li>
+</ol>
+<p>For some amazing examples of data storytelling take a look at the following:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pudding.cool/2019/03/hype/">The pudding: How many high school stars make it in the NBA?</a></p></li>
+<li><p><a class="reference external" href="https://flowingdata.com/2021/06/08/seeing-how-much-we-ate-over-the-years/">Seeing How Much We Ate Over the Years By Nathan Yau</a></p></li>
+<li><p><a class="reference external" href="https://juiceboxdata.com/a/cicada_swarm_2021/#6d7sj43kQpv">Cicadas: A Data Story</a></p></li>
+</ul>
+</div>
+<div class="section" id="best-practices">
+<h2><span class="section-number">4.2. </span>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<p>This section will pin point a few beast practices to instill to avoid common pitfalls that occur, often without too much thought.</p>
+<div class="section" id="aspect-ratios">
+<h3><span class="section-number">4.2.1. </span>Aspect ratios<a class="headerlink" href="#aspect-ratios" title="Permalink to this headline">¶</a></h3>
+<p>Something as simple as a ratio can be problematic when communicating through graphs.
+It’s important that when you are placing worksheets on a dashboard, or simply creating a single visualization, you are representing it with a standard height and width. Aspect ratios can affect our perception of rates of change.</p>
+<p>Let’t take the following as an example.</p>
+<a class="reference internal image-reference" href="../_images/ratio.png"><img alt="404 image" src="../_images/ratio.png" style="width: 95%;" /></a>
+<p><a class="reference external" href="https://socviz.co/lookatdata.html#lookatdata">Source: socviz.co and William S. Cleveland</a></p>
+<p>The left most plot ahow a graph when the line appears to converge to infinity as x increases. However, looking further and re-adjusting to a wider plots corrects for this miscommunication and there no longer appears to be such convergeance.</p>
+</div>
+<div class="section" id="avoid-misleading-axes">
+<h3><span class="section-number">4.2.2. </span>Avoid Misleading Axes<a class="headerlink" href="#avoid-misleading-axes" title="Permalink to this headline">¶</a></h3>
+<p>Another poor way to communicate your data is breaking your axis or not showing the 0 mark where your data begins which leads to a deceptive difference in proportion.</p>
+<p>Generally speaking we like to make comparisons in the categories of our data and when we some axis techniques, this can make the difference between values of categories look much larger than they truly are.</p>
+<p>Let’s first see an an example of this when we break up the axis.</p>
+<a class="reference internal image-reference" href="../_images/broken_axis.png"><img alt="404 image" src="../_images/broken_axis.png" style="width: 95%;" /></a>
+<p>Source: <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module5">Joel Osblom - Data Visualization</a> originally from <a class="reference external" href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">The Economist</a></p>
+<p>The left plot shows the x axis broken up which results in the top bar measuring only 1.5 times that of the second bar which in reality the difference between the two is much more, 5 times as long in fact.</p>
+<p>The second plot correct this and it is clear the actual difference in value between the 2 categories.</p>
+<p>We’ve included this example which is from an article in The Economist where they identified mistakes they have made in their previous visualizations.</p>
+<p>This type of behaviour not only helps learn from their past mistakes but it also creates a transparency which causes the reader to trust the source more even though that have made errors in the past.</p>
+<p>Owning up to one’s mistakes is often looked at with respect instead of avoiding it pretending it didn’t happen.</p>
+<p>Let’s also look at an example where the axis of a bar chart does not begin at 0.</p>
+<a class="reference internal image-reference" href="../_images/callbs1.gif"><img alt="404 image" src="../_images/callbs1.gif" style="width: 85%;" /></a>
+<p>Source: <a class="reference external" href="https://www.callingbullshit.org/tools/tools_misleading_axes.html">Calling Bullshit</a></p>
+<p>Here we are comparing the average number of hours worked per week by different countries. Here it looks like Germany have quite a lead over Italy, France in Belgium.</p>
+<p>If we replot the data and include the 0 value, we can re-evalute and conclude that the difference between the countries we identified are not nearly as great as it originally appeared.</p>
+<a class="reference internal image-reference" href="../_images/callbs2.png"><img alt="404 image" src="../_images/callbs2.png" style="width: 75%;" /></a>
+<p>Source: <a class="reference external" href="https://www.callingbullshit.org/tools/tools_misleading_axes.html">Calling Bullshit</a></p>
+<p>It’s important to note that including the 0 value on axes is particularly agreed upon for bar plots but not agreed upon for other plot types. Often it could help you analysis to zoom into areas of interest in scatterplots or line plots, however other times it could be a method used to communicate one’s own agenda.</p>
+<p>For more discussion on this see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://stephanieevergreen.com/y-axis/">this article written by Dr. Stephanie Evergreen</a></p></li>
+<li><p><a class="reference external" href="https://youtu.be/9pNWVMxaFuM">This episode on the Calling Bullshit saga</a></p></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="are-gridlines-or-labels-necessary">
+<h3><span class="section-number">4.2.3. </span>Are Gridlines or Labels Necessary?<a class="headerlink" href="#are-gridlines-or-labels-necessary" title="Permalink to this headline">¶</a></h3>
+<p>This isn’t necessarily going to be a solid rule however it definitely warrants a discussion.</p>
+<p>Gridlines are heavily debated in the Data Visualization community and people dissagree on if they are needed at all.</p>
+<p>My take on this depends on what your question is and how you are trying to answer it.</p>
+<a class="reference internal image-reference" href="../_images/gridlines.png"><img alt="404 image" src="../_images/gridlines.png" style="width: 100%;" /></a>
+<p>In a lot of cases, gridlines can distract from the fundametable insight of the plot and it’s best to not to overuse them since instead of helping your plot, they can make it harder to read.</p>
+<p>Or if it’s necessary to know a specific value, it may be more appropriate to use a plot with labels and ignore gridlines (as seen in the middle plot). If the values are not necessary and only the comparison between the categories in a bar plot specifically, then omitting labels and gridlines may even be the most effective in this case.</p>
+</div>
+<div class="section" id="add-informative-titles">
+<h3><span class="section-number">4.2.4. </span>Add Informative Titles<a class="headerlink" href="#add-informative-titles" title="Permalink to this headline">¶</a></h3>
+<p>Readers often remember the story you are telling instead if the exact data and your plot’s title is a contributing factor.
+Chart titles frame the story in your data and thus it’s important not to simply title your plots with the metrics it’s plotting but with the insight you are trying to convey. This will make it more likely that the reader will retain the visualization’s goal.</p>
+<p>Take the below example.</p>
+<p>From this title alone, the reader will be able to know right away the point of the plot and no longer needs to decypher what the creators were trying to communicate, nor look elsewhere for the narration.It is immediately clear why this visualization has been created and the question it is answering.</p>
+<a class="reference internal image-reference" href="../_images/titlesc.png"><img alt="404 image" src="../_images/titlesc.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="highlight-whats-important">
+<h3><span class="section-number">4.2.5. </span>Highlight What’s Important<a class="headerlink" href="#highlight-whats-important" title="Permalink to this headline">¶</a></h3>
+<p>Although data visualization will present the data for the audience, sometimes we need an additional step to make it that much more obvious why the plot exists or what the key point of it is. Highlighting distracts the reader from the noise and “highlights” the important information in the plot and tell the desired story.</p>
+<p>The following example from <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module5">Data Visualization</a> shows how in this case we have ordinal data and are unable to sort like we would normally.
+Instead, we highlight the day of the week that has the highest donation amounts and add anotation to explain why this is occuring.</p>
+<a class="reference internal image-reference" href="../_images/highlight.png"><img alt="404 image" src="../_images/highlight.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="don-t-use-many-channels-for-different-fields">
+<h3><span class="section-number">4.2.6. </span>Don’t use Many Channels for Different Fields<a class="headerlink" href="#don-t-use-many-channels-for-different-fields" title="Permalink to this headline">¶</a></h3>
+<p>Adding several channels such as size, colour and position to a graph, can overwhelm the visualization and can frustrate or confuse the reader quickly.</p>
+<p>We’ve seen where we have used both colour and size for a single measure, however I’m speaking on giving several channels to many different measures.</p>
+<p>The example below show how hard it could potentially be to find data within a visualization.
+Here we can see how easily a data point is located when colour alone is used as a channel, however when we have size and colour finding specific data points within the data becomes much harder.</p>
+<a class="reference internal image-reference" href="../_images/channels.png"><img alt="404 image" src="../_images/channels.png" style="width: 100%;" /></a>
+<p>Source: <a class="reference external" href="https://socviz.co/lookatdata.html#lookatdata">socviz.co</a></p>
+<p>A more effective option would be to simple create a separate plot.</p>
+</div>
+<div class="section" id="use-colour-effectively">
+<h3><span class="section-number">4.2.7. </span>Use Colour Effectively<a class="headerlink" href="#use-colour-effectively" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="categorical-use">
+<h4><span class="section-number">4.2.7.1. </span>Categorical Use<a class="headerlink" href="#categorical-use" title="Permalink to this headline">¶</a></h4>
+<p>We discussed how using multiple channels for a single field can be helpful in comunicating especially if someone has a colour seeing deficiency but when position or size is being represented, having colour as a additional channel can be disorienting.</p>
+<a class="reference internal image-reference" href="../_images/colourc.png"><img alt="404 image" src="../_images/colourc.png" style="width: 85%;" /></a>
+<p>Source: <a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module5">Data Visualization</a></p>
+<p>In the case above, we see that if there are many bars or categories, the plot becomes much more confusing. Had this plot had fewer bar, the colour channel may have been better executed.</p>
+<p>Colour channels in general work better when there are less than 5-8 distinct categories.</p>
+<a class="reference internal image-reference" href="../_images/hue-guidelines.png"><img alt="404 image" src="../_images/hue-guidelines.png" style="width: 85%;" /></a>
+</div>
+<div class="section" id="numeric-use">
+<h4><span class="section-number">4.2.7.2. </span>Numeric Use<a class="headerlink" href="#numeric-use" title="Permalink to this headline">¶</a></h4>
+<p>Tableau gives several colour palettes to choose from with the option of making your own.</p>
+<a class="reference internal image-reference" href="../_images/palettes.png"><img alt="404 image" src="../_images/palettes.png" style="width: 25%;" /></a>
+<br>
+<br>
+<p>When it comes to numeric data, we will need a spectrum of colour to represent a field.</p>
+<p>Generally speaking we use a sequential colour spectrum with a single hue when communicating numeric data.</p>
+<a class="reference internal image-reference" href="../_images/sequential.png"><img alt="404 image" src="../_images/sequential.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Source: matplotlib.org</a></p>
+<p>Here we represented the temperature in both the y axis and the colour channel just to make our point more clear.</p>
+<a class="reference internal image-reference" href="../_images/sequentialplot.png"><img alt="404 image" src="../_images/sequentialplot.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module5">Source: Data Visualization</a></p>
+<p>General rule of thumb is to avoid a spectrum with too many colours as it can be unintuitive which colour is associated with each range of values.</p>
+<a class="reference internal image-reference" href="../_images/sequential2.png"><img alt="404 image" src="../_images/sequential2.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Source: matplotlib.org</a></p>
+<p>The exception is if a <strong>Diverging</strong> palette is used.</p>
+<a class="reference internal image-reference" href="../_images/diverging.png"><img alt="404 image" src="../_images/diverging.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Source: matplotlib.org</a></p>
+<p>Diverging colour schemes show 2 colours on opposite sides of a spectrum that converge to a critical point (or diverge from a center point to 2 separate colours). We use this type of scheme when the data has a natural midpoint (such as temperature or percentage).</p>
+<a class="reference internal image-reference" href="../_images/divergingplot.png"><img alt="404 image" src="../_images/divergingplot.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://viz-learn.mds.ubc.ca/en/module5">Source: Data Visualization</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="where-things-go-wrong">
+<h2><span class="section-number">4.3. </span>Where Things Go Wrong<a class="headerlink" href="#where-things-go-wrong" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at some examples of poorly constructed visualizations in the wild.</p>
+<div class="section" id="how-xiaomi-stacks-up-against-the-world-s-biggest-smartphone-makers">
+<h3><span class="section-number">4.3.1. </span>How Xiaomi Stacks up Against the World’s Biggest Smartphone Makers<a class="headerlink" href="#how-xiaomi-stacks-up-against-the-world-s-biggest-smartphone-makers" title="Permalink to this headline">¶</a></h3>
+<p>Here we have a visualization published by Forbes, generally a reputable source and yet here we can already see some clear problems.</p>
+<a class="reference internal image-reference" href="lessons/imgs/bad2.png"><img alt="404 image" src="lessons/imgs/bad2.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://www.forbes.com/sites/ywang/2017/08/08/xiaomi-is-once-again-worlds-biggest-smartphone-brand-but-could-it-go-further/?sh=45f0bb731691">Source</a></p>
+<p>The first thing I noticed was that although “Q2 China Market Share” and “Q2 Global Shipment (Millions)” are separate plots, I immediatly wanted to connect the two and got confused why the 13.00% orange bar was larger than the 21.2 orange bar. After further investigation I concluded that both bar charts have separate units and are plottin different things but the initial confusion was still there. We als have the broken bars in 2 locations which drastically misleads the public that there is less of a separation between the values then there really is!</p>
+</div>
+<div class="section" id="a-crisis-of-faith-in-democracy-new-york-times">
+<h3><span class="section-number">4.3.2. </span>A crisis of faith in democracy? (New York Times.)<a class="headerlink" href="#a-crisis-of-faith-in-democracy-new-york-times" title="Permalink to this headline">¶</a></h3>
+<p>At first glance this visualization doesn’t look too bad, but the problem with this visualization is in the way it was made from the given data upon further inspection.</p>
+<img src="imgs/divergingplot.png"  width = "85%" alt="404 image" />  
+[Source: Socviz.co](https://socviz.co/lookatdata.html#lookatdata)
+<p>First, the x-axis is representing people born in different periods of time and the graphs are not representing a time of measure. A line graph in this last is somewhat deceptive even if that wasn’t the intent.</p>
+<p>The data from this graph was collected by asking the respondents to rate the importance of living in a democracy from 1 to 10 with 1 being Not at all Important and 10 being Absolutely importance. This graph is only plotting the difference of respondants who votes 10. That being said people although they may not have rated it 10, most people still rated the importance of living in a democracy quite high.</p>
+<p>If instead we ploted the average rating over the different age generations, we still get a dowward trend but our scale on the y axis is not nearly as jarring as initially perceived.</p>
+</div>
+<div class="section" id="nature-climate-change">
+<h3><span class="section-number">4.3.3. </span>Nature Climate Change<a class="headerlink" href="#nature-climate-change" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/bad3.png"><img alt="404 image" src="../_images/bad3.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://getdolphins.com/blog/the-worst-graphs-of-2017/">Source: getdolphins.com</a></p>
+<p>Here we have an example where someone was attempting to visualize everything and the kitchen sink. Climate change is difficule to explain in the best of times, and so when someone attempts to explain as much as possible in a single graphic, it’s not surprising that it fails.</p>
+<p>We have a multiple colour channels, shapes and marks, 2 scales, labels and axes, multiple legends and a colour spectrum.</p>
+<p>I’m just putting this in here because you may feel like you are being clever at finding a way to put everything in a single figure, but if it’s this much effort, it’s going to be that much  effort to try and actually decypher the thing.</p>
+</div>
+</div>
+<div class="section" id="data-science-ducks">
+<h2><span class="section-number">4.4. </span>Data Science Ducks<a class="headerlink" href="#data-science-ducks" title="Permalink to this headline">¶</a></h2>
+<p>A duck is a data graphic that prioritizes style and design over information and substance. The term was coined by Edward Tufte who is a well known statistician currently working at Yale University.</p>
+<p>Generally speaking infographic style plots and graph or gimicky methods of communicating information in the form of graphs is what is described as a duck and in many cases does harm in the communication of the data.</p>
+<div class="section" id="ipad">
+<h3><span class="section-number">4.4.1. </span>Ipad<a class="headerlink" href="#ipad" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="lessons/imgs/duck1.png"><img alt="404 image" src="lessons/imgs/duck1.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://gizmodo.com/holy-f-ck-the-new-ipad-has-a-gigantic-70-percent-large-5893738">Source: gizmodo.com</a></p>
+<p>In 2011-2012, when Apple released a new version of it’s iPad, the website <a class="reference external" href="https://gizmodo.com/holy-f-ck-the-new-ipad-has-a-gigantic-70-percent-large-5893738">https://gizmodo.com</a> wrote an article on it’s new batter capacity with this visualization.</p>
+<p>It boast a 70% larger battery but there are multiple reasons this is a duck. First, although the battery is larger, the battery life remained unchanged and simply needed to increase for the larger screen and more demanding technical components.</p>
+<p>Secondly, the length and width of the battery on the left has been increased by 1.7 times which results in a 2.9 times increase in area!</p>
+<p>This is also an example of how using 2 channels (area and position) can be problematic for a single measure.</p>
+</div>
+</div>
+<div class="section" id="make-up-better-plots">
+<h2><span class="section-number">4.5. </span>Make-up (better) Plots<a class="headerlink" href="#make-up-better-plots" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://visual.ly/community/Infographics/health/secrets-beauty-products">Visual.ly</a>, a know infographics site produced this to explain cosmetic usage in different countries.</p>
+<a class="reference internal image-reference" href="lessons/imgs/duck3.png"><img alt="404 image" src="lessons/imgs/duck3.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://viz.wtf/post/127958690558/airbrushed-data">Source: viz.wtf</a></p>
+<p>Instead of providing clarity however, it’s clear that there determination to use cosmetic shapes proves to seriously compromise the graph. 17.9% is only slightly higher than 6.8% and 6.2,6.4 an d 6.8% all look the same height. Even if they has sorted the “bars” in ascending or descending order, there would still be so much wrong in this graph. xs</p>
+</div>
+<div class="section" id="pizza">
+<h2><span class="section-number">4.6. </span>Pizza<a class="headerlink" href="#pizza" title="Permalink to this headline">¶</a></h2>
+<p>Here, we have a in honesty a pretty typical and reoccuring culprit in data visualization.</p>
+<p>YouGov posted this visualization via twitter in March 2017 and the after math as as bad as you expect it to be.</p>
+<a class="reference internal image-reference" href="../_images/duck0.png"><img alt="404 image" src="../_images/duck0.png" style="width: 85%;" /></a>
+<p><a class="reference external" href="https://twitter.com/YouGov/status/838720989991223297">Source: YouGov</a></p>
+<p>YouGov describes itself as <em>“an international research data and analytics group.”</em> and considering their line of business you’d think that they would be more award of the problems in this plot.</p>
+<p>Right away we know the portions add up to far more than 100%, 485% in fact.</p>
+<p>This is an example where the designer wanted to utilize the pizza theme and design but sacrified any clarity or insight. A bar plot would have been a far superior plot type.</p>
+</div>
+<div class="section" id="a-game-of-good-or-evil">
+<h2><span class="section-number">4.7. </span>A Game of Good or Evil<a class="headerlink" href="#a-game-of-good-or-evil" title="Permalink to this headline">¶</a></h2>
+<p>Stocks Pick, which is better?</p>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. Descriptive
+2. Causal
+3. Mechanic
+4. Predictive
+5. Inferential
+6. True
+7. d)  Creating a predictive model from the data
+
+```
+-->
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. Descriptive
+2. Causal
+3. Mechanic
+4. Predictive
+5. Inferential
+6. True
+7. d)  Creating a predictive model from the data
+
+```
+-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lesson3.html" title="previous page"><span class="section-number">3. </span>Asking Question and Exploring Your Data</a>
+    <a class='right-next' id="next-link" href="tableau1.html" title="next page"><span class="section-number">1. </span>Introduction to Tableau</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

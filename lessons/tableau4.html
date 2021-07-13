@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Who: Hayley Boyce &#8212; Data Visualization with Tableau</title>
+    <title>4. Choropleths, Formatting and Dashboard Extra’s &#8212; Data Visualization with Tableau</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -52,22 +52,22 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/things_to_know/who.html" />
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau4.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="What: Learning Outcomes" href="what.html" />
-    <link rel="prev" title="Learning Data Visualization with Tableau" href="../intro.html" />
+    <link rel="next" title="Lesson 1: Making Your First Viz" href="../activities/activity1.html" />
+    <link rel="prev" title="3. Dashboards, EDA and Choropleths" href="tableau3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/things_to_know/who.html" />
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau4.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Who: Hayley Boyce" />
-<meta property="og:description" content="Who: Hayley Boyce  Hi! My name is Hayley.    Welcome to Data Visualization with Tableau. Let me introduce myself a little.  I have a bachelor’s degree in Applie" />
+<meta property="og:title"       content="Choropleths, Formatting and Dashboard Extra’s" />
+<meta property="og:description" content="Choropleths, Formatting and Dashboard Extra’s  Making a Choropleth Map  Let’s try to create another map but this time let’s try and answer how many trees there " />
 <meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -101,14 +101,14 @@
   Things to Know
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
    Who: Hayley Boyce
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="what.html">
+  <a class="reference internal" href="../things_to_know/what.html">
    What: Learning Outcomes
   </a>
  </li>
@@ -120,22 +120,22 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/lesson1.html">
+  <a class="reference internal" href="lesson1.html">
    1. Visualization Importance
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/lesson2.html">
+  <a class="reference internal" href="lesson2.html">
    2. Visualization Types
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/lesson3.html">
+  <a class="reference internal" href="lesson3.html">
    3. Asking Question and Exploring Your Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/lesson4.html">
+  <a class="reference internal" href="lesson4.html">
    4. The Good, the Bad, and the Ugly
   </a>
  </li>
@@ -145,24 +145,24 @@
   Lessons - Tableau
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/tableau1.html">
+  <a class="reference internal" href="tableau1.html">
    1. Introduction to Tableau
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/tableau2.html">
+  <a class="reference internal" href="tableau2.html">
    2. Plot Types
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/tableau3.html">
+  <a class="reference internal" href="tableau3.html">
    3. Dashboards, EDA and Choropleths
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lessons/tableau4.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    4. Choropleths, Formatting and Dashboard Extra’s
   </a>
  </li>
@@ -196,7 +196,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="attribution.html">
+  <a class="reference internal" href="../things_to_know/attribution.html">
    Attribution
   </a>
  </li>
@@ -240,7 +240,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/things_to_know/who.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/lessons/tableau4.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -260,10 +260,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Fthings_to_know/who.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/tableau4.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/things_to_know/who.md"><button
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/tableau4.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -289,8 +289,33 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-bit-about-my-teaching-philosophy">
-   A bit about my Teaching Philosophy:
+  <a class="reference internal nav-link" href="#making-a-choropleth-map">
+   4.1. Making a Choropleth Map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculations-functions">
+   4.2. Calculations Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   4.3. Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groups">
+   4.4. Groups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-title-axis-charts-and-dashboard">
+   4.5. Formatting title, Axis, Charts and Dashboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dashboard-extras">
+   4.6. Dashboard Extras
   </a>
  </li>
 </ul>
@@ -305,24 +330,91 @@
         
               <div>
                 
-  <div class="section" id="who-hayley-boyce">
-<h1>Who: Hayley Boyce<a class="headerlink" href="#who-hayley-boyce" title="Permalink to this headline">¶</a></h1>
-<p>Hi! My name is Hayley.</p>
-<p><img alt="" src="../_images/hi.png" /></p>
-<p>Welcome to Data Visualization with Tableau. Let me introduce myself a little.</p>
-<p>I have a bachelor’s degree in Applied Mathematics and Economics from the University of Western Ontario and a Master’s degree in Data Science from the University of British Columbia. For the last year and a half I have developed online courses for the Key Capabilities in Data Science program from UBC’s Extended Learning, Lab instructed for the Master of Data Science program, contributed to an online course framework, created a Tableau seminar-workshop, and taught a Machine learning course for UBC’s Sauder School of Business.</p>
-<p>I have worked with companies like Riversol Skincare and Freshprep making visualization and prediction tools.</p>
-<p>For this course, I plan to not only teach you how to use Tableau but also how to create effective visualizations using well-known theories.</p>
-<p>Each class will have 3 parts:</p>
+  <div class="section" id="choropleths-formatting-and-dashboard-extra-s">
+<h1><span class="section-number">4. </span>Choropleths, Formatting and Dashboard Extra’s<a class="headerlink" href="#choropleths-formatting-and-dashboard-extra-s" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="making-a-choropleth-map">
+<h2><span class="section-number">4.1. </span>Making a Choropleth Map<a class="headerlink" href="#making-a-choropleth-map" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try to create another map but this time let’s try and answer how many trees there are in each Vancouver neighbourhood. We can visualize this by using a choropleth map.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Locate yourself to the spatial dataset that we connected to the Data Source  <code class="docutils literal notranslate"><span class="pre">local-area-boundary.geojson</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/choro1.png"><img alt="404 image" src="../_images/choro1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag the Geometry Dimension to the <strong>Details</strong> icon in our <strong>Marks</strong> card.</p>
+<a class="reference internal image-reference" href="../_images/choro2.png"><img alt="404 image" src="../_images/choro2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Right away, a map with all our neighbourhoods will be visible. Tableau is using <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> fields created from this <code class="docutils literal notranslate"><span class="pre">geojson</span></code> file to create a map this time.</p>
+<a class="reference internal image-reference" href="../_images/choro3.png"><img alt="404 image" src="../_images/choro3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Now let’s use our <code class="docutils literal notranslate"><span class="pre">street-trees</span></code> data to count the number of trees in each neighbourhood. From the <strong>Data</strong> tab, navigate yourself to the <code class="docutils literal notranslate"><span class="pre">street-trees</span></code> data source.</p>
+<a class="reference internal image-reference" href="../_images/choro4.png"><img alt="404 image" src="../_images/choro4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the colour icon in the <strong>Marks</strong> card so that we can use a colour channel to communicate the number of trees.</p>
+<a class="reference internal image-reference" href="../_images/choro5.png"><img alt="404 image" src="../_images/choro5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This may generate a popup winder informing us that we need to add a relationship to our primary data source.</p>
+<a class="reference internal image-reference" href="../_images/choro6.png"><img alt="404 image" src="../_images/choro6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We can blend the data sources now by clicking the chains next to the <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field so that they turn red and now link the 2 sources.</p>
+<a class="reference internal image-reference" href="../_images/choro7.png"><img alt="404 image" src="../_images/choro7.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<p>5. Once the 2 sources are blended and there is a red chain icon next to our <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field, we can convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field from our colour channel and convert it to a <strong>Count Measure</strong> by clicking it and selecting <strong>Measure</strong> followed by <strong>Count</strong> from the dropdown menu.</p>
+<a class="reference internal image-reference" href="../_images/choro8.png"><img alt="404 image" src="../_images/choro8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We are still not quite at a choropleth map; we need one more thing!</p>
+<a class="reference internal image-reference" href="../_images/choro9.png"><img alt="404 image" src="../_images/choro9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. Drag the <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field from the primary source (the source we did not use the latitude and longitude fiends to make the map from) to the <strong>Details</strong> field in the <strong>Marks</strong> card.</p>
+<a class="reference internal image-reference" href="../_images/choro10.png"><img alt="404 image" src="../_images/choro10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Ahhh! How we have a choropleth map!</p>
+<a class="reference internal image-reference" href="../_images/choro11.png"><img alt="404 image" src="../_images/choro11.png" style="width: 85%;" /></a>
+<p>7. If when we hover over the map, it shows us the number of trees in each neighbourhood!</p>
+<a class="reference internal image-reference" href="../_images/choro13.png"><img alt="404 image" src="../_images/choro13.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Easy Peasy right?!</p>
+</div>
+<div class="section" id="calculations-functions">
+<h2><span class="section-number">4.2. </span>Calculations Functions<a class="headerlink" href="#calculations-functions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Theory section on how to create <strong>effective</strong> visualization</p></li>
-<li><p>Tableau section on how to use it</p></li>
-<li><p>Exercise to apply your skills</p></li>
+<li><p>lists</p></li>
+<li><p>LOD ?</p></li>
 </ul>
-<div class="section" id="a-bit-about-my-teaching-philosophy">
-<h2>A bit about my Teaching Philosophy:<a class="headerlink" href="#a-bit-about-my-teaching-philosophy" title="Permalink to this headline">¶</a></h2>
-<p>Teaching professionally for the last 2 year and working as a tutor for over 8 years, I have learned that although not all student learns in the same way, there are common approaches that can be adopted so that all they not only persevere with what they are expected to learn but also somewhat, enjoy it.</p>
-<p>Bluntly and ineloquently, the most important approach I take to all my teaching is to keep things fun. Learning can be extremely stressful and not all topics appeal to each student. I like to put in a considerable amount of effort so that my lectures or assignment questions are relatable or attractive in some way. This mostly means that I like to keep my notes and style light. It’s important not to mistaken this strategy with lack of professionalism. I believe that having fun lectures and being professional are <strong>NOT</strong> mutually exclusive.</p>
+</div>
+<div class="section" id="sets">
+<h2><span class="section-number">4.3. </span>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="groups">
+<h2><span class="section-number">4.4. </span>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="formatting-title-axis-charts-and-dashboard">
+<h2><span class="section-number">4.5. </span>Formatting title, Axis, Charts and Dashboard<a class="headerlink" href="#formatting-title-axis-charts-and-dashboard" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Gridlines
+-Dashboard font</p></li>
+<li><p>Selectively highlight and annotate data with color and text</p></li>
+</ul>
+</div>
+<div class="section" id="dashboard-extras">
+<h2><span class="section-number">4.6. </span>Dashboard Extras<a class="headerlink" href="#dashboard-extras" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Tooltip</p></li>
+<li><p>Shapes</p></li>
+<li><p>Clicks and hovers</p></li>
+</ul>
 </div>
 </div>
 
@@ -339,7 +431,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./things_to_know"
+            path: "./lessons"
         },
         predefinedOutput: true
     }
@@ -351,8 +443,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Learning Data Visualization with Tableau</a>
-    <a class='right-next' id="next-link" href="what.html" title="next page">What: Learning Outcomes</a>
+    <a class='left-prev' id="prev-link" href="tableau3.html" title="previous page"><span class="section-number">3. </span>Dashboards, EDA and Choropleths</a>
+    <a class='right-next' id="next-link" href="../activities/activity1.html" title="next page">Lesson 1: Making Your First Viz</a>
 
         </div>
         
