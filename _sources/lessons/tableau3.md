@@ -1,4 +1,4 @@
-# Dashboards, EDA and Choropleths
+# Dashboards, EDA and Blending Data Sources
 
 ## Dashboards
 
@@ -482,7 +482,7 @@ You'll also be able to publish your work on [Tableau Public](https://help.tablea
 5. Which layout type is recommended when choosing **Automatic** as a Dashboard size?
 6. **True or False:** You can only have 1 dashboard tab for each file. 
 
-<!--
+
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -494,7 +494,6 @@ You'll also be able to publish your work on [Tableau Public](https://help.tablea
 6. False
 
 ```
--->
 
 
 ## EDA 

@@ -59,10 +59,12 @@ By the end of the lesson, learners are expected to be able to:
 1. Create a choropleth graph.
 1. Recognize best practices in visualization design.
 1. Adjust titles, axes and background plot formatting.
-1. Modify titles of figures.
 1. Choose appropriate color schemes for different visualizations.
 1. Use Tableau and custom color schemes.
-1. Create shapes in Tableau. 
-1. Selectively highlight and annotate data with color and text.
+1. Creates groups and sets from existing fields. 
+1. Create a Tableau story. 
 1. Craft engaging narratives for your visualizations.
-1. Use advanced Tableau Techniques to amplify your dashboards. 
+1. Edit, format and add tooltips to existing worksheets.
+1. Create shapes in Tableau. (if time) 
+
+
