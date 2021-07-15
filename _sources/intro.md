@@ -28,8 +28,7 @@ Details about class meetings will appear here as they become available.
 | 1  | Jun/25 9:00am - 11ish  |June 24th 8:30-10:30PM  | Introduction to Tableau and Visualization Importance | [Lesson 1 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson1.html),<br> [Lesson 1 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau1.html)|
 | 2 | Jul/02 9:00am - 11ish  |Jul/01 8:30-10:30PM  | Visualization Types and How to Create them in Tableau | [Lesson 2 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson2.html), <br> [Lesson 2 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau2.html) | 
 | 3 | Jul/09 9:00am - 11ish  |Jul/08 8:30-10:30PM  |  Dashboards and Exploratory Data Visualization | [Lesson 3 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson3.html), <br> [Lesson 3 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau3.html) | 
-| 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  |  | 
-| 5 | Jul/23 9:00am - 11ish  |Jul/22 8:30-10:30PM  |  Dashboard Presentations | |
+| 4 | Jul/16 9:00am - 11ish  |Jul/15 8:30-10:30PM  |  Good vs Evil, Tableau Stories and Extras  | [Lesson 4 - Theory](https://hfboyce.github.io/tableau_course/lessons/lesson4.html), <br> [Lesson 4 - Tableau](https://hfboyce.github.io/tableau_course/lessons/tableau4.html)  | 
 
 
 ## Data
@@ -132,7 +131,6 @@ Any data that I'll be using will be available in the data file [here](https://dr
 - Dashboard practice
 - Facetting
 - Calculations (briefly)
-- Chloropleth
 - Combine 2 dataframes
 
 ### Lesson 4 - Good vs Evil, Tableau Stories and Extras
@@ -147,9 +145,13 @@ Any data that I'll be using will be available in the data file [here](https://dr
 
 #### Tableau Applications 
 
+- Chloropleth
+- Calculation function
+- Sets
+- Groups
 - Tooltip
-- sets, slicing
-- Formatting
+- Formatting Axes, Gridlines
+- Stories
 
 If time:
 
@@ -161,14 +163,8 @@ If time:
 
 
 #### Exercise 
+- EDA
+- Story telling 
 - Add a hover to your dashboard
-- Create a palette 
-- Use an additional extension 
 - Create a tableau story 
 
-Next class, take any dataset, make a mini dashboard (What is your question?) then present it in the next class. 
-
-### Lesson 5 - Dashboard Presentations
-
-- Present your dashboards.
-- As a group discuss how each dashboard is effective and contribute potential ideas to enhance them.  
