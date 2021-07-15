@@ -1,0 +1,1037 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Choropleths, Formatting, Stories and Dashboard Extras &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau4.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson 1: Making Your First Viz" href="../activities/activity1.html" />
+    <link rel="prev" title="3. Dashboards, EDA and Blending Data Sources" href="tableau3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/lessons/tableau4.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Choropleths, Formatting, Stories and Dashboard Extras" />
+<meta property="og:description" content="Choropleths, Formatting, Stories and Dashboard Extras  Making a Choropleth Map  Let’s try to create another map but this time let’s try and answer how many tree" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson2.html">
+   2. Visualization Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson3.html">
+   3. Asking Question and Exploring Your Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson4.html">
+   4. The Good, the Bad, and the Ugly
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau2.html">
+   2. Plot Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tableau3.html">
+   3. Dashboards, EDA and Blending Data Sources
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Choropleths, Formatting, Stories and Dashboard Extras
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity2.html">
+   Lesson 2: Plots and Dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity3.html">
+   Lesson 3: Dashboards and EDA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/activity4.html">
+   Lesson 4: Bringing it all together
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/lessons/tableau4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Flessons/tableau4.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/lessons/tableau4.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-a-choropleth-map">
+   4.1. Making a Choropleth Map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculations-functions">
+   4.2. Calculations Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple">
+     4.2.1. Simple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometric-functions">
+     4.2.2. Geometric Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-and-conditional">
+     4.2.3. Logical and Conditional
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregate-functions">
+     4.2.4. Aggregate Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-functions">
+     4.2.5. String Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#level-of-detail-functions">
+   4.3. Level of Detail Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groups">
+   4.4. Groups
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sets">
+   4.5. Sets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-titles-axes-gridlines-and-charts">
+   4.6. Formatting Titles, Axes, Gridlines and Charts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fonts">
+     4.6.1. Fonts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shading">
+     4.6.2. Shading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gridlines">
+     4.6.3. Gridlines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stories">
+   4.7. Stories
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#story-workspace">
+     4.7.1. Story Workspace
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-story-tutorial">
+     4.7.2. Quick Story Tutorial
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-tooltip-feature">
+   4.8. The Tooltip Feature
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-quiz">
+   4.9. Quick Quiz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-time-shapes-demo">
+   4.10. (If time) Shapes Demo
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="choropleths-formatting-stories-and-dashboard-extras">
+<h1><span class="section-number">4. </span>Choropleths, Formatting, Stories and Dashboard Extras<a class="headerlink" href="#choropleths-formatting-stories-and-dashboard-extras" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="making-a-choropleth-map">
+<h2><span class="section-number">4.1. </span>Making a Choropleth Map<a class="headerlink" href="#making-a-choropleth-map" title="Permalink to this headline">¶</a></h2>
+<p>Let’s try to create another map but this time let’s try and answer how many trees there are in each Vancouver neighbourhood. We can visualize this by using a choropleth map.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Locate yourself to the spatial dataset that we connected to the Data Source  <code class="docutils literal notranslate"><span class="pre">local-area-boundary.geojson</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/choro1.png"><img alt="404 image" src="../_images/choro1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Drag the Geometry Dimension to the <strong>Details</strong> icon in our <strong>Marks</strong> card.</p>
+<a class="reference internal image-reference" href="../_images/choro2.png"><img alt="404 image" src="../_images/choro2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Right away, a map with all our neighbourhoods will be visible. Tableau is using <code class="docutils literal notranslate"><span class="pre">Latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">Longitude</span></code> fields created from this <code class="docutils literal notranslate"><span class="pre">geojson</span></code> file to create a map this time.</p>
+<a class="reference internal image-reference" href="../_images/choro3.png"><img alt="404 image" src="../_images/choro3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Now let’s use our <code class="docutils literal notranslate"><span class="pre">street-trees</span></code> data to count the number of trees in each neighbourhood. From the <strong>Data</strong> tab, navigate yourself to the <code class="docutils literal notranslate"><span class="pre">street-trees</span></code> data source.</p>
+<a class="reference internal image-reference" href="../_images/choro4.png"><img alt="404 image" src="../_images/choro4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Drag the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field to the colour icon in the <strong>Marks</strong> card so that we can use a colour channel to communicate the number of trees.</p>
+<a class="reference internal image-reference" href="../_images/choro5.png"><img alt="404 image" src="../_images/choro5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This may generate a popup winder informing us that we need to add a relationship to our primary data source.</p>
+<a class="reference internal image-reference" href="../_images/choro6.png"><img alt="404 image" src="../_images/choro6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We can blend the data sources now by clicking the chains next to the <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field so that they turn red and now link the 2 sources.</p>
+<a class="reference internal image-reference" href="../_images/choro7.png"><img alt="404 image" src="../_images/choro7.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<p>5. Once the 2 sources are blended and there is a red chain icon next to our <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field, we can convert the <code class="docutils literal notranslate"><span class="pre">Tree</span> <span class="pre">Id</span></code> field from our colour channel and convert it to a <strong>Count Measure</strong> by clicking it and selecting <strong>Measure</strong> followed by <strong>Count</strong> from the dropdown menu.</p>
+<a class="reference internal image-reference" href="../_images/choro8.png"><img alt="404 image" src="../_images/choro8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We are still not quite at a choropleth map; we need one more thing!</p>
+<a class="reference internal image-reference" href="../_images/choro9.png"><img alt="404 image" src="../_images/choro9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. Drag the <code class="docutils literal notranslate"><span class="pre">Neighbourhood</span> <span class="pre">Name</span></code> field from the primary source (the source we did not use the latitude and longitude fiends to make the map from) to the <strong>Details</strong> field in the <strong>Marks</strong> card.</p>
+<a class="reference internal image-reference" href="../_images/choro10.png"><img alt="404 image" src="../_images/choro10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Ahhh! Now we have a choropleth map!</p>
+<a class="reference internal image-reference" href="../_images/choro11.png"><img alt="404 image" src="../_images/choro11.png" style="width: 85%;" /></a>
+<p>7. If when we hover over the map, it shows us the number of trees in each neighbourhood!</p>
+<a class="reference internal image-reference" href="../_images/choro13.png"><img alt="404 image" src="../_images/choro13.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Easy Peasy right?!</p>
+</div>
+<div class="section" id="calculations-functions">
+<h2><span class="section-number">4.2. </span>Calculations Functions<a class="headerlink" href="#calculations-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple">
+<h3><span class="section-number">4.2.1. </span>Simple<a class="headerlink" href="#simple" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Function</p></th>
+<th class="text-align:left head"><p>How to call it</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Absolute value</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ABS(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Ceiling</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">CEILING(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Floor</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">FLOOR(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Log</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">LOG(number</span> <span class="pre">[,</span> <span class="pre">base])</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Max</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">MAX(number,</span> <span class="pre">number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Min</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">MIN(number,</span> <span class="pre">number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Power</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">POWER(number,</span> <span class="pre">power)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Round</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ROUND(number,</span> <span class="pre">[decimals])</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Sign</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">SIGN(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Square root</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">SQRT(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Square</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">SQUARE(number)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="geometric-functions">
+<h3><span class="section-number">4.2.2. </span>Geometric Functions<a class="headerlink" href="#geometric-functions" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Function</p></th>
+<th class="text-align:left head"><p>How to call it</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Arc Cosine</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ACOS(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Cosine</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">COS(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Arc Sine</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ASIN(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Sine</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">Sine(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Arc Tangent</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ATAN(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Tangent</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">TAN(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Cotangent</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">COT(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Degrees</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">DEGREES(number)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Radians</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">RADIANS(number)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>pi</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">PI()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="logical-and-conditional">
+<h3><span class="section-number">4.2.3. </span>Logical and Conditional<a class="headerlink" href="#logical-and-conditional" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Function</p></th>
+<th class="text-align:left head"><p>How to call it</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>In</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">&lt;expr1&gt;</span> <span class="pre">IN</span> <span class="pre">&lt;expr2&gt;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Else</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">IF</span> <span class="pre">&lt;expr&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;then&gt;</span> <span class="pre">ELSE</span> <span class="pre">&lt;else&gt;</span> <span class="pre">END</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Else if</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">	IF</span> <span class="pre">&lt;expr&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;then&gt;</span> <span class="pre">[ELSEIF</span> <span class="pre">&lt;expr2&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;then2&gt;...]</span> <span class="pre">[ELSE</span> <span class="pre">&lt;else&gt;]</span> <span class="pre">END</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>And</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">IF</span> <span class="pre">&lt;expr1&gt;</span> <span class="pre">AND</span> <span class="pre">&lt;expr2&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;then&gt;</span> <span class="pre">END</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Case</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">CASE</span> <span class="pre">&lt;expression&gt;</span> <span class="pre">WHEN</span> <span class="pre">&lt;value1&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;return1&gt;</span> <span class="pre">WHEN</span> <span class="pre">&lt;value2&gt;</span> <span class="pre">THEN</span> <span class="pre">&lt;return2&gt;</span> <span class="pre">...</span> <span class="pre">ELSE</span> <span class="pre">&lt;default</span> <span class="pre">return&gt;</span> <span class="pre">END</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="aggregate-functions">
+<h3><span class="section-number">4.2.4. </span>Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Function</p></th>
+<th class="text-align:left head"><p>How to call it</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Standard Deviation</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">STDEV(expression)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Median</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">MEDIAN(expression)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Pearson correlation</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">CORR(expression</span> <span class="pre">1,</span> <span class="pre">expression2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Variance</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">VAR(expression)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="string-functions">
+<h3><span class="section-number">4.2.5. </span>String Functions<a class="headerlink" href="#string-functions" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Function</p></th>
+<th class="text-align:left head"><p>How to call it</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Contains</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">CONTAINS(string,</span> <span class="pre">substring)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Ends with</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ENDSWITH(string,</span> <span class="pre">substring)</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Lower</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">LOWER(string)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Replace</p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">REPLACE(string,</span> <span class="pre">substring,</span> <span class="pre">replacement)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>All functions, by category, can be found <a class="reference external" href="https://help.tableau.com/current/pro/desktop/en-us/functions_all_categories.htm">here</a>.</p>
+</div>
+</div>
+<div class="section" id="level-of-detail-functions">
+<h2><span class="section-number">4.3. </span>Level of Detail Functions<a class="headerlink" href="#level-of-detail-functions" title="Permalink to this headline">¶</a></h2>
+<p>LOD functions allow further control or granularity of your calculations, for example, the ability to obtain the total sales per customer which will then allow you to calculate the average amount a customer spends in different regions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">INCLUDE</span> <span class="pre">[Customer</span> <span class="pre">Name]</span> <span class="pre">:</span> <span class="pre">SUM([Sales])</span> <span class="pre">}</span></code></p>
+<p>This is a more advanced technique and will likely be covered in future classes (without me), however <a class="reference external" href="https://help.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_lod.htm#INCLUDE">here is a great resource</a> that explained how to create them in more detail.</p>
+</div>
+<div class="section" id="groups">
+<h2><span class="section-number">4.4. </span>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h2>
+<p>To group something you are creating a higher category of a subset.</p>
+<p>You are grouping members from a single dimension. Perhaps our Genus category could be grouped further.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Let’s first see how many different tree genera there are. We can go a step further and group these genera into a family.</p>
+<a class="reference internal image-reference" href="../_images/groups0.png"><img alt="404 image" src="../_images/groups0.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. Let’s right-click on <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code> and <strong>Create</strong> <strong>Group…</strong> by diving into the drop-down sections.</p>
+<a class="reference internal image-reference" href="../_images/groups1.png"><img alt="404 image" src="../_images/groups1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will generate a popup.</p>
+<a class="reference internal image-reference" href="../_images/groups3.png"><img alt="404 image" src="../_images/groups3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Let’s add the following Genus names together (holding down the <strong>command</strong> button on a mac to select multiple):</p>
+<ul class="simple">
+<li><p>Abies</p></li>
+<li><p>Cedrus</p></li>
+<li><p>Larix</p></li>
+<li><p>Picea</p></li>
+<li><p>Pinus</p></li>
+<li><p>Pseudotsuga</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/groups4.png"><img alt="404 image" src="../_images/groups4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>You’ll want to click the <strong>Group</strong> button to combine them. You will be able to edit this group and add more by selecting a genus name and selecting the desired group under the <strong>Add to</strong> dropdown on the upper right side of the popup.</p>
+<p>4. Rename this group, “Pine” so it’s obvious to us what tree family it is.</p>
+<a class="reference internal image-reference" href="../_images/groups5.png"><img alt="404 image" src="../_images/groups5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. Let’s make a second “Birch” tree group.</p>
+<p>Select the following and then use the <strong>Group</strong> button to combine them in a group.</p>
+<ul class="simple">
+<li><p>Alnus</p></li>
+<li><p>Betula</p></li>
+<li><p>Carpinus</p></li>
+<li><p>Corylus</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/groups6.png"><img alt="404 image" src="../_images/groups6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Let’s then rename this group “Birch”.</p>
+<a class="reference internal image-reference" href="../_images/groups7.png"><img alt="404 image" src="../_images/groups7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. Since I don’t have time to make several families, I’m going to include an “Other” group by ticking the <strong>Include ‘Other’</strong> option. This will make a group for all the remaining genus not already assigned.</p>
+<a class="reference internal image-reference" href="../_images/groups8.png"><img alt="404 image" src="../_images/groups8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. If we inspect this new field, we can see our 3 groups!</p>
+<a class="reference internal image-reference" href="../_images/groups9.png"><img alt="404 image" src="../_images/groups9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>8. If we make a bar chart with this new field, you can see that most of our tree observations are in the “Other” category. (Remember this is the total trees not the number of genera in the group)</p>
+<a class="reference internal image-reference" href="../_images/groups10.png"><img alt="404 image" src="../_images/groups10.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="sets">
+<h2><span class="section-number">4.5. </span>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<p>Many often get confused between the sets and group options offered by Tableau.
+<a class="reference external" href="https://www.linkedin.com/pulse/war-between-tableaus-groups-vs-sets-tyler-lubben-mba/">Tyler Lubben, MBA</a> explains it in the following manner:</p>
+<blockquote>
+<div><p>“<em>Grouping in Tableau is grouping multiple members in a SINGLE dimension into a higher category and creating a set is grouping members from MULTI dimensions and/or condition into a dynamic or constant group. So, sets are just a more complex and dynamic grouping</em>”</p>
+</div></blockquote>
+<p>We can make sets using multiple conditions on multiple fields but for our example, we are going to show a simplified way of using sets by segregating the 10 most occurring tree genera in our dataset by the number of observations. This is a dynamic field, meaning if we update our data, this field will update also.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Just like we started making groups, right-click on the <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code> and under the <strong>Create</strong> Option select <strong>Set..</strong></p>
+<a class="reference internal image-reference" href="../_images/sets1.png"><img alt="404 image" src="../_images/sets1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. This will generate another popup window where we want to name our new field -&gt; “Top 10 Genus” and then switch to the <strong>Top</strong> tab.</p>
+<a class="reference internal image-reference" href="../_images/sets2.png"><img alt="404 image" src="../_images/sets2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Here we select the <strong>By field</strong> option and specify <strong>Top 10</strong> by <strong><code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code></strong>   and aggregate by <strong>Count</strong>. We finalize everything by clicking <strong>OK</strong>.</p>
+<a class="reference internal image-reference" href="../_images/sets3.png"><img alt="404 image" src="../_images/sets3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. Let’s take a look at what happened. Drag the new field <strong>Top 10 Genus</strong> to the <strong>Rows</strong> shelf. This doesn’t show the categories but that there are members either in the set or out of the set.
+<a class="reference internal" href="../_images/sets4.png"><img alt="404 image" src="../_images/sets4.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+<p>4. We can look at all the members we selected (aka the top 10 occurring tree genus in the data) by right-clicking the field on the shelf and from the menu, selecting <strong>Show Members in Set</strong>.</p>
+<a class="reference internal image-reference" href="../_images/sets5.png"><img alt="404 image" src="../_images/sets5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This now shows us the 10 genera!</p>
+<a class="reference internal image-reference" href="../_images/sets6.png"><img alt="404 image" src="../_images/sets6.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="formatting-titles-axes-gridlines-and-charts">
+<h2><span class="section-number">4.6. </span>Formatting Titles, Axes, Gridlines and Charts<a class="headerlink" href="#formatting-titles-axes-gridlines-and-charts" title="Permalink to this headline">¶</a></h2>
+<p>Ahh, the little extras that can make all the difference!</p>
+<p>Although there are so many ways to format your worksheets and dashboards, we are going to showcase a select few that should get you on the right track for other formatting options and methods.</p>
+<p>Let’s first get to the formatting toolbar.</p>
+<p>We can do so in two ways, by right-clicking on your plot and selecting <strong>Format…</strong> …</p>
+<a class="reference internal image-reference" href="../_images/formatting2.png"><img alt="404 image" src="../_images/formatting2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>or through the upmost toolbar under <strong>Format</strong>…</p>
+<a class="reference internal image-reference" href="../_images/formatting.png"><img alt="404 image" src="../_images/formatting.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Note that using the latter allows you to make formatting decisions on a Workbook basis meaning that changes will be made to all the visualizations in your workbook.</p>
+<p>For this tutorial, we will be making the changes on a worksheet basis for versatility.</p>
+<div class="section" id="fonts">
+<h3><span class="section-number">4.6.1. </span>Fonts<a class="headerlink" href="#fonts" title="Permalink to this headline">¶</a></h3>
+<p>You can change the font in your visualization by the whole worksheet by selecting <strong>Sheet</strong> and then changing your designed font type, size and colour under the worksheet.</p>
+<p>The <strong>Worksheet</strong> option will change the axis titles, tick marks for both axis and total and Grand total calculations you may have.</p>
+<a class="reference internal image-reference" href="../_images/format2.png"><img alt="404 image" src="../_images/format2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/format3.png"><img alt="404 image" src="../_images/format3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>If you want to format the axis labels separately, then it’s best to switched tabs to either <strong>Rows</strong> or <strong>Columns</strong>.</p>
+<a class="reference internal image-reference" href="../_images/format1.png"><img alt="404 image" src="../_images/format1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/format4.png"><img alt="404 image" src="../_images/format4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This rule can be applied to the font. alignment, shading, borders and lines.</p>
+</div>
+<div class="section" id="shading">
+<h3><span class="section-number">4.6.2. </span>Shading<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h3>
+<p>This is where the background of your graphs can be changed. Again, you can change the background for the entire pane, or give the axes different colours by selecting <strong>Columns</strong> or <strong>Rows</strong>.</p>
+<a class="reference internal image-reference" href="../_images/format5.png"><img alt="404 image" src="../_images/format5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/format6.png"><img alt="404 image" src="../_images/format6.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+<div class="section" id="gridlines">
+<h3><span class="section-number">4.6.3. </span>Gridlines<a class="headerlink" href="#gridlines" title="Permalink to this headline">¶</a></h3>
+<p>Gridlines are controlled under the line icon.</p>
+<p>We can change both the horizontal and vertical lines together under the <strong>Sheet</strong> tab and changing the colour and line width…</p>
+<a class="reference internal image-reference" href="../_images/format7.png"><img alt="404 image" src="../_images/format7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>or separately with the <strong>Columns</strong> or <strong>Rows</strong> tab.</p>
+<a class="reference internal image-reference" href="../_images/format8.png"><img alt="404 image" src="../_images/format8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>Under this icon is also where we can format the colour, size, width and style of reference lines or trend lines.</p>
+</div>
+</div>
+</div>
+<div class="section" id="stories">
+<h2><span class="section-number">4.7. </span>Stories<a class="headerlink" href="#stories" title="Permalink to this headline">¶</a></h2>
+<p>In a short and to the point manner I’m going to quickly show you how you can make a Tableau Story.</p>
+<p>Tableau Stories are where we can create a narrative to provide key details, information and insights that give context and a case for the insights you’ve discovered.</p>
+<p>Stories are what I would describe as a slideshow presentation for your plots. Making static plots for specific filtered data and explaining them with annotation.</p>
+<p>You can only have 1 worksheet per data point.</p>
+<div class="section" id="story-workspace">
+<h3><span class="section-number">4.7.1. </span>Story Workspace<a class="headerlink" href="#story-workspace" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/storyspace.png"><img alt="404 image" src="../_images/storyspace.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p style="font-size:30px; color:#00FDFF">New Point or "Slide" </p>
+<p>This is where we can create a new slide or point starting from scratch or working from a previous already created point.</p>
+<p style="font-size:30px; color:#E392FE">Worksheets</p>
+<p>We can choose our visualization from the sheets we’ve created.</p>
+<p style="font-size:30px; color:#E392FE">Annotation</p>
+<p>We can annotate and explain our findings with text and similarly to how we drag a worksheet or image in a dashboard, we can drag a textbox that will “Float” over our plot.</p>
+<p style="font-size:30px; color:#DEDC4A">Pane Size</p>
+<p>Just like we need to adjust the pane for multiple screen dimensions for dashboards, we must do the same for stories and the same methods apply. I prefer to maintain the <strong>Automatic</strong> sizing so that the dimensions adjust for multiple screens.</p>
+</div>
+<div class="section" id="quick-story-tutorial">
+<h3><span class="section-number">4.7.2. </span>Quick Story Tutorial<a class="headerlink" href="#quick-story-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>Here is just a basic story tutorial so you are familiar with the tools and toggles necessary to create a Tableau Story.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Before we can do anything, we need to create a story page. using either the icon in the tool displayed or the icon at the bottom of the workspace, click on the <strong>New Story</strong> options.</p>
+<a class="reference internal image-reference" href="../_images/story1.png"><img alt="404 image" src="../_images/story1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. We are then greeted with our workspace. The first thing I do (similarly to what I do in Dashboards) is to change the layout size to <strong>Automatic</strong>.</p>
+<a class="reference internal image-reference" href="../_images/story2.png"><img alt="404 image" src="../_images/story2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3. Now you can add a worksheet to your story point. You can add only 1 worksheet to a point but your story can be made of multiple sheets. We are dragging over our line plot to our centre panel.</p>
+<a class="reference internal image-reference" href="../_images/story3.png"><img alt="404 image" src="../_images/story3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>After we’ve dragged the sheet it will appear with a default caption option.</p>
+<a class="reference internal image-reference" href="../_images/story33.png"><img alt="404 image" src="../_images/story33.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. We can edit our caption to give context to the insight we are trying to explain.</p>
+<a class="reference internal image-reference" href="../_images/story4.png"><img alt="404 image" src="../_images/story4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5. In addition to a caption, we can annotate our plot directly with text by dragging the <strong>Drag to add text</strong> option to the workspace.</p>
+<a class="reference internal image-reference" href="../_images/story5.png"><img alt="404 image" src="../_images/story5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>6. This will generate a popup and you’ll be able to add your text and format it.</p>
+<a class="reference internal image-reference" href="../_images/story6.png"><img alt="404 image" src="../_images/story6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Once you hit ok, you’ll be able to move it to your desired location.</p>
+<a class="reference internal image-reference" href="../_images/story7.png"><img alt="404 image" src="../_images/story7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. If we want to add a different plot to our story we can click on the <strong>Blank</strong> option under <strong>New story point</strong> or to build on your existing plot, we can click on the <strong>Duplicate</strong> option.</p>
+<a class="reference internal image-reference" href="../_images/story8.png"><img alt="404 image" src="../_images/story8.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will give us an option to navigate through our story points and add an additional caption!
+<a class="reference internal" href="../_images/story9.png"><img alt="404 image" src="../_images/story9.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>There are multiple navigation styles to choose from besides the default <strong>Caption</strong> boxes.</p>
+<p>We can click on the <strong>Layout</strong> tab to see the other <strong>Navigation Styles</strong>.</p>
+<a class="reference internal image-reference" href="../_images/stornav0.png"><img alt="404 image" src="../_images/stornav0.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will give us the following options besides <strong>Captions boxes</strong>…
+<a class="reference internal" href="../_images/story10.png"><img alt="404 image" src="../_images/story10.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+<p>We can navigate with <strong>Numbers</strong>…
+<a class="reference internal" href="../_images/stornav1.png"><img alt="404 image" src="../_images/stornav1.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+<p>…or <strong>Dots</strong>…
+<a class="reference internal" href="../_images/stornav2.png"><img alt="404 image" src="../_images/stornav2.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+<p>…or <strong>Arrows</strong>.
+<a class="reference internal" href="../_images/stornav3.png"><img alt="404 image" src="../_images/stornav3.png" style="width: 85%;" /></a></p>
+<br>
+<br>
+</div>
+</div>
+</div>
+<div class="section" id="the-tooltip-feature">
+<h2><span class="section-number">4.8. </span>The Tooltip Feature<a class="headerlink" href="#the-tooltip-feature" title="Permalink to this headline">¶</a></h2>
+<p>Dashboard and worksheet tooltip options are generated automatically but I’m going to dive a bit deeper into how to format them and other options.</p>
+<p><strong>Step by Step Instructions</strong></p>
+<p>1. Let’s start by demonstrating with our map that is plotting every tree in Vancouver.</p>
+<a class="reference internal image-reference" href="../_images/tooltip1.png"><img alt="404 image" src="../_images/tooltip1.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>2. If we hover over one of the trees, the tooltip automatically shows any of the fields we are using, which in this case, are only the <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> fields.</p>
+<a class="reference internal image-reference" href="../_images/tooltip2.png"><img alt="404 image" src="../_images/tooltip2.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>3.  Similar to how we need to drag the field we want to filter on in dashboards to the filter column, we must drag the field we want in the tooltip to the <strong>Tooltip</strong> icon in the <strong>Marks</strong> card.  Here we drag <code class="docutils literal notranslate"><span class="pre">Genus</span> <span class="pre">Name</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/tooltip3.png"><img alt="404 image" src="../_images/tooltip3.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will add it now to the tooltip when we hover!</p>
+<a class="reference internal image-reference" href="../_images/tooltip4.png"><img alt="404 image" src="../_images/tooltip4.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>4. We want to do a bit more editing on the formatting of this though. In order to do that, we click on the <strong>Tooltip</strong> icon.</p>
+<a class="reference internal image-reference" href="../_images/tooltip5.png"><img alt="404 image" src="../_images/tooltip5.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>This will generate a popup that shows the fields with labels on how they will appear!</p>
+<p>We can edit the font size colour and alignment.</p>
+<a class="reference internal image-reference" href="../_images/tooltip6.png"><img alt="404 image" src="../_images/tooltip6.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>5/. If we want to add additional fields and measure we can click on the <strong>Insert</strong> tab.</p>
+<p>This will show us all the options. You’ll again notice that we can only add a dynamic field if we have used it in our workspace or added it to the <strong>Tooltip</strong> channel.</p>
+<a class="reference internal image-reference" href="../_images/tooltip66.png"><img alt="404 image" src="../_images/tooltip66.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We can add another field by dragging it to the channel.</p>
+<a class="reference internal image-reference" href="../_images/tooltip666.png"><img alt="404 image" src="../_images/tooltip666.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>Now, when we open the tooltip options, we see it as an option and added to our area.</p>
+<a class="reference internal image-reference" href="../_images/tooltip6666.png"><img alt="404 image" src="../_images/tooltip6666.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>7. Let’s go ahead and edit it then. I’ve changed the font size and colour and removed the <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> fields.</p>
+<a class="reference internal image-reference" href="../_images/tooltip7.png"><img alt="404 image" src="../_images/tooltip7.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>We can also decide how it will respond, instantly or with a slight delay.</p>
+<p>8. Now when we hover on our plot, we see the updated formatted tooltip!</p>
+<a class="reference internal image-reference" href="../_images/tooltip9.png"><img alt="404 image" src="../_images/tooltip9.png" style="width: 85%;" /></a>
+<br>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">Tip!</p>
+<p>We can also link tooltips to already existing worksheets.</p>
+<p>All you need to do is click on the <strong>Tooltip</strong> icon and then from the popup select the sheet under the <strong>Insert</strong> tab.</p>
+<a class="reference internal image-reference" href="../_images/tooltip10.png"><img alt="404 image" src="../_images/tooltip10.png" style="width: 85%;" /></a>
+<br>
+<br>
+<p>I’ve selected the scatter plot and now we can see a graph as well as the other fields we selected when we hover over the respected tree.</p>
+<a class="reference internal image-reference" href="../_images/tooltip11.png"><img alt="404 image" src="../_images/tooltip11.png" style="width: 85%;" /></a>
+<br>
+<br>
+</div>
+</div>
+<div class="section" id="quick-quiz">
+<h2><span class="section-number">4.9. </span>Quick Quiz<a class="headerlink" href="#quick-quiz" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>True or False:</strong> I can use <em>Groups</em> to combine categories based on conditions or other fields.</p></li>
+<li><p>Between Sets and Groups, which of the following with let us show members In/Out of the dimension?</p></li>
+<li><p><strong>True or False:</strong> We can format on an entire workbook level.</p></li>
+<li><p>Which of the following is not a formatting icon in the formatting toolbar; Font, Opacity, Alignment, Shading, Borders, Lines.</p></li>
+<li><p><strong>True or False:</strong> Stories can have multiple worksheets.</p></li>
+</ol>
+<!--
+```{admonition} Solutions!
+:class: dropdown
+
+1. False
+2. Sets
+3. True
+4. Opacity
+5. True
+
+```
+-->
+</div>
+<div class="section" id="if-time-shapes-demo">
+<h2><span class="section-number">4.10. </span>(If time) Shapes Demo<a class="headerlink" href="#if-time-shapes-demo" title="Permalink to this headline">¶</a></h2>
+<p>If we have time in class, I will demo a way to customize shapes used for marks.</p>
+<p>I cannot include notes here due to copyright and licensing.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="tableau3.html" title="previous page"><span class="section-number">3. </span>Dashboards, EDA and Blending Data Sources</a>
+    <a class='right-next' id="next-link" href="../activities/activity1.html" title="next page">Lesson 1: Making Your First Viz</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

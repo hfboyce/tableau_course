@@ -19,8 +19,7 @@
     - file: lessons/tableau1
     - file: lessons/tableau2
     - file: lessons/tableau3
-    #- file: lessons/tableau4
-    #- file: lessons/tableau5
+    - file: lessons/tableau4
 
 - part: Activities
   numbered: false
@@ -28,6 +27,7 @@
     - file: activities/activity1
     - file: activities/activity2
     - file: activities/activity3
+    - file: activities/activity4
 
 - part: References
   chapters:

@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 4: Bringing It All Together &#8212; Data Visualization with Tableau</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://hfboyce.github.io/tableau_course/intro.html/activities/activity4.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Attribution" href="../things_to_know/attribution.html" />
+    <link rel="prev" title="Lesson 3: Dashboards and EDA" href="activity3.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://hfboyce.github.io/tableau_course/intro.html/activities/activity4.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Lesson 4: Bringing It All Together" />
+<meta property="og:description" content="Lesson 4: Bringing It All Together  For this final exercise, we will be using a hockey dataset named player_dim.csv  and/or  player_stats.csv provided for you a" />
+<meta property="og:image"       content="https://hfboyce.github.io/tableau_course/intro.html/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Visualization with Tableau</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Things to Know
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/who.html">
+   Who: Hayley Boyce
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/what.html">
+   What: Learning Outcomes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Theory
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/lesson1.html">
+   1. Visualization Importance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/lesson2.html">
+   2. Visualization Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/lesson3.html">
+   3. Asking Question and Exploring Your Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/lesson4.html">
+   4. The Good, the Bad, and the Ugly
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lessons - Tableau
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/tableau1.html">
+   1. Introduction to Tableau
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/tableau2.html">
+   2. Plot Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/tableau3.html">
+   3. Dashboards, EDA and Blending Data Sources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lessons/tableau4.html">
+   4. Choropleths, Formatting, Stories and Dashboard Extras
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="activity1.html">
+   Lesson 1: Making Your First Viz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="activity2.html">
+   Lesson 2: Plots and Dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="activity3.html">
+   Lesson 3: Dashboards and EDA
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lesson 4: Bringing It All Together
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../things_to_know/attribution.html">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/activities/activity4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hfboyce/tableau_course/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/hfboyce/tableau_course//issues/new?title=Issue%20on%20page%20%2Factivities/activity4.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/hfboyce/tableau_course/edit/master/activities/activity4.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-reading-in-your-data">
+   Exercise 1: Reading in your data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-eda">
+   Exercise 2: EDA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-3-dashboard">
+   Exercise 3: Dashboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-4-creating-a-story">
+   Exercise 4: Creating a Story
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attribution">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lesson-4-bringing-it-all-together">
+<h1>Lesson 4: Bringing It All Together<a class="headerlink" href="#lesson-4-bringing-it-all-together" title="Permalink to this headline">¶</a></h1>
+<p>For this final exercise, we will be using a hockey dataset named <code class="docutils literal notranslate"><span class="pre">player_dim.csv</span></code>  and/or  <code class="docutils literal notranslate"><span class="pre">player_stats.csv</span></code> provided for you at <a class="reference external" href="https://drive.google.com/drive/folders/1IP1Vs8bJnGElKfqZ8VkNlLVX-VXJZfaV?usp=sharing">this link from the google drive</a>.</p>
+<p>This data was originally obtained from the <a class="reference external" href="https://www.kaggle.com/mjavon/elite-prospects-hockey-stats-player-data?select=player_dim.csv"><strong>Elite Prospects Hockey Stats &amp; Player Data</strong></a> Kaggle dataset and full attribution created is given to <a class="reference external" href="https://www.kaggle.com/mjavon">Mike Javon</a>.</p>
+<p>This exercise is formatted more so as an independent project than an exercise worksheet. I will provide some useful hints and items to include but will have a far less “step by step” approach than we had in the previous exercises.</p>
+<p>I want you to take the data given, explore it using the skills you learned in exploratory data analysis, asking questions, creating your plots and formatting them appropriately.</p>
+<p>In addition to creating a dashboard for this exercise, you will be putting your storytelling skills to use and explain your findings in form of a story.</p>
+<div class="section" id="exercise-1-reading-in-your-data">
+<h2>Exercise 1: Reading in your data<a class="headerlink" href="#exercise-1-reading-in-your-data" title="Permalink to this headline">¶</a></h2>
+<p>1. Load in the desired data - <a class="reference external" href="https://drive.google.com/file/d/1f21fkR1AHOeK61j0NK-rYwEIQFLtPZpn/view?usp=sharing"><code class="docutils literal notranslate"><span class="pre">players_dim.csv</span></code></a> and/or <a class="reference external" href="https://drive.google.com/file/d/1CTxWyJhfRzOwb_dWGDZj38SnUdqBDCA3/view?usp=sharing"><code class="docutils literal notranslate"><span class="pre">players_stat.csv</span></code></a> in Tableau Desktop.</p>
+<p>2. Split any columns up. (I recommend splitting the <code class="docutils literal notranslate"><span class="pre">Nationality</span></code> column by clicking on the drop-down menu and selecting split)</p>
+<p>3. Convert any columns into geographical or date data types.</p>
+</div>
+<div class="section" id="exercise-2-eda">
+<h2>Exercise 2: EDA<a class="headerlink" href="#exercise-2-eda" title="Permalink to this headline">¶</a></h2>
+<p>1. Explore your data using both Tableau Prep as well as additional columns further by asking appropriate questions.</p>
+<ul class="simple">
+<li><p>I advise making at least 6-7 plots to help get a better sense of your data and get a grasp of which visualizations would be appropriate to add into an interactive dashboard for your audience.</p></li>
+<li><p>You’ll also want to make observations that you can include in your Tableau Story.</p></li>
+<li><p>*Hint: Creating a scatterplot for height and weight, finding the proportion of left to right shooters for each country, etc.  *</p></li>
+<li><p>Create groups or sets if needed.</p></li>
+<li><p>Add trendlines or reference lines.</p></li>
+<li><p>Cluster if appropriate.</p></li>
+<li><p>Format the plots you expect to use in your dashboard.</p></li>
+<li><p>Give appropriate titles and axes labels.</p></li>
+<li><p>Edit the worksheet hover function.</p></li>
+<li><p>Engineer new features if appropriate by making calculations</p></li>
+<li><p>Use the <strong>Pages</strong> option for EDA.</p></li>
+<li><p>Use appropriate colours and palettes for your plots.</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-3-dashboard">
+<h2>Exercise 3: Dashboard<a class="headerlink" href="#exercise-3-dashboard" title="Permalink to this headline">¶</a></h2>
+<p>1. Create a new Dashboard page and size it appropriately.</p>
+<p>2. Add images titles, worksheets, filters to the dashboard.</p>
+<ul class="simple">
+<li><p>Make sure to attribute your images properly.</p></li>
+<li><p>Use a tiled option if using automatic sizing.</p></li>
+</ul>
+<p>3. Use at least 1 filter for multiple plots.</p>
+<p>4. Use a worksheet to filter your other plots.</p>
+<p>5. Edit a filter style so that it’s space-efficient and appropriate for the task.</p>
+</div>
+<div class="section" id="exercise-4-creating-a-story">
+<h2>Exercise 4: Creating a Story<a class="headerlink" href="#exercise-4-creating-a-story" title="Permalink to this headline">¶</a></h2>
+<p>1. Given the discoveries from your EDA, what are some key insights you think are important to narrate?</p>
+<p>2. Create a new story and add at least 6 points with captions and/or annotations.</p>
+<ul class="simple">
+<li><p>Really think about the storytelling techniques we discussed in the lesson.</p></li>
+</ul>
+</div>
+<div class="section" id="attribution">
+<h2>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Data: <a class="reference external" href="https://www.kaggle.com/mjavon/elite-prospects-hockey-stats-player-data?select=player_dim.csv"><strong>Elite Prospects Hockey Stats &amp; Player Data</strong></a> obtained from Kaggle.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "hfboyce/tableau_course",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./activities"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="activity3.html" title="previous page">Lesson 3: Dashboards and EDA</a>
+    <a class='right-next' id="next-link" href="../things_to_know/attribution.html" title="next page">Attribution</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Hayley Boyce<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

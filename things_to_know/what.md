@@ -17,42 +17,54 @@ By the end of the course, learners are expected to be able to:
 
 By the end of the lesson, learners are expected to be able to:
 
-- Explain the importance of  visualizations in communication and analysis. 
-- Discuss the advantages and disadvantages of using Tableau as a tool.
-- Open and connect Tableau to a data source. 
-- List the different data types Tableau uses.
-- Locate important buttons and menus needed in Tableau.
-- identify how Tableau categorizes columns into Dimensions and Measures. 
-- Create new worksheets for plots.
-- Save your work appropriately. 
+1. Explain the importance of  visualizations in communication and analysis. 
+1. Discuss the advantages and disadvantages of using Tableau as a tool.
+1. Open and connect Tableau to a data source. 
+1. List the different data types Tableau uses.
+1. Locate important buttons and menus needed in Tableau.
+1. identify how Tableau categorizes columns into Dimensions and Measures. 
+1. Create new worksheets for plots.
+1. Save your work appropriately. 
 
 ### Lecture 2
 
 By the end of the lesson, learners are expected to be able to:
 
-- Explain the difference between a scatter, line, pie, and bar plot.
-- Recognize when 3D plots are appropriate. 
-- Select an appropriate distribution plot for the data.
-- Choose effective visual channels for information display.
-- Visualize frequencies with bar plots.
-- Create line, scatter and histogram plot using Tableau.
+1. Explain the difference between a scatter, line, pie, and bar plot.
+1. Recognize when 3D plots are appropriate. 
+1. Select an appropriate distribution plot for the data.
+1. Choose effective visual channels for information display.
+1. Visualize frequencies with bar plots.
+1. Create line, scatter and histogram plot using Tableau.
 
 ### Lecture 3
 
 By the end of the lesson, learners are expected to be able to:
 
-- Combine worksheets to make a Dashboard.
-- Use different filtering types on a Dashboard. 
-- Identify the different tools needed to make a dashboard layout in Tableau.
-- Define and describe the 6 possible data analysis questions. 
-- Summarize the importants of Exploratory Data Analysis (EDA).
-- Impliment calculations in Tableau.
-- Add trend lines and sumary lines to a plot.
-- Experiment with clustering and forcasting.
-- Combining data sources using relationships and joins. 
+1. Combine worksheets to make a Dashboard.
+1. Use different filtering types on a Dashboard. 
+1. Identify the different tools needed to make a dashboard layout in Tableau.
+1. Define and describe the 6 possible data analysis questions. 
+1. Summarize the importants of Exploratory Data Analysis (EDA).
+1. Impliment calculations in Tableau.
+1. Add trend lines and sumary lines to a plot.
+1. Experiment with clustering and forcasting.
+1. Combining data sources using relationships and joins. 
 
 
 ### Lecture 4
 
+By the end of the lesson, learners are expected to be able to:
 
-### Lecture 5
+1. Create a choropleth graph.
+1. Recognize best practices in visualization design.
+1. Adjust titles, axes and background plot formatting.
+1. Choose appropriate color schemes for different visualizations.
+1. Use Tableau and custom color schemes.
+1. Creates groups and sets from existing fields. 
+1. Create a Tableau story. 
+1. Craft engaging narratives for your visualizations.
+1. Edit, format and add tooltips to existing worksheets.
+1. Create shapes in Tableau. (if time) 
+
+

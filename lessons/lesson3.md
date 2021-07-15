@@ -182,7 +182,6 @@ b) Understanding the missing values from your data
 c) Visualizing the data     
 d) Creating a predictive model from the data      
 
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -195,4 +194,3 @@ d) Creating a predictive model from the data
 7. d)  Creating a predictive model from the data
 
 ```
--->
