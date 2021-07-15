@@ -16,7 +16,7 @@ In addition to creating a dashboard for this exercise, you will be putting your 
 
 1\. Load in the desired data - [`players_dim.csv`](https://drive.google.com/file/d/1f21fkR1AHOeK61j0NK-rYwEIQFLtPZpn/view?usp=sharing) and/or [`players_stat.csv`](https://drive.google.com/file/d/1CTxWyJhfRzOwb_dWGDZj38SnUdqBDCA3/view?usp=sharing) in Tableau Desktop.     
 
-2\. Split any columns up. (I recommend splitting the `Nationality` column by clicking on the drop-down menu and selecting split)
+2\. Split any columns up. (I recommend splitting the `Nationality` column by clicking on the drop-down menu and selecting split.)
 
 3\. Convert any columns into geographical or date data types. 
 
@@ -25,7 +25,7 @@ In addition to creating a dashboard for this exercise, you will be putting your 
 1\. Explore your data using both Tableau Prep as well as additional columns further by asking appropriate questions.
  - I advise making at least 6-7 plots to help get a better sense of your data and get a grasp of which visualizations would be appropriate to add into an interactive dashboard for your audience. 
  - You'll also want to make observations that you can include in your Tableau Story. 
- - *Hint: Creating a scatterplot for height and weight, finding the proportion of left to right shooters for each country, etc.  *
+ - *Hint: Creating a scatterplot for height and weight, finding the proportion of left to right shooters for each country, etc.*
  - Create groups or sets if needed. 
  - Add trendlines or reference lines.
  - Cluster if appropriate.
