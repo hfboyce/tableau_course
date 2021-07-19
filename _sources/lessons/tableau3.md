@@ -1263,7 +1263,6 @@ To delete a Data Source, click on the Data tab in the uppermost toolbar and then
 9. What "join" type is used to stack data on top of each other?
 10. What join type only keeps rows present in both tables?
 
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -1279,7 +1278,6 @@ To delete a Data Source, click on the Data tab in the uppermost toolbar and then
 10. Inner
 
 ```
--->
 
 
 
