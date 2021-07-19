@@ -700,7 +700,6 @@ I've selected the scatter plot and now we can see a graph as well as the other f
 4. Which of the following is not a formatting icon in the formatting toolbar; Font, Opacity, Alignment, Shading, Borders, Lines. 
 5. **True or False:** Stories can have multiple worksheets. 
 
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
@@ -711,7 +710,6 @@ I've selected the scatter plot and now we can see a graph as well as the other f
 5. True
 
 ```
--->
 
 
 ## (If time) Shapes Demo

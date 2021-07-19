@@ -386,11 +386,10 @@ Source for these plots:
 - [Tableau](https://www.tableau.com/learn/articles/best-beautiful-data-visualization-examples)
 
 
-<!--
 ```{admonition} Solutions!
 :class: dropdown
 
-1. Good
+1.  Can go either Good or Evil
 2. Evil
 3. Evil
 4. Good
@@ -398,7 +397,6 @@ Source for these plots:
 6. Good
 
 ```
--->
 
 
 
